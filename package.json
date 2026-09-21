@@ -1,0 +1,15 @@
+{
+  "name": "ideaz",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "1日5枠のブログ・フォーマット。毎朝AIが題材を探して、コピーできる形で5個出す。",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "search": "node scripts/search.mjs",
+    "harvest": "node scripts/search.mjs --harvest",
+    "generate": "node scripts/generate.mjs",
+    "build": "node scripts/generate.mjs"
+  },
+  "dependencies": {}
+}

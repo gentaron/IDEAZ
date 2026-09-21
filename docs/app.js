@@ -123,7 +123,9 @@ function skeletons(n = 5) {
 
 function render(day) {
   today = day
-  dateLabel.textContent = `${day.date}（マレーシア時間）`
+  const searched = day.slots.filter((s) => s.topic).length
+  dateLabel.textContent =
+    `${day.date}（マレーシア時間）` + (searched ? ` · 題材 ${searched}/${day.slots.length}` : '')
   cards.innerHTML = ''
 
   for (const slot of day.slots) {
@@ -144,8 +146,38 @@ function render(day) {
     lens.className = 'lens'
     const lensLabel = document.createElement('span')
     lensLabel.className = 'lens-label'
-    lensLabel.textContent = '今日の角度'
-    lens.append(lensLabel, document.createTextNode(slot.lens))
+
+    if (slot.topic) {
+      // 今朝の探索で題材まで決まっている日。カードの主役は題材
+      lensLabel.textContent = '今日の題材'
+      const title = document.createElement('strong')
+      title.className = 'topic-title'
+      title.textContent = slot.topic.title
+      lens.append(lensLabel, title)
+
+      if (slot.topic.whatChanged) {
+        const what = document.createElement('span')
+        what.className = 'topic-what'
+        what.textContent = slot.topic.whatChanged
+        lens.append(what)
+      }
+
+      const angle = document.createElement('span')
+      angle.className = 'topic-angle'
+      angle.textContent = `角度: ${slot.lens}`
+      lens.append(angle)
+
+      if (slot.topic.sources?.length) {
+        const src = document.createElement('span')
+        src.className = 'topic-sources'
+        src.textContent = `根拠 ${slot.topic.sources.length} 件`
+        lens.append(src)
+      }
+    } else {
+      // 題材が決まらなかった枠。角度だけ渡して、探すところから書き手にやってもらう
+      lensLabel.textContent = '今日の角度'
+      lens.append(lensLabel, document.createTextNode(slot.lens))
+    }
 
     const actions = document.createElement('div')
     actions.className = 'actions'
@@ -210,7 +242,7 @@ async function openArchive() {
 
       const l = document.createElement('p')
       l.className = 'archive-lenses'
-      l.textContent = day.lenses.map((x) => `${x.time} ${x.lens}`).join(' / ')
+      l.textContent = day.lenses.map((x) => `${x.time} ${x.title || x.lens}`).join(' / ')
 
       const btn = document.createElement('button')
       btn.type = 'button'

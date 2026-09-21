@@ -12,6 +12,7 @@ on:
 
 permissions:
   contents: write
+  models: read      # GitHub Models（無料枠）を使う。これで課金口は要らない
 
 concurrency:
   group: daily-formats
@@ -29,6 +30,29 @@ jobs:
         with:
           node-version: '22'
 
+      # すでに公開した記事の見出しを取ってくる。既出を二度書かないための一枚目の網。
+      # 取れなければ前の内容が残る。空のままだと次の探索が自分で止まる。
+      - name: 公開済みの記事を同期する
+        continue-on-error: true
+        run: node scripts/sync-published.mjs
+
+      # 今日の題材を探す。ここが本体。
+      # 落ちても止めない。題材が無ければ、その日は角度だけ配った5枠になる。
+      - name: 今日の題材を探す
+        id: search
+        continue-on-error: true
+        env:
+          # 候補集めは鍵不要。選ぶところは GitHub Models の無料枠を使う。
+          # GITHUB_TOKEN はワークフローが最初から持っているので、登録するものは無い。
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # 無料枠のあるところに乗り換えたいときだけ入れる（無くていい）
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          IDEAZ_LLM_PROVIDER: ${{ vars.IDEAZ_LLM_PROVIDER }}
+          IDEAZ_LLM_MODEL: ${{ vars.IDEAZ_LLM_MODEL }}
+        run: node scripts/search.mjs ${{ github.event.inputs.date }}
+
       - name: 5枠を生成する
         run: node scripts/generate.mjs ${{ github.event.inputs.date }}
 
@@ -36,14 +60,19 @@ jobs:
         run: |
           git config user.name  "ideaz-bot"
           git config user.email "ideaz-bot@users.noreply.github.com"
-          git add docs/data
+          git add docs/data memory/published.json
           if git diff --staged --quiet; then
             echo "変化なし。コミットしない"
           else
             DATE=$(node -e "console.log(require('./docs/data/current.json').date)")
-            git commit -m "フォーマット更新 ${DATE}"
+            SRC=$(node -e "console.log(require('./docs/data/current.json').topicSource)")
+            git commit -m "フォーマット更新 ${DATE}（${SRC}）"
             git push
           fi
+
+      - name: 探索が落ちていたら知らせる
+        if: steps.search.outcome == 'failure'
+        run: echo "::warning::今日の題材探索が失敗した。角度だけの5枠を出している。"
 
       - name: Netlify に作り直させる（ビルドフックがあるときだけ）
         # リポジトリに Netlify を繋いでいれば、上の push だけで勝手に建て直る。

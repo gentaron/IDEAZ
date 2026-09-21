@@ -10,6 +10,7 @@ import { buildDay, mytDate } from '../src/build.mjs'
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..')
 const DATA = join(ROOT, 'docs', 'data')
 const ARCHIVE = join(DATA, 'archive')
+const TOPICS = join(DATA, 'topics')
 
 const date = process.argv[2] || mytDate()
 if (!/^\d{4}-\d{2}-\d{2}$/.test(date)) {
@@ -28,7 +29,21 @@ if (existsSync(currentPath)) {
   }
 }
 
-const day = buildDay(date)
+// 今朝の探索の結果があれば、題材まで埋め込む。無ければ角度だけ配る
+const topicsPath = join(TOPICS, `${date}.json`)
+let topics = null
+if (existsSync(topicsPath)) {
+  try {
+    topics = JSON.parse(readFileSync(topicsPath, 'utf8'))
+  } catch (e) {
+    console.warn(`題材のファイルを読めなかった: ${e.message}`)
+  }
+}
+if (!topics) {
+  console.warn(`${date} の題材が無い。角度だけ配って組み立てる（scripts/search.mjs を先に回すと題材が入る）`)
+}
+
+const day = buildDay(date, topics)
 writeFileSync(currentPath, JSON.stringify(day, null, 2) + '\n')
 writeFileSync(join(ARCHIVE, `${date}.json`), JSON.stringify(day, null, 2) + '\n')
 
@@ -40,7 +55,16 @@ const entries = readdirSync(ARCHIVE)
   .reverse()
   .map((d) => {
     const doc = JSON.parse(readFileSync(join(ARCHIVE, `${d}.json`), 'utf8'))
-    return { date: d, lenses: doc.slots.map((s) => ({ id: s.id, time: s.time, lens: s.lens })) }
+    return {
+      date: d,
+      topicSource: doc.topicSource || 'lens-only',
+      lenses: doc.slots.map((s) => ({
+        id: s.id,
+        time: s.time,
+        lens: s.lens,
+        title: s.topic?.title || null
+      }))
+    }
   })
 
 writeFileSync(
@@ -50,5 +74,5 @@ writeFileSync(
 
 console.log(`${date} の5枠を書き出しました（アーカイブ ${entries.length} 日分）`)
 for (const s of day.slots) {
-  console.log(`  ${s.time}  ${s.lens}  [${s.prompt.length}字]`)
+  console.log(`  ${s.time}  ${s.topic ? `題材: ${s.topic.title}` : `角度のみ: ${s.lens}`}  [${s.prompt.length}字]`)
 }
