@@ -50,18 +50,35 @@ function bullets(text) {
     .join('\n')
 }
 
-export function buildDay(dateStr) {
-  const canon = MEM('canon.md')
-  const win = MEM('winning-patterns.md')
-  const title = MEM('title.md')
-  const voice = MEM('voice.md')
-  const env = MEM('environment.md')
-  const sources = MEM('sources.md')
-  const forbidden = MEM('forbidden.md')
-  const exclusions = MEM('exclusions.md')
+/** 探索が見つけてきた題材を、プロンプトに貼る一塊にする */
+function topicBlock(topic) {
+  const lines = [`題材: ${topic.title}`, '', `何が変わったのか:\n${topic.whatChanged}`]
+
+  if (topic.gate) lines.push('', `関門の一文（探索時点で埋めたもの。自分で検算すること）:\n${topic.gate}`)
+  if (topic.whyItPasses) lines.push('', `シグナルのどこに当たるか:\n${topic.whyItPasses}`)
+
+  if (topic.sources?.length) {
+    lines.push('', '根拠（最低3つ突き合わせてある。必ず自分で開いて確かめる）:')
+    for (const src of topic.sources) lines.push(`- ${src.title} ${src.url}`)
+  }
+
+  if (topic.check) lines.push('', `この題材で自分で測ること:\n${topic.check}`)
+
+  if (topic.backups?.length) {
+    lines.push('', 'この題材が持たなかったときの控え（関門が埋まらない、裏が取れない、既出だった場合のみ使う）:')
+    for (const b of topic.backups) lines.push(`- ${b.title} — ${b.why}`)
+  }
+
+  return lines.join('\n')
+}
+
+/**
+ * その日の枠と「今日の角度」を決める。
+ * 探索（scripts/search.mjs）と組み立て（buildDay）で同じ配り方を使うために外に出してある。
+ */
+export function planDay(dateStr) {
   const { slots, judgement, openTitleExample, openGateExample } = JSONMEM('slots.json')
   const lenses = JSONMEM('lenses.json')
-
   const di = dayIndex(dateStr)
   const openSlots = slots.filter((s) => s.kind === 'open')
 
@@ -76,6 +93,25 @@ export function buildDay(dateStr) {
       dealt.set(s.id, lenses.judgement[di % lenses.judgement.length])
     })
 
+  return { slots, judgement, openTitleExample, openGateExample, dealt, dayIndex: di }
+}
+
+/**
+ * その日の5枠を組み立てる。
+ * topics に探索の結果（scripts/search.mjs が書いたもの）を渡すと、
+ * 「探してください」ではなく「この題材で書いてください」の形になる。
+ */
+export function buildDay(dateStr, topics = null) {
+  const canon = MEM('canon.md')
+  const win = MEM('winning-patterns.md')
+  const title = MEM('title.md')
+  const voice = MEM('voice.md')
+  const env = MEM('environment.md')
+  const sources = MEM('sources.md')
+  const forbidden = MEM('forbidden.md')
+  const exclusions = MEM('exclusions.md')
+  const { slots, judgement, openTitleExample, openGateExample, dealt, dayIndex: di } = planDay(dateStr)
+
   const built = slots.map((slot) => {
     const isJudge = slot.kind === 'judgement'
     const lens = dealt.get(slot.id)
@@ -83,15 +119,31 @@ export function buildDay(dateStr) {
       .filter((s) => s.id !== slot.id)
       .map((s) => `${s.time} ${dealt.get(s.id)}`)
 
+    const topic = topics?.slots?.[slot.id] || null
     const parts = []
 
-    parts.push(
-      isJudge
-        ? '「判断するAI」の世界最先端をひとつ見つけて、それについてのブログを1本書いてください。'
-        : '強いAIが、ふつうの個人にも使えるようになった変化を1つ見つけて、それについてのブログを1本書いてください。'
-    )
-
-    parts.push(`【今日の角度。${dateStr} の ${slot.time} 枠】\n${lens}\nこの角度で探して、見つからなければ角度を外してもいい。外すときは、下の関門の一文が埋まることだけは必ず守る。`)
+    if (topic) {
+      // 題材は今朝の探索で決まっている。書き手は探すところからやり直さない
+      parts.push(
+        isJudge
+          ? '今日の題材はもう決めてあります。下の【今日の題材】について、ブログを1本書いてください。判断AIの枠です。'
+          : '今日の題材はもう決めてあります。下の【今日の題材】について、ブログを1本書いてください。'
+      )
+      parts.push(`【今日の題材。${dateStr} の ${slot.time} 枠】\n${topicBlock(topic)}`)
+      parts.push(
+        `【この題材を選んだ角度】\n${lens}\nこの角度から探して、上の題材に行き着いた。記事の軸はこの角度に寄せる。`
+      )
+      parts.push(
+        '【題材を捨てていい場合】\n根拠のURLを開いて裏が取れない、関門の一文が自分の言葉で埋め直せない、すでに書いた題材の家族に当たる。このどれかなら控えに移る。控えも持たないなら、その旨だけ返して書かない。空振りを1本として出さない。'
+      )
+    } else {
+      parts.push(
+        isJudge
+          ? '「判断するAI」の世界最先端をひとつ見つけて、それについてのブログを1本書いてください。'
+          : '強いAIが、ふつうの個人にも使えるようになった変化を1つ見つけて、それについてのブログを1本書いてください。'
+      )
+      parts.push(`【今日の角度。${dateStr} の ${slot.time} 枠】\n${lens}\nこの角度で探して、見つからなければ角度を外してもいい。外すときは、下の関門の一文が埋まることだけは必ず守る。`)
+    }
 
     if (isJudge) parts.push(`【この枠だけの題材の縛り】\n${judgement.territory}`)
 
@@ -107,7 +159,11 @@ export function buildDay(dateStr) {
     parts.push(`【採用理由にもタイトルの主役にもしないノイズ6つ】\n${bullets(section(canon, '採用理由にもタイトルの主役にもしないノイズ6つ'))}`)
     parts.push(`【実績の裏付け（記事には書かない）】\n${section(win, '実績の裏付け')}`)
     parts.push(`【いちばん強い型】\n${section(win, 'いちばん強い型')}`)
-    parts.push(`【候補の絞り方】\n${section(canon, '候補の絞り方')}`)
+    parts.push(
+      topic
+        ? `【候補の絞り方（今朝すでに通してある。検算用に置いておく）】\n${section(canon, '候補の絞り方')}`
+        : `【候補の絞り方】\n${section(canon, '候補の絞り方')}`
+    )
     parts.push(`【タイトル】\n${body(title)}\n${isJudge ? judgement.titleExample : openTitleExample}`)
     parts.push(`【自分の計算環境】\n${section(env, '自分の計算環境')}`)
     parts.push(
@@ -128,7 +184,9 @@ export function buildDay(dateStr) {
     parts.push(`【分量】\n${section(voice, '分量')}`)
     parts.push(`【判定】\n${section(canon, '判定')}`)
     parts.push(
-      '【書いたあと】\n書き終えたら、いま主役にした題材の「家族」を一行にまとめて教えてください。同じ家族を二度書かないための記録に足します。'
+      topic?.family
+        ? `【書いたあと】\n書き終えたら、いま主役にした題材の「家族」を一行にまとめて教えてください。同じ家族を二度書かないための記録に足します。\n探索時点の案はこれ。ずれていれば直してください。\n${topic.family}`
+        : '【書いたあと】\n書き終えたら、いま主役にした題材の「家族」を一行にまとめて教えてください。同じ家族を二度書かないための記録に足します。'
     )
 
     return {
@@ -137,6 +195,14 @@ export function buildDay(dateStr) {
       label: isJudge ? `${slot.label}・${judgement.title}` : `${slot.label}・題材の縛りなし`,
       kind: slot.kind,
       lens,
+      topic: topic
+        ? {
+            title: topic.title,
+            whatChanged: topic.whatChanged,
+            gate: topic.gate || '',
+            sources: topic.sources || []
+          }
+        : null,
       prompt: parts.join('\n\n')
     }
   })
@@ -146,6 +212,9 @@ export function buildDay(dateStr) {
     timezone: 'Asia/Kuala_Lumpur',
     generatedAt: new Date().toISOString(),
     dayIndex: di,
+    // searched = 今朝の探索で題材まで決まっている / lens-only = 角度だけ配って、探すのは書き手
+    topicSource: topics ? 'searched' : 'lens-only',
+    searchedAt: topics?.generatedAt || null,
     slots: built
   }
 }

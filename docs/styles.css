@@ -233,6 +233,35 @@ main {
   margin-bottom: 3px;
 }
 
+/* 題材まで決まっている日。カードの主役は題材の名前 */
+.topic-title {
+  display: block;
+  font-size: 1.02rem;
+  font-weight: 700;
+  line-height: 1.5;
+  margin-bottom: 5px;
+}
+
+.topic-what {
+  font-size: 0.88rem;
+  color: var(--text);
+  margin-bottom: 7px;
+  /* 長いものは3行で止める。全文はダイアログで読む */
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.topic-angle,
+.topic-sources {
+  display: block;
+  font-size: 0.74rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
 .actions {
   display: flex;
   gap: 8px;

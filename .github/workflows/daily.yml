@@ -28,6 +28,24 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+          cache: npm
+
+      - name: 依存を入れる
+        run: npm ci
+
+      # 今日の題材を探す。ここが本体。
+      # 落ちても止めない。題材が無ければ、その日は角度だけ配った5枠になる。
+      - name: 今日の題材を探す
+        id: search
+        continue-on-error: true
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          if [ -z "$ANTHROPIC_API_KEY" ]; then
+            echo "ANTHROPIC_API_KEY が無い。探索は飛ばす（角度だけの5枠になる）"
+            exit 0
+          fi
+          node scripts/search.mjs ${{ github.event.inputs.date }}
 
       - name: 5枠を生成する
         run: node scripts/generate.mjs ${{ github.event.inputs.date }}
@@ -41,9 +59,14 @@ jobs:
             echo "変化なし。コミットしない"
           else
             DATE=$(node -e "console.log(require('./docs/data/current.json').date)")
-            git commit -m "フォーマット更新 ${DATE}"
+            SRC=$(node -e "console.log(require('./docs/data/current.json').topicSource)")
+            git commit -m "フォーマット更新 ${DATE}（${SRC}）"
             git push
           fi
+
+      - name: 探索が落ちていたら知らせる
+        if: steps.search.outcome == 'failure'
+        run: echo "::warning::今日の題材探索が失敗した。角度だけの5枠を出している。"
 
       - name: Netlify に作り直させる（ビルドフックがあるときだけ）
         # リポジトリに Netlify を繋いでいれば、上の push だけで勝手に建て直る。

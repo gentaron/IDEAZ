@@ -1,0 +1,17 @@
+{
+  "name": "ideaz",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "1日5枠のブログ・フォーマット。毎朝AIが題材を探して、コピーできる形で5個出す。",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "search": "node scripts/search.mjs",
+    "generate": "node scripts/generate.mjs",
+    "build": "node scripts/generate.mjs",
+    "dev": "node scripts/generate.mjs && npx --yes http-server docs -p 8080 -c-1"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.127.0"
+  }
+}
