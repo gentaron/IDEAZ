@@ -1,0 +1,17 @@
+{
+  "name": "IDEAZ — 1日5枠のブログ・フォーマット",
+  "short_name": "IDEAZ",
+  "description": "毎朝5時に入れ替わる5個のプロンプト。コピーしてAIに投げるだけ。",
+  "start_url": ".",
+  "scope": ".",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0d1014",
+  "theme_color": "#0d1014",
+  "lang": "ja",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-maskable.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

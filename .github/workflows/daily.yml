@@ -1,0 +1,44 @@
+name: 毎日5枠を入れ替える
+
+on:
+  schedule:
+    # 21:00 UTC = マレーシア時間 翌朝 05:00
+    - cron: '0 21 * * *'
+  workflow_dispatch:
+    inputs:
+      date:
+        description: '作り直す日付 (YYYY-MM-DD)。空なら当日'
+        required: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-formats
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: 5枠を生成する
+        run: node scripts/generate.mjs ${{ github.event.inputs.date }}
+
+      - name: 変わっていればコミットする
+        run: |
+          git config user.name  "ideaz-bot"
+          git config user.email "ideaz-bot@users.noreply.github.com"
+          git add docs/data
+          if git diff --staged --quiet; then
+            echo "変化なし。コミットしない"
+          else
+            DATE=$(node -e "console.log(require('./docs/data/current.json').date)")
+            git commit -m "フォーマット更新 ${DATE}"
+            git push
+          fi

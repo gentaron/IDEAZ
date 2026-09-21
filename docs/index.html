@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>IDEAZ</title>
+<meta name="description" content="1日5枠のブログ・フォーマット。毎朝5時に全部入れ替わる。">
+<meta name="theme-color" content="#0d1014">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="top-row">
+    <h1>IDEAZ</h1>
+    <button id="archive-btn" class="ghost" type="button" aria-haspopup="dialog">アーカイブ</button>
+  </div>
+  <p class="meta">
+    <span id="date-label">読み込み中</span>
+    <span class="dot" aria-hidden="true">·</span>
+    <span id="next-label"></span>
+  </p>
+</header>
+
+<main id="cards" aria-live="polite"></main>
+
+<p class="footnote">
+  毎朝5時（マレーシア時間）に5個とも入れ替わります。古い分はアーカイブに残ります。<br>
+  文面の正本はリポジトリの <code>memory/</code>。そこを直すと翌朝から反映されます。
+</p>
+
+<dialog id="viewer">
+  <div class="viewer-head">
+    <strong id="viewer-title"></strong>
+    <button id="viewer-close" class="ghost" type="button">閉じる</button>
+  </div>
+  <pre id="viewer-body"></pre>
+  <button id="viewer-copy" class="primary wide" type="button">全文をコピー</button>
+</dialog>
+
+<dialog id="archive">
+  <div class="viewer-head">
+    <strong>アーカイブ</strong>
+    <button id="archive-close" class="ghost" type="button">閉じる</button>
+  </div>
+  <div id="archive-list" class="archive-list"></div>
+</dialog>
+
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+<script src="app.js" type="module"></script>
+</body>
+</html>
