@@ -20,6 +20,8 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      NETLIFY_BUILD_HOOK: ${{ secrets.NETLIFY_BUILD_HOOK }}
     steps:
       - uses: actions/checkout@v4
 
@@ -42,3 +44,10 @@ jobs:
             git commit -m "フォーマット更新 ${DATE}"
             git push
           fi
+
+      - name: Netlify に作り直させる（ビルドフックがあるときだけ）
+        # リポジトリに Netlify を繋いでいれば、上の push だけで勝手に建て直る。
+        # このステップは、繋いでいない・別経路で建てたいときの保険。
+        # Settings → Secrets → Actions に NETLIFY_BUILD_HOOK を入れると動く。
+        if: ${{ env.NETLIFY_BUILD_HOOK != '' }}
+        run: curl -fsS -X POST -d '{}' "$NETLIFY_BUILD_HOOK" > /dev/null && echo "Netlify に投げた"

@@ -50,10 +50,52 @@ npx serve docs                        # ローカルで開く（何でもいい�
 - `docs/data/archive/YYYY-MM-DD.json` — 日ごとの控え
 - `docs/data/index.json` — アーカイブの目次
 
-## 公開
+## 公開（Netlify）
 
-GitHub Pages を **Settings → Pages → Source: Deploy from a branch → `main` / `docs`** にする。
-スマホで開いて「ホーム画面に追加」すると、アプリとして立ち上がる。一度開けばオフラインでも読める。
+`netlify.toml` が入っているので、リポジトリを繋げばそれだけで建つ。
+
+1. Netlify で **Add new site → Import an existing project** から、このリポジトリを選ぶ
+2. ビルド設定は `netlify.toml` が持っているので、触らなくていい
+
+| 項目 | 値 | どこで決まっているか |
+| --- | --- | --- |
+| Build command | `node scripts/generate.mjs` | `netlify.toml` |
+| Publish directory | `docs` | `netlify.toml` |
+| Node | 22 | `netlify.toml` |
+
+ビルドのたびにその日の5枠を作り直す。`src/build.mjs` は日付から決定的に組み立てるので、
+いつデプロイしても「その時点のマレーシア時間の日付」の分が出る。アーカイブはリポジトリに
+コミットされている分がそのまま載る。
+
+`main` に push が入るたび Netlify が建て直す。毎朝のワークフローも `docs/data` をコミットするので、
+そこで自動的に新しい5枠が公開される。繋いでいない経路から叩きたいときは、Netlify の
+**Build hooks** で URL を作って、GitHub の Secrets に `NETLIFY_BUILD_HOOK` として入れる。
+入っていればワークフローが最後に叩く。入れなければ何もしない。
+
+### ヘッダ
+
+`netlify.toml` で決めてある。要点だけ:
+
+- `sw.js` と `manifest.webmanifest`、`index.html` / `app.js` / `styles.css` は毎回確かめさせる
+  （ファイル名にハッシュを付けていないので、ここを長く持たせると更新が届かなくなる）
+- `data/*` も毎回確かめさせる。毎朝入れ替わるので
+- `icons/*` だけ1週間持たせる
+
+### GitHub Pages でも出したいとき
+
+`docs/` をそのまま publish しているだけなので、両方同時に出せる。
+**Settings → Pages → Source: Deploy from a branch → `main` / `docs`**。
+パスはすべて相対で書いてあるので、サブパスに置かれても壊れない。
+
+## アプリとして入れる
+
+スマホで開いて「ホーム画面に追加」すると、アプリとして立ち上がる。
+
+- Android / デスクトップの Chrome 系は、条件が揃うと右上に **インストール** が出る。押すだけ
+- iPhone は共有ボタンから「ホーム画面に追加」。初回だけその旨を帯で出す
+- 長押しのショートカットから「今日の5枠」と「アーカイブ」に直接入れる
+- 一度開けばオフラインでも読める。前に取った分を出す
+- 新しい版が出ていれば「更新」の帯が出る。押すと入れ替わる
 
 ## 自動更新
 

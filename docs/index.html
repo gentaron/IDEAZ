@@ -3,22 +3,40 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>IDEAZ</title>
-<meta name="description" content="1日5枠のブログ・フォーマット。毎朝5時に全部入れ替わる。">
-<meta name="theme-color" content="#0d1014">
+<title>IDEAZ — 1日5枠のブログ・フォーマット</title>
+<meta name="description" content="1日5枠のブログ・フォーマット。毎朝5時に全部入れ替わる。コピーしてAIに投げるだけ。">
+<meta name="color-scheme" content="dark light">
+<meta name="theme-color" content="#0d1014" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f6f8fa" media="(prefers-color-scheme: light)">
+
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="icons/icon-192.png">
+<meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="IDEAZ">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="format-detection" content="telephone=no">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="IDEAZ — 1日5枠のブログ・フォーマット">
+<meta property="og:description" content="毎朝5時に入れ替わる5個のプロンプト。コピーしてAIに投げるだけ。">
+<meta property="og:image" content="icons/icon-512.png">
+<meta name="twitter:card" content="summary">
+
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
+<a class="skip" href="#cards">本文へ</a>
+
 <header class="top">
   <div class="top-row">
     <h1>IDEAZ</h1>
-    <button id="archive-btn" class="ghost" type="button" aria-haspopup="dialog">アーカイブ</button>
+    <div class="top-actions">
+      <button id="install-btn" class="ghost small" type="button" hidden>インストール</button>
+      <button id="archive-btn" class="ghost small" type="button" aria-haspopup="dialog">アーカイブ</button>
+    </div>
   </div>
   <p class="meta">
     <span id="date-label">読み込み中</span>
@@ -27,26 +45,35 @@
   </p>
 </header>
 
-<main id="cards" aria-live="polite"></main>
+<div id="banner" class="banner" hidden>
+  <span id="banner-text"></span>
+  <button id="banner-action" class="banner-btn" type="button" hidden></button>
+  <button id="banner-close" class="banner-x" type="button" aria-label="閉じる">×</button>
+</div>
+
+<main id="cards" aria-live="polite" aria-busy="true"></main>
 
 <p class="footnote">
   毎朝5時（マレーシア時間）に5個とも入れ替わります。古い分はアーカイブに残ります。<br>
   文面の正本はリポジトリの <code>memory/</code>。そこを直すと翌朝から反映されます。
 </p>
 
-<dialog id="viewer">
+<dialog id="viewer" aria-labelledby="viewer-title">
   <div class="viewer-head">
     <strong id="viewer-title"></strong>
-    <button id="viewer-close" class="ghost" type="button">閉じる</button>
+    <button id="viewer-close" class="ghost small" type="button">閉じる</button>
   </div>
-  <pre id="viewer-body"></pre>
-  <button id="viewer-copy" class="primary wide" type="button">全文をコピー</button>
+  <pre id="viewer-body" tabindex="0"></pre>
+  <div class="viewer-foot">
+    <button id="viewer-copy" class="primary" type="button">全文をコピー</button>
+    <button id="viewer-share" class="ghost" type="button" hidden>共有</button>
+  </div>
 </dialog>
 
-<dialog id="archive">
+<dialog id="archive" aria-labelledby="archive-title">
   <div class="viewer-head">
-    <strong>アーカイブ</strong>
-    <button id="archive-close" class="ghost" type="button">閉じる</button>
+    <strong id="archive-title">アーカイブ</strong>
+    <button id="archive-close" class="ghost small" type="button">閉じる</button>
   </div>
   <div id="archive-list" class="archive-list"></div>
 </dialog>
