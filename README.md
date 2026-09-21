@@ -11,9 +11,12 @@
 ```
 21:00 UTC（MYT 5:00）  Cron
   ↓
-scripts/search.mjs     Claude が web_search でソースの網を回る
-                       候補を50個くらい拾う → 関門の一文で10個に落とす
-                       → シグナル5つで絞る → 5枠に1つずつ配る
+src/harvest.mjs        鍵の要らない公開の口から候補を集める
+                       HN / Reddit / Hugging Face / GitHub / arXiv / 各社のRSS
+  ↓
+scripts/search.mjs     1段目: 見出しを見て、軸に合いそうなものを14件に落とす
+                       残ったものは実際にページを開いて本文を少し読む
+                       2段目: 関門の一文とシグナル5つで見て、5枠に1つずつ配る
                        → docs/data/topics/YYYY-MM-DD.json
   ↓
 scripts/generate.mjs   題材を土台のフォーマットに埋め込んで5個のプロンプトにする
@@ -21,6 +24,30 @@ scripts/generate.mjs   題材を土台のフォーマットに埋め込んで5�
   ↓
 コミット → Netlify が建て直す → カードの「コピー」で、その題材で書けるプロンプトが手に入る
 ```
+
+## 全部タダで回る
+
+**課金される口は1つも使っていない。npm の依存もゼロ。**
+
+| 何を | どこで | いくら |
+| --- | --- | --- |
+| 候補を集める | HN / Reddit / Hugging Face / GitHub / arXiv / 各社のRSS | 鍵すら要らない |
+| 本文を読む | ふつうの HTTP GET | 無料 |
+| 題材を選ぶ | **GitHub Models の無料枠** | 無料。`GITHUB_TOKEN` が最初からあるので登録するものも無い |
+| 生成・公開 | GitHub Actions + Netlify | 無料枠 |
+
+選ぶところは、無料枠のあるものなら他にも乗り換えられる。上から順に見て、最初に使えるものを取る。
+
+| 名前 | 要る鍵 | 既定のモデル | 備考 |
+| --- | --- | --- | --- |
+| `github` | `GITHUB_TOKEN` | `openai/gpt-4o-mini` | Actions 内なら**何も登録しなくていい**。`models: read` だけ要る |
+| `gemini` | `GEMINI_API_KEY` | `gemini-2.0-flash` | aistudio.google.com で無料の鍵が取れる |
+| `groq` | `GROQ_API_KEY` | `llama-3.3-70b-versatile` | console.groq.com で無料の鍵が取れる |
+| `openrouter` | `OPENROUTER_API_KEY` | `deepseek/deepseek-chat-v3.1:free` | **`:free` 以外を指定すると止まる**（うっかり課金しないため） |
+| `local` | 不要 | `qwen2.5:7b` | 手元の Ollama など。`IDEAZ_LLM_PROVIDER=local` で名指しする |
+
+どれも OpenAI 互換の `/chat/completions` を喋るので、中身は `src/llm.mjs` 1枚で足りている。
+`IDEAZ_LLM_PROVIDER` で名指し、`IDEAZ_LLM_MODEL` でモデルだけ差し替えられる。
 
 **フォーマットは土台**。軸・関門・シグナル5つ・ノイズ6つ・タイトル規格・文体・重複禁止は毎日同じ。
 毎日変わるのは、その土台に載る**今日の題材**と、それを探した**角度**。
@@ -56,20 +83,23 @@ scripts/generate.mjs   題材を土台のフォーマットに埋め込んで5�
 | `memory/slots.json` | 5枠の定義と、9時枠の題材の縛り |
 | `memory/lenses.json` | 日替わりで配る「今日の角度」の札 |
 
-探索にわたす指示書も、同じ `memory/` から組み立てている（`src/brief.mjs`）。
-軸も関門もシグナルも、探す側と書く側で同じ正本を見ているので、二重に管理する場所はない。
+選ぶ係にわたす指示書も、同じ `memory/` から組み立てている（`src/brief.mjs`）。
+軸も関門もシグナルも、選ぶ側と書く側で同じ正本を見ているので、二重に管理する場所はない。
+候補を集める先（`src/harvest.mjs`）も `memory/sources.md` の網をそのまま機械で回れる形にしたもの。
 
 記事を1本出したら、`memory/exclusions.md` にその題材の家族を1行足すこと。
 ここが薄いと同じ話を二度書く。プロンプトの末尾で、書いたあとに家族を一行返すよう指示してある。
 
 ## 動かし方
 
-```bash
-npm install                           # 初回だけ
+依存は無いので `npm install` は要らない。Node 22 だけあればいい。
 
-export ANTHROPIC_API_KEY=sk-ant-...   # 探索に要る
-node scripts/search.mjs               # 今日の題材を探す（APIを叩く。数分かかる）
-node scripts/search.mjs --dry-run     # 叩かずに、投げる指示書だけ見る
+```bash
+node scripts/search.mjs --harvest     # 候補集めだけ試す（AIは呼ばない。鍵も要らない）
+node scripts/search.mjs --dry-run     # 何も叩かず、投げる指示書だけ見る
+
+export GITHUB_TOKEN=ghp_...           # または GEMINI_API_KEY / GROQ_API_KEY など
+node scripts/search.mjs               # 今日の題材を探す
 node scripts/search.mjs 2026-10-01    # 日付を指定して探す
 
 node scripts/generate.mjs             # 題材を埋め込んで5枠を作る
@@ -93,10 +123,12 @@ npx serve docs                        # ローカルで開く（何でもいい�
 
 | 変数 | 既定 | 何が変わるか |
 | --- | --- | --- |
-| `ANTHROPIC_API_KEY` | （なし） | **これが無いと探索は動かない** |
-| `IDEAZ_SEARCH_MODEL` | `claude-opus-5` | 探す係のモデル |
-| `IDEAZ_SEARCH_EFFORT` | `high` | 考える深さ。`low`〜`max` |
-| `IDEAZ_MAX_SEARCHES` | `40` | web_search を回す上限 |
+| `IDEAZ_LLM_PROVIDER` | 自動 | 選ぶ係を名指しする。`github` / `gemini` / `groq` / `openrouter` / `local` |
+| `IDEAZ_LLM_MODEL` | 相手による | モデルだけ差し替える |
+| `IDEAZ_LLM_BASE` | 相手による | 別の場所に向ける（手元のものなど） |
+| `IDEAZ_WINDOW_HOURS` | `72` | 何時間ぶんさかのぼって集めるか |
+| `IDEAZ_CANDIDATES` | `70` | 1段目に渡す候補の上限 |
+| `IDEAZ_SHORTLIST` | `14` | 1段目を通す件数。本文を読みにいく件数でもある |
 
 ## 公開（Netlify）
 
@@ -150,8 +182,11 @@ npx serve docs                        # ローカルで開く（何でもいい�
 `.github/workflows/daily.yml` が毎日 21:00 UTC に走る。**題材を探して**、5枠を生成して、コミットする。
 手で回したいときは Actions タブから **Run workflow**（日付を入れれば任意の日で作り直せる）。
 
-探索を動かすには、GitHub の **Settings → Secrets and variables → Actions** に
-`ANTHROPIC_API_KEY` を入れる。入っていなければ探索は飛ばされ、角度だけの5枠が出る（止まりはしない）。
-探索が落ちた日はワークフローに警告が出るが、公開は続く。
+探索に**登録するものは無い**。ワークフローに `models: read` が入っているので、
+最初から入っている `GITHUB_TOKEN` で GitHub Models の無料枠が使える。
+
+他の無料枠に乗り換えたいときだけ、**Settings → Secrets and variables → Actions** に
+`GEMINI_API_KEY` などを入れる（`Variables` 側に `IDEAZ_LLM_PROVIDER` を置けば名指しできる）。
+探索が落ちた日は警告が出るが、公開は続く。その日は角度だけの5枠になる。
 
 GitHub の cron は混み具合で数十分ずれることがある。5時ちょうどに出ていなくても壊れてはいない。

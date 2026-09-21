@@ -2,124 +2,128 @@
 //
 //   node scripts/search.mjs             # 今日（MYT）の分を探す
 //   node scripts/search.mjs 2026-10-01  # 日付を指定して探す
-//   node scripts/search.mjs --dry-run   # APIを叩かず、渡す指示書だけ出す
+//   node scripts/search.mjs --dry-run   # 何も叩かず、投げる指示書だけ出す
+//   node scripts/search.mjs --harvest   # 候補集めだけ試す（AIは呼ばない）
+//
+// 使うのは無料のものだけ。
+//   集める = 鍵の要らない公開の口（HN / Reddit / HF / GitHub / arXiv / RSS）
+//   選ぶ   = 無料枠のLLM（GitHub Models など。src/llm.mjs 参照）
 //
 // 結果は docs/data/topics/YYYY-MM-DD.json に出る。
-// scripts/generate.mjs がそれを読んで、題材を埋め込んだ5枠を組み立てる。
 // ここが失敗しても generate は動く。その日は「角度だけ配って、探すのは書き手」に戻るだけ。
 
 import { mkdirSync, writeFileSync } from 'node:fs'
 import { join, dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { mytDate, planDay } from '../src/build.mjs'
-import { searchSystem, searchTask, TOPIC_SCHEMA } from '../src/brief.mjs'
+import { judgeSystem, shortlistTask, decideTask } from '../src/brief.mjs'
+import { harvest, excerpt } from '../src/harvest.mjs'
+import { pickProvider, chat, parseJSON } from '../src/llm.mjs'
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..')
 const OUT = join(ROOT, 'docs', 'data', 'topics')
 
-const MODEL = process.env.IDEAZ_SEARCH_MODEL || 'claude-opus-5'
-const EFFORT = process.env.IDEAZ_SEARCH_EFFORT || 'high'
-const MAX_SEARCHES = Number(process.env.IDEAZ_MAX_SEARCHES || 40)
-const MAX_CONTINUATIONS = 6
+const HOURS = Number(process.env.IDEAZ_WINDOW_HOURS || 72)
+const SHORTLIST = Number(process.env.IDEAZ_SHORTLIST || 14)
+const CANDIDATES = Number(process.env.IDEAZ_CANDIDATES || 70)
 
 const args = process.argv.slice(2)
 const dryRun = args.includes('--dry-run')
+const harvestOnly = args.includes('--harvest')
 const date = args.find((a) => /^\d{4}-\d{2}-\d{2}$/.test(a)) || mytDate()
 
-if (args.some((a) => a.startsWith('-') && a !== '--dry-run')) {
-  console.error(`知らない引数: ${args.find((a) => a.startsWith('-') && a !== '--dry-run')}`)
+const bad = args.find((a) => a.startsWith('-') && !['--dry-run', '--harvest'].includes(a))
+if (bad) {
+  console.error(`知らない引数: ${bad}`)
   process.exit(1)
 }
 
-const system = searchSystem()
-const task = searchTask(date)
+/* ---------- 何も叩かずに中身だけ見る ---------- */
 
 if (dryRun) {
+  const sample = [
+    { source: 'Hacker News', title: '（候補の見出しがここに並ぶ）', url: 'https://example.com/1', summary: '', score: 120 }
+  ]
   console.log('===== system =====')
-  console.log(system)
-  console.log('\n===== task =====')
-  console.log(task)
-  console.log(`\n(${date} / ${MODEL} / effort=${EFFORT} / web_search 最大${MAX_SEARCHES}回)`)
-  console.log(`system ${system.length}字、task ${task.length}字。APIは叩いていない`)
+  console.log(judgeSystem())
+  console.log('\n===== 1段目: 候補をふるいにかける =====')
+  console.log(shortlistTask(date, sample, SHORTLIST))
+  console.log('\n===== 2段目: 5枠に配る =====')
+  console.log(decideTask(date, [{ ...sample[0], excerpt: '（読めた分の本文）' }]))
+  let who = '（使える無料の口が無い）'
+  try {
+    const p = pickProvider()
+    who = `${p.label} / ${p.model}`
+  } catch (e) {
+    who = e.message.split('\n')[0]
+  }
+  console.log(`\n(${date} / 相手: ${who} / 直近${HOURS}時間 / 候補${CANDIDATES}件 → ${SHORTLIST}件)`)
+  console.log('何も叩いていない')
   process.exit(0)
 }
 
-const { default: Anthropic } = await import('@anthropic-ai/sdk')
-const client = new Anthropic()
+/* ---------- 候補を集める ---------- */
 
-/** 探索役に投げる。web_search が10往復で止まったら、そのまま続きを頼む */
-async function runSearch() {
-  const messages = [{ role: 'user', content: task }]
+const harvested = await harvest({ hours: HOURS })
 
-  for (let i = 0; i <= MAX_CONTINUATIONS; i++) {
-    const stream = client.messages.stream({
-      model: MODEL,
-      max_tokens: 64000,
-      thinking: { type: 'adaptive' },
-      output_config: { effort: EFFORT },
-      system: [{ type: 'text', text: system, cache_control: { type: 'ephemeral' } }],
-      tools: [{ type: 'web_search_20260209', name: 'web_search', max_uses: MAX_SEARCHES }],
-      messages
-    })
-
-    const res = await stream.finalMessage()
-
-    if (res.stop_reason === 'refusal') {
-      throw new Error(`探索を断られた: ${res.stop_details?.category || 'category不明'}`)
-    }
-
-    // server_tool_use の往復が上限に当たっただけ。そのまま積んで続きを頼む
-    if (res.stop_reason === 'pause_turn') {
-      messages.push({ role: 'assistant', content: res.content })
-      console.log(`  …web_search の往復が上限に当たったので続ける（${i + 1}回目）`)
-      continue
-    }
-
-    return { res, messages }
-  }
-
-  throw new Error(`続きを${MAX_CONTINUATIONS}回頼んでも終わらなかった`)
+if (!harvested.length) {
+  console.error('候補が1件も取れなかった。書き出さない（generate は角度だけで組み立てる）')
+  process.exit(1)
 }
 
-/** 探した結果を、決まった形に直させる。ここでは道具を持たせない */
-async function structure({ res, messages }) {
-  const stream = client.messages.stream({
-    model: MODEL,
-    max_tokens: 32000,
-    thinking: { type: 'adaptive' },
-    output_config: {
-      effort: 'low',
-      format: { type: 'json_schema', schema: TOPIC_SCHEMA }
-    },
-    system: [{ type: 'text', text: system, cache_control: { type: 'ephemeral' } }],
-    messages: [
-      ...messages,
-      { role: 'assistant', content: res.content },
-      {
-        role: 'user',
-        content:
-          'いま決めた内容を、指定された形でそのまま出してください。新しく探し直さないこと。' +
-          '題材が決まらなかった枠は found を false にして、skipReason にその理由を書いてください。'
-      }
-    ]
-  })
+const pool = harvested.slice(0, CANDIDATES)
 
-  const out = await stream.finalMessage()
-  const text = out.content
-    .filter((b) => b.type === 'text')
-    .map((b) => b.text)
-    .join('')
-
-  if (!text.trim()) throw new Error('形に直した結果が空だった')
-  return JSON.parse(text)
+if (harvestOnly) {
+  console.log(`\n上位20件:`)
+  for (const c of pool.slice(0, 20)) console.log(`  [${String(c.score).padStart(5)}] ${c.source} — ${c.title}`)
+  console.log(`\n(AIは呼んでいない。全${pool.length}件)`)
+  process.exit(0)
 }
 
-/** 返ってきたものを、こちらの都合の形に均して確かめる */
+/* ---------- 選ぶ ---------- */
+
+const provider = pickProvider()
+console.log(`選ぶ相手: ${provider.label} / ${provider.model}`)
+
+const system = judgeSystem()
+
+// 1段目。見出しだけを見て、軸に合いそうなものを残す
+console.log(`1段目: ${pool.length}件を最大${Math.min(SHORTLIST, pool.length)}件に落とす…`)
+const picked = parseJSON(
+  await chat(provider, { system, user: shortlistTask(date, pool, SHORTLIST), json: true, maxTokens: 4000 })
+)
+const keep = (picked.keep || [])
+  .map((i) => pool[Number(i) - 1])
+  .filter(Boolean)
+  .slice(0, SHORTLIST)
+
+if (!keep.length) {
+  console.error('1段目で何も残らなかった。書き出さない')
+  process.exit(1)
+}
+console.log(`  → ${keep.length}件残った`)
+
+// 残ったものは、実際にページを開いて本文を少し取る（これも無料）
+console.log('  残った候補の本文を読む…')
+const withText = await Promise.all(
+  keep.map(async (c) => ({ ...c, excerpt: await excerpt(c.url) }))
+)
+console.log(`  → ${withText.filter((c) => c.excerpt).length}/${withText.length}件は本文も取れた`)
+
+// 2段目。関門とシグナルで見て、5枠に配る
+console.log('2段目: 関門とシグナルで見て、5枠に配る…')
+const raw = parseJSON(
+  await chat(provider, { system, user: decideTask(date, withText), json: true, maxTokens: 12000 })
+)
+
+/* ---------- 検算して書き出す ---------- */
+
 function normalise(raw) {
   const { slots } = planDay(date)
   const known = new Set(slots.map((s) => s.id))
   const out = {}
   const dropped = []
+  const urls = new Map(withText.map((c) => [c.url, c]))
 
   for (const entry of raw.slots || []) {
     const id = String(entry.slotId || '').padStart(2, '0')
@@ -135,9 +139,13 @@ function normalise(raw) {
       dropped.push(`${id} は中身が足りない（題材・変化・関門のどれかが空）`)
       continue
     }
-    const sources = (entry.sources || []).filter((s) => s?.url && /^https?:\/\//.test(s.url))
+
+    // 根拠は、こちらが実際に集めたURLの中から選ばれたものだけ通す。作り話のURLを弾く
+    const sources = (entry.sources || [])
+      .filter((s) => s?.url && urls.has(s.url))
+      .map((s) => ({ title: urls.get(s.url).title, url: s.url, via: urls.get(s.url).source }))
     if (!sources.length) {
-      dropped.push(`${id} は根拠のURLが無い`)
+      dropped.push(`${id} は根拠が候補一覧の外を指している（作り話の可能性）`)
       continue
     }
 
@@ -156,13 +164,7 @@ function normalise(raw) {
   return { slots: out, dropped }
 }
 
-console.log(`${date} の題材を探す（${MODEL} / effort=${EFFORT}）…`)
-
-const found = await runSearch()
-console.log('  探し終わり。形に直す…')
-const raw = await structure(found)
 const { slots, dropped } = normalise(raw)
-
 for (const line of dropped) console.warn(`  落とした: ${line}`)
 
 if (!Object.keys(slots).length) {
@@ -171,18 +173,26 @@ if (!Object.keys(slots).length) {
 }
 
 mkdirSync(OUT, { recursive: true })
-const doc = {
-  date,
-  generatedAt: new Date().toISOString(),
-  model: MODEL,
-  searchedCount: raw.searchedCount ?? null,
-  slots
-}
-writeFileSync(join(OUT, `${date}.json`), JSON.stringify(doc, null, 2) + '\n')
+writeFileSync(
+  join(OUT, `${date}.json`),
+  JSON.stringify(
+    {
+      date,
+      generatedAt: new Date().toISOString(),
+      provider: provider.name,
+      model: provider.model,
+      harvested: harvested.length,
+      shortlisted: keep.length,
+      slots
+    },
+    null,
+    2
+  ) + '\n'
+)
 
 const { slots: defs } = planDay(date)
-console.log(`\n${date} の題材（${Object.keys(slots).length}/${defs.length}枠、候補 ${raw.searchedCount ?? '?'} 件から）`)
+console.log(`\n${date} の題材（${Object.keys(slots).length}/${defs.length}枠、候補 ${harvested.length}件から）`)
 for (const s of defs) {
   const t = slots[s.id]
-  console.log(`  ${s.time}  ${t ? `${t.title}（根拠 ${t.sources.length} 件）` : '— 決まらず'}`)
+  console.log(`  ${s.time}  ${t ? `${t.title}（根拠 ${t.sources.length}件）` : '— 決まらず'}`)
 }

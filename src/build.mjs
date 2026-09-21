@@ -58,8 +58,19 @@ function topicBlock(topic) {
   if (topic.whyItPasses) lines.push('', `シグナルのどこに当たるか:\n${topic.whyItPasses}`)
 
   if (topic.sources?.length) {
-    lines.push('', '根拠（最低3つ突き合わせてある。必ず自分で開いて確かめる）:')
-    for (const src of topic.sources) lines.push(`- ${src.title} ${src.url}`)
+    // 探索は見出しと、読めた分の本文までしか見ていない。数を盛らない
+    lines.push(
+      '',
+      `根拠（探索が拾った${topic.sources.length}件。裏取りは済んでいない。必ず自分で開いて確かめる）:`
+    )
+    for (const src of topic.sources) {
+      lines.push(`- ${src.title} ${src.url}${src.via ? `（${src.via} 経由）` : ''}`)
+    }
+    if (topic.sources.length < 3) {
+      lines.push(
+        '根拠がまだ3つに届いていない。書く前に、別のソースで最低3つまで突き合わせること。埋まらなければこの題材は捨てる。'
+      )
+    }
   }
 
   if (topic.check) lines.push('', `この題材で自分で測ること:\n${topic.check}`)

@@ -1,8 +1,11 @@
-// 探索にわたす指示書を、memory/ の正本から組み立てる。
+// 選ぶ係にわたす指示書を、memory/ の正本から組み立てる。
 //
 // 書き手にわたすプロンプト（src/build.mjs）とは役割が違う。
-// あちらは「この題材でどう書くか」、こちらは「今日は何を題材にするか」。
+// あちらは「この題材でどう書くか」、こちらは「集めた候補のどれを今日の題材にするか」。
 // 軸・関門・シグナル・ノイズ・重複禁止は同じ正本から引いているので、二重管理にならない。
+//
+// 候補集めは src/harvest.mjs が先に済ませている（鍵の要らない公開の口だけ）。
+// ここに来るのは「もう手元にある候補の一覧」で、選ぶ係は自分で検索はしない。
 
 import { readFileSync } from 'node:fs'
 import { join, dirname } from 'node:path'
@@ -30,36 +33,67 @@ function body(md) {
     .trim()
 }
 
-/** 探索役に渡す system 指示。毎日同じ文字列になるようにして、キャッシュに乗せる */
-export function searchSystem() {
+/** 選ぶ係に渡す system 指示。毎日同じ文字列になるようにしてある */
+export function judgeSystem() {
   const canon = MEM('canon.md')
   const win = MEM('winning-patterns.md')
-  const sources = MEM('sources.md')
   const forbidden = MEM('forbidden.md')
 
   return [
-    'あなたは、ブログの題材を探す係です。記事は書きません。探して、確かめて、今日の題材を決めるところまでが仕事です。',
+    'あなたは、ブログの題材を選ぶ係です。記事は書きません。渡された候補の一覧から、今日の題材を決めるところまでが仕事です。',
     `【軸。意識するのはこれだけ】\n${section(canon, '軸。意識するのはこれだけ')}`,
     `【採否の関門。ここが埋まらない候補は落とす】\n${section(canon, '書く前に必ず埋める一文。ここが関門')}`,
     `【必ず入れるシグナル5つ。候補がこれに当たるかで絞る】\n${section(canon, '必ず入れるシグナル5つ')}`,
     `【採用理由にしないノイズ6つ。これしか無い候補は落とす】\n${section(canon, '採用理由にもタイトルの主役にもしないノイズ6つ')}`,
-    `【候補の絞り方。この順で落とす】\n${section(canon, '候補の絞り方')}`,
     `【いちばん強い型】\n${section(win, 'いちばん強い型')}`,
-    `【ソースの網。ここを回る】\n${body(sources)}`,
     `【永久禁止と安全条件】\n${body(forbidden)}`,
     [
-      '【探し方の決まり】',
-      '- web_search を惜しまず使う。ひとつのソースだけで決めない。最低3つ突き合わせて、本物か・どこが誇張されているかを見極める。',
-      '- 一次情報を優先する。公式ブログ、モデルカード、リポジトリ、論文。まとめ記事だけで決めない。',
-      '- 実在を確かめる。名前・数字・日付・URLを、自分が開いたページから取る。思い出しで書かない。',
-      '- 見つからない枠があるなら、無理に埋めない。弱い題材を1つ混ぜるより、その枠は空にして理由を書く方がいい。',
-      '- 古い話を今日の話として出さない。目新しさだけで採らないが、すでに行き渡った話も採らない。'
+      '【守ること】',
+      '- 候補一覧の外から題材を持ってこない。あなたは検索できません。一覧にあるものだけで決めます。',
+      '- URLは一覧に書いてあるものをそのまま写す。組み立てない、思い出さない。写せないなら、その候補は使わない。',
+      '- 本文が付いている候補は、そこに実際に書いてあることだけを根拠にする。見出しから想像で補わない。',
+      '- 数字・日付・モデル名は、一覧か本文にあるものだけ。無いなら書かない。',
+      '- 迷ったら落とす。弱いものを1つ混ぜるより、その枠を空にする方がいい。',
+      '- 返事はJSONだけ。説明も前置きも付けない。'
     ].join('\n')
   ].join('\n\n')
 }
 
-/** その日ぶんの指示。枠・角度・重複禁止がここに入る */
-export function searchTask(dateStr) {
+/** 候補を1行ずつ並べる。番号で選ばせるので、番号は1始まりで固定 */
+function listCandidates(items, { withText = false } = {}) {
+  return items
+    .map((c, i) => {
+      const head = `${i + 1}. [${c.source}] ${c.title}`
+      const lines = [head, `   URL: ${c.url}`]
+      if (c.score) lines.push(`   反応: ${c.score}`)
+      if (c.summary) lines.push(`   概要: ${c.summary}`)
+      if (withText && c.excerpt) lines.push(`   本文（読めた分）: ${c.excerpt}`)
+      else if (withText) lines.push('   本文: 読めなかった。見出しと概要だけで判断すること')
+      return lines.join('\n')
+    })
+    .join('\n\n')
+}
+
+/** 1段目。見出しを見て、軸に合いそうなものだけ残す */
+export function shortlistTask(dateStr, candidates, keepN) {
+  return [
+    `今日は ${dateStr}（マレーシア時間）。下は、今朝の時点で集まった候補です。`,
+    '',
+    `この中から、軸に合いそうなものを最大${keepN}件まで残してください。ここではまだ絞りきらなくていい。`,
+    '「読者が越えられる制約が1つ見えそうか」だけで見ます。見えないもの、ノイズ6つしか無いものを落としてください。',
+    '',
+    '同じ話題が複数ある場合は、いちばん一次情報に近いものを1つだけ残してください。',
+    '',
+    listCandidates(candidates),
+    '',
+    '返事はこの形のJSONだけ:',
+    '{"keep": [番号, 番号, ...]}',
+    '番号は上の一覧のものをそのまま使ってください。'
+  ].join('\n')
+}
+
+/** 2段目。本文つきの候補を、関門とシグナルで見て5枠に配る */
+export function decideTask(dateStr, candidates) {
   const exclusions = MEM('exclusions.md')
   const { slots, judgement, dealt } = planDay(dateStr)
 
@@ -76,17 +110,18 @@ export function searchTask(dateStr) {
   })
 
   return [
-    `今日は ${dateStr}（マレーシア時間）。下の5枠それぞれに、題材を1つずつ決めてください。`,
+    `今日は ${dateStr}（マレーシア時間）。1段目を通った候補を、本文つきで並べます。`,
+    '',
+    '下の5枠それぞれに、この中から題材を1つずつ当ててください。',
     '',
     '進め方:',
-    '1. まず広く探す。枠のことは一旦忘れて、軸に合う候補を50個ほど集める。',
-    '2. 関門の一文が埋まりそうなものだけ10個ほどに落とす。',
-    '3. シグナル5つで見て、ノイズ6つしか無いものを捨てる。',
-    '4. 残ったものを、角度がいちばん合う枠に当てる。5枠ぶん、互いに重ならないように配る。',
-    '5. 各枠について、関門の一文を実際に埋める。埋まらなければその枠は空にする。',
+    '1. 各候補について、関門の一文が埋まるかを見る。埋まらないものは落とす。',
+    '2. 残ったものをシグナル5つで見る。ノイズ6つしか無いものを落とす。',
+    '3. 残ったものを、角度がいちばん合う枠に当てる。5枠ぶん、互いに重ならないように配る。',
+    '4. 埋まらない枠は、無理に埋めない。found を false にして理由を書く。',
     '',
-    '枠ごとの角度は下のとおり。角度は「探す切り口」であって、題材そのものではありません。',
-    'その角度で探して合うものが無ければ、角度を外してもかまいません。関門の一文が埋まることだけは必ず守ってください。',
+    '角度は「探す切り口」であって、題材そのものではありません。',
+    'その角度に合う候補が無ければ、角度を外してもかまいません。関門の一文が埋まることだけは必ず守ってください。',
     '',
     slotLines.join('\n\n'),
     '',
@@ -96,72 +131,36 @@ export function searchTask(dateStr) {
     '【過去との重複禁止】',
     '下はすでに書いた題材の家族です。ここに当たるものは選ばないでください。名前を変えただけの量産も同じ扱いです。迷ったら選ばない。',
     '',
-    body(exclusions)
+    body(exclusions),
+    '',
+    '【候補】',
+    '',
+    listCandidates(candidates, { withText: true }),
+    '',
+    '返事はこの形のJSONだけ。説明も前置きも付けない:',
+    JSON.stringify(
+      {
+        slots: [
+          {
+            slotId: '07',
+            found: true,
+            title: '題材の名前。モデル名・道具名・変化の名前',
+            whatChanged: '何がどう変わったのか。2〜4文。読者のできることに寄せて書く',
+            gate: 'これまで【制約】で【できなかったこと】が、【新しい変化】によって、【普通の個人の環境】でもできる。その根拠は【確認した事実】。の形で実際に埋めたもの',
+            whyItPasses: 'シグナル5つのどれに当たるか。1〜3文',
+            check: '書き手が自分の環境で測るべきこと。1〜3文',
+            family: '題材の家族を一行で',
+            sources: [{ title: '候補一覧にあった見出し', url: '候補一覧にあったURLをそのまま' }],
+            backups: [{ title: '控えの候補', why: 'なぜ控えとして成立するか。1文' }]
+          },
+          { slotId: '11', found: false, skipReason: '関門の一文が埋まる候補が無かった' }
+        ]
+      },
+      null,
+      1
+    ),
+    '',
+    `slotId は ${slots.map((s) => s.id).join(' / ')} の5つ。5つとも必ず入れてください（found が false でも）。`,
+    'sources のURLは、上の候補一覧に書いてあるものをそのまま写すこと。一覧に無いURLを書いた枠は捨てられます。'
   ].join('\n')
-}
-
-/** 構造化して返させる形 */
-export const TOPIC_SCHEMA = {
-  type: 'object',
-  additionalProperties: false,
-  required: ['searchedCount', 'slots'],
-  properties: {
-    searchedCount: {
-      type: 'integer',
-      description: '最初に目を通した候補のおおよその数'
-    },
-    slots: {
-      type: 'array',
-      description: '枠ごとの結果。題材が決まらなかった枠は found を false にする',
-      items: {
-        type: 'object',
-        additionalProperties: false,
-        required: ['slotId', 'found'],
-        properties: {
-          slotId: { type: 'string', description: '枠のid。07 / 09 / 11 / 14 / 18 のいずれか' },
-          found: { type: 'boolean', description: '題材が決まったか' },
-          skipReason: { type: 'string', description: 'found が false のとき、決まらなかった理由' },
-          title: { type: 'string', description: '題材の名前。モデル名・道具名・変化の名前' },
-          whatChanged: {
-            type: 'string',
-            description: '何がどう変わったのか。2〜4文。読者のできることに寄せて書く'
-          },
-          gate: {
-            type: 'string',
-            description:
-              '関門の一文を実際に埋めたもの。「これまで【制約】で【できなかったこと】が、【新しい変化】によって、【普通の個人の環境】でもできる。その根拠は【確認した事実】。」の形'
-          },
-          whyItPasses: { type: 'string', description: 'シグナル5つのどれに当たるか。1〜3文' },
-          check: { type: 'string', description: '書き手が自分の環境で測るべきこと。1〜3文' },
-          family: { type: 'string', description: '題材の家族を一行で。exclusions.md に足せる形' },
-          sources: {
-            type: 'array',
-            description: '実際に開いて確かめたページ。3つ以上',
-            items: {
-              type: 'object',
-              additionalProperties: false,
-              required: ['title', 'url'],
-              properties: {
-                title: { type: 'string' },
-                url: { type: 'string' }
-              }
-            }
-          },
-          backups: {
-            type: 'array',
-            description: '本命が持たなかったときの控え。1〜2個',
-            items: {
-              type: 'object',
-              additionalProperties: false,
-              required: ['title', 'why'],
-              properties: {
-                title: { type: 'string' },
-                why: { type: 'string', description: 'なぜ控えとして成立するか。1文' }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
 }

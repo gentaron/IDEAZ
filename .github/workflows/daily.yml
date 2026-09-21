@@ -12,6 +12,7 @@ on:
 
 permissions:
   contents: write
+  models: read      # GitHub Models（無料枠）を使う。これで課金口は要らない
 
 concurrency:
   group: daily-formats
@@ -28,10 +29,6 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-          cache: npm
-
-      - name: 依存を入れる
-        run: npm ci
 
       # 今日の題材を探す。ここが本体。
       # 落ちても止めない。題材が無ければ、その日は角度だけ配った5枠になる。
@@ -39,13 +36,16 @@ jobs:
         id: search
         continue-on-error: true
         env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-        run: |
-          if [ -z "$ANTHROPIC_API_KEY" ]; then
-            echo "ANTHROPIC_API_KEY が無い。探索は飛ばす（角度だけの5枠になる）"
-            exit 0
-          fi
-          node scripts/search.mjs ${{ github.event.inputs.date }}
+          # 候補集めは鍵不要。選ぶところは GitHub Models の無料枠を使う。
+          # GITHUB_TOKEN はワークフローが最初から持っているので、登録するものは無い。
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # 無料枠のあるところに乗り換えたいときだけ入れる（無くていい）
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          IDEAZ_LLM_PROVIDER: ${{ vars.IDEAZ_LLM_PROVIDER }}
+          IDEAZ_LLM_MODEL: ${{ vars.IDEAZ_LLM_MODEL }}
+        run: node scripts/search.mjs ${{ github.event.inputs.date }}
 
       - name: 5枠を生成する
         run: node scripts/generate.mjs ${{ github.event.inputs.date }}

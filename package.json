@@ -7,11 +7,9 @@
   "engines": { "node": ">=22" },
   "scripts": {
     "search": "node scripts/search.mjs",
+    "harvest": "node scripts/search.mjs --harvest",
     "generate": "node scripts/generate.mjs",
-    "build": "node scripts/generate.mjs",
-    "dev": "node scripts/generate.mjs && npx --yes http-server docs -p 8080 -c-1"
+    "build": "node scripts/generate.mjs"
   },
-  "dependencies": {
-    "@anthropic-ai/sdk": "^0.127.0"
-  }
+  "dependencies": {}
 }
