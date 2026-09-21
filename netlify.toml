@@ -1,0 +1,71 @@
+# Netlify の設定。publish は docs/、ビルドでその日の5枠を作り直す。
+#
+# データの正本は memory/ とリポジトリにコミット済みの docs/data/。
+# scripts/generate.mjs は日付から決定的に組み立てるので、
+# いつデプロイしても「その時点のマレーシア時間の日付」の5枠が出る。
+
+[build]
+  base    = "."
+  publish = "docs"
+  command = "node scripts/generate.mjs"
+
+[build.environment]
+  NODE_VERSION = "22"
+  TZ = "UTC"
+
+# デプロイプレビューでも同じものを作る
+[context.deploy-preview]
+  command = "node scripts/generate.mjs"
+
+[context.branch-deploy]
+  command = "node scripts/generate.mjs"
+
+# ---- ヘッダ ----
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=(), interest-cohort=()"
+
+# Service Worker は絶対にキャッシュさせない。ここを間違えると更新が届かなくなる
+[[headers]]
+  for = "/sw.js"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+    Service-Worker-Allowed = "/"
+
+[[headers]]
+  for = "/manifest.webmanifest"
+  [headers.values]
+    Content-Type = "application/manifest+json; charset=utf-8"
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# 殻はファイル名にハッシュが付かないので、毎回確かめさせる
+[[headers]]
+  for = "/index.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/app.js"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/styles.css"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# 毎朝入れ替わるので、こちらも都度確かめる
+[[headers]]
+  for = "/data/*"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# アイコンは変わらない
+[[headers]]
+  for = "/icons/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
