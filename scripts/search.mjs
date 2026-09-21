@@ -18,6 +18,7 @@ import { fileURLToPath } from 'node:url'
 import { mytDate, planDay } from '../src/build.mjs'
 import { judgeSystem, shortlistTask, decideTask } from '../src/brief.mjs'
 import { harvest, excerpt } from '../src/harvest.mjs'
+import { loadPublished, buildIndex, filterCandidates, recentTitles } from '../src/published.mjs'
 import { pickProvider, chat, parseJSON } from '../src/llm.mjs'
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..')
@@ -49,7 +50,12 @@ if (dryRun) {
   console.log('\n===== 1段目: 候補をふるいにかける =====')
   console.log(shortlistTask(date, sample, SHORTLIST))
   console.log('\n===== 2段目: 5枠に配る =====')
-  console.log(decideTask(date, [{ ...sample[0], excerpt: '（読めた分の本文）' }]))
+  console.log(
+    decideTask(date, [{ ...sample[0], excerpt: '（読めた分の本文）' }], {
+      published: loadPublished(),
+      titles: recentTitles(loadPublished())
+    })
+  )
   let who = '（使える無料の口が無い）'
   try {
     const p = pickProvider()
@@ -57,7 +63,13 @@ if (dryRun) {
   } catch (e) {
     who = e.message.split('\n')[0]
   }
+  const pub = loadPublished()
+  const { terms: nTerms, cutoff } = buildIndex(pub)
   console.log(`\n(${date} / 相手: ${who} / 直近${HOURS}時間 / 候補${CANDIDATES}件 → ${SHORTLIST}件)`)
+  console.log(
+    `(すでに公開した記事 ${pub.count}本 / 固有名詞 ${nTerms}語で機械的に弾く / ` +
+      `${cutoff}本を超えて出てくる語はありふれ扱い / 最終同期 ${pub.syncedAt || 'まだ'})`
+  )
   console.log('何も叩いていない')
   process.exit(0)
 }
@@ -71,7 +83,43 @@ if (!harvested.length) {
   process.exit(1)
 }
 
-const pool = harvested.slice(0, CANDIDATES)
+/* ---------- すでに書いた題材を機械的に落とす ---------- */
+
+const published = loadPublished()
+
+// アカウントを並べてあるのに1本も取れていない = 同期がまだ or 失敗している。
+// ここで進むと既出を踏みかねないので、進まない。generate は角度だけで組み立てる。
+if (published.accounts.length && !published.titles.length) {
+  console.error(
+    `すでに公開した記事の一覧が空。${published.accounts.join(' / ')} を取れていない。\n` +
+      '先に node scripts/sync-published.mjs を回すこと。' +
+      '既出を踏まないために、ここでは題材を決めない（角度だけの5枠になる）'
+  )
+  process.exit(1)
+}
+
+const { index, cutoff, terms: nTerms } = buildIndex(published)
+const { kept, blocked } = filterCandidates(harvested, index)
+
+console.log(
+  `すでに公開した記事 ${published.count}本（${published.accounts.join(' / ')}）。` +
+    `固有名詞 ${nTerms}語で照合（${cutoff}本を超えて出てくる語はありふれ扱い）`
+)
+if (blocked.length) {
+  console.log(`  既出と当たって落とした: ${blocked.length}件`)
+  for (const b of blocked.slice(0, 8)) {
+    console.log(`    ${b.title}\n      ← 「${b.hit.term}」が既出: ${b.hit.titles[0]}`)
+  }
+  if (blocked.length > 8) console.log(`    （ほか ${blocked.length - 8}件）`)
+}
+console.log(`  → 残り ${kept.length}件`)
+
+if (!kept.length) {
+  console.error('既出を落としたら候補が残らなかった。書き出さない（generate は角度だけで組み立てる）')
+  process.exit(1)
+}
+
+const pool = kept.slice(0, CANDIDATES)
 
 if (harvestOnly) {
   console.log(`\n上位20件:`)
@@ -113,7 +161,12 @@ console.log(`  → ${withText.filter((c) => c.excerpt).length}/${withText.length
 // 2段目。関門とシグナルで見て、5枠に配る
 console.log('2段目: 関門とシグナルで見て、5枠に配る…')
 const raw = parseJSON(
-  await chat(provider, { system, user: decideTask(date, withText), json: true, maxTokens: 12000 })
+  await chat(provider, {
+    system,
+    user: decideTask(date, withText, { published, titles: recentTitles(published) }),
+    json: true,
+    maxTokens: 12000
+  })
 )
 
 /* ---------- 検算して書き出す ---------- */

@@ -93,7 +93,7 @@ export function shortlistTask(dateStr, candidates, keepN) {
 }
 
 /** 2段目。本文つきの候補を、関門とシグナルで見て5枠に配る */
-export function decideTask(dateStr, candidates) {
+export function decideTask(dateStr, candidates, { published = null, titles = [] } = {}) {
   const exclusions = MEM('exclusions.md')
   const { slots, judgement, dealt } = planDay(dateStr)
 
@@ -128,8 +128,18 @@ export function decideTask(dateStr, candidates) {
     '【枠どうしの重複禁止】',
     '5枠が同じ話題・同じモデル・同じ道具・同じ会社の発表に寄らないこと。読む人には5本が別々の話に見える必要があります。',
     '',
-    '【過去との重複禁止】',
-    '下はすでに書いた題材の家族です。ここに当たるものは選ばないでください。名前を変えただけの量産も同じ扱いです。迷ったら選ばない。',
+    '【過去との重複禁止。ここがいちばん固い】',
+    'すでに公開した記事と同じテーマは、絶対に取り上げないでください。',
+    published?.accounts?.length ? `公開先: ${published.accounts.join(' / ')}（${published.count}本）` : '',
+    '同じ題材はもちろん、同じ道具・同じモデルの別バージョン・言い方を変えただけのもの、すべて対象です。',
+    '候補の見出しに出てくる固有名詞は、すでに機械側でも照合して落としてありますが、',
+    '機械で拾えない言い換え（同じ話を別の名前で書いたもの）は、あなたが見て落としてください。',
+    '迷ったら選ばない。その枠を空にする方がいい。',
+    titles.length
+      ? ['', `すでに公開した記事の見出し（新しい順に${titles.length}本）:`, titles.map((t) => `- ${t}`).join('\n')].join('\n')
+      : '',
+    '',
+    '下はすでに書いた題材の家族です。ここに当たるものも選ばないでください。',
     '',
     body(exclusions),
     '',
@@ -162,5 +172,7 @@ export function decideTask(dateStr, candidates) {
     '',
     `slotId は ${slots.map((s) => s.id).join(' / ')} の5つ。5つとも必ず入れてください（found が false でも）。`,
     'sources のURLは、上の候補一覧に書いてあるものをそのまま写すこと。一覧に無いURLを書いた枠は捨てられます。'
-  ].join('\n')
+  ]
+    .filter((line) => line !== '')
+    .join('\n')
 }

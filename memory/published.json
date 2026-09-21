@@ -1,0 +1,10 @@
+{
+  "note": "すでに公開した記事の一覧。ここに載っている題材は二度と取り上げない。scripts/sync-published.mjs が note.com から取ってきて titles を入れ替える。accounts は手で足す。",
+  "accounts": [
+    "note.com/humble_bobcat51",
+    "note.com/gensnotes"
+  ],
+  "syncedAt": null,
+  "count": 0,
+  "titles": []
+}

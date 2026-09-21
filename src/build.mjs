@@ -11,6 +11,16 @@ const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..')
 const MEM = (name) => readFileSync(join(ROOT, 'memory', name), 'utf8')
 const JSONMEM = (name) => JSON.parse(MEM(name))
 
+/** すでに公開した記事。無くても組み立ては続ける */
+function published() {
+  try {
+    const db = JSONMEM('published.json')
+    return { accounts: db.accounts || [], count: db.count || 0 }
+  } catch {
+    return { accounts: [], count: 0 }
+  }
+}
+
 /** マレーシア時間（UTC+8）の YYYY-MM-DD を返す */
 export function mytDate(now = new Date()) {
   const t = new Date(now.getTime() + 8 * 60 * 60 * 1000)
@@ -188,8 +198,23 @@ export function buildDay(dateStr, topics = null) {
     parts.push(`【ちょっとだけ入れるもの】\n${section(voice, 'ちょっとだけ入れるもの')}`)
     parts.push(`【ソースの網】\n${body(sources)}${isJudge ? `\nこの枠で特に効くソース＝${judgement.extraSources}` : ''}`)
     parts.push(`【今日、他の枠が担当している角度。ここと被らせない】\n${others.join('\n')}`)
+    const pub = published()
     parts.push(
-      `【重複の絶対禁止】\n過去に主役にした題材・モデル・道具は二度使わない。名前を変えた量産もしない。同じ日の他の枠が扱ったものも避ける。迷ったら選ばない。\n以下はすでに使った題材の家族。ここに当たるものは選ばない。\n\n${body(exclusions)}`
+      [
+        '【重複の絶対禁止】',
+        '過去に主役にした題材・モデル・道具は二度使わない。名前を変えた量産もしない。同じ日の他の枠が扱ったものも避ける。迷ったら選ばない。',
+        pub.accounts.length
+          ? `すでに公開した記事（${pub.accounts.join(' / ')} の${pub.count}本）と同じテーマは、絶対に取り上げない。\n` +
+            (topic
+              ? '今朝の探索で、見出しの固有名詞による照合は済ませてある。それでも書く前に、自分の過去記事と被っていないか必ず確かめること。'
+              : '題材を探すときは、まず自分の過去記事と被っていないかを確かめること。被るなら別の候補を探す。')
+          : '',
+        '以下はすでに使った題材の家族。ここに当たるものは選ばない。',
+        '',
+        body(exclusions)
+      ]
+        .filter((l) => l !== '')
+        .join('\n')
     )
     parts.push(`【永久禁止と安全条件】\n${body(forbidden)}`)
     parts.push(`【分量】\n${section(voice, '分量')}`)

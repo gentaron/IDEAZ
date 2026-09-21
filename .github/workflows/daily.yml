@@ -30,6 +30,12 @@ jobs:
         with:
           node-version: '22'
 
+      # すでに公開した記事の見出しを取ってくる。既出を二度書かないための一枚目の網。
+      # 取れなければ前の内容が残る。空のままだと次の探索が自分で止まる。
+      - name: 公開済みの記事を同期する
+        continue-on-error: true
+        run: node scripts/sync-published.mjs
+
       # 今日の題材を探す。ここが本体。
       # 落ちても止めない。題材が無ければ、その日は角度だけ配った5枠になる。
       - name: 今日の題材を探す
@@ -54,7 +60,7 @@ jobs:
         run: |
           git config user.name  "ideaz-bot"
           git config user.email "ideaz-bot@users.noreply.github.com"
-          git add docs/data
+          git add docs/data memory/published.json
           if git diff --staged --quiet; then
             echo "変化なし。コミットしない"
           else
