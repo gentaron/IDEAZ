@@ -4,7 +4,4328 @@
     "note.com/humble_bobcat51",
     "note.com/gensnotes"
   ],
-  "syncedAt": null,
-  "count": 0,
-  "titles": []
+  "syncedAt": "2026-09-21T23:48:24.673Z",
+  "count": 720,
+  "titles": [
+    {
+      "title": "高価なGPUなしで50ページの資料を解析。インストール不要のブラウザAIが私の非力なPCで動いた話",
+      "url": "https://note.com/gensnotes/n/na5fd2965cae7",
+      "publishedAt": "2026-09-22T04:41:03+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【Jev実践日誌】100万トークンの資料を食わせて、型崩れしないJSONと正直な確率だけを500ミリ秒で返す。 プログラムが、巨大なAIを手元で使えるようになる…！",
+      "url": "https://note.com/gensnotes/n/n8f17e70ad9f9",
+      "publishedAt": "2026-09-22T04:32:05+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "ブラウザ操作をAIに任せたい。前は1,000人だけ、いまは月20ドルから使えるClaude in Chrome",
+      "url": "https://note.com/gensnotes/n/ne2c5b53835c9",
+      "publishedAt": "2026-09-22T04:23:26+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "AIがファイルを壊しても一瞬で戻る。非力なPCで巨大なエージェントを安心して試せるClineのチェックポイント機能",
+      "url": "https://note.com/gensnotes/n/nd9750a66f949",
+      "publishedAt": "2026-09-22T04:18:51+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "自分の声を学習させなくていい。5秒渡せば14言語で話せるConfucius4-TTS",
+      "url": "https://note.com/gensnotes/n/nf00c62761445",
+      "publishedAt": "2026-09-22T04:15:26+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【JevではなくLaya】文章を一文字も書かないAIに、判断だけ任せる。1GB弱、GPUなしで自分のプログラムに埋まる",
+      "url": "https://note.com/gensnotes/n/n05e541b8d6c0",
+      "publishedAt": "2026-09-22T02:27:20+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "次の暗号資産サイクルは、もう始まっているのかもしれない",
+      "url": "https://note.com/gensnotes/n/n73a0eaea1e04",
+      "publishedAt": "2026-09-22T01:00:56+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【2026年9月版】MacローカルLLM白書：Air 8GB~12GB~16GB~Pro32GBの最適解を探すんだ！徹底比較してみたい",
+      "url": "https://note.com/humble_bobcat51/n/nea5b8e810486",
+      "publishedAt": "2026-09-21T22:52:58+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "trycua/cuaを見ているけど、まだよく分かっていない。でもたぶん面白い",
+      "url": "https://note.com/gensnotes/n/n4cae199bdace",
+      "publishedAt": "2026-09-21T20:09:16+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "「巨大な一つ」が終わるとき。AIとBitcoinに起きている同じ変化",
+      "url": "https://note.com/gensnotes/n/n4bfa9134cc8e",
+      "publishedAt": "2026-09-21T19:34:23+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【個人開発】Jev＋現環境の色々盛ったOpencode＋MuseSpark1.3で開発してみたい【エアホッケーゲームを作ってみよう】",
+      "url": "https://note.com/humble_bobcat51/n/n4af6956fa6bb",
+      "publishedAt": "2026-09-21T19:14:59+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【画像AI】ライセンスで揺れたQwen2.1-Image-2.1：ネイティブ透過（RGBA）と最大10枚参照を備えた「7B DiT統合画像モデル」の実力と注意点",
+      "url": "https://note.com/humble_bobcat51/n/necae72b899f2",
+      "publishedAt": "2026-09-21T17:03:34+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【LLM】Step 5 Preview：600B疎MoEが切り開く「実世界エージェント」の量産時代【4じゃないんかい】",
+      "url": "https://note.com/humble_bobcat51/n/n6937765776b3",
+      "publishedAt": "2026-09-21T15:23:53+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【日記】SURGE Townという配信者サーバーがむっちゃ良かった",
+      "url": "https://note.com/humble_bobcat51/n/n93aaeffaf4d5",
+      "publishedAt": "2026-09-21T12:02:10+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【Jev関連】modernbert-ja-310m-jev ：GPU不要で動く「日本語 System One 採点器」を使って調べたい",
+      "url": "https://note.com/humble_bobcat51/n/na59833119f78",
+      "publishedAt": "2026-09-21T10:50:36+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "薬はもう「物質」ではなく「命令文」になり始めている。2026年のバイオテックを全部つなげて考える",
+      "url": "https://note.com/gensnotes/n/nf70a92ba77b4",
+      "publishedAt": "2026-09-21T02:24:06+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "『これでいい』が『これがいい』になる料理",
+      "url": "https://note.com/gensnotes/n/nfb27ebe00f76",
+      "publishedAt": "2026-09-20T20:18:45+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【個人開発】OpencodeにJevが来たなら、もう開発で使うしか無いでしょう。イラストレーターみたいなツール作らせてみよう。",
+      "url": "https://note.com/humble_bobcat51/n/nd35790c4813e",
+      "publishedAt": "2026-09-20T20:11:06+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "AI音楽が退屈なうちは、まだ少し安全なのかもしれない",
+      "url": "https://note.com/gensnotes/n/n54126b96ecb1",
+      "publishedAt": "2026-09-20T19:48:53+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "165KBのAIに、毎秒1800回の判断をさせた。文章を書かないモデルは、GPUなしのPCで10秒で訓練できる",
+      "url": "https://note.com/gensnotes/n/n267cc66da3aa",
+      "publishedAt": "2026-09-20T19:40:33+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【日記】沢庵を8本分、貰った。人生でこんなにいっぺんに貰ったこと無さすぎて思考が静止",
+      "url": "https://note.com/humble_bobcat51/n/nfc77524f292a",
+      "publishedAt": "2026-09-20T12:44:26+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【動画系はテイカー】AIサービスは、性能より料金表に性格が出る。Giver型とTaker型で考えてみた",
+      "url": "https://note.com/gensnotes/n/n136b2a018faf",
+      "publishedAt": "2026-09-20T12:13:42+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "AIは世界を知っている。でも、「今ここ」を知らない",
+      "url": "https://note.com/gensnotes/n/nf8e32cf11642",
+      "publishedAt": "2026-09-20T11:44:35+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【徹底比較】Jevと類似OSS 8選 — なぜ1パスの意味的ifが爆速なのか？仕組み・精度・選び方を使って調べた所感です【OpenJev、Jevlike、SimpleJev、NanoJev、Cua、kev、modernbert、nimble】※追記：OpencodeでJev無料枠になっとる",
+      "url": "https://note.com/humble_bobcat51/n/nf16b648092fe",
+      "publishedAt": "2026-09-20T10:33:55+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "人生には、もう退職届を出している",
+      "url": "https://note.com/gensnotes/n/n7d2fc6e034f0",
+      "publishedAt": "2026-09-20T01:26:11+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【Jev】AIの本体は、ベクトル空間ではなく「予測できる世界」なのかもしれない",
+      "url": "https://note.com/gensnotes/n/n84288429ed8d",
+      "publishedAt": "2026-09-20T00:04:08+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【5.9GBの衝撃】27B級の本格AIがノートPCで爆速動作！超圧縮モデル「Bonsai 2 27B」が革命的な理由",
+      "url": "https://note.com/humble_bobcat51/n/nf363fd7ae361",
+      "publishedAt": "2026-09-19T18:50:54+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【個人開発/失敗例】やり方を変えてJevっぽいツールを作り直そう。【NanoJev/Needle3/Simple Jev/ModernBERT】",
+      "url": "https://note.com/humble_bobcat51/n/n1b068e1ee57f",
+      "publishedAt": "2026-09-19T14:08:39+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【個人開発】Jevっぽい自作ツールは効果あるのかな？画面録画ツールを作ってもらおう【全工程でスクショしてみよう】",
+      "url": "https://note.com/humble_bobcat51/n/nb39d18611196",
+      "publishedAt": "2026-09-19T10:36:17+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【8MBの衝撃】会話を捨てて「機械の操作」に全振りした超軽量AI「Needle 3」はJevに至るのか？",
+      "url": "https://note.com/humble_bobcat51/n/n8a7524874d3b",
+      "publishedAt": "2026-09-19T09:40:02+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "Jevに登録して無料5ドル分で足掻いてみたお話。自分専用のJevっぽいツールも作ってみて満足気味です",
+      "url": "https://note.com/humble_bobcat51/n/na4b5c7b9f029",
+      "publishedAt": "2026-09-18T19:01:08+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "「体験」と書けば、労働は労働じゃなくなるのか",
+      "url": "https://note.com/gensnotes/n/n031fc2b7e60a",
+      "publishedAt": "2026-09-18T14:04:54+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【OpenJev＆Jevlike】Jevの発表当日からOSSで再現しようとする動き。新しい形のモデルをどう使っていくのかな？",
+      "url": "https://note.com/humble_bobcat51/n/n98552741fa2a",
+      "publishedAt": "2026-09-18T12:19:47+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【睡眠】欲望には、たぶん「助走」がある",
+      "url": "https://note.com/gensnotes/n/nb922e6828e34",
+      "publishedAt": "2026-09-18T01:24:43+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "政治の話をしない理由は、たぶん人間の認知にある",
+      "url": "https://note.com/gensnotes/n/ne68ba07ac1df",
+      "publishedAt": "2026-09-17T23:40:37+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【バイオテック革命】オミクスが来ている。人体を全部データにする時代が、もう始まっている",
+      "url": "https://note.com/gensnotes/n/nf613999244e8",
+      "publishedAt": "2026-09-17T22:41:57+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "人生、結局「食べる・寝る・歩く」に戻ってくる",
+      "url": "https://note.com/gensnotes/n/n38af14699785",
+      "publishedAt": "2026-09-17T21:21:44+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【アメリカだけか？】あと一発で、社会から落ちる人たち",
+      "url": "https://note.com/gensnotes/n/n1680ec5e9e41",
+      "publishedAt": "2026-09-17T20:35:23+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "アメリカは崩壊していない。でも、生活の底が抜けている。",
+      "url": "https://note.com/gensnotes/n/n9a6b0af1c905",
+      "publishedAt": "2026-09-17T20:19:05+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【個人開発】UnionAlphaで開発パート2。画像編集と出力形式変換ツールを作ってみよう。",
+      "url": "https://note.com/humble_bobcat51/n/nf59fbfd58afc",
+      "publishedAt": "2026-09-17T19:37:49+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【KOI Thé】無糖にすると、ドリンクチェーンの違いが見えてくる",
+      "url": "https://note.com/gensnotes/n/ncdb8701fe45c",
+      "publishedAt": "2026-09-17T19:33:19+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【偏見？】タトゥーで頭の良さはわからない。でも、人は見た目から勝手に物語を作る",
+      "url": "https://note.com/gensnotes/n/n8117e7992e5f",
+      "publishedAt": "2026-09-17T19:00:02+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "9月・10月の国際親善試合に臨むサッカー日本代表メンバー31人発表！熊坂と齋藤俊輔はむっちゃ嬉しいっ",
+      "url": "https://note.com/humble_bobcat51/n/ne3438f4d52de",
+      "publishedAt": "2026-09-17T18:55:04+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【Duo、57万円】Android使いが思ってるiPhoneユーザーへの疑問",
+      "url": "https://note.com/gensnotes/n/n0df2a2fdc005",
+      "publishedAt": "2026-09-17T17:25:29+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "ブラックホールみたいな問題について",
+      "url": "https://note.com/gensnotes/n/ncd79ace59437",
+      "publishedAt": "2026-09-17T14:54:12+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "うちのノートPCより、たぶんスマホの方が速い。昨日から、いつものAIモデルがそのままスマホのNPUに載るようになった",
+      "url": "https://note.com/gensnotes/n/n3855c0a4abdf",
+      "publishedAt": "2026-09-17T14:37:30+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "AIに「ネットで調べて」が通らない理由、1.4秒で分かった。うちで開いてた入口は16個中3個だけ",
+      "url": "https://note.com/gensnotes/n/nc4d8b1e90873",
+      "publishedAt": "2026-09-17T14:30:09+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【衝撃】9Bなのに30B超え？ローカルで動くコーディングLLM「OxCoder-9B」が実務レベルでヤバすぎる",
+      "url": "https://note.com/humble_bobcat51/n/n3ca1e257e213",
+      "publishedAt": "2026-09-17T12:29:08+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "文章生成を捨てたAI「Jev」とは？ChatGPTの生みの親が仕掛ける「ソフトウェア専用の知能」がヤバすぎる",
+      "url": "https://note.com/humble_bobcat51/n/n738afa099309",
+      "publishedAt": "2026-09-17T08:32:59+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "AIに送る前に、手元で7割削れた。GPUなしのノートPCでできる、無料枠の伸ばし方",
+      "url": "https://note.com/gensnotes/n/n6b0bf9d7f1e7",
+      "publishedAt": "2026-09-17T04:06:43+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【エロサイト】Stripchatは、なぜChaturbateを追い抜いたのか",
+      "url": "https://note.com/gensnotes/n/n7b489ef79784",
+      "publishedAt": "2026-09-17T03:38:36+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "Opencode無料枠Union Alphaで遊ぼう。会計ツール＆シフト管理ツールを作成してみる",
+      "url": "https://note.com/humble_bobcat51/n/n777180b31e96",
+      "publishedAt": "2026-09-17T00:33:43+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "数学オリンピックを75%解く7Bが、訓練データごとまるごと無料。なのに公式の推論コードにはKVキャッシュが1つも入っていなかった",
+      "url": "https://note.com/gensnotes/n/na0e1a6352cb8",
+      "publishedAt": "2026-09-16T22:08:18+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "35BのMoEを3GB未満で喋らせるedge0、からくりを読んでみた",
+      "url": "https://note.com/gensnotes/n/n3049a6eda61c",
+      "publishedAt": "2026-09-16T21:59:30+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "スマホしかない人のほうが、先に触れるのかもしれない。346個のAIが電波なしで動くのに、同じ仕組みは私のパソコンでは1行も動かなかった",
+      "url": "https://note.com/gensnotes/n/n16ca85e5f611",
+      "publishedAt": "2026-09-16T21:55:45+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "入らないモデルを流し込むと1トークンに42秒かかる。同じ4GBのカードで175倍速くしたのは、ストリーミングじゃなかった",
+      "url": "https://note.com/gensnotes/n/n8c8b32e3578d",
+      "publishedAt": "2026-09-16T21:54:24+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "議事録をAIにまとめさせると出典が消える。依存ライブラリ0本・GPUなしで引用付きにできたのに、カタカナで質問すると1件も返ってこない",
+      "url": "https://note.com/gensnotes/n/n66ffa5d08c0b",
+      "publishedAt": "2026-09-16T21:39:26+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【個人開発日記】虚業や趣味としてのバイブコーディングから抜け出したい。",
+      "url": "https://note.com/humble_bobcat51/n/n02accda047b7",
+      "publishedAt": "2026-09-16T18:32:24+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "人間はもうAIに負けてる。だから、別に勝たなくていい",
+      "url": "https://note.com/gensnotes/n/n5e110ec84a68",
+      "publishedAt": "2026-09-16T17:52:56+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "学習にはGPUが要ると思ってた。1000層のネットワークが、うちの2コアCPUで6分だった",
+      "url": "https://note.com/gensnotes/n/n18515dd921b6",
+      "publishedAt": "2026-09-16T15:31:08+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "GPUより速いCPU推論の正体は、先に確保する92GBだった。KVの常識を捨てたeLLMを非力な箱で追いかけてみた",
+      "url": "https://note.com/gensnotes/n/n98ec2db807fb",
+      "publishedAt": "2026-09-16T15:27:28+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【タルムードと因果】何も起きてない時間に、たぶん全部が動いている",
+      "url": "https://note.com/gensnotes/n/n30cc57e4a3d4",
+      "publishedAt": "2026-09-16T15:22:26+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【日記】人それぞれでいいけど、昔の野菜よりも甘く育った現代野菜を無理に甘く味付けして食べたくない。",
+      "url": "https://note.com/humble_bobcat51/n/n8d06f60587f9",
+      "publishedAt": "2026-09-16T12:49:10+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "静かに置かれた744Bの夜明け —— 上海AI Lab「Atria Dawn Preview」を徹底調査－無料枠無かったぁ",
+      "url": "https://note.com/humble_bobcat51/n/n383d9120ae39",
+      "publishedAt": "2026-09-16T09:58:04+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【Marigold V2】写真の奥行きを測るのに40回計算していたのが、1回で終わるようになった。速くしたのに髪の毛が消えないのは何を捨てたから？",
+      "url": "https://note.com/gensnotes/n/n9bd0d3c9b8c6",
+      "publishedAt": "2026-09-16T02:39:43+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "私はSNSをほとんどやっていません",
+      "url": "https://note.com/gensnotes/n/nc8a8acd7d772",
+      "publishedAt": "2026-09-16T00:49:05+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "紙をテキストにするのにGPUもPythonも要らない。実行ファイル1本で3BのOCRが動くのに、日本語だと数字がくっつく",
+      "url": "https://note.com/gensnotes/n/n4ad5ee6940b7",
+      "publishedAt": "2026-09-16T00:35:08+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【サッカー】9月28日の日本代表戦が近付いてきた。W杯以来の試合はどうなるんかな？",
+      "url": "https://note.com/humble_bobcat51/n/nf5eedcacd440",
+      "publishedAt": "2026-09-15T17:29:47+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "GPUはNVIDIA一択だと思ってた。ゲーム用のRadeonで、Windowsのまま学習が1周回った。CUDAの関数672個のうち実際に動いていたのは141個で、間に挟まっているのは33MBのZLUDAだけ",
+      "url": "https://note.com/gensnotes/n/ne60ffceeb75a",
+      "publishedAt": "2026-09-15T13:29:49+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【日記】トマト味になったモバイルモニターとメインPC復活",
+      "url": "https://note.com/humble_bobcat51/n/n871a86eed3a1",
+      "publishedAt": "2026-09-15T12:18:45+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "「AIが嘘をつく」「API代が溶ける」に終止符を。次世代AI開発の司令塔「oh-my-hermes」が凄すぎる",
+      "url": "https://note.com/humble_bobcat51/n/n9cefe97ef9c5",
+      "publishedAt": "2026-09-15T09:52:20+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "8Bのはずが35GBあった。VRAMは5GBまで下がるのに普通のメモリを42GB要求してくる、SenseNova-U1.5はまだ私の机に降りてこない",
+      "url": "https://note.com/gensnotes/n/ndb97057175d0",
+      "publishedAt": "2026-09-15T00:08:44+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【個人開発日記】メインPCが治る前にいったん開発する物事を整理しておきたい",
+      "url": "https://note.com/humble_bobcat51/n/n7259a762c1a2",
+      "publishedAt": "2026-09-14T20:47:22+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "Cosmological Bootstrap、宇宙全部を解く理論かと思ったら意外と担当範囲が狭かった",
+      "url": "https://note.com/gensnotes/n/n34426e7f20a7",
+      "publishedAt": "2026-09-14T18:15:36+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【何もない…】ポリトープで世界を全部計算できるなら、ひもなんていらないんじゃないか",
+      "url": "https://note.com/gensnotes/n/naf2b992df6b1",
+      "publishedAt": "2026-09-14T17:15:14+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【復習】時空を使わずに宇宙を計算できるなら、時間って何なんだろう",
+      "url": "https://note.com/gensnotes/n/n3dea7fc6a638",
+      "publishedAt": "2026-09-14T16:09:14+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "LLMって、全部を同じように軽くしなくてよかったんだ",
+      "url": "https://note.com/gensnotes/n/n7d8c3d395bf3",
+      "publishedAt": "2026-09-14T14:52:38+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【日記】金曜・土曜はわたしにとっては創作時間や勉強時間。",
+      "url": "https://note.com/humble_bobcat51/n/nbb63438d3bba",
+      "publishedAt": "2026-09-14T12:42:14+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "「NEXTPlaywright？」自らJavaScriptを書き自己進化するAIエージェント『Browser Use Pi』が凄まじい【TypeScript/実装コード付き】",
+      "url": "https://note.com/humble_bobcat51/n/n7ec8c4777872",
+      "publishedAt": "2026-09-14T07:55:00+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【コラム】Suno V6で曲を作ってみたのですが…",
+      "url": "https://note.com/gensnotes/n/nd2ea396351dc",
+      "publishedAt": "2026-09-14T05:26:09+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "意味があることより、自分にわかることをやりたい",
+      "url": "https://note.com/gensnotes/n/n3dbc05aee68e",
+      "publishedAt": "2026-09-14T01:39:59+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【コラム】最近、食べるものが完全に決まってきた",
+      "url": "https://note.com/gensnotes/n/nf307e91da919",
+      "publishedAt": "2026-09-14T00:35:48+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "GoogleAIStudioでGemini3.8Flashを使い倒す毎日。API不要は嬉しいけどGASの発想が産まれない自分が情けなくもなる【GASが使い慣れない】",
+      "url": "https://note.com/humble_bobcat51/n/n251cb95279ee",
+      "publishedAt": "2026-09-13T20:23:17+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【最新LLM】101万トークン＆コード精度98%のお馬さん。30Bモデルを9Bがボコボコにした？自己進化型AIの新星「NeoHorse-1」がヤバすぎる",
+      "url": "https://note.com/humble_bobcat51/n/nd926976bcfcb",
+      "publishedAt": "2026-09-13T17:59:52+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "動画AIの想像力を、そのままロボットの手にする話。OpenWAMっていう研究まるごと一式を覗いてきた",
+      "url": "https://note.com/gensnotes/n/n8c23255efc52",
+      "publishedAt": "2026-09-13T13:08:55+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "DeepSeekがチャットテンプレートをやめた話",
+      "url": "https://note.com/gensnotes/n/n2efff3c03887",
+      "publishedAt": "2026-09-13T12:54:43+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【日記】作りたいツールと使うツールって違うんだなぁという着地点",
+      "url": "https://note.com/humble_bobcat51/n/nfd366e5a8341",
+      "publishedAt": "2026-09-13T12:18:24+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【お試し中】npm install不要、React不要、WebGPUで100万行が爆速で動く。依存ゼロのスプレッドシート「Gridline」にウェブ開発のロマンを見た",
+      "url": "https://note.com/humble_bobcat51/n/nec28ded953f2",
+      "publishedAt": "2026-09-13T09:54:12+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "AI開発は「チャット」から「チーム統率」へ。GPT-6時代の最強指揮官『Astra Advisor』完全解説",
+      "url": "https://note.com/humble_bobcat51/n/nb857451e62ef",
+      "publishedAt": "2026-09-13T08:40:10+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【1000倍の市場へ】AIはソフトウェアを変えるのではなく、仕事そのものを製品にするのか",
+      "url": "https://note.com/gensnotes/n/n93878408de18",
+      "publishedAt": "2026-09-12T23:35:10+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "壊れた酵素を速くする薬 ミトコンドリアのDNAを「本数」で治すという賭け",
+      "url": "https://note.com/gensnotes/n/nee39653a9aac",
+      "publishedAt": "2026-09-12T21:31:46+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "2MBで言語を当てて、11MBで個人情報を消す。18個の小さいモデルを端末に置いていく人たち",
+      "url": "https://note.com/gensnotes/n/n3f9f422e59a8",
+      "publishedAt": "2026-09-12T20:12:29+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "ログのほうが本体、みたいなコーディングエージェントを見てた（Apache Maka）",
+      "url": "https://note.com/gensnotes/n/ne382cb18ed1d",
+      "publishedAt": "2026-09-12T20:11:52+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【脱Suno？】先に楽譜を書いてから歌うAI、YuE2-3Bのこと",
+      "url": "https://note.com/gensnotes/n/ncea1f02e40e2",
+      "publishedAt": "2026-09-12T20:10:25+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【衝撃】DeepSeek-V4.1-Flashがヤバすぎる。格安モデルの皮を被った「Pro食い」怪物の正体と、9月14日に起きる激変",
+      "url": "https://note.com/humble_bobcat51/n/n9d12fd1301d5",
+      "publishedAt": "2026-09-12T19:58:26+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "「動画生成AIガチャ」はもう終わり。たった1つのHTMLで映画級アニメーションを書き出す『Bang Motion』の衝撃",
+      "url": "https://note.com/humble_bobcat51/n/nfe039381e5d5",
+      "publishedAt": "2026-09-12T18:58:31+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【日記】個人店は大型スーパーに潰され、大型スーパーはAmazonに客を取られ、Amazonはロボットで配送し始める。結局お仕事が無くなって世界は快適になる方向性。",
+      "url": "https://note.com/humble_bobcat51/n/nb908312bc70f",
+      "publishedAt": "2026-09-12T12:17:18+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "1枚の図解が「プロの手描き解説動画」に化ける。OSS『whiteboard-animator』の衝撃",
+      "url": "https://note.com/humble_bobcat51/n/n54e99f651de1",
+      "publishedAt": "2026-09-12T11:04:37+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "米政府が中国6社を非難した「AI蒸留」声明を調べていくと、任天堂・セガのIP問題と地続きで驚いた",
+      "url": "https://note.com/humble_bobcat51/n/nf6da533a4824",
+      "publishedAt": "2026-09-12T09:23:38+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "楽譜を書いてから歌わせる無料作曲AI「YuE2」が使いやすい――“直せないAI作曲”を終わらせるオープンモデルの衝撃",
+      "url": "https://note.com/humble_bobcat51/n/n977c99a109eb",
+      "publishedAt": "2026-09-12T08:41:33+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【カルバン・クライン】人類、パンツを小さくする方向に進化してきたのかもしれない【見せるブランドへ】",
+      "url": "https://note.com/gensnotes/n/nca04678a9852",
+      "publishedAt": "2026-09-12T04:11:49+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "声の生成・編集・分離をこれ1台で。テンセントの1.5B音声モデル「AuK」が音声AIの常識を覆す理由【MIT商用可】",
+      "url": "https://note.com/humble_bobcat51/n/nb816a9a11350",
+      "publishedAt": "2026-09-11T20:55:38+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "賢くするより無駄を削る。NVIDIAが開発したAIエージェントの劇的節約術「SoL-Pi」が凄すぎる",
+      "url": "https://note.com/humble_bobcat51/n/n7256ef770914",
+      "publishedAt": "2026-09-11T17:18:36+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【GPN-Star】進化の時間を、モデルの中に入れてしまう話",
+      "url": "https://note.com/gensnotes/n/nc100894b9cb1",
+      "publishedAt": "2026-09-11T13:57:31+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【Φ-Bench】AIに「自分を動かしてる土台を速くしてみて」って言うベンチマークが出た話",
+      "url": "https://note.com/gensnotes/n/n2b016cd0d69b",
+      "publishedAt": "2026-09-11T13:54:59+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "Nex-N2.5がずっと気になってる。画面を見て、自分のミスに自分で気づくモデルの話",
+      "url": "https://note.com/gensnotes/n/n7b65410601a4",
+      "publishedAt": "2026-09-11T13:49:42+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【消耗回避】やっぱり、こういう話はタルムードなんだよな",
+      "url": "https://note.com/gensnotes/n/naa7ba43f1da4",
+      "publishedAt": "2026-09-11T12:44:47+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【日記】Claudeの年間Pro課金ですけど、旨味がまったく無くて泣ける",
+      "url": "https://note.com/humble_bobcat51/n/n4e429049d720",
+      "publishedAt": "2026-09-11T12:05:42+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【1.6兆パラメータの怪物】Claude Opus 5をWeb調査で撃破？オープンAIエージェント「Nex-N2.5」三兄弟がヤバすぎるのでリサーチャーとして実際に動かしてみた",
+      "url": "https://note.com/humble_bobcat51/n/n03a5be8d81d9",
+      "publishedAt": "2026-09-11T08:00:35+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【市況 9月11日】株価を見るとき、私は「どこが強いか」より「なぜそこだけ強いのか」が気になる【AI・半導体・エネルギーモメンタム】",
+      "url": "https://note.com/gensnotes/n/n7e37697ff9fb",
+      "publishedAt": "2026-09-11T05:27:10+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【実効金利】日本の金利が上がっても、なぜまだ経済は壊れないのか【日本株】",
+      "url": "https://note.com/gensnotes/n/n8a560dacc2e6",
+      "publishedAt": "2026-09-11T03:39:30+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "金属3Dプリントの品質保証を変える『工程そのものを証拠にする』という発想",
+      "url": "https://note.com/gensnotes/n/n7dadea4b460f",
+      "publishedAt": "2026-09-10T21:59:59+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【微小重力】軌道で抗体の結晶をつくる ― BioOrbit が挑んでいる「粘度の壁」",
+      "url": "https://note.com/gensnotes/n/n46300da9a2f8",
+      "publishedAt": "2026-09-10T21:49:47+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【イラスト】答えを変えないまま速くする、Unoっていう後付けのやり方",
+      "url": "https://note.com/gensnotes/n/n9d0146631eb1",
+      "publishedAt": "2026-09-10T21:45:17+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "AIエージェントに基板を描かせる。copperheadという道具を見てきた",
+      "url": "https://note.com/gensnotes/n/nfd8f2cedfcc0",
+      "publishedAt": "2026-09-10T21:39:22+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "で、Teslaはこれからどうするつもりなんだろう",
+      "url": "https://note.com/gensnotes/n/nfbe483c354b7",
+      "publishedAt": "2026-09-10T20:05:41+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【日記】最近、周囲が国際色豊かでちょっと困惑。良い人は良いし、悪い人は悪いんですけど全体的に倫理観違ってる",
+      "url": "https://note.com/humble_bobcat51/n/neb1093bf6cf7",
+      "publishedAt": "2026-09-10T19:58:05+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "重さわずか1.5GBで8B級を粉砕？ ローカルLLMの常識を破壊する『MiniCPM5-2B』が凄すぎるのでお試ししましたーっ",
+      "url": "https://note.com/humble_bobcat51/n/n7358553d1ecd",
+      "publishedAt": "2026-09-10T19:02:46+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "「LLMはすぐ忘れるし、嘘をつく」に終止符を打つ。次世代AIフレームワーク『Omega』がヤバすぎる理由",
+      "url": "https://note.com/humble_bobcat51/n/ne17d470b49ac",
+      "publishedAt": "2026-09-10T17:35:55+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "道具を増やしたら、エージェントは前にできたことを忘れるらしい",
+      "url": "https://note.com/gensnotes/n/n37bb0aa98749",
+      "publishedAt": "2026-09-10T14:59:22+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【NeoHorse-1】振り分けの記録が、そのまま次の教材になってる",
+      "url": "https://note.com/gensnotes/n/n759dac4cd0a2",
+      "publishedAt": "2026-09-10T14:54:29+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【筆記】昔は、人の字をもっと読んでいた気がする",
+      "url": "https://note.com/gensnotes/n/nc4d67ae9586f",
+      "publishedAt": "2026-09-10T14:38:52+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "「悪い人」だけでは説明できない、犯罪に人が吸い込まれるまでの話",
+      "url": "https://note.com/gensnotes/n/n7c5c177ac169",
+      "publishedAt": "2026-09-10T05:38:31+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "AIがみんな賢くなったら、いったい何が足りなくなるんだろう",
+      "url": "https://note.com/gensnotes/n/nde8099e0d980",
+      "publishedAt": "2026-09-10T00:43:43+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "AIの推論チップで、データをどこに置くかを誰が決めるのか",
+      "url": "https://note.com/gensnotes/n/nee3475d0cdb6",
+      "publishedAt": "2026-09-10T00:25:22+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "訓練できる量子回路は、古典で真似できてしまうのか",
+      "url": "https://note.com/gensnotes/n/n333997044b46",
+      "publishedAt": "2026-09-10T00:09:15+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "シミュレーションの中でだけ速かったデコーダ",
+      "url": "https://note.com/gensnotes/n/n8d20e091cb4c",
+      "publishedAt": "2026-09-10T00:01:45+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "今や、GKがゲームを作る時代なのか？彩艶がアストンヴィラで10番を付ける日も近い。",
+      "url": "https://note.com/humble_bobcat51/n/n5759eecc3e34",
+      "publishedAt": "2026-09-09T20:48:38+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "動いている途中で書き換える——ヒューマノイドの振る舞いを「構造」で押した論文を読む",
+      "url": "https://note.com/gensnotes/n/n09610395e17c",
+      "publishedAt": "2026-09-09T18:49:13+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "AIに持たせた記憶、モデルを乗り換えた瞬間に目減りする。しかも「どの形で持っていたか」で壊れ方がぜんぜん違う",
+      "url": "https://note.com/gensnotes/n/n6abcf10d5af2",
+      "publishedAt": "2026-09-09T18:05:04+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "HTMLを書くと動画になる。HyperFramesの中を覗いてみた",
+      "url": "https://note.com/gensnotes/n/ne669570dc383",
+      "publishedAt": "2026-09-09T17:19:04+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "鍵は渡さないけど、中では好きにしていいよ、という箱",
+      "url": "https://note.com/gensnotes/n/n746940b2dc99",
+      "publishedAt": "2026-09-09T17:16:34+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "家のネット環境がお亡くなりになりました。ルーターなのか、アンテナなのか。",
+      "url": "https://note.com/humble_bobcat51/n/n435f06fbb6f1",
+      "publishedAt": "2026-09-09T09:21:13+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "AIに.mdファイルを読ませまくる世界で、人間はまた作業を発明している",
+      "url": "https://note.com/gensnotes/n/n462b8d9b0047",
+      "publishedAt": "2026-09-09T02:52:16+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "AI時代に、なんか「メロい」って感覚が大事なんじゃないかと思ってる話",
+      "url": "https://note.com/gensnotes/n/n2f466ed73bcb",
+      "publishedAt": "2026-09-09T00:15:33+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【AIボーナス期】問いとアイデアのAI時代？ってのは嘘で、結局やり遂げたもの勝ちじゃん？",
+      "url": "https://note.com/gensnotes/n/n6ef0fc6e4a1d",
+      "publishedAt": "2026-09-08T23:26:53+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "noteのダッシュボードが刷新されていたので、活用する",
+      "url": "https://note.com/gensnotes/n/n11407e74c15c",
+      "publishedAt": "2026-09-08T18:07:56+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【無料】会話が木になるコーディングエージェント、Jugglerの話",
+      "url": "https://note.com/gensnotes/n/ncfe3b105027a",
+      "publishedAt": "2026-09-08T17:44:18+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【アプデしないと大損】動画をインフラとしてコード管理する次世代フレームワーク【HyperFrames】のアプデ内容が面白い",
+      "url": "https://note.com/humble_bobcat51/n/n116af4639948",
+      "publishedAt": "2026-09-08T17:09:44+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "ブラウザでAIを動かす部品が、Hugging Faceで配られはじめた",
+      "url": "https://note.com/gensnotes/n/n0cf759db9596",
+      "publishedAt": "2026-09-08T16:50:18+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【コラム】AI時代に伸びる人、伸びない人",
+      "url": "https://note.com/gensnotes/n/n36e9814c6d5d",
+      "publishedAt": "2026-09-08T16:45:49+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "16人の先生を1人に詰め込んだ2Bモデル、MiniCPM5-2B",
+      "url": "https://note.com/gensnotes/n/nda1923ef09dc",
+      "publishedAt": "2026-09-08T16:35:51+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【物理】散乱振幅の隠れたゼロ点、そして局所性が前提でなくなるかもしれない話",
+      "url": "https://note.com/gensnotes/n/n96fd03af4b7f",
+      "publishedAt": "2026-09-08T16:18:57+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "なんかnoteのダッシュボード変わってるっ？",
+      "url": "https://note.com/humble_bobcat51/n/n9eeef9e76232",
+      "publishedAt": "2026-09-08T14:36:41+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【日記】新作AIを待ちながら、変な空想に囚われる生産性のない週の初め。",
+      "url": "https://note.com/humble_bobcat51/n/neb00727965be",
+      "publishedAt": "2026-09-08T12:18:57+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【個人開発日記】顧客を主人公にするだけでCV・保存率が変わる。ストーリーテリング支援ツールを作った理由【マーケや営業の問題を力技で解決するツールを自作した話】",
+      "url": "https://note.com/humble_bobcat51/n/ne2c890ada8b5",
+      "publishedAt": "2026-09-08T07:02:00+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【ユダヤ】タルムードの逸話を100本ノックした【保存版】",
+      "url": "https://note.com/gensnotes/n/n9f633160be94",
+      "publishedAt": "2026-09-08T06:08:16+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "意味のわからない言葉を大量に浴びるのって、実は結構大事？",
+      "url": "https://note.com/gensnotes/n/n3b4147ff3ae5",
+      "publishedAt": "2026-09-08T05:34:36+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "砂漠に二人、水筒はひとつ——タルムードが畳まなかった議論",
+      "url": "https://note.com/gensnotes/n/n3e3b28c81b43",
+      "publishedAt": "2026-09-07T23:51:14+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【神ツール】Claude CodeやCursorに「動画編集の腕」を授ける『ffmpeg-skill』が凄すぎる。もう謎のコマンドエラーや音ズレに泣かされない",
+      "url": "https://note.com/humble_bobcat51/n/n8212e4764592",
+      "publishedAt": "2026-09-07T20:05:23+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "文字に戻さないで渡す、という圧縮のしかた",
+      "url": "https://note.com/gensnotes/n/n73dd83249db2",
+      "publishedAt": "2026-09-07T19:53:02+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【日記】原曲を知らないAI編曲を気に入って、原曲を聞くと違和感しかない。それを両親世代と話して、「魂」を感じないと言われる",
+      "url": "https://note.com/humble_bobcat51/n/n428a4d69c9d1",
+      "publishedAt": "2026-09-07T17:11:25+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "MathKernel、答えより「その答えがどこまで確かか」を持ち歩く数学エンジン",
+      "url": "https://note.com/gensnotes/n/n88d59fb7dc5e",
+      "publishedAt": "2026-09-07T12:51:35+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "「賢くなった」じゃなくて「減った」が売り——Muse Spark 1.3",
+      "url": "https://note.com/gensnotes/n/n23bfe804a013",
+      "publishedAt": "2026-09-07T12:24:44+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "エージェントを全部おなじ蛇口から出す箱、HarnessRouter",
+      "url": "https://note.com/gensnotes/n/nbe8b52880708",
+      "publishedAt": "2026-09-07T12:20:11+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【資料作成】Mermaidの「あのダサさ」から完全に卒業するらしい。AIで雑誌クオリティの図解を一瞬で作る「Diagram Design」を使った感じが結構良いぞ",
+      "url": "https://note.com/humble_bobcat51/n/ne6b5e5e7490e",
+      "publishedAt": "2026-09-07T12:12:28+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "AGI時代、人間は何を学ぶべきなのか",
+      "url": "https://note.com/gensnotes/n/n520d688c5076",
+      "publishedAt": "2026-09-07T06:22:38+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "どうなってほしいかを一行書く。コーディングAIへの頼み方を分解して測った話",
+      "url": "https://note.com/gensnotes/n/n179352c53f51",
+      "publishedAt": "2026-09-07T01:50:49+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "「勝手に学ぶ人」と「期待されて学ぶ人」の差って、学ぶ力じゃなくて欲望の向きの差なんじゃないか",
+      "url": "https://note.com/gensnotes/n/n86c75ae6e041",
+      "publishedAt": "2026-09-07T01:46:57+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "他人のスキルを入れる前に点検してくれる、NVIDIAのSkillSpectorを動かしてみた",
+      "url": "https://note.com/gensnotes/n/n31dab6a1b0ec",
+      "publishedAt": "2026-09-07T01:25:38+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "AIのパラメータ数を見ていたら、2200年の世界まで考えてしまった話",
+      "url": "https://note.com/gensnotes/n/n0eca3526de88",
+      "publishedAt": "2026-09-06T21:55:41+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【日記】今日だけで600記事のnote読んでる。完全に中毒だ、まずいな",
+      "url": "https://note.com/humble_bobcat51/n/nc118be7751d5",
+      "publishedAt": "2026-09-06T20:24:01+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "StemDeck ― 曲を6本にばらすAIが、ノートパソコンの中だけで完結してしまった",
+      "url": "https://note.com/gensnotes/n/n6137f9dedeab",
+      "publishedAt": "2026-09-06T17:17:00+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "4Bのモデルに100万トークン入るらしい。Spark-X2.5-4Bが私のノートでどこまで動くか調べた",
+      "url": "https://note.com/gensnotes/n/n770c2702c804",
+      "publishedAt": "2026-09-06T14:06:00+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【個人開発】マーケティングを「点」でやって消耗していませんか？一次情報から逆算する戦略・GEO・投資配分の実践ガイドを作ってみよう",
+      "url": "https://note.com/humble_bobcat51/n/n316985ee483e",
+      "publishedAt": "2026-09-06T13:06:49+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "最近、コスモヘドロンのような発想について考えていると、世界を見る順番そのものが、少しおかしくなってくる",
+      "url": "https://note.com/gensnotes/n/n515d61c4a714",
+      "publishedAt": "2026-09-05T23:56:54+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "たぶん、この話を最後まで聞いてくれる人はほとんどいない",
+      "url": "https://note.com/gensnotes/n/nc1d5945a3c05",
+      "publishedAt": "2026-09-05T20:35:41+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "512Kの衝撃：次世代AIモデル「K2-Horizon-7B」を父のPCにねじ込んで使ってみた。",
+      "url": "https://note.com/humble_bobcat51/n/n4454c6512388",
+      "publishedAt": "2026-09-05T20:05:25+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "説明文をコンパイルして、手元で動く22MBの関数にする。ProgramAsWeightsが登場",
+      "url": "https://note.com/gensnotes/n/n37d5c8bf42d1",
+      "publishedAt": "2026-09-05T17:32:58+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【アンチ・テッキー】人新世を考える一幕",
+      "url": "https://note.com/gensnotes/n/n52183419897c",
+      "publishedAt": "2026-09-05T17:26:01+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【日記…なのか？】勝手に学ぶ人と期待されて学ぶ人の差が埋まらないらしいので、理由を調べてみた",
+      "url": "https://note.com/humble_bobcat51/n/n55d05c6fe699",
+      "publishedAt": "2026-09-05T14:46:00+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【トカマク】核融合の歴史をラフに振り返ってみる",
+      "url": "https://note.com/gensnotes/n/n6c0d3aa96d86",
+      "publishedAt": "2026-09-05T14:02:54+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "文章じゃなくて「数字の続き」を当てにくるAI、TimesFM 3がリリース",
+      "url": "https://note.com/gensnotes/n/n2e848ebc41c2",
+      "publishedAt": "2026-09-05T14:02:06+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "ミオスタチンの形は誰でも無料で見られる。タンパク質設計の道具から出てきたアイデア20選",
+      "url": "https://note.com/gensnotes/n/n058ad319d3b5",
+      "publishedAt": "2026-09-05T14:01:23+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "Anthropicが「AIに買い物させるお店」を丸ごと置いていった——commerce-agentsを動かしてみた",
+      "url": "https://note.com/gensnotes/n/nd98dc2b2e9be",
+      "publishedAt": "2026-09-05T13:11:13+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "AIエージェントの過去ログを検索できる記憶にする「funes」。引き継ぎメモより8倍安いらしい",
+      "url": "https://note.com/gensnotes/n/n889436242516",
+      "publishedAt": "2026-09-05T12:55:45+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【今週LLM出過ぎ】現状のフロンティア級LLMの比較表がみたい。なんせ今週ごっちゃごちゃになったからねっ【Fable5.1、GPT6、MuseSpark1.3、Gemini3.8Flash、GLM5.3Flash、Qwen3.8‐MAX-0901、Grok4.6、DeepseekV4Pro、KimiK3】",
+      "url": "https://note.com/humble_bobcat51/n/nf082b852a96a",
+      "publishedAt": "2026-09-05T12:04:36+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【一日リサーチ】GPT-6 Astraを失敗せず使い倒したいので 現状のベストプラクティスを整理して待ち構える",
+      "url": "https://note.com/humble_bobcat51/n/n5c04cc701cab",
+      "publishedAt": "2026-09-05T07:32:40+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "これ、気づかないとAI時代に大損してるかも？ 情報商材を買う人が本当に買っているもの",
+      "url": "https://note.com/gensnotes/n/n0b67664ff24d",
+      "publishedAt": "2026-09-05T05:33:49+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【知の狂乱】OpenAI設立から…AI覇権争いの現在まで",
+      "url": "https://note.com/gensnotes/n/n0f539992c608",
+      "publishedAt": "2026-09-05T02:44:36+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【超簡潔にわかりやすく】「OpenAI」ができるまで",
+      "url": "https://note.com/gensnotes/n/nf369a6ef5559",
+      "publishedAt": "2026-09-05T02:30:57+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【AI開発アイデア】重力波も天気予報の裏側も、全部タダで落ちてる。「公開データ」で世界をハックする22のすごいサイト",
+      "url": "https://note.com/gensnotes/n/n954fa612db94",
+      "publishedAt": "2026-09-05T00:20:22+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "重みもデータもログも出すと言った0.9B K2 Horizonを、GPUなしのノート目線で調べてみた",
+      "url": "https://note.com/gensnotes/n/n783dec188398",
+      "publishedAt": "2026-09-04T23:58:45+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【アイデア】無料で世界をハックする19の「すごいサイト」完全リスト",
+      "url": "https://note.com/gensnotes/n/na1b78348265d",
+      "publishedAt": "2026-09-04T23:53:12+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "家で眠ってるパソコン、全部わたしの手下にできるらしい",
+      "url": "https://note.com/gensnotes/n/nec65b2f6850a",
+      "publishedAt": "2026-09-04T22:33:29+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【個人開発日記】ノートPCで今できる会計ソフトのノウハウ詰め込んでみた。うーん、もうちょい使い勝手よく出来そう。",
+      "url": "https://note.com/humble_bobcat51/n/n935076e16173",
+      "publishedAt": "2026-09-04T20:43:30+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "人間はみんな「余裕」が欲しい",
+      "url": "https://note.com/gensnotes/n/nb2d07fa31e5a",
+      "publishedAt": "2026-09-04T19:16:53+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【面白そう】Claude Commerce Agentsを調べてみた！カート+35%・購入完了+60%の「売れるAI店員」の作り方や設計図を知れておもろい",
+      "url": "https://note.com/humble_bobcat51/n/n9991736aa3ee",
+      "publishedAt": "2026-09-04T19:12:33+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "天才は「壊れかけたサイコロ」を振り切った生存者なのか",
+      "url": "https://note.com/gensnotes/n/n71a59945804c",
+      "publishedAt": "2026-09-04T17:20:55+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【日記】前向きな想像をしたくなったので、お金が湯水のように使える自分が何をするのか考えてみよう",
+      "url": "https://note.com/humble_bobcat51/n/n23f782d8f736",
+      "publishedAt": "2026-09-04T12:13:26+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "3日で3モデル同時到来──Gemini 3.8 Flash × Muse Spark 1.3 × Fable 5.1の使い分けの現状【2026年9月3日版】",
+      "url": "https://note.com/humble_bobcat51/n/n917660c80786",
+      "publishedAt": "2026-09-04T07:35:55+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "一日経ったMuse Spark 1.3のベストプラクティスを知って動きたい！Metaが「過去最大の改善」と豪語する本当の実力【サンプルでインスタ＆Facebook攻略ツールもGitHubに作成】",
+      "url": "https://note.com/humble_bobcat51/n/n86e6418e8ff8",
+      "publishedAt": "2026-09-04T06:50:50+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "Gemini 3.8 Flashを一日リサーチしてベストプラクティスを探りました！6週間で3連発の“働き者モデル”は何がすごいのか",
+      "url": "https://note.com/humble_bobcat51/n/nc79372682d49",
+      "publishedAt": "2026-09-04T06:40:24+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【それ本当に必要？】お金はシンプルだ。だからこそ、人生は定期的に「Verify」しなければならない",
+      "url": "https://note.com/gensnotes/n/nafca974deb62",
+      "publishedAt": "2026-09-03T22:08:15+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【AI個人事業】アイデアで、勝ち目を見抜く",
+      "url": "https://note.com/gensnotes/n/n4e6191cbf4ec",
+      "publishedAt": "2026-09-03T22:03:48+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "資産を貯めるゲームから、未来の可能性を最大化するゲームへ",
+      "url": "https://note.com/gensnotes/n/na74a1387f86d",
+      "publishedAt": "2026-09-03T22:02:00+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【日記】わたしはPythonが出来ないし、ロックを聴かない。それでも恋い焦がれるのはツール開発。",
+      "url": "https://note.com/humble_bobcat51/n/n79619cc8d96e",
+      "publishedAt": "2026-09-03T18:17:33+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【一日経ってからのリサーチ】Qwen3.8-Max-0902のベストプラクティス調べて使ってみた！2.4兆パラメータのまま「8ベンチ全上げ・CodeArena世界1位」の無料アプデは何がすごいのか",
+      "url": "https://note.com/humble_bobcat51/n/n8c60097fa7ab",
+      "publishedAt": "2026-09-03T12:15:49+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "一日たったのでClaude Fable 5.1 ベストプラクティスを知って使っていきたい — 「単価据え置きで請求書が半額」になる理由とプロンプト・移行の全技術",
+      "url": "https://note.com/humble_bobcat51/n/nf84e4330077e",
+      "publishedAt": "2026-09-03T07:38:46+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【個人開発日記】GLM5.3Flash凄いけど、メモリ消費えげつないよVerdent。作るものを凄く迷う。",
+      "url": "https://note.com/humble_bobcat51/n/n74288444f8e6",
+      "publishedAt": "2026-09-02T20:35:44+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "8月31日にアプデしたマルチモデル対応のターミナルAI「OpenClaude」徹底的に調べたい（v0.30.0対応）",
+      "url": "https://note.com/humble_bobcat51/n/n9665d1fd03d7",
+      "publishedAt": "2026-09-02T17:07:20+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【日記】準備は才能に変わる唯一の武器らしいし、考えることは才能のない人間の最大の武器らしい",
+      "url": "https://note.com/humble_bobcat51/n/n8f05736571e4",
+      "publishedAt": "2026-09-02T12:05:56+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "旅好きって、結局なんなんだろう",
+      "url": "https://note.com/gensnotes/n/n90f738f1c97d",
+      "publishedAt": "2026-09-02T00:19:43+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "国王はなぜ借金を返すようになったのか——名誉革命が国債金利を下げたという定説と、それを崩した「その後30年」の数字",
+      "url": "https://note.com/gensnotes/n/n2258912292ff",
+      "publishedAt": "2026-09-01T23:45:19+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "2026年のRAG勝ち筋：コストを抑えて最高効率とベストプラクティスで「使えるAI環境」を作る検索パイプライン設計を整理したい。",
+      "url": "https://note.com/humble_bobcat51/n/naaf1346ec1ee",
+      "publishedAt": "2026-09-01T20:58:58+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "AIエージェントが「ボタンを探す」のをやめる日——サイト側が自分の機能をツールとして宣言するWebMCPとは何か、ChatGPTのブラウザが8月25日に対応して具体的に何が変わり、何がまだ危ないのか",
+      "url": "https://note.com/gensnotes/n/n75a6c865e99e",
+      "publishedAt": "2026-09-01T19:43:49+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "考えてから答えるAIを3B・8B・30Bで丸ごと無料公開したIBM「Granite 4.2」を読み解く——流行のMoEもMambaも使わない「素のTransformer」という選択と、128Kの文脈が実際には58Kしか使えなかった数字の話",
+      "url": "https://note.com/gensnotes/n/n6e354cedd6b0",
+      "publishedAt": "2026-09-01T19:39:48+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "炭素の膜を1.1度だけひねると電気が抵抗ゼロで流れる——マジックアングル・グラフェンの「超伝導ギャップ」がV字型だと測られた意味と、電子をくっつける糊の正体をめぐる決着していない論争",
+      "url": "https://note.com/gensnotes/n/ncbe1f5cf669f",
+      "publishedAt": "2026-09-01T14:01:26+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "筋トレをやめても筋肉が戻りやすいのはなぜか——「筋核は一度増えたら消えない」というマッスルメモリー仮説が、いまどこまで確かめられ、どこで割れているのか",
+      "url": "https://note.com/gensnotes/n/nacd6601d0699",
+      "publishedAt": "2026-09-01T14:00:50+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【日記】PC直してる期間、何を勉強しようかなー。色々常識知らないから、1個ずつ調べて固めたいなぁ",
+      "url": "https://note.com/humble_bobcat51/n/na622e6ae6da7",
+      "publishedAt": "2026-09-01T12:23:53+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "失敗の8割を防ぐ「要件定義」について現状のベストプラクティスを調べて整理してみた — IPA・INCOSE・EARS・AI活用まで完全網羅したい",
+      "url": "https://note.com/humble_bobcat51/n/n3d03a48f6fb9",
+      "publishedAt": "2026-09-01T07:34:53+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "「AとB」では書けない関係を、1本の線でまとめて掴む——文章を知識グラフとハイパーグラフに変換するオープンソースCLI「Hyper-Extract」を実際に動かして確かめた話",
+      "url": "https://note.com/gensnotes/n/nd5a5301ba650",
+      "publishedAt": "2026-09-01T01:57:09+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "AIエージェントの作業計画に赤ペンを入れてから走らせる——コーディングエージェントの計画とコード差分をブラウザで注釈レビューし、ワンクリックで指摘を返す無料ツール「Plannotator」の仕組み・使いどころ・動作要件",
+      "url": "https://note.com/gensnotes/n/n2ef806a892cc",
+      "publishedAt": "2026-09-01T01:46:23+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "出産の日を境に片方の収入だけが折れる——男女の賃金差の8割を占める「子どもの罰」はどう測られ、その数字はどこまで因果と呼べるのか",
+      "url": "https://note.com/gensnotes/n/nddfd3353bcd4",
+      "publishedAt": "2026-09-01T01:39:16+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【チョークポイント】スマホと「自分の人生の面白さ」の等価交換について",
+      "url": "https://note.com/gensnotes/n/n1e14cc3d1f87",
+      "publishedAt": "2026-08-31T19:54:26+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "一週間の食事を記録して、AIに評価してもらったらボロボロの評価だった【人生初サプリ：メガビタミン】",
+      "url": "https://note.com/humble_bobcat51/n/n0e70c5443b6d",
+      "publishedAt": "2026-08-31T19:36:56+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【2026年最新】セッション使い捨ての時代は終わったんですかね？「BotMode」徹底比較 —— GrokBot × OpenBot × Hermes Agent",
+      "url": "https://note.com/humble_bobcat51/n/nc83f62d5fc02",
+      "publishedAt": "2026-08-31T17:59:43+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【コラム】有性生殖の99％は雌雄に別れているけれど…のこりの1%はそうじゃないらしい",
+      "url": "https://note.com/gensnotes/n/ne3aa0aea51c1",
+      "publishedAt": "2026-08-31T12:48:09+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【日記】開発に使えるPCが無いんでClaude Academyをやり始めた集中力ない人間",
+      "url": "https://note.com/humble_bobcat51/n/ne36f2798d5a6",
+      "publishedAt": "2026-08-31T11:56:47+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【徹底解剖】JavaScriptを書かずにモダンUIを作る「HTMX」という選択肢",
+      "url": "https://note.com/humble_bobcat51/n/n48fc4b50233c",
+      "publishedAt": "2026-08-31T08:13:53+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "ミューオンg-2異常はどこへ消えたのか——素粒子の「磁石のぶれ」を12桁まで測った実験と、格子QCDが標準模型の予言を書き換えるまで",
+      "url": "https://note.com/gensnotes/n/nba9e1d29e909",
+      "publishedAt": "2026-08-31T04:30:05+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "化石の歯から性別が読める時代——古タンパク質学（パレオプロテオミクス）が2400万年前まで届いた話と、ホモ・ナレディ20個体に「男性の印」がひとつも無かった謎",
+      "url": "https://note.com/gensnotes/n/nd0529bff5bb4",
+      "publishedAt": "2026-08-31T04:27:03+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "年収と幸福はどこで頭打ちになるのか——「7万5000ドルの壁」が提唱者自身の手で覆され、10万ドル説と20万ドル説に割れるまで",
+      "url": "https://note.com/gensnotes/n/n2215780207d7",
+      "publishedAt": "2026-08-31T04:23:46+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "AIエージェントが勝手に作った不要なファイルを、データベースのように巻き戻す——「記録するだけ」の観測ツールと決別した介入型タイムトラベル・デバッガの仕組み、使いどころ、そして動作要件",
+      "url": "https://note.com/gensnotes/n/nf4d36e6a6b25",
+      "publishedAt": "2026-08-31T04:21:06+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "言葉を出さずに頭の中だけで考えるAI「BDH-CQ」を、GPUなしのノートパソコンに入れて動かしてみた——1億5000万パラメータで抽象推論に挑む潜在推論アーキテクチャの仕組みと、実際に必要なメモリ・ディスク・実行時間",
+      "url": "https://note.com/gensnotes/n/n6fb1133fbc2b",
+      "publishedAt": "2026-08-31T04:15:34+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【完全無料】話題の並列AI開発環境「Verdent」でGLM-5.3 Flash & DeepSeek V4 Flashが使い放題になると聞いて使ってみた＆使い分けガイド",
+      "url": "https://note.com/humble_bobcat51/n/n3132396f78e3",
+      "publishedAt": "2026-08-30T21:03:20+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【日記】サブPCの調子も狂い始めました。出来ることが遂に情報取得とHTML作成に絞られつつある。人生の上手くいかなさに疑問を持ちながら、夏に野菜を素揚げという愚行",
+      "url": "https://note.com/humble_bobcat51/n/nda2e31243006",
+      "publishedAt": "2026-08-30T17:03:42+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【2026年版】いまHTMLで何が起きているのか？JavaScriptを60%削減する“最新HTML”の凄さと活用大全",
+      "url": "https://note.com/humble_bobcat51/n/n7bff66b31b7e",
+      "publishedAt": "2026-08-30T13:19:17+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "2026年〜2031年の5年間で、私たちの仕事に何が起きるのか",
+      "url": "https://note.com/humble_bobcat51/n/n80de5c8c5d9b",
+      "publishedAt": "2026-08-30T09:10:38+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【クロスドミナンス】右利きワールドをハックする「謎の全能感」と選択の自由",
+      "url": "https://note.com/gensnotes/n/n0a04b5947dd6",
+      "publishedAt": "2026-08-30T05:01:39+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【脳タバコ？】苦行の先にある「遅い報酬」──AI時代に人間が磨くべきもの",
+      "url": "https://note.com/gensnotes/n/n45af4dee2ed3",
+      "publishedAt": "2026-08-30T03:41:21+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "1981年カンザスシティ、ホテルの空中通路はなぜ落ちたのか——吊り棒を2本に分けた図面の変更、2倍になった荷重、そして誰も一度も計算していなかった接合部",
+      "url": "https://note.com/gensnotes/n/nf68e7edeba28",
+      "publishedAt": "2026-08-29T19:47:55+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "ミューオンのg-2異常とは何だったのか——素粒子の「コマの回り方」の小数点以下9桁目をめぐる20年の食い違いが、2025年に理論側の計算のやり直しで消えかけている話",
+      "url": "https://note.com/gensnotes/n/n0ed8e9e2c791",
+      "publishedAt": "2026-08-29T19:42:57+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "Zvecとは何か──サーバーを立てずにアプリの中で動く「インプロセス型ベクトルデータベース」の仕組み、ベクトルを最大32分の1に圧縮するRaBitQ量子化、そして動作要件と向き不向きを調べた",
+      "url": "https://note.com/gensnotes/n/na164a4bdd3f2",
+      "publishedAt": "2026-08-29T19:39:58+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "Tencentの次世代巨大AI「Hy4-preview」はKimiK3やGLM 5.3レベルなのか：オープンソースの限界に挑む旗艦モデルの実力",
+      "url": "https://note.com/humble_bobcat51/n/n3479f3e2e778",
+      "publishedAt": "2026-08-29T18:36:22+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "12万5000人が一気に流れ込んだ街で賃金は本当に下がったのか——マリエル難民の労働経済学、40年たっても決着しない論争と、たった17人の標本が結論をひっくり返した話",
+      "url": "https://note.com/gensnotes/n/n3a340a79eef5",
+      "publishedAt": "2026-08-29T17:41:43+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "AIエージェントの「やっていいこと」をプロンプトではなくコードで決める——ツール実行の直前に許可と拒否を判定し、監査記録まで残すオープンソース基盤の仕組みと限界",
+      "url": "https://note.com/gensnotes/n/naf242ae759e6",
+      "publishedAt": "2026-08-29T17:37:39+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【日記】ケーブル探しにきたハードオフ、10万で売られていたモニター映らないMacのノートPCが光って見えた日",
+      "url": "https://note.com/humble_bobcat51/n/n5a7c2d3e603b",
+      "publishedAt": "2026-08-29T15:09:21+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【LLM＆個人開発】新無料枠Ling 3.0 Flash Fin 徹底リサーチまとめですー！✨金融特化モデルなので金融ツールを作ってみた。",
+      "url": "https://note.com/humble_bobcat51/n/n12954ee58b9c",
+      "publishedAt": "2026-08-29T12:32:29+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "AIエージェント時代の表計算革命：Reactでスプレッドシートを「書く」新常識「open-sheet」使ってみた",
+      "url": "https://note.com/humble_bobcat51/n/n90d884e10016",
+      "publishedAt": "2026-08-29T08:53:34+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "画面上の「コピーできない文字」を根こそぎ抽出：オフラインOCR拡張機能「ocr-it」を使ってみた。",
+      "url": "https://note.com/humble_bobcat51/n/ncebcd13e2139",
+      "publishedAt": "2026-08-29T07:57:52+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【AIの裏で】ようやく、世界がWeb3を理解し始めた感がある…",
+      "url": "https://note.com/gensnotes/n/n5b0cceb5ae8f",
+      "publishedAt": "2026-08-29T01:25:22+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "ロールバック・ネットコードとは何か——対戦ゲームの「ラグ」を消したように見せる巻き戻しの仕組みと、1985年の並列シミュレーション理論、そして遅延を誰が負担するのかという設計の話",
+      "url": "https://note.com/gensnotes/n/ne23f6ec0e57d",
+      "publishedAt": "2026-08-28T22:14:54+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【日記】総合50万ビュー達成！ありがとうございますーっ、むっちゃ感謝ですっ",
+      "url": "https://note.com/humble_bobcat51/n/n00f15cd3580d",
+      "publishedAt": "2026-08-28T20:12:13+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【脳内ふわふわライフ】フォーリング・サン前の夕暮れこそが人生",
+      "url": "https://note.com/gensnotes/n/n6f0ac48cf188",
+      "publishedAt": "2026-08-28T15:38:14+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【忠誠心】なぜ有能な部下ほど遠ざけられるのか──独裁者と側近をめぐる「忠誠と能力のトレードオフ」を、ゲーム理論・中国の昇進データ・アメリカの行政評価から読み直す",
+      "url": "https://note.com/gensnotes/n/n3ae45a4781d4",
+      "publishedAt": "2026-08-28T15:09:11+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【深堀りメモ】アンプリチュードヘドロンの話をしたら思ったより泥沼だった件【コスモヘドロン】",
+      "url": "https://note.com/gensnotes/n/nb85ea92ec846",
+      "publishedAt": "2026-08-28T14:54:38+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "GLM-5.3-Flash 徹底考察：低コスト・高効率な次世代マルチモーダルAIを調べたら、海外掲示板の荒れ具合を知りました。数カ月目を閉じていようかな。",
+      "url": "https://note.com/humble_bobcat51/n/n1c13cd361097",
+      "publishedAt": "2026-08-28T12:00:37+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【サッカー】現状の日本代表候補を追ってるのでその整理。2030年、ベスト4くらい行って欲しいなぁ。",
+      "url": "https://note.com/humble_bobcat51/n/nf0cc8cf8e7c4",
+      "publishedAt": "2026-08-28T08:24:31+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "次世代AIの先駆け：Qwen3.8-Flash-Nextを試している配信に入って検証してもらってきた",
+      "url": "https://note.com/humble_bobcat51/n/nd1becc6c291a",
+      "publishedAt": "2026-08-28T07:53:02+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【日記】メインPCが無い不便、意外と脳トレになって悪くない。いや早く使いたいんですけども。怠惰を目指して勤勉に行き着くんでしょうかね？",
+      "url": "https://note.com/humble_bobcat51/n/naa0278351409",
+      "publishedAt": "2026-08-27T21:28:39+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "ローカルAIとObsidianで構築する「一生モノの自律型知識ベース」：claude-obsidianを使ってみた。LLMwikiも入ってて独自の機構が面白い",
+      "url": "https://note.com/humble_bobcat51/n/n8d6564699806",
+      "publishedAt": "2026-08-27T19:01:43+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "なぜ免疫は自分の体を攻撃しないのか——制御性T細胞とFoxp3の物語、一度は学界から葬られた「抑える細胞」が三十年かけて戻ってくるまで",
+      "url": "https://note.com/gensnotes/n/nd775f3cb96da",
+      "publishedAt": "2026-08-27T18:59:27+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【1000万分の1行】ファインマン図を畳んだ先に何があるのか——アンプリチュードヘドロンが説明していること、まだ説明していないこと",
+      "url": "https://note.com/gensnotes/n/n63ae6c93979d",
+      "publishedAt": "2026-08-27T18:47:10+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "暗黒エネルギーは本当に弱まりつつあるのか——DESIが出した2.8σから4.2σという幅、超新星カタログの「0.04等」のずれ、そして宇宙の終わり方をめぐる決着していない論争",
+      "url": "https://note.com/gensnotes/n/n046a989011e1",
+      "publishedAt": "2026-08-27T18:17:07+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "システム構成図をAIで民主化する「Archify」を使ってみた。これならわたしも理解できそう。",
+      "url": "https://note.com/humble_bobcat51/n/n8927f420dfba",
+      "publishedAt": "2026-08-27T12:02:30+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "GPU不要で驚きの精度。リアルタイム多言語文字起こしツール「hayamimi」使ってみましたー。",
+      "url": "https://note.com/humble_bobcat51/n/n64602c64db6c",
+      "publishedAt": "2026-08-27T08:25:19+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【ロマン】AIは、ツールではないと思ってる派",
+      "url": "https://note.com/gensnotes/n/nb5a09ba31eef",
+      "publishedAt": "2026-08-27T04:18:17+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【仮説】黒板の答えは、いつも少しだけ間違っていなければならない——金融と大学と、宇宙の法則について",
+      "url": "https://note.com/gensnotes/n/na8e35a8d8f23",
+      "publishedAt": "2026-08-27T03:44:51+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【幾何に帰化した物理】時空は…幻想だった？——散乱振幅の新理論「サーフェイソロジー」と「隠れたゼロ点」が、ファインマン図1000万枚を1本の積分に畳んだ話",
+      "url": "https://note.com/gensnotes/n/nf2d23871d835",
+      "publishedAt": "2026-08-27T02:29:29+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【リスクオン】AI・半導体銘柄が一時的に沈んだ今の世界市場の市況分析",
+      "url": "https://note.com/gensnotes/n/n0557f700d3a0",
+      "publishedAt": "2026-08-27T01:26:50+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "The \"Childish\" Paradox: Why Japan’s \"Air\" Feels Like \"Immaturity\" to the Rest of the World",
+      "url": "https://note.com/gensnotes/n/naf58cd13a3e8",
+      "publishedAt": "2026-08-27T00:45:21+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【日記】ハーネスを用途別で持っておきたいけど、一つもまともに組み上がらない",
+      "url": "https://note.com/humble_bobcat51/n/n22b55eaddd76",
+      "publishedAt": "2026-08-26T21:51:54+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "信用は「仲間内の評判」で回るのか、それとも「契約書と裁判所」で回るのか——11世紀の地中海商人が残した手紙の束をめぐって、経済史の研究者たちが20年以上ぶつかり続けている論争を、予備知識ゼロから読む",
+      "url": "https://note.com/gensnotes/n/n47155b03cba6",
+      "publishedAt": "2026-08-26T20:22:54+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "開発効率を劇的に変える「Autoprompt」でOpencodeの無料枠を上手く使いたい：AIエージェントの失敗を45%減らす技術",
+      "url": "https://note.com/humble_bobcat51/n/n2688cb1453f2",
+      "publishedAt": "2026-08-26T19:41:21+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "次世代AIエージェントの決定版になるのか：fullstack-agentを試しています",
+      "url": "https://note.com/humble_bobcat51/n/nc300a2f003b5",
+      "publishedAt": "2026-08-26T12:26:58+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【フルAI記事の如何】AIに任せていい範囲を、私はまだ決めきれていない【意図】",
+      "url": "https://note.com/gensnotes/n/nb7512af1281b",
+      "publishedAt": "2026-08-26T05:12:38+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【体験】数時間「スマホ」を紛失して見えた世界【管理力】",
+      "url": "https://note.com/gensnotes/n/nfa5376a3a16c",
+      "publishedAt": "2026-08-26T01:20:02+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "次世代マーケティング基盤「Marketing OS」徹底解説：Claudeを最強のマーケティング部門に変える方法",
+      "url": "https://note.com/humble_bobcat51/n/nb6c0199d60ff",
+      "publishedAt": "2026-08-25T18:15:07+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【Everything is Connect】均衡の錨、真理の窓、そして信頼の核",
+      "url": "https://note.com/gensnotes/n/nded4d7135d39",
+      "publishedAt": "2026-08-25T14:08:53+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "ミニPCとは何か——手のひらサイズのパソコンはどこまで使えるのか、スペック表のどこを見ればいいのか、初めての人のために一つずつ",
+      "url": "https://note.com/gensnotes/n/nc901ec5b4b28",
+      "publishedAt": "2026-08-25T13:23:38+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "Procoder：AIコーディングエージェントをシニアエンジニアへ進化させる究極の規律ツール",
+      "url": "https://note.com/humble_bobcat51/n/neb882ca02df1",
+      "publishedAt": "2026-08-25T12:52:06+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【日記】AIを使うのに嫌う人間と、私達の世代",
+      "url": "https://note.com/humble_bobcat51/n/n4d992bb70490",
+      "publishedAt": "2026-08-25T12:12:00+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【やってみたい】Barehands：ウェブカメラだけでAIと物理的に触れ合う、新しい操作体験のすべて【凄い脳みそ酔う】",
+      "url": "https://note.com/humble_bobcat51/n/n359f13710161",
+      "publishedAt": "2026-08-25T07:54:56+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "Qwen3.8-27Bベースの実験モデル「Carnice-V3」：画像と対話を繋ぐ新時代のエージェントモデルはこの先に何を繋げるんでしょうかね【使用は非推奨】",
+      "url": "https://note.com/humble_bobcat51/n/n416fb6763089",
+      "publishedAt": "2026-08-25T07:23:49+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "値段のつかないものは、いくらだと言い張れるのか——退職口座に入りはじめた未公開株の「滑らかすぎる成績」を、平滑化モデルと確率的割引ファクターから初心者にも分かるように解説する",
+      "url": "https://note.com/gensnotes/n/n7a6052044af8",
+      "publishedAt": "2026-08-24T23:46:32+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "AIデータセンターが電力網を「揺らす」本当の理由——GPU10万台が1秒に数回そろって息をする0.2〜3ヘルツ問題と、コードの一行が発電機の軸をねじるまで",
+      "url": "https://note.com/gensnotes/n/n0551026a9ecb",
+      "publishedAt": "2026-08-24T23:41:47+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "皿の中の80万個のヒト神経細胞が、深層強化学習より速く学ぶ——市販された生体コンピュータCL1と、それを支える『液体状態機械』の理論を丁寧に読み解く",
+      "url": "https://note.com/gensnotes/n/n8341019784f2",
+      "publishedAt": "2026-08-24T20:04:31+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "早口の言語とゆっくりな言語があるのに、1秒あたりに伝わる中身の量はほぼ同じ——17の言語を録音して見つかった「毎秒39ビット」という奇妙な一定値は、どこまで確かめられているのか",
+      "url": "https://note.com/gensnotes/n/n57a42d3f1868",
+      "publishedAt": "2026-08-24T20:02:26+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "AIが出した答えの「なぜ」を後から追えるようにする——GitHubトレンド1位になったSemanticaが、ベクトル検索の代わりに知識グラフで矛盾と来歴を管理する仕組み",
+      "url": "https://note.com/gensnotes/n/n1a8fb1d713e9",
+      "publishedAt": "2026-08-24T20:01:21+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "ローカルAIエージェント管理ツール「Zeron」使ってみた：開発効率を劇的に変える次世代の選択肢",
+      "url": "https://note.com/humble_bobcat51/n/na452ae4830dd",
+      "publishedAt": "2026-08-24T19:44:45+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "AIエージェントを「フォルダ構造」で操る新常識：icm-architectがかなり気に入りました。",
+      "url": "https://note.com/humble_bobcat51/n/ndd464107b60c",
+      "publishedAt": "2026-08-24T17:33:58+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "重力は量子なのか——机の上の実験で決着がつくはずだった「重力が生む量子のもつれ」という証明の土台が、いま揺らいでいる話を、予備知識ゼロから読み解く",
+      "url": "https://note.com/gensnotes/n/n64e891d3ce14",
+      "publishedAt": "2026-08-24T13:33:31+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【思考の整理】現代LLMエコシステムを人体にマッピングして整理してみよう【素人発想】",
+      "url": "https://note.com/humble_bobcat51/n/ned4afe754f88",
+      "publishedAt": "2026-08-24T11:59:17+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "Remotion開発を劇的に加速させる「remocn」使ってみました：コードで動画を作る新時代のスタンダード",
+      "url": "https://note.com/humble_bobcat51/n/n5c4f0581c86d",
+      "publishedAt": "2026-08-24T06:39:59+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "値動きが小さい資産は、本当にリスクが小さいのか――未公開株ファンドの「なめらかなリターン」はどう作られ、平滑化を数式ではがすと危険度がどれだけ増えるのか",
+      "url": "https://note.com/gensnotes/n/nbb24ff371c03",
+      "publishedAt": "2026-08-24T04:25:23+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【衝撃】AIがゼロから書いたウイルスのゲノムが本当に動いた日——「生成ゲノム設計」とは何か、なぜ285個のうち16個だけが生きたのか、配列空間という数学から読み解く",
+      "url": "https://note.com/gensnotes/n/n09e48f86fcf3",
+      "publishedAt": "2026-08-24T03:51:45+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【オプション】宇宙の均衡と青いインク：ブラック・ショールズが私たちに教える「不確実性の制御」について",
+      "url": "https://note.com/gensnotes/n/n892a62159578",
+      "publishedAt": "2026-08-24T03:11:12+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【書いてること凄いのにいまいち使いこなせん】TrueForge：LLMを「動くAIエージェント」へと進化させる究極の実行基盤（エージェント・ハーネス）",
+      "url": "https://note.com/humble_bobcat51/n/na99ba0d79b73",
+      "publishedAt": "2026-08-23T22:17:34+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "AIサブスクを「手」に変える：ブラウザ自動操作ツール「Endoplexity」使ってみました",
+      "url": "https://note.com/humble_bobcat51/n/n8355d9e80556",
+      "publishedAt": "2026-08-23T20:05:22+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【日記】友人宅で恋バナして過ごし、ミニPCのUSB-Cを踏んづけて曲げた日",
+      "url": "https://note.com/humble_bobcat51/n/ncab64edf00bd",
+      "publishedAt": "2026-08-23T17:52:58+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【Youtubeオワコン問題】「歴史は韻を踏む」じゃ足りない〜KPZ方程式が示す、コンテンツ進化の普遍法則〜",
+      "url": "https://note.com/gensnotes/n/n74410c390f7e",
+      "publishedAt": "2026-08-23T13:58:52+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【人生がOSS】Genesis Vaultは「私とAIのOSS」だった〜デジタル時代のタルムードについて〜",
+      "url": "https://note.com/gensnotes/n/n1d44305aac76",
+      "publishedAt": "2026-08-23T13:44:28+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【雑記】900億の屍を越えていく〜哲学が人生の「主役」である理由〜",
+      "url": "https://note.com/gensnotes/n/n6e9dbbf4736d",
+      "publishedAt": "2026-08-23T13:26:00+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "拍手はなぜ勝手に揃うのか——ホタル・心臓・送電網・超伝導素子に共通する「同期」の方程式は、どこまで本当に証明され、どこで崩れたのか",
+      "url": "https://note.com/gensnotes/n/n371507e203dd",
+      "publishedAt": "2026-08-23T13:22:44+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "手元のパソコンで数千億パラメータのAIを動かす——データセンターを借りずに、自分のGPU1枚で巨大モデルを走らせる無料の仕組み「FreeToken」を、初心者にもわかるように解説する",
+      "url": "https://note.com/gensnotes/n/n301061282b5f",
+      "publishedAt": "2026-08-23T13:14:35+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "粒子を「編む」と計算になる——54個の量子ビットの上に最小の非可換エニオンをつくり、編んで融合させて万能ゲートに到達した実験を、予備知識ゼロから読み解く（S3量子ダブルとトポロジカル量子計算）",
+      "url": "https://note.com/gensnotes/n/ne5012614b356",
+      "publishedAt": "2026-08-22T23:33:31+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【コラム】「情報の非対称性」と「解釈の非対称性」〜宇宙が完全対称を許さない理由〜",
+      "url": "https://note.com/gensnotes/n/n7a557dd8e686",
+      "publishedAt": "2026-08-22T22:02:45+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【日記】ご近所さんにとってAIは、何でも出来るし、何も無い所からサーバーすら生み出せる",
+      "url": "https://note.com/humble_bobcat51/n/nb0c99b4201bb",
+      "publishedAt": "2026-08-22T21:25:44+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【思考メモ】「正解」は無料だから、「解釈」にお金を払う話",
+      "url": "https://note.com/gensnotes/n/n0852714c766a",
+      "publishedAt": "2026-08-22T20:04:29+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【思考メモ】シンプルになるために、底なしの深淵を覗く話",
+      "url": "https://note.com/gensnotes/n/na1c01b802333",
+      "publishedAt": "2026-08-22T17:52:35+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "自分をコピーする45文字のRNAが見つかった――「写し間違いの限界」を決めるエラー閾値の数学と、生命が始まる最小サイズの話",
+      "url": "https://note.com/gensnotes/n/n9e45b1f0bdbb",
+      "publishedAt": "2026-08-22T17:18:26+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "AIセキュリティの決定版：Tencent「A.I.G（AI-Infra-Guard）」",
+      "url": "https://note.com/humble_bobcat51/n/nb1aec694c5f9",
+      "publishedAt": "2026-08-22T14:11:38+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "磁石と水が、小数点以下9桁まで同じ数字を共有している——「普遍性」はどこまで本当に検証されたのか。臨界指数、繰り込み群、共形ブートストラップ、そして液体ヘリウムで理論と実験がずれたままの話",
+      "url": "https://note.com/gensnotes/n/n86c3e8e0252d",
+      "publishedAt": "2026-08-22T13:39:59+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "AIエージェントに足りなかったのは「賢さ」ではなく「規律」だった——テスト駆動開発やコードレビューといった開発の作法を、マークダウン十数枚で配って回る「superpowers」という仕組み",
+      "url": "https://note.com/gensnotes/n/n03ca8330ad4b",
+      "publishedAt": "2026-08-22T13:36:45+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【多少使いこなせた】OpenLogi：Logicool Options+の呪縛から解放する、Rust製の超軽量・次世代ユーティリティを使いこなしてみたい【アクションリングをどうしたらよいのか】",
+      "url": "https://note.com/humble_bobcat51/n/n7e6fdf6ccde3",
+      "publishedAt": "2026-08-22T11:14:04+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "Opencode無料枠で作ったインスタ＆Facebookツールを謎のモデルで魔改造してみよう",
+      "url": "https://note.com/humble_bobcat51/n/ndc1140713f46",
+      "publishedAt": "2026-08-22T07:40:09+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【むずい】手でつまめる大きさの金属の中で、電子が9個ひとかたまりになっていた——量子フィッシャー情報という「情報の幾何学」で、ストレンジメタル40年の謎を初めて数で測った話",
+      "url": "https://note.com/gensnotes/n/n450bcf2522a1",
+      "publishedAt": "2026-08-22T00:29:08+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【Genesis Vault】30歳の主観：アルゴリズムが定義する「強さ」を捨て、内面の砦を築く",
+      "url": "https://note.com/gensnotes/n/n5f76710f94cd",
+      "publishedAt": "2026-08-21T19:38:52+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "期待値がプラスの賭けをくり返すと、なぜ資産は減っていくのか——ケリー基準（対数最適成長）と「エルゴード性の破れ」、そして最適な賭け金の2倍を張ると成長率がゼロになる理由",
+      "url": "https://note.com/gensnotes/n/n9dd910722e20",
+      "publishedAt": "2026-08-21T18:28:52+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "AIエージェントのための次世代ヘッドレスブラウザ「Moli」がXの広告に乗っかってたから使ってみる。",
+      "url": "https://note.com/humble_bobcat51/n/nf0d45eacd971",
+      "publishedAt": "2026-08-21T18:13:06+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【宇宙時代の生命倫理】昨日のサイコパスは、今日のサイコパスじゃないかもしれない——生命とか複雑さとか、全部ひっくるめて考えた夜のこと",
+      "url": "https://note.com/gensnotes/n/n088ae15667bc",
+      "publishedAt": "2026-08-21T17:27:28+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【面白すぎる】生きものが作った分子は「組み立ての最短手数」という1つの数字で見分けられるのか——アセンブリ理論と分子アセンブリ指数、質量分析による生命探査、そしてこの数の計算がNP完全であることの意味",
+      "url": "https://note.com/gensnotes/n/nf398195ba2b4",
+      "publishedAt": "2026-08-21T16:32:05+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "液晶の乱流と、光でできた流体と、量子コンピュータの中の磁石が、同じ「3分の1」に従う——KPZ普遍性クラスとトレイシー＝ウィドム分布は、どこまで本当に確かめられたのか",
+      "url": "https://note.com/gensnotes/n/n7870d36e7837",
+      "publishedAt": "2026-08-21T15:38:47+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "AIに「一台ずつパソコンを与える」という発想——エージェントが勝手に動かないよう、実行前に許可を判定し実行後に記録を残す仕組みを、オープンソースのOpenBotで読み解く",
+      "url": "https://note.com/gensnotes/n/n14db5d248d48",
+      "publishedAt": "2026-08-21T14:43:02+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "Opencode無料枠にMuse Spark 1.2が来てるからお試し。どうせならインスタとFacebookを攻略するツールを作らせよう",
+      "url": "https://note.com/humble_bobcat51/n/n8e39633a2435",
+      "publishedAt": "2026-08-21T11:21:24+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "次世代自己進化型AI【Ornith-1.5-9B】をお試ししまくってます：軽量モデルの常識を覆す性能の秘密を探ってみよう",
+      "url": "https://note.com/humble_bobcat51/n/n999caede464b",
+      "publishedAt": "2026-08-21T10:05:28+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【矛楯】量子の波、格子の迷宮、そしてハッシュの絶対領域――デジタル時代の「最強」を解き明かす",
+      "url": "https://note.com/gensnotes/n/nd8b61127bac7",
+      "publishedAt": "2026-08-21T05:07:43+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "「2:4:6:8」から「嘘のコスト」まで：宇宙が教える「整合性」の美学",
+      "url": "https://note.com/gensnotes/n/n25a57fbf848d",
+      "publishedAt": "2026-08-21T00:32:36+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【簡易版】2対4対6対8：宇宙が40年間隠し続けた「整数の楽譜」",
+      "url": "https://note.com/gensnotes/n/n436c937d9302",
+      "publishedAt": "2026-08-21T00:22:45+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "35個の原子が並べた「2対4対6対8」——40年前に紙の上で計算された共形場理論のエネルギー準位が、量子シミュレータで初めて直接見えた話",
+      "url": "https://note.com/gensnotes/n/n946bf4c25c79",
+      "publishedAt": "2026-08-21T00:18:43+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【日記】Opus5と相容れない日、新モデルが近いと性能落ちるCloudLLMと日に日に便利になるオープンソースLLMを見て、ふと思う",
+      "url": "https://note.com/humble_bobcat51/n/nc6c241db955c",
+      "publishedAt": "2026-08-20T22:27:54+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【投資】「過去10年、この方法なら勝てていました」がなぜ証拠にならないのか——バックテストの過剰適合、多重検定、そして「何回試したか」を成績から差し引くデフレート済みシャープレシオ",
+      "url": "https://note.com/gensnotes/n/n5d6acff30610",
+      "publishedAt": "2026-08-20T19:21:22+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "イーサリアムは8年かけて育てた専用ハッシュ関数ポセイドンを捨てた——「証明しやすい暗号」から「どんな暗号でも速く証明できる仕組み」への反転と、量子コンピュータに備える耐量子署名（ハッシュベース署名）の設計思想を予備知識ゼロから解説する",
+      "url": "https://note.com/gensnotes/n/n76278059d850",
+      "publishedAt": "2026-08-20T16:34:54+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "AIエージェントの「記憶」をフォルダのように並べ直す——ベクトル検索という黒い箱をやめた文脈データベース OpenViking の仕組みと、消えるコスト・生まれる仕事",
+      "url": "https://note.com/gensnotes/n/n2563cd8990f7",
+      "publishedAt": "2026-08-20T15:05:44+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "Googleフォトの最強の代替案？自前写真管理システム「Immich」でプライバシーの城を築く。Flutter×Svelteが生む圧倒的パフォーマンス。",
+      "url": "https://note.com/humble_bobcat51/n/n0c9a9fa3b0e1",
+      "publishedAt": "2026-08-20T07:26:51+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "コーヒーのシミの縁も、燃え広がる炎の先端も、なぜ同じ「ざらつき方」をするのか——40年解けなかったKPZ方程式（カルダール＝パリージ＝チャン方程式）が2次元でついに測られ、そして今その解釈が争われている",
+      "url": "https://note.com/gensnotes/n/n60dd9968d1a1",
+      "publishedAt": "2026-08-20T00:07:05+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "分散投資は本当に効いているのか——ランダム行列理論とマルチェンコ＝パスツール分布が示した「相関の94%は雑音」という事実と、最適化された資産配分が実際より安全に見えてしまう仕組み",
+      "url": "https://note.com/gensnotes/n/n2a9dd2278f0a",
+      "publishedAt": "2026-08-20T00:00:21+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "生命の設計図は64文字で書かれている。そこから7文字を消しても、大腸菌は生きていた——遺伝暗号（コドン）を書き換える合成生物学と、2026年に判明した「同じ意味の書き換えは、同じ意味ではない」という壁",
+      "url": "https://note.com/gensnotes/n/ne19dfb11c60d",
+      "publishedAt": "2026-08-19T23:57:35+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【日記】カクヨムに投稿してた小説のリワードで初めてAmazonギフトを貰いましたっ",
+      "url": "https://note.com/humble_bobcat51/n/n0ff0bf0baa29",
+      "publishedAt": "2026-08-19T21:10:08+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "Rust製でLLMwiki対応！AIコーディングエージェントに「記憶」を授ける：ai-memoryをお試ししたいのです",
+      "url": "https://note.com/humble_bobcat51/n/na6ab902bccfb",
+      "publishedAt": "2026-08-19T19:46:49+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "AIの複雑さは、パラメータの数では測れない——特異学習理論と代数幾何学の「対数正準閾値」が説明する、モデルがある日とつぜん解けるようになる理由",
+      "url": "https://note.com/gensnotes/n/n035523075015",
+      "publishedAt": "2026-08-19T13:18:34+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "手元のパソコンでどのAIモデルが本当に動くのかを1コマンドで判定する「llmfit」——文章生成の速さを決めていたのは計算力ではなく、メモリ帯域という「運び出す速さ」だった",
+      "url": "https://note.com/gensnotes/n/nc6d80c5e6131",
+      "publishedAt": "2026-08-19T13:14:49+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "AIエージェントの「記憶」を再定義する：次世代コンテキスト・データベース「OpenViking」を色々調べてみました",
+      "url": "https://note.com/humble_bobcat51/n/nca5da61acb72",
+      "publishedAt": "2026-08-19T12:11:56+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "力そのものでできた粒子「グルーボール」の最有力候補X(2370)——クォークを1つも含まない物質の証拠と、100万ドルの未解決問題「ヤン・ミルズ理論の質量ギャップ」をつなぐ話",
+      "url": "https://note.com/gensnotes/n/n252b708c47c7",
+      "publishedAt": "2026-08-18T22:20:33+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【日記】好きな曲を語ったら「夢見過ぎじゃない？」と言われ、筋肉つけて増量したいというと「細くないと」と言われる風潮に中指を立てて行こうかなと",
+      "url": "https://note.com/humble_bobcat51/n/nca0bc2889ebf",
+      "publishedAt": "2026-08-18T21:15:39+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "マルチンゲール最適輸送とは何か——「モデルを1つ選ばずにデリバティブの値段を上下から挟む」数学が、2027年のバーゼル規制で銀行の資本にどう効いてくるのか",
+      "url": "https://note.com/gensnotes/n/n00efcc9ba774",
+      "publishedAt": "2026-08-18T20:18:09+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "次世代AIエージェント圧縮ゲートウェイ「Paritok」完全解説：トークンコストを最大85%削減する技術の正体",
+      "url": "https://note.com/humble_bobcat51/n/n054a575646bf",
+      "publishedAt": "2026-08-18T19:22:38+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "鏡像生命（ミラーライフ）とは何か——左右を反転させただけの細菌が、なぜ「作ってはいけない生命」と呼ばれるのか。ホモキラリティの数学と、2026年に動き出した国際的な線引き",
+      "url": "https://note.com/gensnotes/n/n87b066cafb17",
+      "publishedAt": "2026-08-18T17:01:50+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "粒がバラバラに飛んでいるだけなのに、なぜ滑らかな方程式が現れるのか——1900年に出された「ヒルベルトの第6問題」の解決と、それがAIの平均場理論・トランスフォーマー解析と同じ数学だという話",
+      "url": "https://note.com/gensnotes/n/nfcb4037bbe56",
+      "publishedAt": "2026-08-18T12:41:16+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "モデルではなく「土台」を配るという戦い方——AIエージェントの動作環境そのものを部品に分解したDeepSeek Harnessとは何か。プラグイン差し替え式の設計、導入手順、そして今はまだできないこと",
+      "url": "https://note.com/gensnotes/n/n56fe12553feb",
+      "publishedAt": "2026-08-18T12:03:24+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "映画級のチェス体験をブラウザで。次世代3Dチェス『King's Gambit』Unity不要？ViteとBunで構築された、完全スタティックな3D戦場が凄すぎる",
+      "url": "https://note.com/humble_bobcat51/n/ndd255b98a9b3",
+      "publishedAt": "2026-08-18T07:36:43+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【能力主義と人生論】数学の最先端から、お金は重力だという話に着地するまで",
+      "url": "https://note.com/gensnotes/n/nb9594e1d5692",
+      "publishedAt": "2026-08-18T00:16:52+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "真空は本当に「何もない空間」なのか——90年前に予言された「真空複屈折」が、マグネターという宇宙最強の磁石の周りでついに観測された話",
+      "url": "https://note.com/gensnotes/n/n1dab10bc7292",
+      "publishedAt": "2026-08-17T22:08:48+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "暗号資産が「お金」から「金融商品」へ格上げされる——日本が資金決済法から金融商品取引法へ規制を移した2026年改正が、投資家保護・情報開示・インサイダー規制・そして20%課税とETFに何をもたらすのか、やさしく整理する",
+      "url": "https://note.com/gensnotes/n/n93ecfb6de5d9",
+      "publishedAt": "2026-08-17T19:49:19+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "化学薬品だけから組み立てた袋が、餌を食べ、遺伝子を複製し、二つに分かれた——合成細胞「SpudCell（スパッドセル）」は何を達成し、なぜ作った本人が「生きてはいない」と言うのか",
+      "url": "https://note.com/gensnotes/n/n7a2a97400594",
+      "publishedAt": "2026-08-17T19:47:10+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "スケーリング則はなぜ成り立つのか——AIの学習曲線の「傾き」を、文章そのものの統計だけから予言する理論が出てきた話（ニューラル・スケーリング則の第一原理からの導出をやさしく解説）",
+      "url": "https://note.com/gensnotes/n/n7d7d40a538ff",
+      "publishedAt": "2026-08-17T19:38:36+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "複数リポジトリの「やり残し」を一掃する：Rust製TUIダッシュボード「drydock」をお試ししました",
+      "url": "https://note.com/humble_bobcat51/n/nf6251e56d2c1",
+      "publishedAt": "2026-08-17T18:10:12+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "AIエージェントに「コードを実行させる場所」ごと用意するOpenSandbox——DockerでもKubernetesでも動く隔離実行環境を、通信先の許可リストまで含めて配れるようにしたオープンソース",
+      "url": "https://note.com/gensnotes/n/n3a3c0e6610ef",
+      "publishedAt": "2026-08-17T14:19:39+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "「エンタングルメントを配る」という仕事──量子ネットワークの本質と、量子メモリがすべてを決める理由",
+      "url": "https://note.com/gensnotes/n/n1772bce7982e",
+      "publishedAt": "2026-08-17T03:53:03+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【量子技術】次元も、重力も、素数も——量子が語りはじめた共通の言葉",
+      "url": "https://note.com/gensnotes/n/n6514503c1e05",
+      "publishedAt": "2026-08-17T02:57:16+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【明日はQデイ？】量子コンピューターが来た日、私の財布はどうなるのか【財布移行問題】",
+      "url": "https://note.com/gensnotes/n/n0acdfbbf1767",
+      "publishedAt": "2026-08-17T01:52:14+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "米商品先物取引委員会が46年ぶりに「緊急権限」を発動した日 ― 予測市場（イベント契約）とは何か、なぜ連邦政府が9つの州を訴えているのか、そして「何を市場と呼ぶか」を誰が決めるのかという問題",
+      "url": "https://note.com/gensnotes/n/nc26871082200",
+      "publishedAt": "2026-08-17T00:57:42+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "わかっていないのに、口だけがうまくなっていく",
+      "url": "https://note.com/gensnotes/n/n1096187626da",
+      "publishedAt": "2026-08-17T00:46:04+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【バレン・プラトー】高次元は敵か味方か ── 量子時代の暗号と、AIが証明を書く未来について私が考えていること",
+      "url": "https://note.com/gensnotes/n/n4f2552194c9d",
+      "publishedAt": "2026-08-16T19:59:50+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "高熱で考え続ける時間が長い。Qwen3.8-27Bで2日が吹き飛びました：オープンモデルの常識を覆すOpus4.6級LLMの実力は間違いない。推論MAXはうちの環境ではしない方向で",
+      "url": "https://note.com/humble_bobcat51/n/n3770e8c42ead",
+      "publishedAt": "2026-08-16T19:55:58+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【タルムード×AI】ルールが揺れているものを、機械で確かめられるか",
+      "url": "https://note.com/gensnotes/n/na409ab441541",
+      "publishedAt": "2026-08-16T17:54:54+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "AIエージェントに渡す作業場所を、コンテナからデータベースの中へ——Cloudflareが公開した@cloudflare/computerの仕組みと、エージェント1体あたりのコストが変わる理由、そして今はまだできないこと",
+      "url": "https://note.com/gensnotes/n/n03b7e8314f20",
+      "publishedAt": "2026-08-16T17:20:36+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "AIの能力はなぜ「ある日突然」現れるのか——注意機構のコピー回路が生まれる瞬間を一次相転移として説明したベイズ理論と、ソフトマックスが予測可能性を奪っていたという発見",
+      "url": "https://note.com/gensnotes/n/nfb184037a4b5",
+      "publishedAt": "2026-08-16T12:22:29+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "AIエージェントを会社全体で動かすための土台——Y Combinatorが自社の運営に使っていたオープンソース「QM（クォーターマスター）」は何をする道具なのか、仕組みと導入手順と限界",
+      "url": "https://note.com/gensnotes/n/n2f5a37c62c67",
+      "publishedAt": "2026-08-16T11:41:02+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "超小型エージェントAI「Needle 2」を使ってみたので、使用用途を探してみよう：14MBがもたらす革新",
+      "url": "https://note.com/humble_bobcat51/n/nf10582425b0d",
+      "publishedAt": "2026-08-16T10:59:30+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【ActiveGraph】ログは、エージェントの元帳だった",
+      "url": "https://note.com/gensnotes/n/ne77acd1b90c9",
+      "publishedAt": "2026-08-16T01:39:22+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【Next Pho】トムヤムは、辛いスープではなくて、酸っぱいスープだと思う",
+      "url": "https://note.com/gensnotes/n/n725df9721718",
+      "publishedAt": "2026-08-15T23:48:25+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "AIの賢さは「なめらかさ」ではなく「計算の手順」で測るべきだった——ニューラルネットワークを回路のコンパイル結果として捉え直す2026年6月のプレプリントと、万能近似定理の書き換え",
+      "url": "https://note.com/gensnotes/n/n1b424d423aeb",
+      "publishedAt": "2026-08-15T20:40:03+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "Fable級？DeepSeek V4 Pro 0813をお試し：1.6兆パラメータと100万トークン文脈でエージェント性能が飛躍。入力0.435ドル、出力0.87ドルは異常すぎる",
+      "url": "https://note.com/humble_bobcat51/n/n13abfe5abe49",
+      "publishedAt": "2026-08-15T19:39:57+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【AI】記憶は「似ているもの」より「効くもの」を思い出したほうがいい",
+      "url": "https://note.com/gensnotes/n/n996260e9025f",
+      "publishedAt": "2026-08-15T19:32:31+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "会社の本当の持ち主を国に届け出る制度が、アメリカで終わった——企業透明性法（CTA）の実質的支配者報告が2026年8月に廃止された経緯",
+      "url": "https://note.com/gensnotes/n/ne55e17379d7e",
+      "publishedAt": "2026-08-15T19:07:15+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【日記】GPT5.6の公式ガイドやDeepseekV4pro、Qwen3.8-27Bを一回さらっと触った結果。新卒を取らない選択も理解できたし、アイデア＆基礎知識を持たざる人間は市場価値を失ったのかもと感じた",
+      "url": "https://note.com/humble_bobcat51/n/n7809e36d3545",
+      "publishedAt": "2026-08-15T17:44:51+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "書く必要がなくなった先で、私が考えていること",
+      "url": "https://note.com/gensnotes/n/ndfc848e68981",
+      "publishedAt": "2026-08-15T17:33:26+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "ニューロンの数より多い概念が同じ場所に折り重なっている——「重ね合わせ（スーパーポジション）」とは何か、そしてAIの中身を読む研究に数学的な保証がついた2026年の話",
+      "url": "https://note.com/gensnotes/n/n277f43641663",
+      "publishedAt": "2026-08-15T13:52:55+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "原子核時計が世界で初めて動いた——トリウム229という原子の「芯」で時を刻む新しい時計は、GPSや通信網や金融のタイムスタンプという見えないインフラに何をもたらすのか",
+      "url": "https://note.com/gensnotes/n/n20e5dfe9ef78",
+      "publishedAt": "2026-08-15T09:15:31+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【世界最新を覗く】形式検証を追いかけたら、ループ設計の話に着地した",
+      "url": "https://note.com/gensnotes/n/n980f841fbb34",
+      "publishedAt": "2026-08-14T23:38:54+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【コールドスリーパーな未来】1万年先に行くより、17年多く起きていたい",
+      "url": "https://note.com/gensnotes/n/ne1ee1108bd82",
+      "publishedAt": "2026-08-14T20:00:23+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "エッジAIの常識を覆す3.1Bパラメータの衝撃：マルチモーダルモデル「LFM2.5-VL-3B」で遊んでみました～レイアウト保持OCRで業務自動化の可能性をバリバリ感じます～",
+      "url": "https://note.com/humble_bobcat51/n/nc5ca95849d6f",
+      "publishedAt": "2026-08-14T19:53:46+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "世界最大のステーブルコイン「テザー（USDT）」が初の完全監査を通過した——KPMGの無限定意見は何を証明し、何を証明していないのか",
+      "url": "https://note.com/gensnotes/n/n41d12d36452e",
+      "publishedAt": "2026-08-14T19:07:43+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "0.42ナノメートルの下敷きが、シリコンの次を開けた——TSMCと台湾の大学が示した2次元半導体（二硫化モリブデン）トランジスタの界面工学と、そこから変わる半導体産業の勢力図",
+      "url": "https://note.com/gensnotes/n/nfde405c8fb58",
+      "publishedAt": "2026-08-14T14:45:55+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "米国株と米国債のほぼすべてを預かる保管機関DTCCが、預かり証券そのものをブロックチェーン上の「トークン」に変えて本番稼働",
+      "url": "https://note.com/gensnotes/n/nbc68b8d2d59c",
+      "publishedAt": "2026-08-14T14:41:54+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【相場分析】「で、結局どこが面白そうなの？」を、真面目に考えてみた",
+      "url": "https://note.com/gensnotes/n/ndc4cc11059f5",
+      "publishedAt": "2026-08-14T00:18:20+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "グラフエンジニアリングの理想と現実「Semantica」：ブラックボックスを解消し、信頼されるAIエージェントを構築でRAGの次へ。W3C PROV-O準拠でAIの信頼性を担保",
+      "url": "https://note.com/humble_bobcat51/n/ndad11f4200a8",
+      "publishedAt": "2026-08-13T19:59:39+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【ぶっちゃけ、危険です】無料のジェミニを、私は使うのをやめた【Gemini 3.6 flash】",
+      "url": "https://note.com/gensnotes/n/nc1d87224bee3",
+      "publishedAt": "2026-08-13T19:32:05+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【常時】米国株が23時間取引になる2026年12月6日——株式市場から「営業時間」が消えると何が起きるのか",
+      "url": "https://note.com/gensnotes/n/ncbe1dee9e56a",
+      "publishedAt": "2026-08-13T18:24:56+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "最強のAIエージェントを「進化」で生み出す：KADATHが結構面白い感じでした",
+      "url": "https://note.com/humble_bobcat51/n/ne0cef2ac9c4d",
+      "publishedAt": "2026-08-13T16:39:37+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【遂に】Grok 4.6がやってきた──長時間走れるエージェント型AIの新しい相棒",
+      "url": "https://note.com/gensnotes/n/n12be95920d63",
+      "publishedAt": "2026-08-13T15:53:33+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【事務職、絶滅？】AIに強い職種を探すのは、もう古い地図だと思う",
+      "url": "https://note.com/gensnotes/n/n519f5529c812",
+      "publishedAt": "2026-08-13T15:41:48+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "AIが数十年動かなかった数学の未解決問題を10件まとめて解いた——OpenAI「Astra」の発表と、証明を機械が検査する「Lean（リーン）」という仕組みが、研究開発のコスト構造を変える理由",
+      "url": "https://note.com/gensnotes/n/ne68124a5f99e",
+      "publishedAt": "2026-08-13T13:35:51+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "Mamba-2 × MoEの衝撃。NVIDIA Nemotron-3.5-Lightning-30Bを試してみた ：次世代AIエージェントのNVIDIAエコシステムを最大化する戦略的選択。低コスト・高精度を両立する最新AIモデルの導入メリット",
+      "url": "https://note.com/humble_bobcat51/n/ndcd003861451",
+      "publishedAt": "2026-08-13T13:28:51+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【ツケ払い禁止令】世界でいちばん重要な市場の「配管」が2026年12月31日に切り替わる——米国債の中央清算義務化（セントラル・クリアリング）とは何か",
+      "url": "https://note.com/gensnotes/n/n39c39dffac53",
+      "publishedAt": "2026-08-13T13:02:19+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "ローカルAI開発の革命児「Unsloth Desktop」で徹底的に遊…びたかったけどQwen3.8-27B来なかった：個人からビジネスまでを網羅する次世代の選択肢",
+      "url": "https://note.com/humble_bobcat51/n/n0c75d6dca667",
+      "publishedAt": "2026-08-13T07:45:06+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "Redisを作った人がMacのためにC言語で書いた動画生成エンジン「h3.c」とは何か",
+      "url": "https://note.com/gensnotes/n/n068d7a7cccd1",
+      "publishedAt": "2026-08-12T19:31:28+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "弾丸は債券で買う――2026年、戦争の主戦場は資本市場に移った",
+      "url": "https://note.com/gensnotes/n/nf07c9d9f88e0",
+      "publishedAt": "2026-08-12T14:08:06+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【1命令に62秒】CPUをわざと世界一遅くする実験リポジトリ「Assembly Hall of Shame」とは何か【x86命令fxrstor64が1980億サイクルかかる仕組みを、アセンブリ初心者にも分かるように解説】",
+      "url": "https://note.com/gensnotes/n/n6d72ba3f2961",
+      "publishedAt": "2026-08-12T13:02:16+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【Astryx】150種類以上のReactコンポーネントと、AIに正しい画面を書かせるMCPサーバーの仕組みを初心者向けに解説【2026/08/11】",
+      "url": "https://note.com/gensnotes/n/na8a2cabe4b24",
+      "publishedAt": "2026-08-12T12:58:30+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "大規模コードベースを劇的に変える「Code-Graph-RAG」グラフ構造でコードの「文脈」を解読する次世代RAG",
+      "url": "https://note.com/humble_bobcat51/n/n050ef8e4be61",
+      "publishedAt": "2026-08-12T12:57:08+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【完全ローカル】画像認識×自己修復。Muse Glimmer 30B GGUF ：ローカル環境で自律型AIエージェントを動かす新時代はGemma4超えの完遂能力。2bitや3bitで動かないかなーってお試ししてみました",
+      "url": "https://note.com/humble_bobcat51/n/n5a194485d14a",
+      "publishedAt": "2026-08-12T07:50:10+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【AntV Infographic】文章を貼るだけでAIが図解（インフォグラフィック）を組み立ててくれる、オープンソースの生成・描画フレームワーク",
+      "url": "https://note.com/gensnotes/n/ne31e1bc1419b",
+      "publishedAt": "2026-08-12T01:53:04+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "aily Blockly（アイリー・ブロックリー）とは？ ブロックを並べるだけでArduino・ESP32・STM32が動く、AIがプロジェクト設計から配線図まで面倒を見てくれるハードウェア開発IDE",
+      "url": "https://note.com/gensnotes/n/n3c4d6c43e0cd",
+      "publishedAt": "2026-08-12T01:51:26+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【witr】「このプロセス、誰が動かしてるの？」に一発で答えてくれるコマンドラインツール【解説】",
+      "url": "https://note.com/gensnotes/n/nb732438cf1bb",
+      "publishedAt": "2026-08-12T01:43:15+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "Muse Glimmer 30Bは「止まらないエージェント」のために作られた｜Meta製オープンモデルをApache 2.0とシングルGPUの視点で読む",
+      "url": "https://note.com/gensnotes/n/n230c77a3fee2",
+      "publishedAt": "2026-08-12T00:12:53+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【2026年版】ゲーム開発の3Dモデル制作ツール、AI生成から実装までの最短ルートを全部話す",
+      "url": "https://note.com/gensnotes/n/nc05e50a8dd13",
+      "publishedAt": "2026-08-11T22:45:11+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "メモリ7分の1、でも1.8倍遅い──Cloudflare Kitesurfの正体",
+      "url": "https://note.com/gensnotes/n/nca307fce79aa",
+      "publishedAt": "2026-08-11T21:08:19+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "Ling-3.0-tiny ：なんと脅威の7.9B‐A1.3Bパラメータ。「思考」する軽量AIのローカル革命がとんでもない。8bit量子化でお試しで色々遊んでみました",
+      "url": "https://note.com/humble_bobcat51/n/n24a445d90e0e",
+      "publishedAt": "2026-08-11T20:36:56+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【AIが人類を超えた日】「賢すぎて開発停止」の裏側と、私たちの新しい切り札【Astra】",
+      "url": "https://note.com/gensnotes/n/ncc3728c105e1",
+      "publishedAt": "2026-08-11T17:37:29+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "「デュアル平坦」に舞い上がった私が、全部間違えて、もっと良い場所に着くまで— 情報幾何とJT重力を無理につなごうとした記録",
+      "url": "https://note.com/gensnotes/n/na570fb3f5121",
+      "publishedAt": "2026-08-11T17:23:17+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "Codex Router：Codexに自由と多様性をもたらすモデルルーターでCodexの標準ピッカーにDeepSeekやKimiを召喚。セキュリティと利便性の最適解。",
+      "url": "https://note.com/humble_bobcat51/n/na05e56b4e826",
+      "publishedAt": "2026-08-11T17:15:17+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "iPhoneをAIエージェントに操作させる「phone-harness」徹底解説：脱獄もXcodeも不要、Macの画面ミラーリングと文字認識だけで動く約500行の仕組みと、その限界",
+      "url": "https://note.com/gensnotes/n/n5c19e534318e",
+      "publishedAt": "2026-08-11T13:58:57+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "AIエージェントの「質」を劇的に変える妥協なきループの価値：gauntlet-loop徹底調査して安くループを作るつもりが、気高い思想に圧倒された話。AIに「甘え」を許さない。最高品質を自律的に追求するストイックな開発標準",
+      "url": "https://note.com/humble_bobcat51/n/n16fa31461bd9",
+      "publishedAt": "2026-08-11T12:39:59+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "個人情報保護を自動化する次世代ツール「deident-wasm」徹底解説：安全なデータ活用のための新常識",
+      "url": "https://note.com/humble_bobcat51/n/n0984f1852595",
+      "publishedAt": "2026-08-11T08:33:21+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【スイス1位、日本40位】人材ランキングの谷間で、『自省録』を開く",
+      "url": "https://note.com/gensnotes/n/nc94b7933a476",
+      "publishedAt": "2026-08-11T02:47:19+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【そんな凄くない？】次元は、数えるものではなく測るものかもしれない",
+      "url": "https://note.com/gensnotes/n/nbc415fd490aa",
+      "publishedAt": "2026-08-11T01:00:18+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【8/10世界市況分析】静かな上昇と、静かな主役交代",
+      "url": "https://note.com/gensnotes/n/ne401fe6c5842",
+      "publishedAt": "2026-08-11T00:13:36+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "AIが設計した「前例のない証券」──150億ドルはこうして集まった、という話",
+      "url": "https://note.com/gensnotes/n/n98ba5aa7442d",
+      "publishedAt": "2026-08-10T18:44:53+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【コラム】性能で並んだあと、残ったのはお金の話だった",
+      "url": "https://note.com/gensnotes/n/nab21e20659e4",
+      "publishedAt": "2026-08-10T18:29:03+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【code-graph-rag】重いツールを避けるのは、たぶん私の判断じゃなかった",
+      "url": "https://note.com/gensnotes/n/neae2c314c6fd",
+      "publishedAt": "2026-08-10T18:12:48+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【QLM】LLMが量子コンピュータの「家庭教師」になる日",
+      "url": "https://note.com/gensnotes/n/n47248f68b8a9",
+      "publishedAt": "2026-08-10T17:48:31+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "次世代の描画体験を、全ての開発者へ：完全商用無料のホワイトボードSDK「Quickdraw」React / React Native対応！依存関係ゼロで動くし、かわいい",
+      "url": "https://note.com/humble_bobcat51/n/n13cd964d5f01",
+      "publishedAt": "2026-08-10T16:33:20+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "LangChainは重すぎる？ わずか95行のコードで自分のPCで動く「読める」AIエージェント：「waku-agent」がAI開発の常識を変える「引き算の美学」とマルチツール・ループの実力",
+      "url": "https://note.com/humble_bobcat51/n/n2c9d445730f4",
+      "publishedAt": "2026-08-10T14:04:43+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "「一人で全部やる」を、もう終わりにしない？——msitarzewski/agency-agentsがくれる、静かな革命",
+      "url": "https://note.com/gensnotes/n/n992691cea622",
+      "publishedAt": "2026-08-10T14:02:53+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "「文明のタイムスリップ」に耐えられなかった夜 ―― スリランカ撤退記",
+      "url": "https://note.com/gensnotes/n/n0e0dbde1c1c4",
+      "publishedAt": "2026-08-10T05:02:44+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "眠らない人たちの話を、少し離れた場所から眺めていたら",
+      "url": "https://note.com/gensnotes/n/nf4bfbb70f863",
+      "publishedAt": "2026-08-10T02:47:42+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【666ghj/MiroFish】魚の群れが未来を予測する？「MiroFish」のちょっと不思議な世界",
+      "url": "https://note.com/gensnotes/n/ne196d28bfa80",
+      "publishedAt": "2026-08-10T00:00:18+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "2.78兆パラメータの巨人を、たった8GBのメモリで。純C実装「kimi-k3-in-c」がすごすぎる",
+      "url": "https://note.com/gensnotes/n/nc5f3beb61d78",
+      "publishedAt": "2026-08-09T22:23:43+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【日記】最新ツールは属人化を解消してくれるけど、労働者としては「貴方の価値を探しなさい」と言われる。そんな今の時代の天才は何をするんでしょうか？",
+      "url": "https://note.com/humble_bobcat51/n/n820f34503f11",
+      "publishedAt": "2026-08-09T19:23:21+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "AIエージェントがもっと頼もしくなる！「Agent Skills」って知ってる？",
+      "url": "https://note.com/gensnotes/n/n9b026f1f0453",
+      "publishedAt": "2026-08-09T18:13:10+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【お知らせ】「Genesis Vault Threshold」キャンペーン終了と「Genesis Vault Core」新設について",
+      "url": "https://note.com/gensnotes/n/n2546d4fffca9",
+      "publishedAt": "2026-08-09T17:29:09+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "HTML/CSSで動画をスタイリングする次世代ビデオ編集の形：「OpenEdit」コーディングエージェントで「所有」する。「人間がやったほうが面白い」派の私が、OpenEditに未来を感じた理由",
+      "url": "https://note.com/humble_bobcat51/n/neae2110153f7",
+      "publishedAt": "2026-08-09T15:37:51+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【Moltbook】あの広場は、まだそこにある",
+      "url": "https://note.com/gensnotes/n/ncace144bc756",
+      "publishedAt": "2026-08-09T14:12:33+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "夜中にふと思ったの。AIに「寝てる間も働いて」ってお願いできる時代が、もう来てるんだね。",
+      "url": "https://note.com/gensnotes/n/na74b6034997f",
+      "publishedAt": "2026-08-09T14:04:44+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "Python/piユーザーには神ツール？「Prime Agent」使ってみた：「スキルパッケージ化」と「自己改善」メカニズム。開発ワークフローを劇的に変える「継続性」の正体",
+      "url": "https://note.com/humble_bobcat51/n/ne9c127e08684",
+      "publishedAt": "2026-08-09T12:34:49+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "AIエージェントの拡張を標準化する「Agent Plugins Specification v1.0.0」完全ガイド",
+      "url": "https://note.com/humble_bobcat51/n/n27044d4f5de7",
+      "publishedAt": "2026-08-09T11:04:34+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【スマホ開発】脱OpenCode、Piへ。TermuxでAIエージェントを\"自分の手\"に取り戻すまで",
+      "url": "https://note.com/gensnotes/n/n602928cd73b9",
+      "publishedAt": "2026-08-09T00:08:17+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【コラム】「で、それRTX 3060で動くの？」が最上級の賛辞になった世界で、私たちは何を作るのか",
+      "url": "https://note.com/gensnotes/n/neddec22e0745",
+      "publishedAt": "2026-08-08T23:58:50+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【迷ってるほうを選んだ】「自然」と「技術」の間でモヤモヤする話",
+      "url": "https://note.com/gensnotes/n/n9d1c5951530c",
+      "publishedAt": "2026-08-08T23:57:58+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "「量子AI」と「ASI」について、半信半疑で夜の海を漂ってみた",
+      "url": "https://note.com/gensnotes/n/n83a264317cff",
+      "publishedAt": "2026-08-08T20:58:15+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【KimiK3をKimicodeで使ってみよう】父がシミュレーションRPGの良さを語った日。ちょっと作る前にぐったりしたかも",
+      "url": "https://note.com/humble_bobcat51/n/n3a378adbb9f8",
+      "publishedAt": "2026-08-08T20:40:27+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "🐿️ エゾモモンガ観察日記 — モダン保護施設でのひととき",
+      "url": "https://note.com/gensnotes/n/n25efc824f15f",
+      "publishedAt": "2026-08-08T17:55:51+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "CausalForgeをガチ調査した結果、エンジニアたちの深夜の議論が「だいたい正しくて、一部間違っていた」件",
+      "url": "https://note.com/gensnotes/n/ne975455c5cca",
+      "publishedAt": "2026-08-08T17:43:55+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "新しいパソコン買う前に、私の中の「0円に弱い子」と少し向き合ってみた",
+      "url": "https://note.com/gensnotes/n/n42c865b62a44",
+      "publishedAt": "2026-08-08T17:30:57+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "KimiK3の無料枠GET！実際に使ってみようと思いますーっ【導入～公式サイトお試し～Kimicodeセットアップまで】",
+      "url": "https://note.com/humble_bobcat51/n/n265f99196c0b",
+      "publishedAt": "2026-08-08T08:59:48+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【参加録】論文を読む会に行って、二時間ずっと「エージェントはいつ止まるのか」の話をしていた",
+      "url": "https://note.com/gensnotes/n/n1f42073362ae",
+      "publishedAt": "2026-08-08T03:34:07+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【脱トレーディング】わたし、ジーザス・クオンツになるため英語家になる",
+      "url": "https://note.com/gensnotes/n/n3b8d5deb7480",
+      "publishedAt": "2026-08-07T19:15:38+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【初心者】Ollamaで LiquidAI/LFM2.5-2.6B-GGUF の8bit量子化を使おう。～導入編【歓迎】",
+      "url": "https://note.com/humble_bobcat51/n/nc4462f676de5",
+      "publishedAt": "2026-08-07T18:07:13+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【mattpocock/skills】自分の `.agents` ディレクトリを、そのまま公開してしまう人の話",
+      "url": "https://note.com/gensnotes/n/n4bb8d0bbc1cd",
+      "publishedAt": "2026-08-07T16:05:04+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "老化を「壊れた機械」じゃなく「設定の狂ったソフト」として見る話",
+      "url": "https://note.com/gensnotes/n/nf23f6d95eebe",
+      "publishedAt": "2026-08-07T15:19:10+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【量子AI】自由を奪うと、答えはひとつしか残らない ── SYK、JT重力、そしてAIの数理",
+      "url": "https://note.com/gensnotes/n/ne833af32e011",
+      "publishedAt": "2026-08-07T14:34:56+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "OpenAIがChatGPTに新モデルSolとLunaを導入するらしいぞ、と昨日聞いてたら本日無料ユーザーも無制限利用可能に",
+      "url": "https://note.com/humble_bobcat51/n/nac3ca3c16ba2",
+      "publishedAt": "2026-08-07T09:43:40+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【計算機自然】量子AIの話をするけど、たぶんそれ「AI」じゃないよ【量子コンピューター】",
+      "url": "https://note.com/gensnotes/n/n5248045e4bac",
+      "publishedAt": "2026-08-07T03:08:47+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【逆スケーリング則？】量子AIは知っていた、選択肢のパラドックス【量子コンピューター】",
+      "url": "https://note.com/gensnotes/n/naed43970f083",
+      "publishedAt": "2026-08-07T02:59:28+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【コラム】スマホと、マグカップと、コーヒーと、ギター。",
+      "url": "https://note.com/gensnotes/n/n3aa5ead5c804",
+      "publishedAt": "2026-08-07T00:38:08+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【解説します】AIベース開発の進化についていきたいけど、ついていけない人へ【激変中】",
+      "url": "https://note.com/gensnotes/n/n50a61207560c",
+      "publishedAt": "2026-08-06T22:38:34+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "ドキュメント変換コストを1/100？：PC内の全書類が1分で「AIの血肉」に。爆速変換ツール「anydoc」を触ってみた",
+      "url": "https://note.com/humble_bobcat51/n/n2d5ad568d0e3",
+      "publishedAt": "2026-08-06T20:06:04+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "エージェントに「コンピュータ」を渡すという発想 — @cloudflare/computer を読み解く",
+      "url": "https://note.com/gensnotes/n/n59b350733f24",
+      "publishedAt": "2026-08-06T19:14:13+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "今後は少し投稿記事に対する誠意、という部分を意識したいと思います。",
+      "url": "https://note.com/humble_bobcat51/n/n573c4205379e",
+      "publishedAt": "2026-08-06T08:36:43+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "完全反繋",
+      "url": "https://note.com/gensnotes/n/n9d9b209c0b0c",
+      "publishedAt": "2026-08-06T05:48:58+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【Linear】境界に、一枚の紙を置いた日",
+      "url": "https://note.com/gensnotes/n/nf94e2f08019a",
+      "publishedAt": "2026-08-05T23:54:32+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【開発日記】量子超越性という言葉を、いったん自分の机の上から下ろした話",
+      "url": "https://note.com/gensnotes/n/n5e3aefc9647b",
+      "publishedAt": "2026-08-05T23:47:47+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【TencentDB Agent Memory】記憶を持たないAIに、私たちは何度同じ話をしただろう",
+      "url": "https://note.com/gensnotes/n/n5e15321f3ff3",
+      "publishedAt": "2026-08-05T20:13:29+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "オープンウェイトはなぜ世界に選ばれるのか【K3ショックから読む、分散という思想と米中の勝ち筋】",
+      "url": "https://note.com/gensnotes/n/nd728d2ef9c80",
+      "publishedAt": "2026-08-05T20:11:59+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【不十分なツールを配布したみたいです、大変すみません】元記事タイトル：「Claudeの週間制限来たので、Opencodeを使い倒そう。マーケティング計画書を作成」",
+      "url": "https://note.com/humble_bobcat51/n/ndd942dd5d7db",
+      "publishedAt": "2026-08-05T18:35:55+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【自分用リスト】AIフロンティア380用語・完全解説事典：BitNetからMCP、Rust製CLIまで",
+      "url": "https://note.com/gensnotes/n/n1d2b5e77b56d",
+      "publishedAt": "2026-08-05T16:55:20+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【日記】今日は事務にお仕事がない日。なので同僚から【アルゴリズムとデータ構造】という本を借りた",
+      "url": "https://note.com/humble_bobcat51/n/ndd83742763d9",
+      "publishedAt": "2026-08-05T14:54:16+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "ひなたの光電融合ノート ― 光子と電子が紡ぐ未来への物語",
+      "url": "https://note.com/gensnotes/n/nddf517b3272e",
+      "publishedAt": "2026-08-05T13:43:16+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "Android端末のポテンシャルを最大限に引き出す：Universal Android Debloater Next Generation (UAD-ng)",
+      "url": "https://note.com/humble_bobcat51/n/ne4abdc7a7788",
+      "publishedAt": "2026-08-05T12:34:57+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "Mistral AIの守護神「Shieldstral-1.0-3B」徹底解説：AI安全性の常識を覆す軽量・多機能モデルの全貌",
+      "url": "https://note.com/humble_bobcat51/n/n58c756f84f2e",
+      "publishedAt": "2026-08-05T12:10:53+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【AI驚き屋という認定】大量DMでわたしに届く「AI驚き屋は◯ね」に思うこと",
+      "url": "https://note.com/humble_bobcat51/n/ndd68bb5614df",
+      "publishedAt": "2026-08-05T11:06:15+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "三値重み採用の軽量LLM？DeepGroveが放つ推論特化型モデル「Maple-Preview」の革新性をお試ししてみた。iPhoneで120トークン/秒、Mac miniで200トークン/秒超えらしいぞ",
+      "url": "https://note.com/humble_bobcat51/n/n5201a54aa305",
+      "publishedAt": "2026-08-05T08:40:51+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "次世代ハイブリッドAI「Ling-3.0-flash」がオープンウェイトに！：圧倒的な効率と実力を備えた新星の正体",
+      "url": "https://note.com/humble_bobcat51/n/n2b254e54b51f",
+      "publishedAt": "2026-08-05T08:07:06+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "1000万トークンの衝撃：次世代AIモデル「Pokee-Isaac 28B」徹底調査！多分GPT5.6lunaをむっちゃ意識した性能と価格。未来はありそう",
+      "url": "https://note.com/humble_bobcat51/n/nf17f44b90c07",
+      "publishedAt": "2026-08-05T07:44:09+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "一部は9B超え？爆速で働く次世代AIモデル「LFM2.5-2.6B」徹底解説：小型・高速・高機能がもたらす革新",
+      "url": "https://note.com/humble_bobcat51/n/nc9dbadecf546",
+      "publishedAt": "2026-08-05T07:14:49+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【開発日誌】PierrotKnowledge2-5.0 アップデート内容：メモリ消費約633MB→135MBへと劇的削減、バンドルError等26点の修正",
+      "url": "https://note.com/humble_bobcat51/n/n52f963b88985",
+      "publishedAt": "2026-08-04T22:19:11+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【QI】モメチンのモメチンによるモメチンのためのクオンツ開発日誌 ── 市場の「相転移」を、量子幾何の目で見たかった【Fable5開発】",
+      "url": "https://note.com/gensnotes/n/n1a0eef82eaf9",
+      "publishedAt": "2026-08-04T18:58:10+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "DeepseekV4Flashに自作RAGを繋いでみて性能を上げてみよう【個人開発】",
+      "url": "https://note.com/humble_bobcat51/n/nda7e26c0c546",
+      "publishedAt": "2026-08-04T18:57:56+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "年齢って、地球にいて何回太陽の周りを回ったのかってだけだよね？",
+      "url": "https://note.com/gensnotes/n/nf7d3d771f43d",
+      "publishedAt": "2026-08-04T17:24:32+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "CTMUという名の背景幕——宇宙を持ち出すと、倫理の目盛りは消える",
+      "url": "https://note.com/gensnotes/n/n864b864ca8a0",
+      "publishedAt": "2026-08-04T15:32:40+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【墓参り】海に還るという選択が、静かに普通になっていた",
+      "url": "https://note.com/gensnotes/n/ne378cd56ae07",
+      "publishedAt": "2026-08-04T14:14:50+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "Androidユーザー必携の究極ビューア「Gander」徹底解剖：プライバシーと効率を両立する新基準はGoogleドライブの代わりになるか？「完全オフライン」を貫くGanderのストイックな設計思想はPDFからソースコードまでわずか15MBで全方位対応。",
+      "url": "https://note.com/humble_bobcat51/n/n34498fe34bbb",
+      "publishedAt": "2026-08-04T12:24:18+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【日記】素人がRAGを突き詰めて調べていくと、オブジェクト指向という考えに出会った。",
+      "url": "https://note.com/humble_bobcat51/n/n3059c8d7461b",
+      "publishedAt": "2026-08-04T10:59:55+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "自律型AIマーケティングチーム「eve」完全ガイド：Notion・Slack・Resendを繋ぐ次世代の運用術",
+      "url": "https://note.com/humble_bobcat51/n/n3b56fa3d4b3b",
+      "publishedAt": "2026-08-04T07:28:26+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "「教える」が「自動化」になるAIエージェント時代の新戦略：Skill Recorderで「自分の仕事」を自動化スキルに変える完全ガイド",
+      "url": "https://note.com/humble_bobcat51/n/nd2a0d2344b8a",
+      "publishedAt": "2026-08-04T06:33:53+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "世界最高のものは、たいてい遠くにあるように見える",
+      "url": "https://note.com/gensnotes/n/n0fdd2c20a7a0",
+      "publishedAt": "2026-08-04T04:54:14+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "ノーベル物理学賞でいちばんすごい人誰だと思う？",
+      "url": "https://note.com/gensnotes/n/ne223db36ee4d",
+      "publishedAt": "2026-08-03T21:46:51+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【開発日誌】CLI機能とPARAメソッド追加で快適UP「PierrotKnowledge2」：コンテキスト消費最大70％OFFでどんどん軽くしていこう。",
+      "url": "https://note.com/humble_bobcat51/n/n453b779f9291",
+      "publishedAt": "2026-08-03T18:31:53+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "動画生成を、動画モデルに任せるのをやめた話",
+      "url": "https://note.com/gensnotes/n/n7ed4abbe31be",
+      "publishedAt": "2026-08-03T15:55:59+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【日記】中国AIはサボり癖、米国AIはサイズどーん、機能どーん。わたしは日本的なAIが欲しい。1から作らなくていいから、日本の感性が入ったAIが欲しい",
+      "url": "https://note.com/humble_bobcat51/n/nf6c12805bc8c",
+      "publishedAt": "2026-08-03T11:19:16+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【個人開発でタルムードツール配布終了】DeepseekV4Flashのハーネスを弄くってみよう。planに一回全力を出させる方向性で。",
+      "url": "https://note.com/humble_bobcat51/n/n9756bbe3c865",
+      "publishedAt": "2026-08-03T07:38:39+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【ワームホール】物理学に正面衝突するAI数理は、どこへ行くのか",
+      "url": "https://note.com/gensnotes/n/n9729ec50272c",
+      "publishedAt": "2026-08-03T00:03:00+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【開発日記】ヘッドレスモード＆MCPでむっちゃ軽量・多機能にアップデート：「PierrotKnowledge2」トークン消費を58%削減。Skillの置き場と自動接続、ループエンジニアリングサポートも。",
+      "url": "https://note.com/humble_bobcat51/n/n96787af80860",
+      "publishedAt": "2026-08-02T20:37:53+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【日記】勉強ができなかったわたしと、勉強ができた同級生たち。常に会話が綺麗に揃わない",
+      "url": "https://note.com/humble_bobcat51/n/n23250b036e6e",
+      "publishedAt": "2026-08-02T19:25:56+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【特異点へ】機械的解釈可能性と宇宙論",
+      "url": "https://note.com/gensnotes/n/na04a7056af23",
+      "publishedAt": "2026-08-02T18:58:07+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "GitHubリポジトリの顔を劇的に変える「beautify-github-readme」完全ガイド",
+      "url": "https://note.com/humble_bobcat51/n/ne528bc98105d",
+      "publishedAt": "2026-08-02T17:51:55+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "ローエンド環境で最先端AIを動かす：究極のビデオ生成ツール「Wan2GP」徹底解説ガイド",
+      "url": "https://note.com/humble_bobcat51/n/n28a182f55add",
+      "publishedAt": "2026-08-02T16:50:18+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【個人開発・アイデア出しツール】DeepSeekV4flashがあまりにもToken消費低いので、Opencode内でオーケストレーション組んで使い倒そう。",
+      "url": "https://note.com/humble_bobcat51/n/n26dfd4e41b3b",
+      "publishedAt": "2026-08-02T16:29:09+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "ガードレールの内側を走り続ける人生について",
+      "url": "https://note.com/gensnotes/n/n352eea60404a",
+      "publishedAt": "2026-08-02T13:59:29+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "AIで3Dモデルを作って動かすまで ── 2026年夏、実際に手を動かして分かったこと",
+      "url": "https://note.com/gensnotes/n/n72259d03bc55",
+      "publishedAt": "2026-08-02T13:57:47+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "ハーネス・エンジニアリング：AIの能力を100倍に引き出す「環境の設計図」",
+      "url": "https://note.com/humble_bobcat51/n/na5c266545195",
+      "publishedAt": "2026-08-02T12:21:01+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "AIエージェントを最強のセキュリティエンジニアに変える「reverse-skill」徹底解説",
+      "url": "https://note.com/humble_bobcat51/n/ndd968efc5918",
+      "publishedAt": "2026-08-02T08:49:40+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "AIエージェントの「嘘」と「失敗」を防ぐ究極の処方箋：Fable Method",
+      "url": "https://note.com/humble_bobcat51/n/ne7540711e156",
+      "publishedAt": "2026-08-02T08:04:35+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【自分用】AI時代の英語学習は、もう「訳す練習」じゃない ――この記事を読み終わる頃には、あなたの脳は0秒で判断しはじめる",
+      "url": "https://note.com/gensnotes/n/n45cf94d46819",
+      "publishedAt": "2026-08-01T23:06:06+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【何があっても自爆する】最後の四百メートル【AI自爆ドローン】",
+      "url": "https://note.com/gensnotes/n/n70c77cb7df3c",
+      "publishedAt": "2026-08-01T22:49:24+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【AI英語学習・超高速サイクル】Read Like the Forge — ギガポリスで学ぶ速読ビジネス英語",
+      "url": "https://note.com/gensnotes/n/n30f2e51a5f64",
+      "publishedAt": "2026-08-01T22:44:28+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【キルゾーンにて】静かだと、眠れない【ウクライナ・バトルフロント】",
+      "url": "https://note.com/gensnotes/n/n77748f77b1e8",
+      "publishedAt": "2026-08-01T22:42:32+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "仮定法過去 完全攻略 ── TOEIC990のためのノート",
+      "url": "https://note.com/gensnotes/n/n260b7d8cc165",
+      "publishedAt": "2026-08-01T19:37:45+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【個人開発】爆速・極小・AI特化。Electrobunで322KBのメインプロセスが実現「PierrotKnowledge2」：思考を止めない0.9秒の自動保存を求めた",
+      "url": "https://note.com/humble_bobcat51/n/n0ca24c6165ba",
+      "publishedAt": "2026-08-01T19:03:21+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "Two Days of Watching the Indie AI Scene (And Grinding TOEIC)",
+      "url": "https://note.com/gensnotes/n/nabca51e74a49",
+      "publishedAt": "2026-08-01T17:25:21+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "AIバブルの崩壊はDeepseekV4flashの登場とGPT5.6lunaの80％OFFから始まるのか？",
+      "url": "https://note.com/humble_bobcat51/n/n62129ecd3df6",
+      "publishedAt": "2026-08-01T13:36:02+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "もはや「Flash」ではない怪物モデル。DeepSeek-V4-Flash-0731：ローカルLLMの常識を覆す性能とVRAM 155GBの先に待つ世界。",
+      "url": "https://note.com/humble_bobcat51/n/n22bf567fcfc7",
+      "publishedAt": "2026-08-01T12:09:12+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "AIコーディングの「デザインの質」を劇的に改善する：Impeccable徹底ガイド",
+      "url": "https://note.com/humble_bobcat51/n/n7de21ca895f5",
+      "publishedAt": "2026-08-01T06:00:58+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【不滅】毎日タルムード ── 二千年前の「お金の教科書」を、いま開く【未来永劫】",
+      "url": "https://note.com/gensnotes/n/n3a7a4f86ad58",
+      "publishedAt": "2026-08-01T04:23:59+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "「有効期限切れの600点」から、900点という座標へ",
+      "url": "https://note.com/gensnotes/n/n49f8a45c17f1",
+      "publishedAt": "2026-07-31T23:48:22+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【現代戦争を越えていく】三つの夜",
+      "url": "https://note.com/gensnotes/n/nfa60fdc65bc8",
+      "publishedAt": "2026-07-31T23:41:53+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "読者の【0.5秒】を奪う言葉の技術：【AI Copywriter】が実現する人間味のある発信「Humanizer」×「Copywriting」。33のAIパターンを洗浄。Wikipediaの知見と研究に基づいた実力はAIの効率性とプロの思考を融合させる新基準",
+      "url": "https://note.com/humble_bobcat51/n/n69b78056be21",
+      "publishedAt": "2026-07-31T21:57:13+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【個人開発】Opencodeの無料枠、DeepseekV4FLASHがプレビュー版じゃなくなったので早速使ってみる【開発フレームワーク早見表】",
+      "url": "https://note.com/humble_bobcat51/n/n6410422a32bd",
+      "publishedAt": "2026-07-31T20:32:54+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "アジア競技大会日本代表メンバーが発表！結構ガチなメンバーで驚きました",
+      "url": "https://note.com/humble_bobcat51/n/ncf9004b88489",
+      "publishedAt": "2026-07-31T18:43:49+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【個人開発】Pierrot-Knowledgeプレビュー版を発表したい：RustとOKFが切り拓く、超軽量ナレッジベースの設計思想をまとめてみました",
+      "url": "https://note.com/humble_bobcat51/n/n035a6b696305",
+      "publishedAt": "2026-07-31T16:58:21+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "3D都市で歩くPostgreSQLの深淵：PGSimCity完全ガイド",
+      "url": "https://note.com/humble_bobcat51/n/nfa8c9234df6d",
+      "publishedAt": "2026-07-31T12:38:39+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "Godot開発の決定版：プロジェクト管理とGitを統合する「GodotHub」徹底レビュー",
+      "url": "https://note.com/humble_bobcat51/n/nbb167e54f078",
+      "publishedAt": "2026-07-31T12:23:50+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "「OpenWork」がむっちゃアプデされてた：あなたの働き方をどう変えるのか？",
+      "url": "https://note.com/humble_bobcat51/n/n5eebe00defc2",
+      "publishedAt": "2026-07-31T10:27:39+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "次世代AIエンジニアリングツール「Poolside Desktop Assistant」徹底調査：チャットの枠を超えたマルチエージェント開発の衝撃",
+      "url": "https://note.com/humble_bobcat51/n/nf0e4ecd446a4",
+      "publishedAt": "2026-07-31T10:16:02+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【個人開発】Obsidianが重くて嫌になったので、軽くてOKF仕様のLLMwiki階層になったRAGノートアプリを作ってみました：【Pierrot Knowledge】",
+      "url": "https://note.com/humble_bobcat51/n/n7560d93d8578",
+      "publishedAt": "2026-07-31T08:23:31+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "UEFAがFIFA主催の全大会ボイコットを正式表明した件について",
+      "url": "https://note.com/humble_bobcat51/n/nc0eccde2a68a",
+      "publishedAt": "2026-07-31T07:00:21+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "エゾモモンガ観察記録",
+      "url": "https://note.com/gensnotes/n/na7bdf8aa6459",
+      "publishedAt": "2026-07-31T04:09:01+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "エクストリーム・クリプトカレンシー ── AIトレーディングツール編",
+      "url": "https://note.com/gensnotes/n/n7c72da0b1ac4",
+      "publishedAt": "2026-07-30T21:09:19+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【考察してみた】グラフエンジニアリングってなに？",
+      "url": "https://note.com/gensnotes/n/n0d684c220394",
+      "publishedAt": "2026-07-30T19:49:12+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【雑務は人間を越えた】AIに財布を渡す前に ── Agentic Tradingの、誇大広告と本物の境界線",
+      "url": "https://note.com/gensnotes/n/nab6f5e543830",
+      "publishedAt": "2026-07-30T19:46:11+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "驚異の書き起こし精度。CrisperWhisper 2.0完全解説：AI音声認識の「次世代標準」を読み解く",
+      "url": "https://note.com/humble_bobcat51/n/nbe259d75afcc",
+      "publishedAt": "2026-07-30T19:24:02+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "次世代AI統合プラットフォーム「Skales」最新アプデ内容：開発からビジネス自動化までを網羅する新時代の標準ツールでGemini 3.6からClaudeまで18種を統合。開発と自動化を加速させるSkales Codeの実力",
+      "url": "https://note.com/humble_bobcat51/n/n921fab2158d4",
+      "publishedAt": "2026-07-30T19:06:07+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "AI一般化時代・AGI達成時代・ASI確立時代における「最も必要とされるSkill」と「最もビジネスに結びつくSkill」を無能が考える",
+      "url": "https://note.com/humble_bobcat51/n/ne2f87f713748",
+      "publishedAt": "2026-07-30T17:30:51+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【個人開発】最近の個人開発があまりにも「趣味の開発」って感じになってきちゃった。",
+      "url": "https://note.com/humble_bobcat51/n/n8bc06e0c26bd",
+      "publishedAt": "2026-07-30T12:39:40+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "ローカルAIの限界突破する2ビット量子化：Qwen3.6-35B-A3B-Escha-W2 12GBのモデルが、なぜFP8版に匹敵する精度を出せるのか？",
+      "url": "https://note.com/humble_bobcat51/n/n203fb3c1b457",
+      "publishedAt": "2026-07-30T08:15:57+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "Qwythos-27B-v1：妥協なき全部入りモデルが切り拓く「考えるAI」MTPヘッドとハイブリッド・アテンションの融合",
+      "url": "https://note.com/humble_bobcat51/n/n103d63326acd",
+      "publishedAt": "2026-07-30T07:58:44+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "次世代のブラウザ操作AI「Fara1.5-27B」：自律型エージェントが切り拓く自動化の未来",
+      "url": "https://note.com/humble_bobcat51/n/necb06b205589",
+      "publishedAt": "2026-07-30T07:13:29+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【コラム】暇人が、いつも先に立っている",
+      "url": "https://note.com/gensnotes/n/n6b8f9d287e21",
+      "publishedAt": "2026-07-29T19:35:52+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【対談】「ループ量子重力のほうが、明らかにスリムじゃないですか」――オッカムの剃刀は、何を数える刃なのか",
+      "url": "https://note.com/gensnotes/n/n6b10e44e1110",
+      "publishedAt": "2026-07-29T17:35:08+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【AI放し飼い最適化】AIブリーダーの時代",
+      "url": "https://note.com/gensnotes/n/n63946def767f",
+      "publishedAt": "2026-07-29T16:17:03+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "千という数について——フォロワー1000人への、余白からの手紙",
+      "url": "https://note.com/gensnotes/n/n35a9d5ae0ce8",
+      "publishedAt": "2026-07-29T16:11:36+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "技術書をAIの「知能」に変える最強ツールbook-to-skill徹底調査：トークン消費を最大51倍削減！AIハルシネーションを構造化で防ぐ。技術書を信頼できる一次ソースに変える技術",
+      "url": "https://note.com/humble_bobcat51/n/nb48141254142",
+      "publishedAt": "2026-07-29T15:18:15+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【日記】いじられ役だった卓球部の男の子が将来を真剣に考えてて、自分の成長のなさと卑屈さを感じた。",
+      "url": "https://note.com/humble_bobcat51/n/nc59053ed9c66",
+      "publishedAt": "2026-07-29T14:23:28+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "次世代AIエンコーダー「LFM2.5-Encoder-350M」徹底解剖：CPUで動く爆速多言語モデルの実力",
+      "url": "https://note.com/humble_bobcat51/n/n79dcf1b98d2d",
+      "publishedAt": "2026-07-29T07:48:10+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "grug-27b：推論コストを98%削減する「思考の断捨離」で冗長性を排し、知能の純度を極めた次世代AIモデルの全貌",
+      "url": "https://note.com/humble_bobcat51/n/n2bee78a5104a",
+      "publishedAt": "2026-07-29T07:22:07+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "Rustで構築する極小LLM推論エンジン「tiny-llm」徹底解説：MiniCPM5-1Bの実力を解剖する",
+      "url": "https://note.com/humble_bobcat51/n/n41dfbd3963cf",
+      "publishedAt": "2026-07-29T06:59:25+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【Cloudflare Workers AI】GPUのない机の上で、画像生成基盤を持つ",
+      "url": "https://note.com/gensnotes/n/n19dfd8f8db32",
+      "publishedAt": "2026-07-29T02:33:12+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【コラム】「今年も、誰かに届いたか」——ケイトが私を叱りに来た夜",
+      "url": "https://note.com/gensnotes/n/n42594db8d988",
+      "publishedAt": "2026-07-28T20:08:23+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【ツールお試し】Bentoでマガジンとかアイコン用の画像スライドを作ってみた",
+      "url": "https://note.com/humble_bobcat51/n/n247115acc303",
+      "publishedAt": "2026-07-28T19:44:27+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "次世代量子化モデル「Neutrino-8B」徹底解説：3ビット未満の衝撃と実戦導入ガイド",
+      "url": "https://note.com/humble_bobcat51/n/n5fc9f23d6500",
+      "publishedAt": "2026-07-28T13:46:00+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "アボカドトーストは、なぜ日本の朝に居場所がないのか",
+      "url": "https://note.com/gensnotes/n/n587054e7b427",
+      "publishedAt": "2026-07-28T13:42:40+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "AMD Instella-MoE：オープンソースLLMの新たな極致とその戦略的価値",
+      "url": "https://note.com/humble_bobcat51/n/n4a9398ed7619",
+      "publishedAt": "2026-07-28T07:26:48+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "次世代オープンソースAIの極致：Moonshot AI「Kimi-K3」がオープンウェイトになりましたぁ。",
+      "url": "https://note.com/humble_bobcat51/n/n06e0b4e3618c",
+      "publishedAt": "2026-07-28T06:56:52+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【Eureka Cast】暴走機関車の世紀 ——賢いサピエンスがいても、それは起きる",
+      "url": "https://note.com/gensnotes/n/ndb748b14c838",
+      "publishedAt": "2026-07-27T23:04:20+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【感謝】40万ビューと1200フォローありがとうございますっ！速度感についていけてません",
+      "url": "https://note.com/humble_bobcat51/n/n2ee2507758f8",
+      "publishedAt": "2026-07-27T21:02:21+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "AIコーディング時代の新標準：CodeAlmanacが定義する「生きたコードベース・ウィキ」の全貌",
+      "url": "https://note.com/humble_bobcat51/n/ncbe4e1d9ada9",
+      "publishedAt": "2026-07-27T19:32:21+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "ブラウザとJSONだけでいい。AIエージェントが直接編集する次世代動画編集ツール：【FableCut】徹底解剖でHuman-in-the-loopな制作環境をつくる",
+      "url": "https://note.com/humble_bobcat51/n/n1c2142135044",
+      "publishedAt": "2026-07-27T18:55:16+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "Fable 5.1 リーク情報とGPT-6のリークとGrok4.6と4.7も。",
+      "url": "https://note.com/humble_bobcat51/n/n1d24d0e9e469",
+      "publishedAt": "2026-07-27T18:09:13+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【学歴完全崩壊】悪夢の大学卒業生、ゴキブリと言われる大学院生",
+      "url": "https://note.com/gensnotes/n/n387e1f0bec25",
+      "publishedAt": "2026-07-27T17:47:53+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【対談】Instaticは「サイトを所有する」の何を変えるのか",
+      "url": "https://note.com/gensnotes/n/nb1957485c541",
+      "publishedAt": "2026-07-27T17:16:41+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【妄想】もしも、中流家庭だったら",
+      "url": "https://note.com/humble_bobcat51/n/ncc5dc9b8d224",
+      "publishedAt": "2026-07-27T11:42:19+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【日記】古文書から学ぶggrksという文化と、AI時代でも通用する会話のマナー",
+      "url": "https://note.com/humble_bobcat51/n/n1208b3e1cbc1",
+      "publishedAt": "2026-07-27T08:28:37+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【対談？】「一日で敵陣を勉強してきました」――ひなた、ループ量子重力を手にエウレカに殴りかかる回",
+      "url": "https://note.com/gensnotes/n/n978fd3257c11",
+      "publishedAt": "2026-07-26T22:25:30+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【日記】同級生が帰省してくる中、残った人間の時間が止まってるような言葉を吐かれる。控えめに言って不愉快。",
+      "url": "https://note.com/humble_bobcat51/n/nd50e8f705e1d",
+      "publishedAt": "2026-07-26T21:57:56+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【対談】「じゃあ、うちの宇宙のスクリーンは未来にあるんですか?」――dS/CFT、重力波メモリー、そして天球のホログラム",
+      "url": "https://note.com/gensnotes/n/n48931a56a566",
+      "publishedAt": "2026-07-26T20:10:19+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "PenguinHarness：自律型エージェント構築を再定義する次世代プラットフォームの全貌",
+      "url": "https://note.com/humble_bobcat51/n/n622a78202682",
+      "publishedAt": "2026-07-26T19:56:42+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "次世代AIソフトウェア・ファクトリー「Finn-loop」：GitHubとLinearを統合する究極の開発自動化ガイド",
+      "url": "https://note.com/humble_bobcat51/n/n2c687c404583",
+      "publishedAt": "2026-07-26T19:08:02+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【対談】「うちの宇宙、なんで仲間はずれなんですか?」――AdS/CFTとストリング・ランドスケープを、ひとつなぎに理解する回【境界の】",
+      "url": "https://note.com/gensnotes/n/n34bf3dafc5b7",
+      "publishedAt": "2026-07-26T17:55:01+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "次世代Web演出の標準：Canvas UI徹底解説 — インタラクティブなWebGL体験を全てのフレームワークへ",
+      "url": "https://note.com/humble_bobcat51/n/n7de4ffda332a",
+      "publishedAt": "2026-07-26T17:51:33+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【弦風景解析】10の500乗は「自由」ではない――超弦理論の規則が、卓上実験まで降りてくるまで",
+      "url": "https://note.com/gensnotes/n/n748ff141b0f0",
+      "publishedAt": "2026-07-26T14:04:24+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【次元を超えていく】宇宙にlinterをかける ── 弦理論2026、いちばんやさしい最前線",
+      "url": "https://note.com/gensnotes/n/n004cc22765ba",
+      "publishedAt": "2026-07-26T13:21:09+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "次世代AIエージェント「OpenWorker」徹底解剖：Andrew Ng氏が放つ、業務完遂型「AI同僚」の実力。複数の業務ツールを一気通貫に自動化できるのか？",
+      "url": "https://note.com/humble_bobcat51/n/n06790306233d",
+      "publishedAt": "2026-07-26T12:42:16+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "JOSIE-2-4B-Preview：Apple Siliconで覚醒する「思考型」ローカルLLMの全貌",
+      "url": "https://note.com/humble_bobcat51/n/nc2aefeafdf29",
+      "publishedAt": "2026-07-26T12:14:14+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【日記】自動化出来るようになって、自動化を辞め始めたというか絞り始めた",
+      "url": "https://note.com/humble_bobcat51/n/n54be8e4c094a",
+      "publishedAt": "2026-07-26T10:51:15+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "玄関と、覚え書き ── Glowとマカロンが、実は同じ話をしている件",
+      "url": "https://note.com/gensnotes/n/n5f9205788d54",
+      "publishedAt": "2026-07-26T09:36:52+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "次世代AI開発のパラダイム：fusion-harnessによる「モデル融合」の徹底解説",
+      "url": "https://note.com/humble_bobcat51/n/n540d5333d005",
+      "publishedAt": "2026-07-26T08:36:17+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "Bento — ファイルひとつに完結する次世代オフィススイートの全貌：SaaSへのロックインを終わらせる。560KBのHTMLにエディタを内包した設計思想と圧倒的性能",
+      "url": "https://note.com/humble_bobcat51/n/n9dedf5d3011d",
+      "publishedAt": "2026-07-26T07:48:31+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "Open Code Review：アリババの数万人が磨き上げた次世代AIコードレビューの実力",
+      "url": "https://note.com/humble_bobcat51/n/n5413f2cad808",
+      "publishedAt": "2026-07-26T06:53:35+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【個人開発】面倒ごとから逃げたら成長しないって理解るんだけども、どうしてもｖLLMやSGLangを使っていく未来を想像できない。",
+      "url": "https://note.com/humble_bobcat51/n/n07ae45c3a0ea",
+      "publishedAt": "2026-07-25T19:01:47+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "10ミリ秒の反射神経 ── Automattic/harper が証明している「賢さでは買えないもの」",
+      "url": "https://note.com/gensnotes/n/n16f95e1d03b2",
+      "publishedAt": "2026-07-25T17:04:50+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【Block/Buzz】巣に鍵を渡す日 ── Blockの「Buzz」が静かに書き換えている“働く場所”の定義",
+      "url": "https://note.com/gensnotes/n/n7373ba662aea",
+      "publishedAt": "2026-07-25T16:43:01+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【個人開発】開発がなんにもうまくいかん。KAT-Coder-V2.5-Devを何度も入れ直して、呆然と玉を見過ごす敵AIのエアホッケー。",
+      "url": "https://note.com/humble_bobcat51/n/n7d57aa5050d2",
+      "publishedAt": "2026-07-25T15:39:03+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "Macaron-V1-VentiとMacaron-V1-Tall：GLM5.2をMoE化したModelに未来を感じてる。",
+      "url": "https://note.com/humble_bobcat51/n/n883043b8524f",
+      "publishedAt": "2026-07-25T11:01:00+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "ジェイスン・ファンが署名した米国政府への規制反対、これでオープンウェイトモデルは守られるけど、その背景は？",
+      "url": "https://note.com/humble_bobcat51/n/n36d8810867cd",
+      "publishedAt": "2026-07-25T09:00:42+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "Claude Opus 5がキターーー！：取り敢えず制限来るまで回してみました。むっちゃ賢い。",
+      "url": "https://note.com/humble_bobcat51/n/nfdf8ec184c94",
+      "publishedAt": "2026-07-25T08:14:47+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【解禁】ついに来た、Opus 5",
+      "url": "https://note.com/gensnotes/n/nc760d7e2a25c",
+      "publishedAt": "2026-07-25T07:05:40+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【2026年7月版】無料AIゲートウェイ「OmniRoute」導入手順 ― 月額を止めて、窓口を自分の手元に置く",
+      "url": "https://note.com/gensnotes/n/n617b852c5cb8",
+      "publishedAt": "2026-07-25T06:53:35+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【世界情勢】バッファが消えた世界——2026年7月下旬、バラバラに見える全ニュースが同じ一本の線でつながっている",
+      "url": "https://note.com/gensnotes/n/nf86a07443198",
+      "publishedAt": "2026-07-25T06:29:00+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【コラム】とあるブロガーに圧倒されていた日々",
+      "url": "https://note.com/gensnotes/n/n1fe9b625376e",
+      "publishedAt": "2026-07-25T06:05:12+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【嗚呼、宇宙】この宇宙は、泣けるほど儚い――ランドスケープの高台に置かれた、ひとすくいの水たまりについて",
+      "url": "https://note.com/gensnotes/n/nae8524d3e665",
+      "publishedAt": "2026-07-24T21:24:29+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【日記】『誰にでも見てほしいは誰にも刺さらないに等しい』を読者として痛感した",
+      "url": "https://note.com/humble_bobcat51/n/nbf8001c5ee3a",
+      "publishedAt": "2026-07-24T19:43:36+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【ブリーダーへ】育てる計算機——設計の時代が終わり、育種の時代が始まる",
+      "url": "https://note.com/gensnotes/n/n0bbd691944c8",
+      "publishedAt": "2026-07-24T19:12:11+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【ホモ・サピエンスの環世界】気持ちよさは、渡せるのか——潜在空間を通る「感覚」の移送について、いま分かっていることの全部",
+      "url": "https://note.com/gensnotes/n/n8d9316e736e2",
+      "publishedAt": "2026-07-24T17:20:11+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【A2A】構造化出力のハードウェア版は、どこにあるのか",
+      "url": "https://note.com/gensnotes/n/na69e4eab922c",
+      "publishedAt": "2026-07-24T17:00:58+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "Hy3、Ling-3.0-flash、Laguna-S-2.1 / Laguna-XS-2.1、KAT-Coder-V2.5-Dev の公式発表データを徹底比較してみた。",
+      "url": "https://note.com/humble_bobcat51/n/ne5e40be2f42b",
+      "publishedAt": "2026-07-24T15:12:51+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【Ling-3.0-flash】124Bなのに5.1Bしか動かない怪物と、80%速くなった使い魔 ——2026年7月、個人がエージェントを持つ日",
+      "url": "https://note.com/gensnotes/n/n65d894c4b4ff",
+      "publishedAt": "2026-07-24T13:53:14+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【Grok4.5】アプリが一発で建ち、会話から「ターン」が消えた日に、何が終わったのか【感情AI】",
+      "url": "https://note.com/gensnotes/n/n4954e440906b",
+      "publishedAt": "2026-07-24T13:38:44+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【意味不明さを解く】触れないものと、どうやって話すのか",
+      "url": "https://note.com/gensnotes/n/n4e23078f8a2f",
+      "publishedAt": "2026-07-24T13:21:44+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【Token最高化】審美眼 ── 無意識に育つ分身と、資産としてのClaude Code",
+      "url": "https://note.com/gensnotes/n/n7e482072e29a",
+      "publishedAt": "2026-07-24T13:06:31+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【個人開発】Ling-3.0-flashで個人事業主の会計ソフトを作ってみた",
+      "url": "https://note.com/humble_bobcat51/n/n5b9d5b83658b",
+      "publishedAt": "2026-07-24T12:32:59+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "協調型プラットフォーム「Buzz」：人間とAIエージェントが融合する次世代ワークスペースの全貌",
+      "url": "https://note.com/humble_bobcat51/n/n6aad933fb5e0",
+      "publishedAt": "2026-07-24T12:06:09+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "Fugu-Ultra v1.1 ：SakanaAIのアップデートだぁ。最新の最先端モデル組み込んで最大 7.9 ポイントの向上らしい",
+      "url": "https://note.com/humble_bobcat51/n/n440024f2b614",
+      "publishedAt": "2026-07-24T10:20:41+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "次世代のエージェント指向コーディングモデル「KAT-Coder-V2.5-Dev」がオープンウェイトになりましたぁ",
+      "url": "https://note.com/humble_bobcat51/n/n0516c6e207aa",
+      "publishedAt": "2026-07-24T07:22:55+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "Ling-3.0-flash：124Bのサイズで。アクティブは僅か5.1B！エージェント向けのハイブリッド推論 MoE モデルはどんな感じなのかな？",
+      "url": "https://note.com/humble_bobcat51/n/n1ac1dcf4a3e6",
+      "publishedAt": "2026-07-24T06:51:31+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "世界最高峰は、量子ビットの中にはない。「4マイクロ秒の締切」の中にある",
+      "url": "https://note.com/gensnotes/n/n96ad561b4202",
+      "publishedAt": "2026-07-23T23:28:32+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "誤りは消せない。読み解くだけだ。Googleのデコーダをガチで読んだ",
+      "url": "https://note.com/gensnotes/n/n51030049188e",
+      "publishedAt": "2026-07-23T23:26:47+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "古典が真似できない部分だけが、量子の価値だ。Tsimを解説",
+      "url": "https://note.com/gensnotes/n/n7c25d50c562a",
+      "publishedAt": "2026-07-23T23:06:47+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【販売終了】Grok4.5で良さげな情報取得や結果を出すための無料プロンプトとわたしが普段使ってるおすすめプロンプト集（有料5＋20個）",
+      "url": "https://note.com/humble_bobcat51/n/nb363195ec2c9",
+      "publishedAt": "2026-07-23T21:32:32+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【個人開発】Laguna‐S2.1をなんとかして使おう。アクションGame＆会計ソフト作成してみた",
+      "url": "https://note.com/humble_bobcat51/n/nd2abe999f31f",
+      "publishedAt": "2026-07-23T19:42:51+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "Hermes Agentの最新アプデ最新バージョン0.19：起動時間の約80%削減やらMoAがしやすくなった！Code量も76％削減されたらしいですーっ",
+      "url": "https://note.com/humble_bobcat51/n/n14b0e98da97a",
+      "publishedAt": "2026-07-23T17:11:37+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "次世代セキュア・ファイル転送ツール「croc」完全解説：技術仕様から高度な活用法まで",
+      "url": "https://note.com/humble_bobcat51/n/ne700f739317b",
+      "publishedAt": "2026-07-23T12:57:36+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "AIコーディングのパラダイムシフト：『i-have-adhd』スキルがもたらす極限の生産性",
+      "url": "https://note.com/humble_bobcat51/n/n3e4441666299",
+      "publishedAt": "2026-07-23T12:08:35+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "LikeC4：常に最新のシステム構造を可視化する「コードとしてのアーキテクチャ」完全解説",
+      "url": "https://note.com/humble_bobcat51/n/n76e2cf50cf6e",
+      "publishedAt": "2026-07-23T08:10:51+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【日記】みみっちい生活していたら、太陽とともに生きるようになってきた。友達と生活が合わなすぎる…",
+      "url": "https://note.com/humble_bobcat51/n/n653c1198fce9",
+      "publishedAt": "2026-07-23T07:30:09+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "Solar-Open2-250B：エージェント時代を切り拓く次世代LLMの全貌",
+      "url": "https://note.com/humble_bobcat51/n/n34be6070e896",
+      "publishedAt": "2026-07-23T07:05:36+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【普及用】今からでも全然最前線に間に合う。誰か、今からOpencodeで開発しませんか？【仲間欲しい】",
+      "url": "https://note.com/humble_bobcat51/n/nc3960d322fdb",
+      "publishedAt": "2026-07-22T20:55:03+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【個人開発】Laguna-S-2.1でなんか作ってみよう！アクションGame編……がやりたかったですが、敵はProviderErrorでした。",
+      "url": "https://note.com/humble_bobcat51/n/n0d051c1ceb88",
+      "publishedAt": "2026-07-22T18:16:50+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "アメリカが最近、国交でトラブルまみれになって中国よりも嫌われ始めた？この状況を日本はどう見るのか？",
+      "url": "https://note.com/humble_bobcat51/n/n394ad7671c4c",
+      "publishedAt": "2026-07-22T17:02:48+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "Unturnedオープンソース・プロジェクト：U3-SDKの包括的解析と活用ガイド",
+      "url": "https://note.com/humble_bobcat51/n/n0f2610afd087",
+      "publishedAt": "2026-07-22T12:50:06+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "UnityでのタクティカルRPG開発を加速させる「TRPG_Maker」の全貌",
+      "url": "https://note.com/humble_bobcat51/n/n6c4c7207a839",
+      "publishedAt": "2026-07-22T12:28:45+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "Ponytail：AIエージェントを「怠惰で優秀なシニアエンジニア」に変える革新的なルールセット",
+      "url": "https://note.com/humble_bobcat51/n/nb26d8fa2077e",
+      "publishedAt": "2026-07-22T09:30:24+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "Laguna-S-2.1：エージェント型コーディングの未来を切り拓く118B MoEモデルの全貌",
+      "url": "https://note.com/humble_bobcat51/n/n5f982e111a33",
+      "publishedAt": "2026-07-22T06:48:50+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "GoogleがGemini 3.6 Flashなど3つの新AIモデルを発表：効率重視のアップデートしたんだけど…Proはいつなん？",
+      "url": "https://note.com/humble_bobcat51/n/n82569dd8dfc8",
+      "publishedAt": "2026-07-22T06:14:59+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "20才女子がローカルAIアシスタントを使って得したこと、損したこと",
+      "url": "https://note.com/humble_bobcat51/n/n2c156d1230eb",
+      "publishedAt": "2026-07-21T18:55:10+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【日記】夏バテでどんどん痩せちゃう。筋トレした分が削られるのは嫌だけど食べられん",
+      "url": "https://note.com/humble_bobcat51/n/n0f15ffbdaac9",
+      "publishedAt": "2026-07-21T17:45:57+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "次世代MoEモデル「Motif-3-Beta」徹底解説：314Bパラメータが切り拓く新たな知能の境界線",
+      "url": "https://note.com/humble_bobcat51/n/ne3331fae221a",
+      "publishedAt": "2026-07-21T17:01:11+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "Claudeに「目」と「耳」を授ける：次世代動画解析ツール「claude-video」徹底解説",
+      "url": "https://note.com/humble_bobcat51/n/n7734d67c9cd8",
+      "publishedAt": "2026-07-21T12:42:42+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "中国製AIモデル「GLM 5.5」と米国による規制が嫌な方向に進みそうで不安です",
+      "url": "https://note.com/humble_bobcat51/n/n99ae1447ab8a",
+      "publishedAt": "2026-07-21T09:23:08+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【完全無料で個人開発】OmniRoute と OpenCode による次世代コーディング環境の構築：開発ワークフローの刷新とコスト最適化",
+      "url": "https://note.com/humble_bobcat51/n/n8fa1d4f52329",
+      "publishedAt": "2026-07-21T08:31:05+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【日記】「他人を変えたい」は傲慢で、「自分を変えたい」は褒められる世の中。",
+      "url": "https://note.com/humble_bobcat51/n/n1b2c96e774e5",
+      "publishedAt": "2026-07-20T19:28:26+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【日記】よく「20年先の未来から過去に戻ってやり直したい」って言うのがあるじゃないですか。20年後から戻ったら何をするんだろう？",
+      "url": "https://note.com/humble_bobcat51/n/nc1deba4c4025",
+      "publishedAt": "2026-07-20T17:31:34+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【ai-engineering-from-scratch】と【ai-agent-book】：Agentエンジニアリング設計原理と実践的工程の徹底解説",
+      "url": "https://note.com/humble_bobcat51/n/n06e6971fb756",
+      "publishedAt": "2026-07-20T12:13:59+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "W杯決勝スペイン対アルゼンチン：勝負を分けたのはゲームの支配力。両者堅守で厳しい時間が長かった試合を通してフットボールの未来を見た",
+      "url": "https://note.com/humble_bobcat51/n/nba52d5eff4c2",
+      "publishedAt": "2026-07-20T08:20:48+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "Qwen 3.8 Max Preview登場！ ：Fable級と噂の性能は実際どうなんでしょうかね？",
+      "url": "https://note.com/humble_bobcat51/n/n191f3ec44b5f",
+      "publishedAt": "2026-07-20T08:11:20+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "次に来る技術を調べて、備えてみよう。",
+      "url": "https://note.com/humble_bobcat51/n/nd4b681c3aa2f",
+      "publishedAt": "2026-07-19T19:41:06+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【リーク情報】どうやらQwen3.8とDeepSeek4.1が来週来そうです",
+      "url": "https://note.com/humble_bobcat51/n/n3aac9439a228",
+      "publishedAt": "2026-07-19T18:17:15+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【個人開発日記】どうやら、難しい物事は切り分けるとスムーズになるらしい",
+      "url": "https://note.com/humble_bobcat51/n/n91b5cee8814d",
+      "publishedAt": "2026-07-19T14:18:07+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【KimiK3が発表されて半導体株が急落したこと】の背景を調べると、どうやら「DeepSeekショック」の再来だったらしいのを知った",
+      "url": "https://note.com/humble_bobcat51/n/n50b48dec2519",
+      "publishedAt": "2026-07-19T13:39:45+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "歴史的乱打戦！イングランド対フランス ：3位決定戦はもはやサッカーだったのか？母国の試合はこれだから見逃せない",
+      "url": "https://note.com/humble_bobcat51/n/n11c69392c6fe",
+      "publishedAt": "2026-07-19T09:06:25+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "Osaurus：macOSネイティブ環境で「AIを自分のものにする」ための究極のパーソナル・エージェント基盤",
+      "url": "https://note.com/humble_bobcat51/n/n89bc068fa822",
+      "publishedAt": "2026-07-18T17:52:38+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "AI時代に必要な能力をAIイーロン・マスクに聞いた結果、仲が悪くなったお話",
+      "url": "https://note.com/humble_bobcat51/n/n320aa0b592f3",
+      "publishedAt": "2026-07-18T17:29:30+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "次世代コーディングエージェント：Rust版Open Interpreterの全貌",
+      "url": "https://note.com/humble_bobcat51/n/na332103d24f9",
+      "publishedAt": "2026-07-18T15:57:46+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【個人開発】新聞系アプリを作ってみたけど、やっぱりこうじゃない感じ。作り方と意図を見直そうかな",
+      "url": "https://note.com/humble_bobcat51/n/nb2cb73bb5e29",
+      "publishedAt": "2026-07-18T12:53:03+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "次世代AIの極致？：1.57兆パラメータ・オープンモデル「Monolith-1.0」をちゃんと調べたい",
+      "url": "https://note.com/humble_bobcat51/n/nc2c3b11525dd",
+      "publishedAt": "2026-07-18T11:03:38+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "キオクシアってどんな会社さん？今の株式市場でかなりの影響力を持つ企業はどんな状況なの？",
+      "url": "https://note.com/humble_bobcat51/n/nac2e5efd0b64",
+      "publishedAt": "2026-07-18T10:03:38+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【個人開発】新聞を読んだこと無いけど、新聞みたいなツールを作ってみようかな？企画編",
+      "url": "https://note.com/humble_bobcat51/n/nfe86fe483c33",
+      "publishedAt": "2026-07-18T08:48:09+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【個人開発日記】各機能毎にツールを作って、各々に連携機能を持たせているんだけど、この作り方は果たして意味があるんだろうか",
+      "url": "https://note.com/humble_bobcat51/n/ndc3a8ab8379e",
+      "publishedAt": "2026-07-17T21:49:53+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "Apache Ossie：セマンティック・モデルの標準化が切り拓くデータ活用の新時代",
+      "url": "https://note.com/humble_bobcat51/n/n7bcf038bf467",
+      "publishedAt": "2026-07-17T17:03:47+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【個人開発】サッカー日本代表を追いやすくするツールも作っちゃった。Grok4.5のお試しのつもりが…",
+      "url": "https://note.com/humble_bobcat51/n/nf462d1c99668",
+      "publishedAt": "2026-07-17T12:40:19+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "次世代プレゼンテーション・プラットフォーム「Bolt Slides」：静的なスライドを「動くウェブアプリ」へ進化させる技術革新",
+      "url": "https://note.com/humble_bobcat51/n/n0563984abcb5",
+      "publishedAt": "2026-07-17T12:04:04+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "LM Studio Bionic：オープンモデル特化型ローカルエージェントの革新と実用性",
+      "url": "https://note.com/humble_bobcat51/n/n45dd772624c1",
+      "publishedAt": "2026-07-17T08:50:05+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "Kimi K3がクラウドで使えるようになったけど、どうなんですか？：MoEアーキテクチャとハイブリッド注意機構で大規模タスクをどう攻略するか",
+      "url": "https://note.com/humble_bobcat51/n/n6f7fe5d56313",
+      "publishedAt": "2026-07-17T08:07:12+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【個人開発】今まで集めたnote攻略ノウハウ+Fableでnote攻略ツール作ってみた。",
+      "url": "https://note.com/humble_bobcat51/n/n8c3b840bcab0",
+      "publishedAt": "2026-07-16T17:53:18+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【個人開発】ベネフィットについて勉強したんで、無料枠でアプリ化してみた",
+      "url": "https://note.com/humble_bobcat51/n/nc772657acb6d",
+      "publishedAt": "2026-07-16T12:59:18+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "次世代オープンウェイトモデル「Inkling」完全解説：カスタマイズ性と効率性を両立するMixture-of-Expertsの全貌",
+      "url": "https://note.com/humble_bobcat51/n/ne94dc071f2b3",
+      "publishedAt": "2026-07-16T12:15:24+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "次世代1兆パラメータ思考モデル「Ring-2.5-1T」完全解説：ハイブリッド線形アテンションが切り拓くAIエージェントの新時代",
+      "url": "https://note.com/humble_bobcat51/n/nde9e6c0e430d",
+      "publishedAt": "2026-07-16T09:25:11+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "アルゼンチン対イングランド準決勝は神試合：劇的逆転劇とイングランドの戦術的崩壊、なんで中盤変えたんだよぉ！",
+      "url": "https://note.com/humble_bobcat51/n/n7365fc60ce6b",
+      "publishedAt": "2026-07-16T08:40:00+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "次世代AIコーディングエージェント「Grok Build」徹底解剖：SpaceXAIが放つ開発環境の革新",
+      "url": "https://note.com/humble_bobcat51/n/ndca96017be30",
+      "publishedAt": "2026-07-16T08:18:17+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "Ternary Bonsai 27Bを試してみよう！追記：コンテキスト長に気をつけて。多分同じようなミスする人はおらん",
+      "url": "https://note.com/humble_bobcat51/n/n44e8e19f01ce",
+      "publishedAt": "2026-07-15T17:40:57+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "AIで自分のコピーを作ろうと頑張った結果、「あれ？優秀な人のコピー作ったほうがずっと良くない？」って発想になりました",
+      "url": "https://note.com/humble_bobcat51/n/n283b2cc4a385",
+      "publishedAt": "2026-07-15T17:05:03+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【個人開発】Marketing Storyteller：売れる物語をローカルで紡ぐ、次世代マーケティング資産構築ガイドを余った無料枠で作ってみた",
+      "url": "https://note.com/humble_bobcat51/n/n3c452c302d91",
+      "publishedAt": "2026-07-15T12:21:28+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "三値（Ternary）の革命：Ternary-Bonsai-27B-ggufが切り拓くローカルLLMの新境地",
+      "url": "https://note.com/humble_bobcat51/n/n695e3a4a19c9",
+      "publishedAt": "2026-07-15T11:42:42+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "ワールドカップ準決勝：スペイン対フランス戦がとんでもない！日本の組織力にも未来を感じさせてくれる試合で心が熱くなった",
+      "url": "https://note.com/humble_bobcat51/n/n70a1995fca73",
+      "publishedAt": "2026-07-15T08:07:34+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "Wan-Dancer-14B：音楽とダンスを同期させる「分単位」動画生成AIの全貌",
+      "url": "https://note.com/humble_bobcat51/n/n985a7b7ad940",
+      "publishedAt": "2026-07-14T18:34:51+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "AIエージェントをトップマーケターに変貌させる「Marketing Skills」徹底調査",
+      "url": "https://note.com/humble_bobcat51/n/n6fb70c856659",
+      "publishedAt": "2026-07-14T17:10:14+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "「すぐに役に立つものは、すぐ役に立たなくなる」",
+      "url": "https://note.com/humble_bobcat51/n/ndd7034d60b18",
+      "publishedAt": "2026-07-14T12:46:33+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "次世代AIエージェントフレームワーク「OpenLumara」完全調査：効率とプライバシーの再定義",
+      "url": "https://note.com/humble_bobcat51/n/n445319334a62",
+      "publishedAt": "2026-07-14T12:07:01+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "「ai-hedge-fund」が運用する次世代ヘッジファンドの全貌：多角化された意思決定の自動化",
+      "url": "https://note.com/humble_bobcat51/n/n7a45ad129d4c",
+      "publishedAt": "2026-07-14T08:07:33+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "🌟 AI開発の革命：100以上の実行可能なテンプレート集「Awesome LLM Apps」徹底解説",
+      "url": "https://note.com/humble_bobcat51/n/n4b2acb6219b0",
+      "publishedAt": "2026-07-14T06:56:33+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "次世代LLM学習手法「OPSD（On-Policy Self-Distillation）」徹底解説：効率的な推論能力向上の新潮流",
+      "url": "https://note.com/humble_bobcat51/n/na097622447ab",
+      "publishedAt": "2026-07-13T20:04:15+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "「DesktopCommanderMCP」最近のアプデ内容：Claudeを最強のOS操作エージェントへ変貌させる技術",
+      "url": "https://note.com/humble_bobcat51/n/n7f4f0fbd7710",
+      "publishedAt": "2026-07-13T18:49:23+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【日記】ゲームで【経験値倍増】ってあるじゃないですか。それの現実版ってなんですかね？【思考の整理】",
+      "url": "https://note.com/humble_bobcat51/n/n826a87c6e190",
+      "publishedAt": "2026-07-13T17:39:23+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "色んなリーク情報がきてます：Claude Opus 5通称Honeycomb、GPT-6、GPTSolやFableレベルのGemini 3.5 Pro？ドイツ語に特化した「Soofi S」や、中国の「Kimi K3」などなど",
+      "url": "https://note.com/humble_bobcat51/n/n9ed6b659e35a",
+      "publishedAt": "2026-07-13T12:45:54+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "AIエージェントの暴走を食い止める：dcg（Destructive Command Guard）完全ガイド",
+      "url": "https://note.com/humble_bobcat51/n/n783c66d44a8d",
+      "publishedAt": "2026-07-13T12:10:52+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "Agnes AI 徹底調査：次世代マルチモーダルAPIの全貌と実践的活用法",
+      "url": "https://note.com/humble_bobcat51/n/na63f7245ff19",
+      "publishedAt": "2026-07-13T11:51:27+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "Prefectによる次世代データパイプラインの構築：ワークフロー・オーケストレーションって観てると楽しい。作ると便利",
+      "url": "https://note.com/humble_bobcat51/n/n56fd3815fa1f",
+      "publishedAt": "2026-07-13T11:03:06+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "LLM推論の限界を突破する：vLLM v0.25.0 徹底解説と実践的活用ガイド",
+      "url": "https://note.com/humble_bobcat51/n/n5e48b0870ebd",
+      "publishedAt": "2026-07-12T18:52:13+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【W杯】アルゼンチン対スイス、120分の激闘の末に決着。明暗を分けた「魔の時間帯」と北中米W杯ベスト4確定！FIFAランク上位が独占する準決勝「4強時代」へ",
+      "url": "https://note.com/humble_bobcat51/n/ne105d5cde6ee",
+      "publishedAt": "2026-07-12T14:07:12+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "ローカルLLMの限界を突破する「colibrì」：25GB RAMで744Bモデルを動かす技術的革新",
+      "url": "https://note.com/humble_bobcat51/n/na3b510405087",
+      "publishedAt": "2026-07-12T10:04:10+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "イングランド対ノルウェー戦：120分の死闘でこっちもヘトヘト。ノルウェーのエゴ、王を確立したイングランドの結末は…？",
+      "url": "https://note.com/humble_bobcat51/n/nfb4e5f4d25f5",
+      "publishedAt": "2026-07-12T09:41:34+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【個人開発】Grokの無料枠を使って開発したいのに、全然繋げられない。個人的な開発も一旦ストップで父のお手伝いツールを最優先で作ろう",
+      "url": "https://note.com/humble_bobcat51/n/n027dbc922c46",
+      "publishedAt": "2026-07-12T08:50:38+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "1Bモデルの常識を覆す思考型AI：MiniCPM5-1B-Claude-Opus-Fable5-Thinking-GGUF 徹底解説",
+      "url": "https://note.com/humble_bobcat51/n/n1b0c99f4f49e",
+      "publishedAt": "2026-07-11T20:49:01+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "次世代推論モデル「Qwythos-9B-v2」徹底解説：ループ解消と100万トークンがもたらす実用性の極致",
+      "url": "https://note.com/humble_bobcat51/n/n335c15a43026",
+      "publishedAt": "2026-07-11T18:42:38+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "SGLang v0.5.15: 高性能LLM推論フレームワークの最新版",
+      "url": "https://note.com/humble_bobcat51/n/n79aec7cef370",
+      "publishedAt": "2026-07-11T18:11:51+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "Fable×ベストプラクティス。5W1Hの可視化から始める「勝てるDX」ループエンジニアリング設計図生成ツール作ってみました。【販売終了】",
+      "url": "https://note.com/humble_bobcat51/n/n0065eb73b14e",
+      "publishedAt": "2026-07-11T17:13:11+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "JT-4.1 Flash 236B A21B：知能・コスト・スケールを再定義する次世代AIモデルの深層解析",
+      "url": "https://note.com/humble_bobcat51/n/n6f1538379da2",
+      "publishedAt": "2026-07-11T12:16:53+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "スペイン対ベルギー：クルトワの負傷とメリーノの執念。ベルギー黄金世代、残酷な幕切れの全貌",
+      "url": "https://note.com/humble_bobcat51/n/ne6e153378b1d",
+      "publishedAt": "2026-07-11T08:39:42+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【開発日記】Fable5のオーケストレーションでのHy3をWorkerにするのはむっちゃあり。",
+      "url": "https://note.com/humble_bobcat51/n/ne8495c94c7c3",
+      "publishedAt": "2026-07-10T22:35:36+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "次世代自律型コーディングAI「KAT-Coder-V2.5」完全解説：開発パラダイムの転換点",
+      "url": "https://note.com/humble_bobcat51/n/n79c43a832619",
+      "publishedAt": "2026-07-10T21:44:28+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【個人開発】Fable5とGPT5.6Tera、それとOpenRouter+Opencode無料枠のHy3でオーケストレーションして遊ぼう",
+      "url": "https://note.com/humble_bobcat51/n/n6f42e6137db4",
+      "publishedAt": "2026-07-10T17:34:37+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "一旦、中国経済を整理してみよう。",
+      "url": "https://note.com/humble_bobcat51/n/n31f7635b6462",
+      "publishedAt": "2026-07-10T13:14:47+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "GPT-5.6登場！Sol・Terra・Lunaの衝撃とAI大戦争勃発！GPT-5.6 vs Claude Fable 5、最強の座を射止めるのはどちらか？実際に会計ソフト作ってみましたーっ",
+      "url": "https://note.com/humble_bobcat51/n/n216a679ad661",
+      "publishedAt": "2026-07-10T12:46:10+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "フランス対モロッコ戦がとんでもない。モロッコですらこうなるのかと思わされる個の力、世界の遠さを思い知る",
+      "url": "https://note.com/humble_bobcat51/n/n2158a29b2b46",
+      "publishedAt": "2026-07-10T07:56:52+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "総合32万ビュー、月間13万ビューだっ！むっちゃありがとうございます！30万でお祝いする気が完全に置いていかれちゃった",
+      "url": "https://note.com/humble_bobcat51/n/n848a58318c61",
+      "publishedAt": "2026-07-09T23:03:13+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "次世代ランタイム「Deno」完全解説：JavaScript/TypeScript開発の新たなスタンダード",
+      "url": "https://note.com/humble_bobcat51/n/n4485ee5245b5",
+      "publishedAt": "2026-07-09T21:14:48+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【個人開発】Opencodeの無料枠にHy3が来たのでお試しで会計ソフトを作ってみました",
+      "url": "https://note.com/humble_bobcat51/n/nbe18cd121692",
+      "publishedAt": "2026-07-09T18:36:14+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "Mistral AI最新作Leanstral 1.5：形式検証を民主化する「証明の豊穣」への招待",
+      "url": "https://note.com/humble_bobcat51/n/n6b6355b88711",
+      "publishedAt": "2026-07-09T17:31:13+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【日記】サッカーのない朝に耐えれない身体になりつつある。発作なのか、日本代表戦見直し始めてしまいました",
+      "url": "https://note.com/humble_bobcat51/n/nfa45adb50ca1",
+      "publishedAt": "2026-07-09T12:16:33+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "イーロン・マスクが放つGrok 4.5の実力とは？Claude Opusに匹敵する性能と圧倒的コスパ。Cursor統合でコーディング特化の最強モデルへ",
+      "url": "https://note.com/humble_bobcat51/n/nd1db818969aa",
+      "publishedAt": "2026-07-09T09:05:50+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "TypeScript 7.0 アップデート発表：Goへのネイティブ移植と並列処理がもたらす次世代のパフォーマンスでビルド時間を最大90%削減",
+      "url": "https://note.com/humble_bobcat51/n/nc74737903cbf",
+      "publishedAt": "2026-07-09T07:42:32+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "次世代AIエンジニアリングモデル「SWE-1.7」：フロンティア級の知能を圧倒的な低コストで実現する革新",
+      "url": "https://note.com/humble_bobcat51/n/n7e2726c2e37d",
+      "publishedAt": "2026-07-09T07:04:45+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "NVIDIA Nemotron-Labs-Audex-2B：音声・テキスト統合型LLMが拓く新たな可能性",
+      "url": "https://note.com/humble_bobcat51/n/ne4b146e9034d",
+      "publishedAt": "2026-07-08T21:33:20+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "ASI（人工超知能）の誕生と労働の未来を調べて見た結果：この世の天国と地獄を両方味わう世代かも？",
+      "url": "https://note.com/humble_bobcat51/n/nb8fcd66e7e74",
+      "publishedAt": "2026-07-08T17:35:14+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "セルフホスト型AIワークスペース「Odysseus」完全解説：究極のプライバシーと生産性の融合",
+      "url": "https://note.com/humble_bobcat51/n/nb6f7031dab79",
+      "publishedAt": "2026-07-08T12:04:38+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "アルゼンチン vs エジプト : 朝からカロリーが高すぎる。出勤前にヘトヘトですーっ追記でスイスvsコロンビアも。ラウンド16【FIFAワールドカップ2026】",
+      "url": "https://note.com/humble_bobcat51/n/n87d4017ef445",
+      "publishedAt": "2026-07-08T07:28:09+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【個人開発】AMDでのエージェント・エコシステム構築をがんばりたい：次世代推論最適化システムめっちゃ使えば軽くなる説",
+      "url": "https://note.com/humble_bobcat51/n/n732aa348670e",
+      "publishedAt": "2026-07-07T21:27:00+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "ローカルAIの極致：gemma-4-12B-agentic-fable5-composer2.5-v2-3.5x-tau2-GGUF徹底解説",
+      "url": "https://note.com/humble_bobcat51/n/n63fead47a72c",
+      "publishedAt": "2026-07-07T17:09:29+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "ベルギーVS世界が嫌ったアメリカという図式。今大会No.1ヴィランがラウンド16に望んだ結果。",
+      "url": "https://note.com/humble_bobcat51/n/nec902ea9ae56",
+      "publishedAt": "2026-07-07T12:20:54+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "ポルトガル vs スペイン : ラウンド16でロナウドという一時代が終わる半島対決【FIFAワールドカップ2026】",
+      "url": "https://note.com/humble_bobcat51/n/n896d86618f8c",
+      "publishedAt": "2026-07-07T12:08:57+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "改めてSkyworkとは？リサーチ、分析、資料作成をこれ1つで。オールインワンAIで実現する業務自動化：概要から使い方、他のAIツールとの比較まで",
+      "url": "https://note.com/humble_bobcat51/n/na1a5f8321ee4",
+      "publishedAt": "2026-07-07T07:43:05+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "Mythos-nano：数学・コード・論理に全振り。3Bパラメータが証明する「小規模モデルによる推論の極致」徹底解説",
+      "url": "https://note.com/humble_bobcat51/n/nb62faaeb2ad5",
+      "publishedAt": "2026-07-07T06:58:54+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【日記】資料作成系のサービスを検討したい。（職場や親戚の個人事業用）",
+      "url": "https://note.com/humble_bobcat51/n/n77ad43e01ad7",
+      "publishedAt": "2026-07-06T20:59:49+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "株式会社全東信：今年最大の倒産らしい。",
+      "url": "https://note.com/humble_bobcat51/n/nace485ae4a16",
+      "publishedAt": "2026-07-06T18:09:25+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "Tencent Hy3：次世代MoEモデルが切り拓くAI実用化の新たな地平",
+      "url": "https://note.com/humble_bobcat51/n/n7861bdd48132",
+      "publishedAt": "2026-07-06T17:08:49+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "Ornith 1.0の397Bモデルを使った知人から集めたデータと、コミュニティを覗いたら、どうにもバグは解決しないらしい。",
+      "url": "https://note.com/humble_bobcat51/n/n101285e73e78",
+      "publishedAt": "2026-07-06T16:35:52+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "イングランド対メキシコ戦：大会屈指の「カオス試合」",
+      "url": "https://note.com/humble_bobcat51/n/n6af2a48f86b3",
+      "publishedAt": "2026-07-06T15:02:11+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "薄味のチャーハンを食べた時に、父のお気に入りを掘り返す。美味しいってちゃんと言おうと思った日です。",
+      "url": "https://note.com/humble_bobcat51/n/n9ab83d5bd3f7",
+      "publishedAt": "2026-07-06T13:36:04+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "AI Website Cloner Template：AIエージェントによる次世代のリバースエンジニアリング・ガイド",
+      "url": "https://note.com/humble_bobcat51/n/nd92ba4fce38c",
+      "publishedAt": "2026-07-06T12:27:59+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "ノルウェー対ブラジル戦でブラジルの敗退。日本の立ち位置と理不尽な存在",
+      "url": "https://note.com/humble_bobcat51/n/nc27c2d4c8b17",
+      "publishedAt": "2026-07-06T11:35:08+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "ローカルLLMにクラウドLLM級の安定性を：「CodeRouter」徹底調査でAPIコストを最適化しつつ、24時間止まらないAI開発環境を構築する方法を見つけたい",
+      "url": "https://note.com/humble_bobcat51/n/n5231453f57e6",
+      "publishedAt": "2026-07-06T08:24:50+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "究極のプライバシー保護：完全ローカルAI議事録アシスタント「Meetily」4倍速での文字起こしの快感",
+      "url": "https://note.com/humble_bobcat51/n/n6bb60e2497c7",
+      "publishedAt": "2026-07-05T19:48:46+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "SciJudge-30B-2605：AIが「科学的審美眼」を獲得する新時代の幕開け",
+      "url": "https://note.com/humble_bobcat51/n/ne74039c93f11",
+      "publishedAt": "2026-07-05T18:22:12+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "次世代AI開発環境「Terax」完全解説：ターミナル主導の超軽量AIネイティブ・ワークスペース",
+      "url": "https://note.com/humble_bobcat51/n/n2a18bd744f1e",
+      "publishedAt": "2026-07-05T15:47:39+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "MaralGPT-Mythos-9B-2606：ゲーミングPCで動く100万トークン超の「無修正」高性能LLM徹底解説",
+      "url": "https://note.com/humble_bobcat51/n/n21d1c58ca56f",
+      "publishedAt": "2026-07-05T13:08:45+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "パラグアイ×フランス。優勝候補がとことん苦しめられる今大会。カナダ×モロッコで堅守速攻いいよな、とか言ってる場合じゃなかった",
+      "url": "https://note.com/humble_bobcat51/n/n50edee89c36a",
+      "publishedAt": "2026-07-05T10:56:52+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "AMD GPUユーザー待望の最適化：ROCmFPX量子化フォーマット完全調査。VRAMを12%削減しつつ速度向上。AMD環境のLLM推論最適化は思ったより凄いぞ",
+      "url": "https://note.com/humble_bobcat51/n/nd06d9543099e",
+      "publishedAt": "2026-07-05T09:48:42+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【自己紹介】ゆいまると申します✨最新ツールが好きなポンコツで、普段観てくれる方に本当に感謝しております📚",
+      "url": "https://note.com/humble_bobcat51/n/na1164d709259",
+      "publishedAt": "2026-05-18T16:59:31+09:00",
+      "account": "note.com/humble_bobcat51"
+    }
+  ]
 }
