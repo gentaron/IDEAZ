@@ -4,11 +4,101 @@
     "note.com/humble_bobcat51",
     "note.com/gensnotes"
   ],
-  "syncedAt": "2026-09-21T23:48:24.673Z",
-  "count": 720,
+  "syncedAt": "2026-09-22T23:26:21.564Z",
+  "count": 735,
   "titles": [
     {
-      "title": "高価なGPUなしで50ページの資料を解析。インストール不要のブラウザAIが私の非力なPCで動いた話",
+      "title": "【新曲】王道アニソンみたいな「Dive into the Light」を作ってみました。聞いてください！！",
+      "url": "https://note.com/gensnotes/n/n17f590dcccc6",
+      "publishedAt": "2026-09-23T01:59:55+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【MetroLLM-Bench】2.6GBなのにGPT-5.6級。16GBノートPCで「強い専用AI」を持てるようになったMetroLLM",
+      "url": "https://note.com/gensnotes/n/n614ab35bcabf",
+      "publishedAt": "2026-09-22T22:20:02+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【答えが完成する前に危険を予測するAI】3.32GBで「この先まずい確率」を返すProbGuard",
+      "url": "https://note.com/gensnotes/n/n86436ffc2091",
+      "publishedAt": "2026-09-22T20:39:35+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【ターニングポイント】AIで考えなくてよくなったから、今度は「考えるスポーツ」を始めたい",
+      "url": "https://note.com/gensnotes/n/n54259fd67c09",
+      "publishedAt": "2026-09-22T20:17:58+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【必見】雑魚PCでも4社の上位AIを選べる。GPUを買わずに使い分けるGitHub Copilot",
+      "url": "https://note.com/gensnotes/n/n85a0d6e21f75",
+      "publishedAt": "2026-09-22T20:09:49+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【Grok 4.7 正式リリースだぁ】価格破壊の$2/$6でOpus 5級へ！SpaceXデータが生んだ「電気工学・法務最強」モデルの実力と課題",
+      "url": "https://note.com/humble_bobcat51/n/n59c0abd475a3",
+      "publishedAt": "2026-09-22T18:19:05+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【祝1500人フォロワー】20000スキも達成。感謝の代わりにわたしなりの無料環境で最大限リサーチしていく方法でも。良さそうなのを探す毎日なんでむしろ教えて欲しいレベルですが、良ければ。",
+      "url": "https://note.com/humble_bobcat51/n/ne7ffdc90873e",
+      "publishedAt": "2026-09-22T14:20:51+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "62.5MBのスマホアプリで動画編集1位を触れる。申請不要になったWan 3.0",
+      "url": "https://note.com/gensnotes/n/na6947992eaa1",
+      "publishedAt": "2026-09-22T14:11:02+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【えっ…】参照画像1枚、学習0回。同じ絵柄をそのまま増やせるようになった",
+      "url": "https://note.com/gensnotes/n/n5f1918756035",
+      "publishedAt": "2026-09-22T13:57:28+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【圧倒的】参照画像1枚、学習0回。同じ絵柄を続けて作れるRecraft V4 Styles",
+      "url": "https://note.com/gensnotes/n/nf5f5d0ff7265",
+      "publishedAt": "2026-09-22T13:54:43+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【圧巻】忘却が333分の1になった理由は、設定ファイルの一行だった。自分のPCで、自分のAIをゼロから育てられる",
+      "url": "https://note.com/gensnotes/n/n5e9934c03cdd",
+      "publishedAt": "2026-09-22T13:43:40+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "デタラメしか出さないモデルに300回やらせても、返ってきた答えは300回とも型が崩れなかった。うちの弱いノートで確かめた、壊れない判断の作り方",
+      "url": "https://note.com/gensnotes/n/n662a9e9344d3",
+      "publishedAt": "2026-09-22T13:40:28+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【Needle3】アプリを操作するAIは29MBで足りた。クラウドも強いパソコンもいらない",
+      "url": "https://note.com/gensnotes/n/n12a9e19ab8a9",
+      "publishedAt": "2026-09-22T13:36:41+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【アフリカ発の衝撃】180B級・Opus超えの自律エージェント「Tinfield-1」登場！64GB Macで動くターミナル特化OSSモデルの実力",
+      "url": "https://note.com/humble_bobcat51/n/nef0ca12318dd",
+      "publishedAt": "2026-09-22T12:53:45+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【期間限定Opencode無料枠】Xiaomiが1T級OSSモデル「MiMo-V2.6」を公開！Claude Opus 5肉薄のAgent性能とオープン化戦略の全貌を調べながらOpencodeでお試しましたー。",
+      "url": "https://note.com/humble_bobcat51/n/n94012cad5242",
+      "publishedAt": "2026-09-22T10:07:08+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【驚きまくり】高価なGPUなしで50ページの資料を解析。インストール不要のブラウザAIが私の非力なPCで動いた話",
       "url": "https://note.com/gensnotes/n/na5fd2965cae7",
       "publishedAt": "2026-09-22T04:41:03+09:00",
       "account": "note.com/gensnotes"
