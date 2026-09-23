@@ -4,9 +4,69 @@
     "note.com/humble_bobcat51",
     "note.com/gensnotes"
   ],
-  "syncedAt": "2026-09-22T23:26:21.564Z",
-  "count": 735,
+  "syncedAt": "2026-09-23T23:24:39.627Z",
+  "count": 745,
   "titles": [
+    {
+      "title": "【Claude Opus 5.5】1日待ったベストプラクティス：Fable5.1級の性能で実質40％コスト減！第三者ベンチマーク、新effort設計、プロンプトの「削るべき指示」まで徹底調査。わたしの失敗も含めてどうぞー。",
+      "url": "https://note.com/humble_bobcat51/n/ncd3bae05a55b",
+      "publishedAt": "2026-09-24T07:59:59+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【少子化】消えたのは恋人ではなく「うっすら仲のいい男女」だったのかもしれない",
+      "url": "https://note.com/gensnotes/n/nda9854624001",
+      "publishedAt": "2026-09-24T03:09:48+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【曲がりくねって】最先端AIを追うのをやめた。知識は積み上がって、つながる瞬間がいちばん面白い",
+      "url": "https://note.com/gensnotes/n/nb83c088ac769",
+      "publishedAt": "2026-09-24T01:21:02+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【SpaceBunny】新しいOpencodeのステルスModelが無料枠にきたー。早速会計ツールを作成させてみた。",
+      "url": "https://note.com/humble_bobcat51/n/n875d9081ac98",
+      "publishedAt": "2026-09-24T00:34:01+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【現状のSLM事情】LLMの中でもSLMを特化して使い込みたい所存。現状のベストプラクティスを探ってみよう",
+      "url": "https://note.com/humble_bobcat51/n/n050a2f4255ff",
+      "publishedAt": "2026-09-23T20:05:16+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【ローカルLLM】Hemmingway-1｜27Bの重み公開で日常の代筆だけ大手に並ぶ｜3bitで13.4GB、EQ-Bench4は首位と11点差",
+      "url": "https://note.com/gensnotes/n/n7425fb6d1c3c",
+      "publishedAt": "2026-09-23T16:31:40+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【短波】HFモデムMercury｜30万円の専用機が1.7MBの無料ソフトになった｜雑音が信号より8.8dB強くても通る",
+      "url": "https://note.com/gensnotes/n/nef298fa62635",
+      "publishedAt": "2026-09-23T14:03:52+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【無料】ECMWF AIFS｜世界最高の天気予報モデルが1GB以下で誰でも落とせる｜CPU2コアで10日先まで78分",
+      "url": "https://note.com/gensnotes/n/n7a1cc53b3934",
+      "publishedAt": "2026-09-23T13:50:47+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【UI/UX部門で世界首位？】“文字が読める？”デザイン特化画像生成AI「Ming-Image-0.1-Design」が気になってお試ししてますー",
+      "url": "https://note.com/humble_bobcat51/n/n1df75845c97b",
+      "publishedAt": "2026-09-23T13:37:29+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【日記】欲望に負けてしまったジャンボチキンカツ。悔しいほどに旨すぎる",
+      "url": "https://note.com/humble_bobcat51/n/n2ad32930bbc4",
+      "publishedAt": "2026-09-23T12:34:02+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
     {
       "title": "【新曲】王道アニソンみたいな「Dive into the Light」を作ってみました。聞いてください！！",
       "url": "https://note.com/gensnotes/n/n17f590dcccc6",
