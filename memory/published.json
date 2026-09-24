@@ -4,9 +4,81 @@
     "note.com/humble_bobcat51",
     "note.com/gensnotes"
   ],
-  "syncedAt": "2026-09-23T23:24:39.627Z",
-  "count": 745,
+  "syncedAt": "2026-09-24T23:43:17.298Z",
+  "count": 757,
   "titles": [
+    {
+      "title": "【2026年9月版】AI最前線モデル7選徹底比較！スペック・実測コスト・リアルな口コミから見えた「本当に使えるモデル」はどーれ？【Opus 5.5 / GPT-6 Sol / Grok 4.7 / Muse Spark 1.3 / Gemini 3.8 Flash / DeepSeek V4.1 Flash / MiMo V2.6 Pro】",
+      "url": "https://note.com/humble_bobcat51/n/ndcc65b5bdaf8",
+      "publishedAt": "2026-09-25T00:00:57+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【サッカー】日本代表 対 ウルグアイ代表戦：松木/塩貝/上田のG！佐野兄弟もいいけど瀬古が今日は良かった",
+      "url": "https://note.com/humble_bobcat51/n/n68fb5ad372be",
+      "publishedAt": "2026-09-24T22:35:04+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【コラム】答えを出してくれない人【恋愛】",
+      "url": "https://note.com/gensnotes/n/nd9c5ef13d5fb",
+      "publishedAt": "2026-09-24T21:44:01+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【SpaceBunny】昨日の会計ツールを魔改造しながら、性能を裏で評価フレームワークで図ってみたい所存。",
+      "url": "https://note.com/humble_bobcat51/n/n224ed5e49432",
+      "publishedAt": "2026-09-24T17:23:15+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【ジェットスーツ】人間が空を飛ぶ夢だったのに、気づけばロボットのほうが上手に飛び始めている",
+      "url": "https://note.com/gensnotes/n/nfb18cdb4e38d",
+      "publishedAt": "2026-09-24T16:31:41+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【Giver/Taker論の終着点】善人を探すより「系を食いつぶさない構造」を考えたい",
+      "url": "https://note.com/gensnotes/n/n232608dc8f1c",
+      "publishedAt": "2026-09-24T16:06:40+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【NetflixよりAIでいい】作り物より「現実の外側」を掘るほうが面白くなってしまった",
+      "url": "https://note.com/gensnotes/n/ncdd9e268ceaf",
+      "publishedAt": "2026-09-24T14:40:48+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【AI判定ボード】Raspberry Pi AI HAT+｜カメラの映像をクラウドに送らず人と猫と宅配を家の中で見分ける｜判定10ミリ秒・1万5,840円",
+      "url": "https://note.com/gensnotes/n/n7b6a33eb57e9",
+      "publishedAt": "2026-09-24T13:20:16+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【AI双眼鏡】Solvia ED 8×32｜1万種の鳥をオフラインで当てる双眼鏡｜6万円台、スワロフスキーは88万円",
+      "url": "https://note.com/gensnotes/n/ne42228a2ff31",
+      "publishedAt": "2026-09-24T13:16:43+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【AI通訳イヤホン】Timekettle W4 Pro｜電波を切ると日本語と韓国語のあいだで黙る｜5万8,649円と、iPhoneなら0円",
+      "url": "https://note.com/gensnotes/n/nd36c3c81861a",
+      "publishedAt": "2026-09-24T13:10:52+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【3Dプリンタ】Bambu Lab A1 mini｜CADが使えなくてもAIが寸法入りの部品を書く｜本体2万9,999円、作り直しは0.13秒",
+      "url": "https://note.com/gensnotes/n/n9a9a8c0b2f4b",
+      "publishedAt": "2026-09-24T13:06:04+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【GPT-6 Sol / Luna】1日たったベストプラクティスを集めよう～価格は半額、フロンティア知能を圧倒的な費用対効果で配分する新世代。50%値下げの裏にある落とし穴と、現場のリアルな使いこなし術もありました～",
+      "url": "https://note.com/humble_bobcat51/n/n20577072ebef",
+      "publishedAt": "2026-09-24T12:39:42+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
     {
       "title": "【Claude Opus 5.5】1日待ったベストプラクティス：Fable5.1級の性能で実質40％コスト減！第三者ベンチマーク、新effort設計、プロンプトの「削るべき指示」まで徹底調査。わたしの失敗も含めてどうぞー。",
       "url": "https://note.com/humble_bobcat51/n/ncd3bae05a55b",
