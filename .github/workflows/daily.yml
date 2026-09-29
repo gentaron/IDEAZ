@@ -70,9 +70,12 @@ jobs:
             git push
           fi
 
+      # 落ちた理由を次の行動に繋げる。どの入口が駄目だったかは上のログに出ている
       - name: 探索が落ちていたら知らせる
         if: steps.search.outcome == 'failure'
-        run: echo "::warning::今日の題材探索が失敗した。角度だけの5枠を出している。"
+        run: |
+          echo "::warning::今日の題材探索が失敗した。角度だけの5枠を出している。上の『今日の題材を探す』のログに、どの入口が何を返したかが出ている。"
+          echo "::notice::手元で確かめるには node scripts/search.mjs --probe"
 
       - name: Netlify に作り直させる（ビルドフックがあるときだけ）
         # リポジトリに Netlify を繋いでいれば、上の push だけで勝手に建て直る。

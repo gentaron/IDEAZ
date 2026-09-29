@@ -29,6 +29,13 @@ async function soft(name, fn, log) {
 
 const clean = (s) => String(s || '').replace(/\s+/g, ' ').trim()
 
+/** いつのものか。分からなければ null */
+function when(v) {
+  if (v == null) return null
+  const t = typeof v === 'number' ? v * (v > 1e11 ? 1 : 1000) : Date.parse(v)
+  return Number.isFinite(t) ? new Date(t).toISOString() : null
+}
+
 /* ---------- 個々のソース ---------- */
 
 /** Hacker News。技術者の評価と批判。Algolia の公開APIは鍵が要らない */
@@ -44,6 +51,7 @@ async function hackerNews(sinceSec) {
     url: h.url || `https://news.ycombinator.com/item?id=${h.objectID}`,
     summary: clean(h.story_text).slice(0, 400),
     score: h.points || 0,
+    publishedAt: when(h.created_at_i) || when(h.created_at),
     discussion: `https://news.ycombinator.com/item?id=${h.objectID}`
   }))
 }
@@ -60,6 +68,7 @@ async function reddit(sub) {
       url: p.url_overridden_by_dest || `https://www.reddit.com${p.permalink}`,
       summary: clean(p.selftext).slice(0, 400),
       score: p.score || 0,
+      publishedAt: when(p.created_utc),
       discussion: `https://www.reddit.com${p.permalink}`
     }))
 }
@@ -76,7 +85,8 @@ async function huggingFace() {
         .filter(Boolean)
         .join(' / ')
     ),
-    score: Math.round(m.trendingScore || m.likes || 0)
+    score: Math.round(m.trendingScore || m.likes || 0),
+    publishedAt: when(m.lastModified) || when(m.createdAt)
   }))
 }
 
@@ -92,7 +102,8 @@ async function github(sinceISO) {
     title: clean(r.full_name),
     url: r.html_url,
     summary: clean(r.description).slice(0, 400),
-    score: r.stargazers_count || 0
+    score: r.stargazers_count || 0,
+    publishedAt: when(r.pushed_at) || when(r.created_at)
   }))
 }
 
@@ -111,7 +122,8 @@ async function arxiv(cats) {
       title: pick('title'),
       url: pick('id'),
       summary: pick('summary').slice(0, 500),
-      score: 0
+      score: 0,
+      publishedAt: when(pick('updated')) || when(pick('published'))
     }
   })
 }
@@ -130,7 +142,8 @@ async function feed(name, url) {
       title: strip(pick('title')),
       url: link,
       summary: strip(pick('description') || pick('summary')).slice(0, 400),
-      score: 0
+      score: 0,
+      publishedAt: when(pick('pubDate')) || when(pick('updated')) || when(pick('published'))
     }
   })
 }
@@ -173,9 +186,46 @@ export async function harvest({ hours = 72, log = console.log } = {}) {
     if (!prev || (item.score || 0) > (prev.score || 0)) byUrl.set(key, item)
   }
 
-  const all = [...byUrl.values()].sort((a, b) => (b.score || 0) - (a.score || 0))
-  log(`  → 重複を落として ${all.length}件`)
+  const now = Date.now()
+  const all = [...byUrl.values()].map((item) => {
+    const ageHours = item.publishedAt ? Math.max(0, (now - Date.parse(item.publishedAt)) / 3600000) : null
+    return { ...item, ageHours: ageHours == null ? null : Math.round(ageHours) }
+  })
+
+  // 新しいものを上に。同じくらいの新しさなら反応の大きい方を上に。
+  // 日付の分からないものは、いちばん古い扱いにして後ろへ回す。
+  all.sort((a, b) => {
+    const ax = a.ageHours == null ? Infinity : a.ageHours
+    const bx = b.ageHours == null ? Infinity : b.ageHours
+    const bucket = (h) => (h === Infinity ? 99 : Math.floor(h / 12)) // 12時間ごとの塊で見る
+    if (bucket(ax) !== bucket(bx)) return bucket(ax) - bucket(bx)
+    return (b.score || 0) - (a.score || 0)
+  })
+
+  const dated = all.filter((i) => i.ageHours != null).length
+  log(`  → 重複を落として ${all.length}件（うち日時が分かるもの ${dated}件）`)
   return all
+}
+
+/**
+ * 新しい方から必要な数だけ取る。
+ * まず24時間、足りなければ48、72と広げる。「その日の最新」を優先しつつ、静かな日でも空にしない。
+ */
+export function freshest(items, { want = 70, windows = [24, 48, 72], log = console.log } = {}) {
+  for (const w of windows) {
+    const within = items.filter((i) => i.ageHours != null && i.ageHours <= w)
+    if (within.length >= want) {
+      log(`  直近${w}時間に ${within.length}件。ここから選ぶ`)
+      return within.slice(0, want)
+    }
+  }
+
+  const widest = windows[windows.length - 1]
+  const within = items.filter((i) => i.ageHours != null && i.ageHours <= widest)
+  const undated = items.filter((i) => i.ageHours == null)
+  const out = [...within, ...undated].slice(0, want)
+  log(`  直近${widest}時間は ${within.length}件。日時の分からないものを足して ${out.length}件で進む`)
+  return out
 }
 
 /** 短く読めた分だけ本文を取る。取れなくても構わない */

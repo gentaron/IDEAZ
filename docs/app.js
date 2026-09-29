@@ -126,6 +126,14 @@ function render(day) {
   const searched = day.slots.filter((s) => s.topic).length
   dateLabel.textContent =
     `${day.date}（マレーシア時間）` + (searched ? ` · 題材 ${searched}/${day.slots.length}` : '')
+
+  // 題材が1つも入らなかった日は、そうと分かるようにしておく。
+  // 黙って角度だけの形に戻ると、探索が壊れていても気づけない
+  if (!searched && day.topicSource === 'lens-only') {
+    showBanner('no-topics', '今朝は題材が入りませんでした。角度だけの5枠を出しています。')
+  } else {
+    hideBanner('no-topics')
+  }
   cards.innerHTML = ''
 
   for (const slot of day.slots) {
@@ -308,6 +316,8 @@ function iosHint() {
   const isIOS = /iPad|iPhone|iPod/.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)
   const standalone = window.matchMedia('(display-mode: standalone)').matches || navigator.standalone === true
   if (!isIOS || standalone) return
+  // すでに何か知らせているなら、そちらを優先する（題材が入らなかった等の方が大事）
+  if (!banner.hidden) return
   try {
     if (localStorage.getItem('ideaz-ios-hint') === 'done') return
     localStorage.setItem('ideaz-ios-hint', 'done')

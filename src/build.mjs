@@ -3,9 +3,10 @@
 // ここは組み立てだけを担当する。中身の正本はすべて memory/ にある。
 // 文言を変えたいときは memory/*.md を直せば、翌朝から反映される。
 
-import { readFileSync } from 'node:fs'
+import { readFileSync, existsSync, readdirSync } from 'node:fs'
 import { join, dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
+import { createHash } from 'node:crypto'
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..')
 const MEM = (name) => readFileSync(join(ROOT, 'memory', name), 'utf8')
@@ -30,6 +31,47 @@ export function mytDate(now = new Date()) {
 /** 1970-01-01 からの日数。角度を配るための回転カウンタ */
 function dayIndex(dateStr) {
   return Math.floor(Date.parse(`${dateStr}T00:00:00Z`) / 86400000)
+}
+
+/**
+ * プロンプトの中身の指紋。日付だけは毎日変わるので、そこを伏せてから取る。
+ * これが同じなら「全く同じプロンプト」とみなす。
+ */
+export function fingerprint(prompt) {
+  const normalised = String(prompt).replace(/\d{4}-\d{2}-\d{2}/g, 'DATE')
+  return createHash('sha256').update(normalised).digest('hex').slice(0, 16)
+}
+
+/**
+ * これまでに出したプロンプトの指紋を、枠ごとに集める。
+ * exclude はいま組み立てようとしている日。自分自身の控えと見比べて
+ * 「重複だ」と判定してしまわないように外す（同じ日を作り直しても結果が変わらないため）。
+ */
+export function pastFingerprints({ days = 120, exclude = null } = {}) {
+  const dir = join(ROOT, 'docs', 'data', 'archive')
+  const bySlot = new Map()
+  if (!existsSync(dir)) return bySlot
+
+  const files = readdirSync(dir)
+    .filter((f) => f.endsWith('.json'))
+    .filter((f) => f.replace(/\.json$/, '') !== exclude)
+    .sort()
+    .reverse()
+    .slice(0, days)
+
+  for (const f of files) {
+    try {
+      const doc = JSON.parse(readFileSync(join(dir, f), 'utf8'))
+      for (const slot of doc.slots || []) {
+        if (!slot?.prompt) continue
+        if (!bySlot.has(slot.id)) bySlot.set(slot.id, new Set())
+        bySlot.get(slot.id).add(fingerprint(slot.prompt))
+      }
+    } catch {
+      /* 壊れている日は飛ばす */
+    }
+  }
+  return bySlot
 }
 
 /** マークダウンから `## 見出し` のブロックだけ抜く */
@@ -97,7 +139,7 @@ function topicBlock(topic) {
  * その日の枠と「今日の角度」を決める。
  * 探索（scripts/search.mjs）と組み立て（buildDay）で同じ配り方を使うために外に出してある。
  */
-export function planDay(dateStr) {
+export function planDay(dateStr, offsets = new Map()) {
   const { slots, judgement, openTitleExample, openGateExample } = JSONMEM('slots.json')
   const lenses = JSONMEM('lenses.json')
   const di = dayIndex(dateStr)
@@ -106,23 +148,21 @@ export function planDay(dateStr) {
   // 角度を配る。open は4枠ぶん、judgement は1枚。素数枚なので一巡するまで同じ札は戻らない
   const dealt = new Map()
   openSlots.forEach((s, i) => {
-    dealt.set(s.id, lenses.open[(di * openSlots.length + i) % lenses.open.length])
+    const off = offsets.get(s.id) || 0
+    dealt.set(s.id, lenses.open[(di * openSlots.length + i + off) % lenses.open.length])
   })
   slots
     .filter((s) => s.kind === 'judgement')
     .forEach((s) => {
-      dealt.set(s.id, lenses.judgement[di % lenses.judgement.length])
+      const off = offsets.get(s.id) || 0
+      dealt.set(s.id, lenses.judgement[(di + off) % lenses.judgement.length])
     })
 
   return { slots, judgement, openTitleExample, openGateExample, dealt, dayIndex: di }
 }
 
-/**
- * その日の5枠を組み立てる。
- * topics に探索の結果（scripts/search.mjs が書いたもの）を渡すと、
- * 「探してください」ではなく「この題材で書いてください」の形になる。
- */
-export function buildDay(dateStr, topics = null) {
+/** 5枠を1回ぶん組み立てる。角度のずらし方を変えて何度か呼ばれることがある */
+function assembleDay(dateStr, topics, offsets) {
   const canon = MEM('canon.md')
   const win = MEM('winning-patterns.md')
   const title = MEM('title.md')
@@ -131,7 +171,7 @@ export function buildDay(dateStr, topics = null) {
   const sources = MEM('sources.md')
   const forbidden = MEM('forbidden.md')
   const exclusions = MEM('exclusions.md')
-  const { slots, judgement, openTitleExample, openGateExample, dealt, dayIndex: di } = planDay(dateStr)
+  const { slots, judgement, openTitleExample, openGateExample, dealt, dayIndex: di } = planDay(dateStr, offsets)
 
   const built = slots.map((slot) => {
     const isJudge = slot.kind === 'judgement'
@@ -243,14 +283,49 @@ export function buildDay(dateStr, topics = null) {
     }
   })
 
+  return { built, dayIndex: di }
+}
+
+/**
+ * その日の5枠を組み立てる。
+ * topics に探索の結果（scripts/search.mjs が書いたもの）を渡すと、
+ * 「探してください」ではなく「この題材で書いてください」の形になる。
+ *
+ * 過去に出したのと全く同じプロンプトになる枠があれば、その枠の角度を次の札にずらして組み直す。
+ * 同じものを二度配らないため。
+ */
+export function buildDay(dateStr, topics = null, { avoidRepeats = true } = {}) {
+  const past = avoidRepeats ? pastFingerprints({ exclude: dateStr }) : new Map()
+  const offsets = new Map()
+  const rotated = []
+
+  let day = assembleDay(dateStr, topics, offsets)
+
+  for (let round = 0; avoidRepeats && round < 12; round++) {
+    const clash = day.built.filter((b) => past.get(b.id)?.has(fingerprint(b.prompt)))
+    if (!clash.length) break
+    for (const c of clash) {
+      offsets.set(c.id, (offsets.get(c.id) || 0) + 1)
+      if (!rotated.includes(c.id)) rotated.push(c.id)
+    }
+    day = assembleDay(dateStr, topics, offsets)
+  }
+
+  const stillRepeating = day.built
+    .filter((b) => past.get(b.id)?.has(fingerprint(b.prompt)))
+    .map((b) => b.id)
+
   return {
     date: dateStr,
     timezone: 'Asia/Kuala_Lumpur',
     generatedAt: new Date().toISOString(),
-    dayIndex: di,
+    dayIndex: day.dayIndex,
     // searched = 今朝の探索で題材まで決まっている / lens-only = 角度だけ配って、探すのは書き手
     topicSource: topics ? 'searched' : 'lens-only',
     searchedAt: topics?.generatedAt || null,
-    slots: built
+    // 過去と同じプロンプトになりかけて、角度をずらした枠
+    rotated,
+    slots: day.built.map((b) => ({ ...b, fingerprint: fingerprint(b.prompt) })),
+    stillRepeating
   }
 }

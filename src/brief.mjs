@@ -63,7 +63,13 @@ export function judgeSystem() {
 function listCandidates(items, { withText = false } = {}) {
   return items
     .map((c, i) => {
-      const head = `${i + 1}. [${c.source}] ${c.title}`
+      const age =
+        c.ageHours == null
+          ? '日時不明'
+          : c.ageHours < 24
+            ? `${c.ageHours}時間前`
+            : `${Math.floor(c.ageHours / 24)}日前`
+      const head = `${i + 1}. [${c.source} / ${age}] ${c.title}`
       const lines = [head, `   URL: ${c.url}`]
       if (c.score) lines.push(`   反応: ${c.score}`)
       if (c.summary) lines.push(`   概要: ${c.summary}`)
@@ -83,6 +89,8 @@ export function shortlistTask(dateStr, candidates, keepN) {
     '「読者が越えられる制約が1つ見えそうか」だけで見ます。見えないもの、ノイズ6つしか無いものを落としてください。',
     '',
     '同じ話題が複数ある場合は、いちばん一次情報に近いものを1つだけ残してください。',
+    '新しいものを優先してください。見出しの先頭に、いつのものかを書いてあります。',
+    '同じくらい良い候補が並んだら、新しい方を残してください。',
     '',
     listCandidates(candidates),
     '',
@@ -118,6 +126,7 @@ export function decideTask(dateStr, candidates, { published = null, titles = [] 
     '1. 各候補について、関門の一文が埋まるかを見る。埋まらないものは落とす。',
     '2. 残ったものをシグナル5つで見る。ノイズ6つしか無いものを落とす。',
     '3. 残ったものを、角度がいちばん合う枠に当てる。5枠ぶん、互いに重ならないように配る。',
+    '   同じくらい当てはまる候補が2つあるなら、新しい方を採る。今日の最新を出すのが仕事です。',
     '4. 埋まらない枠は、無理に埋めない。found を false にして理由を書く。',
     '',
     '角度は「探す切り口」であって、題材そのものではありません。',

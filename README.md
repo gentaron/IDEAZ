@@ -45,7 +45,7 @@ scripts/generate.mjs   題材を土台のフォーマットに埋め込んで5�
 
 | 名前 | 要る鍵 | 既定のモデル | 備考 |
 | --- | --- | --- | --- |
-| `github` | `GITHUB_TOKEN` | `openai/gpt-4o-mini` | Actions 内なら**何も登録しなくていい**。`models: read` だけ要る |
+| `github` | `GITHUB_TOKEN` | `openai/gpt-4o-mini` | Actions 内なら**何も登録しなくていい**。`models: read` だけ要る。入口が複数あるので順に試す |
 | `gemini` | `GEMINI_API_KEY` | `gemini-2.0-flash` | aistudio.google.com で無料の鍵が取れる |
 | `groq` | `GROQ_API_KEY` | `llama-3.3-70b-versatile` | console.groq.com で無料の鍵が取れる |
 | `openrouter` | `OPENROUTER_API_KEY` | `deepseek/deepseek-chat-v3.1:free` | **`:free` 以外を指定すると止まる**（うっかり課金しないため） |
@@ -58,7 +58,26 @@ scripts/generate.mjs   題材を土台のフォーマットに埋め込んで5�
 毎日変わるのは、その土台に載る**今日の題材**と、それを探した**角度**。
 
 題材が決まらなかった枠は、無理に埋めない。その枠は角度だけを渡して、探すところから書き手（コピー先のAI）にやってもらう。
-探索そのものが落ちた日も同じで、5枠は必ず出る。
+探索そのものが落ちた日も同じで、5枠は必ず出る。その日は画面に「今朝は題材が入りませんでした」と出る。
+
+## 同じプロンプトを二度出さない
+
+「毎朝入れ替わる」が本当であるために、三重に見ている。
+
+**1. 新しいものから取る。** 候補は新しい順に並べ、まず直近24時間から選ぶ。足りなければ48、72と広げる。
+静かな日でも空にならず、動きのある日は当日のものだけで埋まる。AIにも「いつのものか」を見せて、
+同じくらいの候補なら新しい方を採らせる。
+
+**2. 一度出した題材は二度出さない。** 候補はソースに数日残るので、これが無いと同じ題材を何日も出してしまう。
+`docs/data/topics/` に残っている過去の題材も、公開済みの記事と同じように照合の対象にしている。
+**まだ書いていない題材でも、一度出したらもう出ない。**
+
+**3. 全く同じプロンプトになったら、角度をずらす。** 組み上げたプロンプトの指紋（日付を伏せたハッシュ）を、
+過去の控えと突き合わせる。同じものがあれば、その枠の角度を次の札に送って組み直す。
+
+そのうえで、**中身が前回と同じなら書き換えない**。同じプロンプトで「更新」だけかけても、
+読む人には何も起きていないのと同じなので、コミットもデプロイもしない。
+同じ日を何度作り直しても結果は変わらない。
 
 ## すでに書いたテーマは二度と出さない
 
@@ -138,6 +157,7 @@ node scripts/sync-published.mjs --full   # 最初から全部取り直す
 ```bash
 node scripts/search.mjs --harvest     # 候補集めだけ試す（AIは呼ばない。鍵も要らない）
 node scripts/search.mjs --dry-run     # 何も叩かず、投げる指示書だけ見る
+node scripts/search.mjs --probe       # 相手に小さく1回投げて、どの入口が通るか見る
 
 export GITHUB_TOKEN=ghp_...           # または GEMINI_API_KEY / GROQ_API_KEY など
 node scripts/search.mjs               # 今日の題材を探す
@@ -167,7 +187,8 @@ npx serve docs                        # ローカルで開く（何でもいい�
 | `IDEAZ_LLM_PROVIDER` | 自動 | 選ぶ係を名指しする。`github` / `gemini` / `groq` / `openrouter` / `local` |
 | `IDEAZ_LLM_MODEL` | 相手による | モデルだけ差し替える |
 | `IDEAZ_LLM_BASE` | 相手による | 別の場所に向ける（手元のものなど） |
-| `IDEAZ_WINDOW_HOURS` | `72` | 何時間ぶんさかのぼって集めるか |
+| `IDEAZ_WINDOW_HOURS` | `72` | 何時間ぶんさかのぼって集めるか（上限。実際は24→48→72と広げる） |
+| `IDEAZ_RECENT_TITLES` | `150` | AIに見せる既出見出しの数。無料枠が小さいときは減らす |
 | `IDEAZ_CANDIDATES` | `70` | 1段目に渡す候補の上限 |
 | `IDEAZ_SHORTLIST` | `14` | 1段目を通す件数。本文を読みにいく件数でもある |
 | `IDEAZ_PUBLISHED_MAX_PAGES` | `60` | 過去記事を何ページぶん辿るか |

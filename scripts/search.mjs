@@ -4,6 +4,7 @@
 //   node scripts/search.mjs 2026-10-01  # 日付を指定して探す
 //   node scripts/search.mjs --dry-run   # 何も叩かず、投げる指示書だけ出す
 //   node scripts/search.mjs --harvest   # 候補集めだけ試す（AIは呼ばない）
+//   node scripts/search.mjs --probe     # 相手に1回だけ小さく投げて、通るかだけ見る
 //
 // 使うのは無料のものだけ。
 //   集める = 鍵の要らない公開の口（HN / Reddit / HF / GitHub / arXiv / RSS）
@@ -17,8 +18,8 @@ import { join, dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { mytDate, planDay } from '../src/build.mjs'
 import { judgeSystem, shortlistTask, decideTask } from '../src/brief.mjs'
-import { harvest, excerpt } from '../src/harvest.mjs'
-import { loadPublished, buildIndex, filterCandidates, recentTitles } from '../src/published.mjs'
+import { harvest, excerpt, freshest } from '../src/harvest.mjs'
+import { loadPublished, buildIndex, filterCandidates, recentTitles, pastTopics } from '../src/published.mjs'
 import { pickProvider, chat, parseJSON } from '../src/llm.mjs'
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..')
@@ -31,9 +32,10 @@ const CANDIDATES = Number(process.env.IDEAZ_CANDIDATES || 70)
 const args = process.argv.slice(2)
 const dryRun = args.includes('--dry-run')
 const harvestOnly = args.includes('--harvest')
+const probe = args.includes('--probe')
 const date = args.find((a) => /^\d{4}-\d{2}-\d{2}$/.test(a)) || mytDate()
 
-const bad = args.find((a) => a.startsWith('-') && !['--dry-run', '--harvest'].includes(a))
+const bad = args.find((a) => a.startsWith('-') && !['--dry-run', '--harvest', '--probe'].includes(a))
 if (bad) {
   console.error(`知らない引数: ${bad}`)
   process.exit(1)
@@ -74,6 +76,30 @@ if (dryRun) {
   process.exit(0)
 }
 
+/* ---------- 相手に届くかだけ見る ---------- */
+
+if (probe) {
+  const p = pickProvider()
+  console.log(`相手: ${p.label}\n既定の入口: ${p.base}\n既定のモデル: ${p.model}`)
+  console.log('鍵:', p.key ? `あり（${p.key.length}文字）` : 'なし')
+  console.log('\n小さく1回投げてみる…')
+  try {
+    const out = await chat(p, {
+      system: 'あなたはJSONだけを返します。',
+      user: 'キーが ok で値が true の JSON を1つだけ返してください。',
+      json: true,
+      maxTokens: 64
+    })
+    console.log(`返ってきた: ${out.trim().slice(0, 200)}`)
+    console.log(`\n通った入口: ${p.base}\n通ったモデル: ${p.model}`)
+    console.log('この2つを Variables の IDEAZ_LLM_BASE / IDEAZ_LLM_MODEL に入れておくと、次から迷わない')
+  } catch (e) {
+    console.error(`\n駄目だった:\n${e.message}`)
+    process.exit(1)
+  }
+  process.exit(0)
+}
+
 /* ---------- 候補を集める ---------- */
 
 const harvested = await harvest({ hours: HOURS })
@@ -98,12 +124,18 @@ if (published.accounts.length && !published.titles.length) {
   process.exit(1)
 }
 
-const { index, cutoff, terms: nTerms } = buildIndex(published)
+// 公開済みの記事に加えて、これまで出した題材も照合の対象にする。
+// 候補は数日ソースに残るので、これが無いと同じ題材を何度も出してしまう。
+const emitted = pastTopics()
+const { index, cutoff, terms: nTerms } = buildIndex({
+  titles: [...published.titles, ...emitted]
+})
 const { kept, blocked } = filterCandidates(harvested, index)
 
 console.log(
-  `すでに公開した記事 ${published.count}本（${published.accounts.join(' / ')}）。` +
-    `固有名詞 ${nTerms}語で照合（${cutoff}本を超えて出てくる語はありふれ扱い）`
+  `すでに公開した記事 ${published.count}本（${published.accounts.join(' / ')}）` +
+    `＋これまで出した題材 ${emitted.length}件。` +
+    `固有名詞 ${nTerms}語で照合（${cutoff}件を超えて出てくる語はありふれ扱い）`
 )
 if (blocked.length) {
   console.log(`  既出と当たって落とした: ${blocked.length}件`)
@@ -119,7 +151,8 @@ if (!kept.length) {
   process.exit(1)
 }
 
-const pool = kept.slice(0, CANDIDATES)
+// 新しい順に、必要な数だけ。足りなければ窓を広げる
+const pool = freshest(kept, { want: CANDIDATES })
 
 if (harvestOnly) {
   console.log(`\n上位20件:`)

@@ -4,12 +4,13 @@
 // 見出しから固有名詞らしい語を抜いて、当たったものは候補の段階で捨てる。
 // AI側にも見出しの一覧を渡すが、それは二重の網であって、一枚目はここ。
 
-import { readFileSync, existsSync } from 'node:fs'
+import { readFileSync, existsSync, readdirSync } from 'node:fs'
 import { join, dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..')
 const FILE = join(ROOT, 'memory', 'published.json')
+const TOPICS = join(ROOT, 'docs', 'data', 'topics')
 
 // どの記事にも出てくる語。これで当てると全部消えるので、固有名詞から外す
 const STOP = new Set([
@@ -122,7 +123,33 @@ export function filterCandidates(candidates, index) {
   return { kept, blocked }
 }
 
-/** AI に見せる既出の一覧。全部は多すぎるので、新しい順に詰める */
-export function recentTitles(published, max = 400) {
+/**
+ * これまでに出した題材。
+ *
+ * 公開済みの記事とは別物で、「出したがまだ書かれていない題材」がここに入る。
+ * これを見ないと、同じ候補が何日も残っているあいだ、毎朝同じ題材を出しかねない。
+ */
+export function pastTopics() {
+  if (!existsSync(TOPICS)) return []
+  const out = []
+  for (const f of readdirSync(TOPICS).filter((f) => f.endsWith('.json'))) {
+    try {
+      const doc = JSON.parse(readFileSync(join(TOPICS, f), 'utf8'))
+      for (const slot of Object.values(doc.slots || {})) {
+        if (slot?.title) out.push({ title: slot.title, date: doc.date || f.replace(/\.json$/, '') })
+      }
+    } catch {
+      /* 壊れている日は飛ばす */
+    }
+  }
+  return out
+}
+
+/**
+ * AI に見せる既出の一覧。全部は多すぎるので、新しい順に詰める。
+ * 無料枠は1回に入れられる量が小さいことがあるので、既定は控えめにしてある。
+ * 固有名詞の一致は機械側で済んでいるので、ここは言い換えを拾うための補助。
+ */
+export function recentTitles(published, max = Number(process.env.IDEAZ_RECENT_TITLES || 150)) {
   return (published.titles || []).slice(0, max).map((t) => t.title)
 }

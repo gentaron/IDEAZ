@@ -12,6 +12,13 @@ const PROVIDERS = [
     base: 'https://models.github.ai/inference',
     keyEnv: ['GITHUB_TOKEN', 'GH_TOKEN'],
     model: 'openai/gpt-4o-mini',
+    // 入口が変わることがある。上から順に試して、通ったところを使う。
+    // モデル名の付け方も入口ごとに違う（publisher/ が要る所と要らない所がある）
+    alternates: [
+      { base: 'https://models.inference.ai.azure.com', model: 'gpt-4o-mini' },
+      { base: 'https://models.github.ai/inference', model: 'gpt-4o-mini' },
+      { base: 'https://models.inference.ai.azure.com', model: 'openai/gpt-4o-mini' }
+    ],
     // Actions の中なら GITHUB_TOKEN が最初からある（workflow に models: read が要る）
     note: 'ワークフローに models: read を足すだけで動く。追加の登録は要らない'
   },
@@ -113,54 +120,105 @@ export function parseJSON(text) {
  * 1往復だけ投げる。
  * json を true にすると、返事をJSONに寄せる（対応していない相手でも、指示と取り出しで吸収する）
  */
-export async function chat(provider, { system, user, json = false, maxTokens = 8000, temperature = 0.3 }) {
-  const headers = { 'Content-Type': 'application/json' }
-  if (provider.key) headers.Authorization = `Bearer ${provider.key}`
+/** 試す入口の一覧。既定 → 予備の順。モデルを明示されていればそれを全部に使う */
+function attempts(provider) {
+  const forced = process.env.IDEAZ_LLM_MODEL
+  const list = [{ base: provider.base, model: provider.model }]
 
-  const body = {
-    model: provider.model,
-    messages: [
-      { role: 'system', content: system },
-      { role: 'user', content: user }
-    ],
-    max_tokens: maxTokens,
-    temperature
+  // IDEAZ_LLM_BASE で場所を指定されているなら、そこだけを使う
+  if (process.env.IDEAZ_LLM_BASE) return list
+
+  for (const alt of provider.alternates || []) {
+    list.push({ base: alt.base, model: forced || alt.model })
   }
-  if (json) body.response_format = { type: 'json_object' }
+  return list
+}
 
-  const res = await fetch(`${provider.base}/chat/completions`, {
+/** 1回投げて、返ってきた本文を文字列で受ける。JSONでなくてもここでは落とさない */
+async function post(url, headers, body) {
+  const res = await fetch(url, {
     method: 'POST',
     headers,
     body: JSON.stringify(body),
     signal: AbortSignal.timeout(300000)
   })
-
-  if (!res.ok) {
-    const detail = (await res.text().catch(() => '')).slice(0, 400)
-    // response_format を知らない相手がいる。その場合は外してもう一度だけ試す
-    if (json && (res.status === 400 || res.status === 422)) {
-      delete body.response_format
-      const retry = await fetch(`${provider.base}/chat/completions`, {
-        method: 'POST',
-        headers,
-        body: JSON.stringify(body),
-        signal: AbortSignal.timeout(300000)
-      })
-      if (retry.ok) return pickText(await retry.json())
-      throw new Error(`${provider.label} が ${retry.status}: ${detail}`)
-    }
-    throw new Error(`${provider.label} が ${res.status}: ${detail}`)
+  const text = await res.text().catch(() => '')
+  let payload = null
+  try {
+    payload = JSON.parse(text)
+  } catch {
+    /* JSON でない返事。status と中身は呼び出し側で見る */
   }
-
-  return pickText(await res.json())
+  return { status: res.status, ok: res.ok, text, payload, type: res.headers.get('content-type') || '' }
 }
 
-function pickText(payload) {
-  const text = payload?.choices?.[0]?.message?.content
-  if (typeof text !== 'string' || !text.trim()) {
-    throw new Error(`返事が空だった: ${JSON.stringify(payload).slice(0, 300)}`)
+/** 返事の形を見て、使えるかどうかを言う */
+function verdict(r) {
+  if (!r.payload) {
+    // ここが今まで SyntaxError で落ちていたところ。
+    // 200 で "OK" のような本文が返る入口がある（API の口ではないという意味）
+    return { ok: false, why: `JSONが返らなかった（HTTP ${r.status} ${r.type}）: ${r.text.slice(0, 120).replace(/\s+/g, ' ')}` }
   }
-  return text
+  if (!r.ok) {
+    const msg = r.payload?.error?.message || r.payload?.message || r.text.slice(0, 200)
+    return { ok: false, why: `HTTP ${r.status}: ${String(msg).slice(0, 200)}` }
+  }
+  const content = r.payload?.choices?.[0]?.message?.content
+  if (typeof content !== 'string' || !content.trim()) {
+    return { ok: false, why: `choices が空: ${JSON.stringify(r.payload).slice(0, 200)}` }
+  }
+  return { ok: true, content }
+}
+
+/**
+ * 1往復だけ投げる。
+ * json を true にすると、返事をJSONに寄せる（対応していない相手でも、指示と取り出しで吸収する）
+ *
+ * 入口が複数あるときは順に試す。どれも駄目なら、それぞれが何を返したかを並べて投げる。
+ */
+export async function chat(provider, { system, user, json = false, maxTokens = 8000, temperature = 0.3 }) {
+  const headers = { 'Content-Type': 'application/json', Accept: 'application/json' }
+  if (provider.key) headers.Authorization = `Bearer ${provider.key}`
+
+  const failures = []
+
+  for (const attempt of attempts(provider)) {
+    const url = `${attempt.base.replace(/\/$/, '')}/chat/completions`
+    const body = {
+      model: attempt.model,
+      messages: [
+        { role: 'system', content: system },
+        { role: 'user', content: user }
+      ],
+      max_tokens: maxTokens,
+      temperature
+    }
+    if (json) body.response_format = { type: 'json_object' }
+
+    let r = await post(url, headers, body).catch((e) => ({ status: 0, ok: false, text: String(e.message), payload: null, type: '' }))
+    let v = verdict(r)
+
+    // response_format を知らない相手がいる。外してもう一度だけ試す
+    if (!v.ok && json && (r.status === 400 || r.status === 422)) {
+      delete body.response_format
+      r = await post(url, headers, body).catch((e) => ({ status: 0, ok: false, text: String(e.message), payload: null, type: '' }))
+      v = verdict(r)
+    }
+
+    if (v.ok) {
+      // 予備の入口で通ったなら、以降もそこを使う
+      if (attempt.base !== provider.base || attempt.model !== provider.model) {
+        provider.base = attempt.base
+        provider.model = attempt.model
+        console.log(`  （${attempt.base} / ${attempt.model} に切り替えた）`)
+      }
+      return v.content
+    }
+
+    failures.push(`  ${attempt.base} (${attempt.model})\n    ${v.why}`)
+  }
+
+  throw new Error(`${provider.label} のどの入口も使えなかった:\n${failures.join('\n')}`)
 }
 
 export const providerList = PROVIDERS

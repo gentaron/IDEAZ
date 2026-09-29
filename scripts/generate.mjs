@@ -5,7 +5,7 @@
 import { mkdirSync, writeFileSync, readFileSync, existsSync, readdirSync } from 'node:fs'
 import { join, dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
-import { buildDay, mytDate } from '../src/build.mjs'
+import { buildDay, mytDate, fingerprint } from '../src/build.mjs'
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..')
 const DATA = join(ROOT, 'docs', 'data')
@@ -44,6 +44,34 @@ if (!topics) {
 }
 
 const day = buildDay(date, topics)
+
+if (day.rotated.length) {
+  console.log(`過去と同じプロンプトになる枠があったので、角度をずらした: ${day.rotated.join(', ')}`)
+}
+if (day.stillRepeating.length) {
+  console.warn(
+    `ずらしても過去と同じままの枠がある: ${day.stillRepeating.join(', ')}（角度の札を使い切った可能性）`
+  )
+}
+
+// いま出ているものと中身が同じなら、書き換えない。
+// 同じプロンプトで「更新」だけかけても、読む人には何も起きていないのと同じ。
+if (existsSync(currentPath)) {
+  try {
+    const now = JSON.parse(readFileSync(currentPath, 'utf8'))
+    const same =
+      now.date === day.date &&
+      now.slots?.length === day.slots.length &&
+      now.slots.every((s, i) => fingerprint(s.prompt) === day.slots[i].fingerprint)
+    if (same) {
+      console.log(`${date} の5枠は前回と中身が同じ。書き換えない（更新しない）`)
+      process.exit(0)
+    }
+  } catch {
+    /* 読めないなら普通に書き出す */
+  }
+}
+
 writeFileSync(currentPath, JSON.stringify(day, null, 2) + '\n')
 writeFileSync(join(ARCHIVE, `${date}.json`), JSON.stringify(day, null, 2) + '\n')
 
