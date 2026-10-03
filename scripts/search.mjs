@@ -19,7 +19,7 @@ import { mytDate, planDay } from '../src/build.mjs'
 import { judgeSystem, shortlistTask, decideTask } from '../src/brief.mjs'
 import { harvest, excerpt } from '../src/harvest.mjs'
 import { loadPublished, buildIndex, filterCandidates, recentTitles } from '../src/published.mjs'
-import { pickProvider, chat, parseJSON } from '../src/llm.mjs'
+import { pickProvider, pickProviders, chatAny, parseJSON } from '../src/llm.mjs'
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..')
 const OUT = join(ROOT, 'docs', 'data', 'topics')
@@ -130,16 +130,20 @@ if (harvestOnly) {
 
 /* ---------- 選ぶ ---------- */
 
-const provider = pickProvider()
-console.log(`選ぶ相手: ${provider.label} / ${provider.model}`)
+// 使える口を全部並べておく。1つが変な返事をしても、次の口で続ける
+const providers = pickProviders()
+console.log(`選ぶ相手: ${providers.map((p) => `${p.label} / ${p.model}`).join(' → ')}`)
 
 const system = judgeSystem()
 
 // 1段目。見出しだけを見て、軸に合いそうなものを残す
 console.log(`1段目: ${pool.length}件を最大${Math.min(SHORTLIST, pool.length)}件に落とす…`)
-const picked = parseJSON(
-  await chat(provider, { system, user: shortlistTask(date, pool, SHORTLIST), json: true, maxTokens: 4000 })
+const first = await chatAny(
+  providers,
+  { system, user: shortlistTask(date, pool, SHORTLIST), json: true, maxTokens: 4000 },
+  parseJSON
 )
+const picked = first.value
 const keep = (picked.keep || [])
   .map((i) => pool[Number(i) - 1])
   .filter(Boolean)
@@ -160,14 +164,18 @@ console.log(`  → ${withText.filter((c) => c.excerpt).length}/${withText.length
 
 // 2段目。関門とシグナルで見て、5枠に配る
 console.log('2段目: 関門とシグナルで見て、5枠に配る…')
-const raw = parseJSON(
-  await chat(provider, {
+const second = await chatAny(
+  providers,
+  {
     system,
     user: decideTask(date, withText, { published, titles: recentTitles(published) }),
     json: true,
     maxTokens: 12000
-  })
+  },
+  parseJSON
 )
+const raw = second.value
+const provider = second.provider
 
 /* ---------- 検算して書き出す ---------- */
 

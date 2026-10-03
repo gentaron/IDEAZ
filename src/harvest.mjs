@@ -31,21 +31,28 @@ const clean = (s) => String(s || '').replace(/\s+/g, ' ').trim()
 
 /* ---------- 個々のソース ---------- */
 
+// AIの話かどうかを見出しで見る。HN と GitHub は AI 以外も大量に流れてくるので、ここで AI だけに絞る
+const AI_WORDS =
+  /\b(ai|llms?|gpt[\w.-]*|models?|inference|weights|transformer|diffusion|agents?|rag|embedding|quantiz\w*|gguf|fine-?tun\w*|openai|anthropic|claude|gemini|gemma|llama|qwen|deepseek|mistral|nvidia|hugging ?face|ollama)\b/i
+
 /** Hacker News。技術者の評価と批判。Algolia の公開APIは鍵が要らない */
 async function hackerNews(sinceSec) {
-  const q = encodeURIComponent('AI OR LLM OR model OR inference OR GPU OR open-source')
+  // Algolia の query は全部の語を含むものしか返さない（OR が効かない）。
+  // なので語では絞らずに点の高い記事を広く取り、AI の話だけをこちらで残す
   const url =
-    `https://hn.algolia.com/api/v1/search?query=${q}` +
-    `&tags=story&numericFilters=created_at_i>${sinceSec},points>30&hitsPerPage=40`
+    `https://hn.algolia.com/api/v1/search?tags=story` +
+    `&numericFilters=created_at_i>${sinceSec},points>40&hitsPerPage=200`
   const data = await get(url)
-  return (data.hits || []).map((h) => ({
-    source: 'Hacker News',
-    title: clean(h.title),
-    url: h.url || `https://news.ycombinator.com/item?id=${h.objectID}`,
-    summary: clean(h.story_text).slice(0, 400),
-    score: h.points || 0,
-    discussion: `https://news.ycombinator.com/item?id=${h.objectID}`
-  }))
+  return (data.hits || [])
+    .filter((h) => AI_WORDS.test(`${h.title} ${h.url || ''}`))
+    .map((h) => ({
+      source: 'Hacker News',
+      title: clean(h.title),
+      url: h.url || `https://news.ycombinator.com/item?id=${h.objectID}`,
+      summary: clean(h.story_text).slice(0, 400),
+      score: h.points || 0,
+      discussion: `https://news.ycombinator.com/item?id=${h.objectID}`
+    }))
 }
 
 /** Reddit。ローカル実行と量子化の現場。ここは特に効く、と正本にある */
@@ -82,12 +89,19 @@ async function huggingFace() {
 
 /** GitHub。新しいリポジトリ。GITHUB_TOKEN があれば上限が緩む（無くても動く） */
 async function github(sinceISO) {
-  const q = encodeURIComponent(`created:>${sinceISO.slice(0, 10)} stars:>80 topic:ai`)
   const headers = { Accept: 'application/vnd.github+json' }
   const token = process.env.GITHUB_TOKEN || process.env.GH_TOKEN
   if (token) headers.Authorization = `Bearer ${token}`
-  const data = await get(`https://api.github.com/search/repositories?q=${q}&sort=stars&per_page=25`, { headers })
-  return (data.items || []).map((r) => ({
+  // 作られて数日で星が80付くものはほとんど無い。AIの主な話題ごとに分けて、敷居を下げて拾う
+  const topics = ['llm', 'ai', 'local-llm', 'ai-agents']
+  const lists = await Promise.all(
+    topics.map(async (t) => {
+      const q = encodeURIComponent(`created:>${sinceISO.slice(0, 10)} stars:>20 topic:${t}`)
+      const data = await get(`https://api.github.com/search/repositories?q=${q}&sort=stars&per_page=20`, { headers })
+      return data.items || []
+    })
+  )
+  return lists.flat().map((r) => ({
     source: 'GitHub',
     title: clean(r.full_name),
     url: r.html_url,
@@ -119,7 +133,7 @@ async function arxiv(cats) {
 /** 各社の公式ブログ・リリース。RSS / Atom をそのまま読む */
 async function feed(name, url) {
   const xml = await get(url, { as: 'text' })
-  const chunks = [...xml.matchAll(/<(?:item|entry)>([\s\S]*?)<\/(?:item|entry)>/g)].slice(0, 12)
+  const chunks = [...xml.matchAll(/<(?:item|entry)(?:\s[^>]*)?>([\s\S]*?)<\/(?:item|entry)>/g)].slice(0, 12)
   return chunks.map((m) => {
     const e = m[1]
     const pick = (tag) => clean((e.match(new RegExp(`<${tag}[^>]*>([\\s\\S]*?)</${tag}>`)) || [])[1])
@@ -137,10 +151,16 @@ async function feed(name, url) {
 
 /* ---------- まとめて回す ---------- */
 
+// 大手の公式発表。大手の一手は毎日の本流なので、ここは厚めに持つ
 const FEEDS = [
+  ['OpenAI', 'https://openai.com/news/rss.xml'],
+  ['Google AI', 'https://blog.google/technology/ai/rss/'],
+  ['Google DeepMind', 'https://deepmind.google/blog/rss.xml'],
+  ['Google Developers', 'https://developers.googleblog.com/feeds/posts/default'],
+  ['Microsoft Research', 'https://www.microsoft.com/en-us/research/feed/'],
+  ['NVIDIA Developer', 'https://developer.nvidia.com/blog/feed'],
+  ['AWS Machine Learning', 'https://aws.amazon.com/blogs/machine-learning/feed/'],
   ['Hugging Face Blog', 'https://huggingface.co/blog/feed.xml'],
-  ['Google Research', 'https://blog.google/technology/ai/rss/'],
-  ['Meta AI', 'https://ai.meta.com/blog/rss/'],
   ['Simon Willison', 'https://simonwillison.net/atom/everything/'],
   ['Ollama', 'https://github.com/ollama/ollama/releases.atom'],
   ['llama.cpp', 'https://github.com/ggml-org/llama.cpp/releases.atom'],

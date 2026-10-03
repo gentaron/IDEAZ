@@ -12,6 +12,10 @@ const PROVIDERS = [
     base: 'https://models.github.ai/inference',
     keyEnv: ['GITHUB_TOKEN', 'GH_TOKEN'],
     model: 'openai/gpt-4o-mini',
+    // GitHub の REST と同じ作法で叩く。これが無いと、本文ではなく素の「OK」だけ返ってくる日がある
+    headers: { Accept: 'application/vnd.github+json', 'X-GitHub-Api-Version': '2022-11-28' },
+    // 本命が変な返事をしたときの予備。同じ GITHUB_TOKEN で通る旧い入口で、モデル名に会社の前置きを付けない
+    fallbacks: [{ base: 'https://models.inference.ai.azure.com', model: (m) => m.replace(/^[^/]+\//, ''), headers: {} }],
     // Actions の中なら GITHUB_TOKEN が最初からある（workflow に models: read が要る）
     note: 'ワークフローに models: read を足すだけで動く。追加の登録は要らない'
   },
@@ -58,8 +62,11 @@ function envKey(names) {
   return null
 }
 
-/** 使える口を1つ決める。IDEAZ_LLM_PROVIDER で名指しもできる */
-export function pickProvider() {
+/**
+ * 使える口を、使う順に全部並べる。IDEAZ_LLM_PROVIDER で名指しもできる。
+ * 1つ目が落ちたら次へ回せるように、1つに決めずに並べて返す。
+ */
+export function pickProviders() {
   const wanted = process.env.IDEAZ_LLM_PROVIDER
   const list = wanted ? PROVIDERS.filter((p) => p.name === wanted) : PROVIDERS
 
@@ -67,6 +74,7 @@ export function pickProvider() {
     throw new Error(`知らない相手: ${wanted}（使えるのは ${PROVIDERS.map((p) => p.name).join(', ')}）`)
   }
 
+  const out = []
   for (const p of list) {
     const key = envKey(p.keyEnv)
     // local は鍵が要らないので、名指しされたときだけ使う
@@ -81,18 +89,25 @@ export function pickProvider() {
       )
     }
 
-    return {
+    out.push({
       ...p,
       key,
       model,
       base: process.env.IDEAZ_LLM_BASE || p.base
-    }
+    })
   }
+
+  if (out.length) return out
 
   throw new Error(
     '使える無料の口が1つも無い。どれか1つ用意する:\n' +
       PROVIDERS.map((p) => `  ${p.name.padEnd(11)} ${p.keyEnv.join(' / ') || '鍵不要'} — ${p.note}`).join('\n')
   )
+}
+
+/** 使える口を1つ決める（いちばん上のもの） */
+export function pickProvider() {
+  return pickProviders()[0]
 }
 
 /** 返事からJSONを取り出す。素の中括弧でも ```json 囲みでも拾う */
@@ -112,13 +127,54 @@ export function parseJSON(text) {
 /**
  * 1往復だけ投げる。
  * json を true にすると、返事をJSONに寄せる（対応していない相手でも、指示と取り出しで吸収する）
+ * 本命の入口が変な返事をしたら、同じ相手の予備の入口でもう一度だけ試す。
  */
-export async function chat(provider, { system, user, json = false, maxTokens = 8000, temperature = 0.3 }) {
-  const headers = { 'Content-Type': 'application/json' }
+export async function chat(provider, opts) {
+  const doors = [
+    { base: provider.base, model: provider.model, headers: provider.headers || {} },
+    ...(process.env.IDEAZ_LLM_BASE ? [] : provider.fallbacks || []).map((f) => ({
+      base: f.base,
+      model: typeof f.model === 'function' ? f.model(provider.model) : f.model || provider.model,
+      headers: f.headers || {}
+    }))
+  ]
+
+  let last
+  for (const door of doors) {
+    try {
+      return await once(provider, door, opts)
+    } catch (e) {
+      last = e
+      if (doors.length > 1) console.warn(`  ${door.base} が使えなかった: ${e.message.split('\n')[0]}`)
+    }
+  }
+  throw last
+}
+
+/**
+ * 並んだ口を上から順に試して、最初に答えた口の返事を返す。
+ * check を渡すと、返事がそれを通らないときも次の口へ回す（JSONにならない、など）。
+ */
+export async function chatAny(providers, opts, check = (t) => t) {
+  let last
+  for (const p of providers) {
+    try {
+      const text = await chat(p, opts)
+      return { provider: p, value: check(text) }
+    } catch (e) {
+      last = e
+      console.warn(`  ${p.label} / ${p.model} では駄目だった: ${e.message.split('\n')[0]}`)
+    }
+  }
+  throw last
+}
+
+async function once(provider, door, { system, user, json = false, maxTokens = 8000, temperature = 0.3 }) {
+  const headers = { 'Content-Type': 'application/json', ...door.headers }
   if (provider.key) headers.Authorization = `Bearer ${provider.key}`
 
   const body = {
-    model: provider.model,
+    model: door.model,
     messages: [
       { role: 'system', content: system },
       { role: 'user', content: user }
@@ -128,34 +184,40 @@ export async function chat(provider, { system, user, json = false, maxTokens = 8
   }
   if (json) body.response_format = { type: 'json_object' }
 
-  const res = await fetch(`${provider.base}/chat/completions`, {
-    method: 'POST',
-    headers,
-    body: JSON.stringify(body),
-    signal: AbortSignal.timeout(300000)
-  })
+  const send = () =>
+    fetch(`${door.base}/chat/completions`, {
+      method: 'POST',
+      headers,
+      body: JSON.stringify(body),
+      signal: AbortSignal.timeout(300000)
+    })
+
+  let res = await send()
 
   if (!res.ok) {
     const detail = (await res.text().catch(() => '')).slice(0, 400)
     // response_format を知らない相手がいる。その場合は外してもう一度だけ試す
     if (json && (res.status === 400 || res.status === 422)) {
       delete body.response_format
-      const retry = await fetch(`${provider.base}/chat/completions`, {
-        method: 'POST',
-        headers,
-        body: JSON.stringify(body),
-        signal: AbortSignal.timeout(300000)
-      })
-      if (retry.ok) return pickText(await retry.json())
-      throw new Error(`${provider.label} が ${retry.status}: ${detail}`)
+      res = await send()
+      if (!res.ok) throw new Error(`${provider.label} が ${res.status}: ${detail}`)
+    } else {
+      throw new Error(`${provider.label} が ${res.status}: ${detail}`)
     }
-    throw new Error(`${provider.label} が ${res.status}: ${detail}`)
   }
 
-  return pickText(await res.json())
+  return pickText(provider, await res.text())
 }
 
-function pickText(payload) {
+// 返事はまず文字のまま受け取る。res.json() に任せると、
+// 「OK」のような素の文字が返ってきた日に、何が返ってきたか分からないまま落ちる
+function pickText(provider, raw) {
+  let payload
+  try {
+    payload = JSON.parse(raw)
+  } catch {
+    throw new Error(`${provider.label} の返事がJSONではなかった: ${String(raw).slice(0, 200)}`)
+  }
   const text = payload?.choices?.[0]?.message?.content
   if (typeof text !== 'string' || !text.trim()) {
     throw new Error(`返事が空だった: ${JSON.stringify(payload).slice(0, 300)}`)

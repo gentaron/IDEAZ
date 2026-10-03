@@ -27,7 +27,7 @@
   [headers.values]
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
-    Permissions-Policy = "geolocation=(), microphone=(), camera=(), interest-cohort=()"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=(), accelerometer=(), gyroscope=(), magnetometer=(), interest-cohort=()"
 
 # Service Worker は絶対にキャッシュさせない。ここを間違えると更新が届かなくなる
 [[headers]]

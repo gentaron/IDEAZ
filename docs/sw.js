@@ -3,7 +3,7 @@
 // 殻（HTML/CSS/JS/アイコン）と中身（data/*.json）でキャッシュを分けてある。
 // 殻を作り直しても、前に取った5枠は消えない。オフラインでも開けるのはそのため。
 
-const SHELL_CACHE = 'ideaz-shell-v2'
+const SHELL_CACHE = 'ideaz-shell-v3'
 const DATA_CACHE = 'ideaz-data-v1'
 const KEEP = [SHELL_CACHE, DATA_CACHE]
 

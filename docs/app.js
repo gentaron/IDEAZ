@@ -429,6 +429,25 @@ addEventListener('offline', () => {
   showBanner('offline', 'オフラインです。前に開いた分を表示しています。')
 })
 
+/* ---------- 向き ---------- */
+
+// 起動したとき、端末の傾きに引っぱられて縦横がぐらぐら入れ替わらないように、縦に止める。
+// manifest の orientation だけでは効かない端末があるので、アプリとして開いたときはここでも止める。
+// 止められない環境（ふつうのブラウザのタブ、iOS）では何もしない。
+function lockPortrait() {
+  const standalone =
+    window.matchMedia('(display-mode: standalone)').matches ||
+    window.matchMedia('(display-mode: fullscreen)').matches ||
+    navigator.standalone === true
+  if (!standalone) return
+  screen.orientation?.lock?.('portrait').catch(() => {})
+}
+
+lockPortrait()
+document.addEventListener('visibilitychange', () => {
+  if (document.visibilityState === 'visible') lockPortrait()
+})
+
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', async () => {
     try {

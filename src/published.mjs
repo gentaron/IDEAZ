@@ -30,6 +30,24 @@ const STOP = new Set([
   'オープン', 'ソース', 'ファイル', 'パソコン', 'スマホ', 'ブラウザ', 'アプリ'
 ])
 
+// 大手の会社名と、モデルの家系の名前。
+// これで当てると「Qwen を一度書いたら Qwen の新作は二度と出ない」「NVIDIA を一度書いたら NVIDIA の発表が全部消える」になる。
+// 大手の新しい一手こそ毎日の本流なので、会社名・家系名では弾かない。
+// 弾くのは Qwen3.8-27B や DeepSeek-V4.1-Flash のような、版まで付いた個別の名前だけ。
+const BRANDS = new Set([
+  'openai', 'anthropic', 'claude', 'google', 'deepmind', 'gemini', 'gemma', 'meta', 'llama',
+  'microsoft', 'phi', 'nvidia', 'nemotron', 'apple', 'amazon', 'aws', 'nova', 'ibm', 'granite',
+  'mistral', 'mistralai', 'ministral', 'magistral', 'deepseek', 'deepseek-ai', 'qwen', 'alibaba',
+  'moonshot', 'moonshotai', 'kimi', 'zhipu', 'zai-org', 'glm', 'minimax', 'minimaxai', 'baidu',
+  'ernie', 'tencent', 'hunyuan', 'bytedance', 'seed', 'xiaomi', 'mimo', 'stepfun', 'xai', 'grok',
+  'cohere', 'command', 'ai2', 'allenai', 'olmo', 'liquid', 'liquidai', 'lfm', 'samsung', 'intel',
+  'amd', 'qualcomm', 'cloudflare', 'huggingface', 'hugging', 'face', 'github', 'stability',
+  'stabilityai', 'black-forest-labs', 'flux', 'nous', 'nousresearch', 'unsloth', 'ggml-org',
+  'ollama', 'vllm', 'llama.cpp', 'mlx', 'lmstudio', 'perplexity', 'sakana', 'sakanaai',
+  'preferred', 'pfn', 'plamo', 'elyza', 'sarashina', 'sbintuitions', 'rakuten', 'cyberagent',
+  'openai-gpt', 'chatgpt', 'codex', 'sora', 'veo', 'imagen'
+])
+
 /**
  * 見出しから固有名詞らしい語を抜く。
  * 英数字の並び（Qwen3、llama.cpp、gpt-4o など）と、長めのカタカナ。
@@ -40,7 +58,7 @@ export function terms(title) {
 
   for (const m of s.matchAll(/[A-Za-z][A-Za-z0-9.+-]{2,}/g)) {
     const t = m[0].toLowerCase().replace(/[.+-]+$/, '')
-    if (t.length >= 3 && !STOP.has(t)) out.add(t)
+    if (t.length >= 3 && !STOP.has(t) && !BRANDS.has(t)) out.add(t)
   }
   for (const m of s.matchAll(/[ァ-ヴー]{4,}/g)) {
     const t = m[0]
