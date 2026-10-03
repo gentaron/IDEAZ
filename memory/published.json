@@ -4,9 +4,63 @@
     "note.com/humble_bobcat51",
     "note.com/gensnotes"
   ],
-  "syncedAt": "2026-10-02T00:27:42.364Z",
-  "count": 801,
+  "syncedAt": "2026-10-03T00:06:28.797Z",
+  "count": 810,
   "titles": [
+    {
+      "title": "【無人戦争】AIが「殺す人間の順番」を選ぶ日は来るのか",
+      "url": "https://note.com/gensnotes/n/n7691e567e33d",
+      "publishedAt": "2026-10-03T05:51:41+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【お金】給料が高い国って、本当に勝ちなの？",
+      "url": "https://note.com/gensnotes/n/n76fa4fd9d98a",
+      "publishedAt": "2026-10-02T20:44:32+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【日記】頂いた豚肉ブロックをシャリアピンソース（雰囲気）で食べてみる幸せ",
+      "url": "https://note.com/humble_bobcat51/n/na50ab44b0b6e",
+      "publishedAt": "2026-10-02T19:25:59+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【設計思想】Olmo-core 3｜重みを出さずに「どの数字が怪しいか」まで置いていった学習装置｜GPUなし1コアで1.2兆パラメータの設計を1.73秒で検",
+      "url": "https://note.com/gensnotes/n/n5e689e3fd17c",
+      "publishedAt": "2026-10-02T19:23:55+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【ベクトルDB不要】PageIndex｜埋め込みもチャンクも使わないRAG｜758ページの本がGPUなし1コアで61秒、索引は52KB",
+      "url": "https://note.com/gensnotes/n/n4bec5dab3ca6",
+      "publishedAt": "2026-10-02T19:22:42+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【学習しない】NVIDIA Kumo Tabular｜表データの予測から学習そのものを消した28Mのモデル｜GPUなし1コアで1000行2.2秒、調整の22.8秒が消える",
+      "url": "https://note.com/gensnotes/n/n16c9a9a5af60",
+      "publishedAt": "2026-10-02T19:16:07+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "人間も犬もドラゴンも1つのAIで動く時代へ——SIGGRAPH Asia 2026採択「UniMate」が変える3Dアニメーション制作の常識",
+      "url": "https://note.com/humble_bobcat51/n/nf956031f6428",
+      "publishedAt": "2026-10-02T17:02:08+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【Gemini 4 Argon】1日待った情報整理：Google最新フロンティア登場！出力100万トークン・キャッシュ95%引きの衝撃と、絶対に知るべき「落とし穴」",
+      "url": "https://note.com/humble_bobcat51/n/n622930c54acb",
+      "publishedAt": "2026-10-02T12:58:50+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【Ling-3.1-flash】総560Bなのに動くのは25Bだけ？Ant Groupの最新ハイブリッド推論MoE登場：いまなら2週間無料で試せる",
+      "url": "https://note.com/humble_bobcat51/n/n5c4958b6ccd9",
+      "publishedAt": "2026-10-02T11:20:45+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
     {
       "title": "AIが賢くなったら、現実でも人間に勝てるの？ 私、そこがまだよく分かんない",
       "url": "https://note.com/gensnotes/n/n4f3089309f23",
