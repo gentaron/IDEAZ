@@ -6,6 +6,7 @@ import { mkdirSync, writeFileSync, readFileSync, existsSync, readdirSync } from 
 import { join, dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { buildDay, mytDate } from '../src/build.mjs'
+import { buildTemplates } from '../src/templates.mjs'
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..')
 const DATA = join(ROOT, 'docs', 'data')
@@ -72,7 +73,12 @@ writeFileSync(
   JSON.stringify({ latest: date, count: entries.length, days: entries }, null, 2) + '\n'
 )
 
+// テーマ別のコピーテンプレ。日付に関係なく、memory/ の今の中身から作り直す
+const templates = buildTemplates()
+writeFileSync(join(DATA, 'templates.json'), JSON.stringify(templates, null, 2) + '\n')
+
 console.log(`${date} の5枠を書き出しました（アーカイブ ${entries.length} 日分）`)
 for (const s of day.slots) {
   console.log(`  ${s.time}  ${s.topic ? `題材: ${s.topic.title}` : `角度のみ: ${s.lens}`}  [${s.prompt.length}字]`)
 }
+console.log(`テーマ別テンプレ ${templates.count} 本（${templates.themes.length} テーマ）を書き出しました`)

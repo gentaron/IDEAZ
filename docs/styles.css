@@ -113,8 +113,10 @@ body {
 
 .top-actions {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
   gap: 8px;
-  flex-shrink: 0;
+  min-width: 0;
 }
 
 h1 {
@@ -439,6 +441,102 @@ dialog::backdrop { background: rgba(0, 0, 0, 0.62); }
 }
 
 .archive-day button { width: 100%; }
+
+/* ---------- テーマ別テンプレ ---------- */
+
+/* 一覧が長いので、電話でも窓でも高さをいっぱいまで取る */
+dialog.tall { height: 92dvh; }
+
+@media (min-width: 641px) {
+  dialog.tall { height: min(86dvh, 860px); }
+}
+
+/* テーマの札。電話では横に流して、指で送る */
+.chips {
+  display: flex;
+  gap: 6px;
+  padding: 10px 15px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: contain;
+  scrollbar-width: none;
+  border-bottom: 1px solid var(--line);
+  flex-shrink: 0;
+}
+
+.chips::-webkit-scrollbar { display: none; }
+
+.chip {
+  min-height: 36px;
+  padding: 5px 13px;
+  font-size: 0.8rem;
+  border-radius: 999px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  background: transparent;
+  color: var(--muted);
+}
+
+.chip[aria-pressed="true"] {
+  background: var(--accent);
+  color: var(--accent-ink);
+  border-color: transparent;
+  font-weight: 700;
+}
+
+.tpl-list {
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+  padding: 4px 15px calc(16px + env(safe-area-inset-bottom));
+  flex: 1;
+  min-height: 0;
+}
+
+.tpl-list:focus { outline: none; }
+
+.tpl-theme h2 {
+  margin: 16px 0 0;
+  font-size: 0.95rem;
+  letter-spacing: 0.05em;
+}
+
+.tpl-blurb {
+  margin: 0 0 4px;
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+
+.tpl {
+  border-bottom: 1px solid var(--line);
+  padding: 12px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.tpl:last-child { border-bottom: none; }
+
+.tpl-no {
+  font-size: 0.7rem;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.06em;
+}
+
+.tpl-title {
+  font-size: 0.95rem;
+  line-height: 1.55;
+  margin: 2px 0 4px;
+  overflow-wrap: anywhere;
+}
+
+.tpl-promise {
+  margin: 0 0 10px;
+  font-size: 0.8rem;
+  color: var(--muted);
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
 
 /* ---------- 知らせ ---------- */
 
