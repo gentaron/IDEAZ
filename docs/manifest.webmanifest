@@ -28,6 +28,12 @@
       "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" }]
     },
     {
+      "name": "テーマ別テンプレ",
+      "short_name": "templates",
+      "url": "./?view=templates&src=pwa",
+      "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" }]
+    },
+    {
       "name": "アーカイブ",
       "short_name": "archive",
       "url": "./?view=archive&src=pwa",

@@ -19,9 +19,16 @@ const viewerShare = document.getElementById('viewer-share')
 const archive = document.getElementById('archive')
 const archiveList = document.getElementById('archive-list')
 
+const templatesDlg = document.getElementById('templates')
+const tplThemes = document.getElementById('tpl-themes')
+const tplList = document.getElementById('tpl-list')
+
 let today = null
-let openSlot = null
-let lastFocus = null
+let openDoc = null
+// 閉じたときに戻すフォーカス。ダイアログを重ねて開くので、板ごとに覚えておく
+const returnFocus = new Map()
+let templates = null
+let tplTheme = 'all'
 let installEvent = null
 let viewingArchive = false
 let bannerKind = null
@@ -192,7 +199,9 @@ function render(day) {
     openBtn.className = 'ghost'
     openBtn.type = 'button'
     openBtn.textContent = '全文'
-    openBtn.addEventListener('click', () => openViewer(slot))
+    openBtn.addEventListener('click', () =>
+      openViewer({ title: `${slot.time} ${slot.label}`, prompt: slot.prompt, shareTitle: `IDEAZ ${slot.time}` })
+    )
 
     actions.append(copyBtn, openBtn)
     card.append(head, lens, actions)
@@ -202,21 +211,28 @@ function render(day) {
   cards.setAttribute('aria-busy', 'false')
 }
 
-function openViewer(slot) {
-  openSlot = slot
-  lastFocus = document.activeElement
-  viewerTitle.textContent = `${slot.time} ${slot.label}`
-  viewerBody.textContent = slot.prompt
-  viewerCopy.onclick = () => copy(slot.prompt, 'コピーしました')
+/** ダイアログを開く。閉じたら、開く前に触っていたところへ戻す */
+function openDialog(dlg) {
+  if (dlg.open) return
+  returnFocus.set(dlg, document.activeElement)
+  dlg.showModal()
+}
+
+/** 全文の板。毎朝の枠でもテンプレでも同じものを使う */
+function openViewer({ title, prompt, shareTitle }) {
+  openDoc = { prompt, shareTitle }
+  viewerTitle.textContent = title
+  viewerBody.textContent = prompt
+  viewerCopy.onclick = () => copy(prompt, 'コピーしました')
   viewerShare.hidden = typeof navigator.share !== 'function'
-  viewer.showModal()
+  openDialog(viewer)
   viewerBody.scrollTop = 0
 }
 
 viewerShare.addEventListener('click', async () => {
-  if (!openSlot) return
+  if (!openDoc) return
   try {
-    await navigator.share({ title: `IDEAZ ${openSlot.time}`, text: openSlot.prompt })
+    await navigator.share({ title: openDoc.shareTitle, text: openDoc.prompt })
   } catch {
     /* 取り消しただけ。何も言わない */
   }
@@ -226,8 +242,7 @@ viewerShare.addEventListener('click', async () => {
 
 async function openArchive() {
   if (archive.open) return
-  lastFocus = document.activeElement
-  archive.showModal()
+  openDialog(archive)
   archiveList.innerHTML = '<p class="archive-lenses">読み込み中…</p>'
   try {
     const index = await getJSON('data/index.json')
@@ -274,6 +289,116 @@ async function openArchive() {
     if (!index.days.length) archiveList.innerHTML = '<p class="archive-lenses">まだ何もありません。</p>'
   } catch {
     archiveList.innerHTML = '<p class="archive-lenses">アーカイブを読めませんでした。オフラインかもしれません。</p>'
+  }
+}
+
+/* ---------- テーマ別テンプレ ---------- */
+
+const TPL_KEY = 'ideaz-tpl-theme'
+
+/** テンプレの全文。土台は1回だけ配られているので、ここでつなぐ */
+function tplPrompt(item) {
+  return `${item.head}\n\n${templates.common}`
+}
+
+function tplItem(item) {
+  const row = document.createElement('article')
+  row.className = 'tpl'
+
+  const no = document.createElement('span')
+  no.className = 'tpl-no'
+  no.textContent = `No.${item.no}`
+
+  const title = document.createElement('strong')
+  title.className = 'tpl-title'
+  title.textContent = item.title
+
+  const promise = document.createElement('p')
+  promise.className = 'tpl-promise'
+  promise.textContent = `約束: ${item.promise}`
+
+  const actions = document.createElement('div')
+  actions.className = 'actions'
+
+  const copyBtn = document.createElement('button')
+  copyBtn.className = 'primary'
+  copyBtn.type = 'button'
+  copyBtn.textContent = 'コピー'
+  copyBtn.addEventListener('click', () => copy(tplPrompt(item), `No.${item.no} をコピーしました`))
+
+  const openBtn = document.createElement('button')
+  openBtn.className = 'ghost'
+  openBtn.type = 'button'
+  openBtn.textContent = '全文'
+  openBtn.addEventListener('click', () =>
+    openViewer({ title: `No.${item.no} ${item.title}`, prompt: tplPrompt(item), shareTitle: `IDEAZ No.${item.no}` })
+  )
+
+  actions.append(copyBtn, openBtn)
+  row.append(no, title, promise, actions)
+  return row
+}
+
+function renderTemplates() {
+  if (!templates) return
+  const known = templates.themes.some((t) => t.id === tplTheme)
+  if (!known) tplTheme = 'all'
+
+  tplThemes.innerHTML = ''
+  const chips = [{ id: 'all', name: `すべて ${templates.count}` }, ...templates.themes]
+  for (const t of chips) {
+    const chip = document.createElement('button')
+    chip.type = 'button'
+    chip.className = 'chip'
+    chip.textContent = t.name
+    chip.setAttribute('aria-pressed', String(t.id === tplTheme))
+    chip.addEventListener('click', () => {
+      tplTheme = t.id
+      try {
+        localStorage.setItem(TPL_KEY, t.id)
+      } catch {
+        /* 覚えられなくても困らない */
+      }
+      renderTemplates()
+      tplList.scrollTop = 0
+    })
+    tplThemes.append(chip)
+  }
+
+  tplList.innerHTML = ''
+  const shown = tplTheme === 'all' ? templates.themes : templates.themes.filter((t) => t.id === tplTheme)
+  for (const theme of shown) {
+    const section = document.createElement('section')
+    section.className = 'tpl-theme'
+    const h = document.createElement('h2')
+    h.textContent = theme.name
+    const blurb = document.createElement('p')
+    blurb.className = 'tpl-blurb'
+    blurb.textContent = theme.blurb
+    section.append(h, blurb)
+    for (const item of theme.items) section.append(tplItem(item))
+    tplList.append(section)
+  }
+
+  // 選んだテーマの札が見えるところまで送る
+  tplThemes.querySelector('[aria-pressed="true"]')?.scrollIntoView({ block: 'nearest', inline: 'nearest' })
+}
+
+async function openTemplates() {
+  if (templatesDlg.open) return
+  openDialog(templatesDlg)
+  if (templates) return
+  try {
+    tplTheme = localStorage.getItem(TPL_KEY) || 'all'
+  } catch {
+    tplTheme = 'all'
+  }
+  tplList.innerHTML = '<p class="archive-lenses">読み込み中…</p>'
+  try {
+    templates = await getJSON('data/templates.json')
+    renderTemplates()
+  } catch {
+    tplList.innerHTML = '<p class="archive-lenses">テンプレを読めませんでした。オフラインかもしれません。</p>'
   }
 }
 
@@ -385,8 +510,10 @@ async function boot() {
   tickNext()
   setInterval(tickNext, 30000)
 
-  // ショートカットの「アーカイブ」から立ち上げたとき
-  if (new URLSearchParams(location.search).get('view') === 'archive') openArchive()
+  // ショートカットの「アーカイブ」「テンプレ」から立ち上げたとき
+  const view = new URLSearchParams(location.search).get('view')
+  if (view === 'archive') openArchive()
+  if (view === 'templates') openTemplates()
 
   iosHint()
 }
@@ -394,17 +521,20 @@ async function boot() {
 document.getElementById('viewer-close').addEventListener('click', () => viewer.close())
 document.getElementById('archive-btn').addEventListener('click', openArchive)
 document.getElementById('archive-close').addEventListener('click', () => archive.close())
+document.getElementById('templates-btn').addEventListener('click', openTemplates)
+document.getElementById('templates-close').addEventListener('click', () => templatesDlg.close())
 
-for (const dlg of [viewer, archive]) {
+for (const dlg of [viewer, archive, templatesDlg]) {
   // 板の外側を押したら閉じる
   dlg.addEventListener('click', (e) => {
     if (e.target === dlg) dlg.close()
   })
   // 閉じたら、開く前に触っていたところへ戻す
   dlg.addEventListener('close', () => {
-    if (dlg === viewer) openSlot = null
-    if (lastFocus && document.contains(lastFocus)) lastFocus.focus()
-    lastFocus = null
+    if (dlg === viewer) openDoc = null
+    const back = returnFocus.get(dlg)
+    returnFocus.delete(dlg)
+    if (back && document.contains(back)) back.focus()
   })
 }
 

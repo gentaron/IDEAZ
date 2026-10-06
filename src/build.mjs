@@ -8,11 +8,11 @@ import { join, dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..')
-const MEM = (name) => readFileSync(join(ROOT, 'memory', name), 'utf8')
-const JSONMEM = (name) => JSON.parse(MEM(name))
+export const MEM = (name) => readFileSync(join(ROOT, 'memory', name), 'utf8')
+export const JSONMEM = (name) => JSON.parse(MEM(name))
 
 /** すでに公開した記事。無くても組み立ては続ける */
-function published() {
+export function published() {
   try {
     const db = JSONMEM('published.json')
     return { accounts: db.accounts || [], count: db.count || 0 }
@@ -33,7 +33,7 @@ function dayIndex(dateStr) {
 }
 
 /** マークダウンから `## 見出し` のブロックだけ抜く */
-function section(md, heading) {
+export function section(md, heading) {
   const lines = md.split('\n')
   const start = lines.findIndex((l) => l.trim() === `## ${heading}`)
   if (start === -1) throw new Error(`section not found: ${heading}`)
@@ -43,7 +43,7 @@ function section(md, heading) {
 }
 
 /** 見出し行（# で始まる行）を落として本文だけにする */
-function body(md) {
+export function body(md) {
   return md
     .split('\n')
     .filter((l) => !l.startsWith('#'))
@@ -52,7 +52,7 @@ function body(md) {
     .trim()
 }
 
-function bullets(text) {
+export function bullets(text) {
   return text
     .split('\n')
     .map((l) => l.replace(/^[-*]\s+/, '').trim())
@@ -192,6 +192,7 @@ export function buildDay(dateStr, topics = null) {
     )
     parts.push(`【出力の形。ここ絶対】\n${section(voice, '出力の形。ここ絶対')}`)
     parts.push(`【文体】\n${section(voice, '文体')}`)
+    parts.push(`【読みやすさ】\n${section(voice, '読みやすさ。読者がスマホで最後まで読めること')}`)
     parts.push(`【中身】\n${section(voice, '中身')}${isJudge ? `\n${judgement.extraContent}` : ''}`)
     parts.push(`【冒頭】\n${section(voice, '冒頭')}`)
     parts.push(`【底に流れる思考の型（記事の中で語らない）】\n${section(voice, '底に流れる思考の型（記事の中で語らない）')}`)

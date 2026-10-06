@@ -2,8 +2,14 @@
 //
 // 殻（HTML/CSS/JS/アイコン）と中身（data/*.json）でキャッシュを分けてある。
 // 殻を作り直しても、前に取った5枠は消えない。オフラインでも開けるのはそのため。
+//
+// HTML/CSS/JS は、つながる限り必ず新しいものを取る。
+// 前は CSS/JS をキャッシュから先に出していたので、HTML だけ新しく、
+// CSS/JS は1つ前の版、という組み合わせで起動することがあった
+// （スマホのホーム画面から開いた最初の1回だけ崩れる、の正体）。
+// 版を揃えるのはキャッシュの名前ではなく、取り方の側で担保する。
 
-const SHELL_CACHE = 'ideaz-shell-v2'
+const SHELL_CACHE = 'ideaz-shell-v3'
 const DATA_CACHE = 'ideaz-data-v1'
 const KEEP = [SHELL_CACHE, DATA_CACHE]
 
@@ -48,8 +54,14 @@ self.addEventListener('message', (e) => {
 /** 取れたら入れておく。失敗しても表には響かせない */
 async function put(cacheName, req, res) {
   if (!res || !res.ok || res.type === 'opaque') return
-  const c = await caches.open(cacheName)
-  await c.put(req, res.clone())
+  // 複製は先に取る。待っている間に本体が読まれ始めると clone できなくなる
+  const copy = res.clone()
+  try {
+    const c = await caches.open(cacheName)
+    await c.put(req, copy)
+  } catch {
+    /* 容量いっぱいなど。表には響かせない */
+  }
 }
 
 /** ページそのもの。新しいものを優先し、繋がらなければ前の殻を出す */
@@ -90,16 +102,45 @@ async function handleData(req) {
   }
 }
 
-/** 殻。すぐ前回のものを出しつつ、裏で新しいものに入れ替えておく */
-async function handleShell(req) {
+/** 待ちすぎない fetch。電波が細いときは諦めてキャッシュに回す */
+function fetchWithin(req, ms) {
+  return new Promise((resolve, reject) => {
+    const t = setTimeout(() => reject(new Error('timeout')), ms)
+    fetch(req).then(
+      (res) => {
+        clearTimeout(t)
+        resolve(res)
+      },
+      (err) => {
+        clearTimeout(t)
+        reject(err)
+      }
+    )
+  })
+}
+
+/** アイコン。変わらないので、前回のものをそのまま出す */
+async function handleIcon(req) {
   const hit = await caches.match(req, { cacheName: SHELL_CACHE })
-  const fresh = fetch(req)
-    .then((res) => {
-      put(SHELL_CACHE, req, res)
-      return res
-    })
-    .catch(() => null)
-  return hit || (await fresh) || Response.error()
+  if (hit) return hit
+  const res = await fetch(req)
+  await put(SHELL_CACHE, req, res)
+  return res
+}
+
+/**
+ * 殻（CSS/JS/manifest）。新しいものを先に取りにいく。
+ * HTML と版がずれると見た目も動きも壊れるので、キャッシュは繋がらないときの控え
+ */
+async function handleShell(req) {
+  try {
+    const res = await fetchWithin(req, 6000)
+    await put(SHELL_CACHE, req, res)
+    return res
+  } catch {
+    const hit = await caches.match(req, { cacheName: SHELL_CACHE, ignoreSearch: true })
+    return hit || Response.error()
+  }
 }
 
 self.addEventListener('fetch', (e) => {
@@ -120,6 +161,10 @@ self.addEventListener('fetch', (e) => {
   }
   if (url.pathname.includes('/data/')) {
     e.respondWith(handleData(req))
+    return
+  }
+  if (url.pathname.includes('/icons/')) {
+    e.respondWith(handleIcon(req))
     return
   }
   e.respondWith(handleShell(req))
