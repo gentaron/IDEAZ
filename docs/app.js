@@ -19,7 +19,7 @@ const viewerShare = document.getElementById('viewer-share')
 const archive = document.getElementById('archive')
 const archiveList = document.getElementById('archive-list')
 
-const templatesDlg = document.getElementById('templates')
+const tplSection = document.getElementById('tpl')
 const tplThemes = document.getElementById('tpl-themes')
 const tplList = document.getElementById('tpl-list')
 
@@ -360,7 +360,9 @@ function renderTemplates() {
         /* 覚えられなくても困らない */
       }
       renderTemplates()
-      tplList.scrollTop = 0
+      // 絞ったら、一覧の頭に戻す（札の列は見出しの下に貼りついている）
+      const top = tplList.getBoundingClientRect().top + window.scrollY - stickyOffset()
+      if (window.scrollY > top) window.scrollTo({ top, behavior: 'smooth' })
     })
     tplThemes.append(chip)
   }
@@ -375,8 +377,10 @@ function renderTemplates() {
     const blurb = document.createElement('p')
     blurb.className = 'tpl-blurb'
     blurb.textContent = theme.blurb
-    section.append(h, blurb)
-    for (const item of theme.items) section.append(tplItem(item))
+    const grid = document.createElement('div')
+    grid.className = 'tpl-grid'
+    for (const item of theme.items) grid.append(tplItem(item))
+    section.append(h, blurb, grid)
     tplList.append(section)
   }
 
@@ -384,9 +388,19 @@ function renderTemplates() {
   tplThemes.querySelector('[aria-pressed="true"]')?.scrollIntoView({ block: 'nearest', inline: 'nearest' })
 }
 
-async function openTemplates() {
-  if (templatesDlg.open) return
-  openDialog(templatesDlg)
+/** 見出しと札の列が貼りついている分の高さ。スクロール先をその下に合わせる */
+function stickyOffset() {
+  return header.offsetHeight + tplThemes.offsetHeight + 8
+}
+
+/** 本体のテンプレ欄までスクロールする */
+function goTemplates() {
+  const top = tplSection.getBoundingClientRect().top + window.scrollY - header.offsetHeight - 4
+  window.scrollTo({ top, behavior: 'smooth' })
+}
+
+/** テンプレは本体の下に並べる。日付に関係ないので、起動時に一度だけ取る */
+async function loadTemplates() {
   if (templates) return
   try {
     tplTheme = localStorage.getItem(TPL_KEY) || 'all'
@@ -513,18 +527,18 @@ async function boot() {
   // ショートカットの「アーカイブ」「テンプレ」から立ち上げたとき
   const view = new URLSearchParams(location.search).get('view')
   if (view === 'archive') openArchive()
-  if (view === 'templates') openTemplates()
+  if (view === 'templates') loadTemplates().then(goTemplates)
 
   iosHint()
+  loadTemplates()
 }
 
 document.getElementById('viewer-close').addEventListener('click', () => viewer.close())
 document.getElementById('archive-btn').addEventListener('click', openArchive)
 document.getElementById('archive-close').addEventListener('click', () => archive.close())
-document.getElementById('templates-btn').addEventListener('click', openTemplates)
-document.getElementById('templates-close').addEventListener('click', () => templatesDlg.close())
+document.getElementById('templates-btn').addEventListener('click', goTemplates)
 
-for (const dlg of [viewer, archive, templatesDlg]) {
+for (const dlg of [viewer, archive]) {
   // 板の外側を押したら閉じる
   dlg.addEventListener('click', (e) => {
     if (e.target === dlg) dlg.close()
@@ -537,6 +551,13 @@ for (const dlg of [viewer, archive, templatesDlg]) {
     if (back && document.contains(back)) back.focus()
   })
 }
+
+// 札の列を見出しのすぐ下に貼りつけるため、見出しの高さを CSS に渡す
+const syncHead = () => document.documentElement.style.setProperty('--head-h', `${header.offsetHeight}px`)
+// 日付の行が折り返すなどで見出しの高さが変わったら、そのたびに渡し直す
+if ('ResizeObserver' in window) new ResizeObserver(syncHead).observe(header)
+else addEventListener('resize', syncHead, { passive: true })
+syncHead()
 
 // 巻き上げたら見出しの下に線を出す
 const onScroll = () => header.classList.toggle('stuck', window.scrollY > 4)

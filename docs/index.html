@@ -35,7 +35,7 @@
     <h1>IDEAZ</h1>
     <div class="top-actions">
       <button id="install-btn" class="ghost small" type="button" hidden>インストール</button>
-      <button id="templates-btn" class="ghost small" type="button" aria-haspopup="dialog">テンプレ</button>
+      <button id="templates-btn" class="ghost small" type="button" aria-controls="tpl">テンプレ</button>
       <button id="archive-btn" class="ghost small" type="button" aria-haspopup="dialog">アーカイブ</button>
     </div>
   </div>
@@ -52,10 +52,20 @@
   <button id="banner-close" class="banner-x" type="button" aria-label="閉じる">×</button>
 </div>
 
+<h2 class="section-title">今日の5枠</h2>
 <main id="cards" aria-live="polite" aria-busy="true"></main>
 
+<section id="tpl" class="tpl-section" aria-labelledby="tpl-title">
+  <div class="section-head">
+    <h2 id="tpl-title" class="section-title">テーマ別テンプレ</h2>
+    <p class="section-note">日付に関係なく、いつでも使える100本。テーマを選んで、コピーしてAIに投げるだけ。</p>
+  </div>
+  <div id="tpl-themes" class="chips" role="group" aria-label="テーマで絞る"></div>
+  <div id="tpl-list" class="tpl-list" aria-live="polite"></div>
+</section>
+
 <p class="footnote">
-  毎朝5時（マレーシア時間）に5個とも入れ替わります。古い分はアーカイブに残ります。<br>
+  毎朝5時（マレーシア時間）に5個とも入れ替わります。古い分はアーカイブに残ります。テーマ別テンプレは入れ替わりません。<br>
   文面の正本はリポジトリの <code>memory/</code>。そこを直すと翌朝から反映されます。
 </p>
 
@@ -77,15 +87,6 @@
     <button id="archive-close" class="ghost small" type="button">閉じる</button>
   </div>
   <div id="archive-list" class="archive-list"></div>
-</dialog>
-
-<dialog id="templates" class="tall" aria-labelledby="templates-title">
-  <div class="viewer-head">
-    <strong id="templates-title">テーマ別テンプレ</strong>
-    <button id="templates-close" class="ghost small" type="button">閉じる</button>
-  </div>
-  <div id="tpl-themes" class="chips" role="group" aria-label="テーマで絞る"></div>
-  <div id="tpl-list" class="tpl-list" tabindex="-1"></div>
 </dialog>
 
 <div id="toast" class="toast" role="status" aria-live="polite"></div>
