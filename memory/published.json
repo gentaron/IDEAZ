@@ -4,9 +4,69 @@
     "note.com/humble_bobcat51",
     "note.com/gensnotes"
   ],
-  "syncedAt": "2026-10-06T01:38:18.072Z",
-  "count": 832,
+  "syncedAt": "2026-10-07T00:19:21.456Z",
+  "count": 842,
   "titles": [
+    {
+      "title": "【完全無料】「AIが書いたとバレない」LinkedIn運用術。Claudeを専属マーケターに変える『linkedin-agent-skill』が凄すぎる",
+      "url": "https://note.com/humble_bobcat51/n/nf63cc0e76dcd",
+      "publishedAt": "2026-10-07T08:58:50+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "AIに「書いて」と頼む夜、AIと「考える」夜。エウレカとアルトの対談",
+      "url": "https://note.com/gensnotes/n/nee86d832aa39",
+      "publishedAt": "2026-10-07T01:14:14+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【ミユシャリ×ミナ】AIが火や電気なら、私たちは何を灯すんだろう",
+      "url": "https://note.com/gensnotes/n/n19dbaacc9ffc",
+      "publishedAt": "2026-10-06T21:14:11+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【日記】最近、料理にハマってるのか食べるのにハマっているのか。",
+      "url": "https://note.com/humble_bobcat51/n/n524288cf2f8a",
+      "publishedAt": "2026-10-06T21:07:04+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【脱・セレクタ修正地獄】AIとコードのいいとこ取りをした次世代フレームワーク「e2e」が、E2Eテストの未来すぎた",
+      "url": "https://note.com/humble_bobcat51/n/nf9d2f40a76cf",
+      "publishedAt": "2026-10-06T20:09:20+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【After Effectsはもう不要？】動画編集の常識を覆す「Remocn Studio」が凄い。AIとコードで動画を“完全所有”する時代へ",
+      "url": "https://note.com/humble_bobcat51/n/nb0782d3d35e6",
+      "publishedAt": "2026-10-06T17:15:43+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【意外な普遍性】Kolibri-1｜1トークンで動くのは78Bのうち4.4%、なのにノートPCには降りてこない｜決めているのは1トークンあたり3.835GB",
+      "url": "https://note.com/gensnotes/n/n06aec684cbd0",
+      "publishedAt": "2026-10-06T17:15:10+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "同じプロンプトを2回投げて、返ってくる文章が文字まで一致する確率。7%以下でした。temperature は0に落としてあるのに。",
+      "url": "https://note.com/gensnotes/n/nb7d40a1fa2c5",
+      "publishedAt": "2026-10-06T14:34:21+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【学習データ】SYNTHとBaguettotron｜ウェブを1行も使わずWikipedia 58,698記事だけで事前学習した｜1記事を128万トークンに増幅、知らない相手の67%で答えを拒む",
+      "url": "https://note.com/gensnotes/n/neee7b7ef8566",
+      "publishedAt": "2026-10-06T14:29:37+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "たった1枚のイラストから動く2Dアバターを生成！AIエージェント×ローカルエディタの新星「mesh-avatar-studio」完全解説",
+      "url": "https://note.com/humble_bobcat51/n/n6bc360f70d90",
+      "publishedAt": "2026-10-06T12:18:49+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
     {
       "title": "【最新AIツール】「読むだけのPDF」はもう終わり。対話型Web本へ全自動変換する『Papermorph』が面白そう",
       "url": "https://note.com/humble_bobcat51/n/n1507efef16ba",
