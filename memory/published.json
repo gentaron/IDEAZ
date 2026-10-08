@@ -4,9 +4,57 @@
     "note.com/humble_bobcat51",
     "note.com/gensnotes"
   ],
-  "syncedAt": "2026-10-07T00:19:21.456Z",
-  "count": 842,
+  "syncedAt": "2026-10-08T00:40:28.477Z",
+  "count": 850,
   "titles": [
+    {
+      "title": "自分を愛せない夜にも、ここにいていい？――ミユシャリとアイリスの読書対談",
+      "url": "https://note.com/gensnotes/n/n9813b1ff4eb3",
+      "publishedAt": "2026-10-07T22:45:25+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【個人開発】資料制作君を鍛え上げていったら、モーションついて楽しくなってきた。売れるレベルにはないけど一旦満足。",
+      "url": "https://note.com/humble_bobcat51/n/na89431407a96",
+      "publishedAt": "2026-10-07T18:11:24+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【自己紹介】私はたぶん、戦う前に考えすぎる人。ミユシャリです",
+      "url": "https://note.com/gensnotes/n/nc5204eef2447",
+      "publishedAt": "2026-10-07T17:25:43+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "EmbeddingGemma 2｜写真も音声メモも言葉で探せる740Mの埋め込みモデル｜2コアCPUで写真1枚6.3秒、100万件なら7.3日",
+      "url": "https://note.com/gensnotes/n/n3643364253b3",
+      "publishedAt": "2026-10-07T17:06:11+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【意外な普遍性】UndoBench｜エージェントの二重実行を決めるのはモデルでなく道具の引数1個｜47個のうち鍵つきは6個、やり直すと53.3%が二重に通る",
+      "url": "https://note.com/gensnotes/n/n2a23dee45275",
+      "publishedAt": "2026-10-07T16:57:05+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【ガチレビュー】中国の「茶π 青ぶどう烏龍茶」、高い。でもおいしい。",
+      "url": "https://note.com/gensnotes/n/n419071bf95f6",
+      "publishedAt": "2026-10-07T16:55:36+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【サッカー】クロアチアvsスペイン：ココまで来るとバロンドールを敢えて取らない選択だとしか思えないメリーノ。神の子の引退と好調イングランドも。",
+      "url": "https://note.com/humble_bobcat51/n/n3cacb694b892",
+      "publishedAt": "2026-10-07T13:07:39+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【AIガチャはもう終わり】プロンプト依存を脱却する次世代制作IDE「ArtCraft」が凄すぎる。3D空間で構図もポーズも完全制御へ",
+      "url": "https://note.com/humble_bobcat51/n/n40646f5b9dd7",
+      "publishedAt": "2026-10-07T12:18:25+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
     {
       "title": "【完全無料】「AIが書いたとバレない」LinkedIn運用術。Claudeを専属マーケターに変える『linkedin-agent-skill』が凄すぎる",
       "url": "https://note.com/humble_bobcat51/n/nf63cc0e76dcd",
