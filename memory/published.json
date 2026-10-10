@@ -4,9 +4,69 @@
     "note.com/humble_bobcat51",
     "note.com/gensnotes"
   ],
-  "syncedAt": "2026-10-09T00:56:06.104Z",
-  "count": 857,
+  "syncedAt": "2026-10-10T00:27:28.736Z",
+  "count": 867,
   "titles": [
+    {
+      "title": "【10月10日】今日の相場分析──上昇基調の中で、強い場所が分かれてきた",
+      "url": "https://note.com/gensnotes/n/nc67b1197d60d",
+      "publishedAt": "2026-10-10T08:37:10+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【Microsoft 365 Copilot 】最新ベストプラクティス —基本のプロンプトからエージェント開発・セキュリティ統治まで",
+      "url": "https://note.com/humble_bobcat51/n/n26c5b4ce2011",
+      "publishedAt": "2026-10-10T08:31:58+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "2020年、世界はどこかで分岐したのかもしれない。地球から3000万光年先のE16まで考えてみた",
+      "url": "https://note.com/gensnotes/n/nfbd700fbb48e",
+      "publishedAt": "2026-10-10T08:13:01+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【2026年10月9日現在】Claude 5.5時代の「CLAUDE.md」最新ベストプラクティス —— 200行制限・Hooks強制・安くて強いモデル使い分け術",
+      "url": "https://note.com/humble_bobcat51/n/n403e9f85a482",
+      "publishedAt": "2026-10-10T06:49:22+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【もしもの通貨切り下げ想定】株価が2倍になった夜、私は豊かになったのかな",
+      "url": "https://note.com/gensnotes/n/nf5f2c050bde7",
+      "publishedAt": "2026-10-09T23:42:31+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【カナダ旅行】バンクーバーからバンフへ。景色が強すぎて、だんだん感覚がおかしくなってきた",
+      "url": "https://note.com/gensnotes/n/nfc99227b3f1d",
+      "publishedAt": "2026-10-09T23:39:05+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "70Bモデルがスマホで動く日。Samsungが発表した「LLMを0.1ビットに圧縮する技術」LittleBitとは何か？",
+      "url": "https://note.com/humble_bobcat51/n/n1edadefebecf",
+      "publishedAt": "2026-10-09T20:08:18+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【Mellum 2.1】JetBrainsの新作オープンLLMが12B、アクティブ2.5BでSWE-bench 47%達成＆商用フリーの衝撃",
+      "url": "https://note.com/humble_bobcat51/n/n1e4b6e317aee",
+      "publishedAt": "2026-10-09T17:31:16+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "Genesis Vaultは、「このままの自分ではだめかも」に別の考え方を差し出すブログです",
+      "url": "https://note.com/gensnotes/n/n173b1e0b558f",
+      "publishedAt": "2026-10-09T14:58:07+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【Open d1】1日たったベストプラクティス：3BでAPIコストを最大200分の1に。判定特化型モデルによるAIシステム最適化戦略は凄く良き",
+      "url": "https://note.com/humble_bobcat51/n/n95c18ac36b7a",
+      "publishedAt": "2026-10-09T12:12:07+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
     {
       "title": "【Claude Haiku 5.5】1日たったベストプラクティス：単価90%減の裏に潜む「10万トークンの崖」と400エラーの罠",
       "url": "https://note.com/humble_bobcat51/n/nb2e95d330d4e",
