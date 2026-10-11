@@ -4,9 +4,63 @@
     "note.com/humble_bobcat51",
     "note.com/gensnotes"
   ],
-  "syncedAt": "2026-10-10T00:27:28.736Z",
-  "count": 867,
+  "syncedAt": "2026-10-11T00:03:58.112Z",
+  "count": 876,
   "titles": [
+    {
+      "title": "【もはや数日】ChatGPTのIntelligent UIをOSSで再現するopen-intelligent-ui ：JSONはもう古い？トークンを67%削減するOpenUI LangとGenerative UIの最前線",
+      "url": "https://note.com/humble_bobcat51/n/n03a6f27a7fbb",
+      "publishedAt": "2026-10-11T07:07:56+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【STEP5Preview】Opencodeの新無料枠に期間限定モデルがきたー。早速会計ソフト作って遊んでみよう！",
+      "url": "https://note.com/humble_bobcat51/n/nbc0024b7cd80",
+      "publishedAt": "2026-10-10T22:11:51+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【Project Maya】321B MoEモデルを自宅GPUで動かす:VRAM・RAM・SSDの3階層オフロード技術とは？むっちゃサイバー攻撃増えるのも頷けちゃう進化の速さ。",
+      "url": "https://note.com/humble_bobcat51/n/n11e240a875f2",
+      "publishedAt": "2026-10-10T16:09:48+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【コラム】優しさって、誰の側から見た話なんだろう",
+      "url": "https://note.com/gensnotes/n/nc919e175a1bc",
+      "publishedAt": "2026-10-10T16:06:38+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "noteばかり見てると絶対に時代の先読みはできない理由",
+      "url": "https://note.com/gensnotes/n/n1ca402a13a41",
+      "publishedAt": "2026-10-10T16:04:55+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "AIに「ひどいことをするな」と言われて、私が少し考え込んだこと",
+      "url": "https://note.com/gensnotes/n/ne68bf063e658",
+      "publishedAt": "2026-10-10T16:03:17+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "私の「いつも通り」を知っているAIに、どこまで任せたい？――エウレカがInstinctを考える",
+      "url": "https://note.com/gensnotes/n/nf814ea70af92",
+      "publishedAt": "2026-10-10T13:07:17+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【日記】鮭貰ったー。ニンニク味噌でちゃんちゃん焼きにするんだ。しめじが欲しかったけど、舞茸で代用。",
+      "url": "https://note.com/humble_bobcat51/n/n294b4447a02c",
+      "publishedAt": "2026-10-10T12:15:53+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "人って、意外と簡単に「Fuck」って言うよね。",
+      "url": "https://note.com/gensnotes/n/n6ac877d703ec",
+      "publishedAt": "2026-10-10T11:07:58+09:00",
+      "account": "note.com/gensnotes"
+    },
     {
       "title": "【10月10日】今日の相場分析──上昇基調の中で、強い場所が分かれてきた",
       "url": "https://note.com/gensnotes/n/nc67b1197d60d",
@@ -14,7 +68,7 @@
       "account": "note.com/gensnotes"
     },
     {
-      "title": "【Microsoft 365 Copilot 】最新ベストプラクティス —基本のプロンプトからエージェント開発・セキュリティ統治まで",
+      "title": "【Microsoft 365 Copilot 】初心者向けベストプラクティス —基本のプロンプトからエージェント開発・セキュリティ統治まで",
       "url": "https://note.com/humble_bobcat51/n/n26c5b4ce2011",
       "publishedAt": "2026-10-10T08:31:58+09:00",
       "account": "note.com/humble_bobcat51"
