@@ -4,9 +4,69 @@
     "note.com/humble_bobcat51",
     "note.com/gensnotes"
   ],
-  "syncedAt": "2026-10-12T00:08:47.914Z",
-  "count": 886,
+  "syncedAt": "2026-10-13T02:22:58.054Z",
+  "count": 896,
   "titles": [
+    {
+      "title": "【ローカルLLM】Strata｜125Bの巨大AIを12GBのゲーム用GPUと64GBのメモリで動かす無料ソフト｜1語で働く専門家は全体の2%、RTX 5070で毎秒94トークン",
+      "url": "https://note.com/gensnotes/n/n36c2c288aa50",
+      "publishedAt": "2026-10-13T11:14:11+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【XeStrata】CUDAに縛られないstrata？ついに35BとかのMoEも対応、日本人forkなので応援しつつ、VRAM4GBはむっちゃ助かる",
+      "url": "https://note.com/humble_bobcat51/n/n1185ec456841",
+      "publishedAt": "2026-10-13T07:59:23+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【転身します】AIにブログを書かせるだけじゃ、もったいない。Genesis Vaultで宇宙の数式を探索したい",
+      "url": "https://note.com/gensnotes/n/n57d9c81df65b",
+      "publishedAt": "2026-10-12T19:46:50+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【日記】人の恋路を見守るのは、何故こんなにも楽しいのか。カプ厨として生きることに一切の生産性を感じないけど辞められない",
+      "url": "https://note.com/humble_bobcat51/n/ne66d57408557",
+      "publishedAt": "2026-10-12T19:24:16+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【2026年10月05~12日最新動向まとめ】凄い一週間だったなぁ。ClaudeOpus7.0 、GTP7.0Bell、Gemini4の一般化などの噂も含めて、振り返りたいのです。",
+      "url": "https://note.com/humble_bobcat51/n/n37dfe8fe7201",
+      "publishedAt": "2026-10-12T18:10:18+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "時代が完全に変わった。私はいま、暴落よりも盗難が怖い",
+      "url": "https://note.com/gensnotes/n/n3ecda5532969",
+      "publishedAt": "2026-10-12T17:56:26+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【Pirates of the Cambodian】サイバーパイレーツの黄金時代は、どこで終わるんだろう【AIで加速】",
+      "url": "https://note.com/gensnotes/n/n8a3a39f45d47",
+      "publishedAt": "2026-10-12T13:39:33+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【個人開発日記】自作RAGとstrataを繋ぎ、自作strataで遊ぶ連休",
+      "url": "https://note.com/humble_bobcat51/n/n6045ab492299",
+      "publishedAt": "2026-10-12T13:30:16+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "「頭いいね」のあとで、なぜ二人は睨み合ったのか",
+      "url": "https://note.com/gensnotes/n/nbad8333cb33e",
+      "publishedAt": "2026-10-12T12:40:17+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【サッカー】日本代表追いすぎて時間が足りなすぎる。海外一部リーグむっちゃ増えたなぁ",
+      "url": "https://note.com/humble_bobcat51/n/na5e6b1c2b277",
+      "publishedAt": "2026-10-12T09:52:03+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
     {
       "title": "【GitHub Copilot】「ただのコード補完」で終わらせていませんか？最新ベストプラクティス【設定テンプレ付き】",
       "url": "https://note.com/humble_bobcat51/n/nfc2a316c5bce",
