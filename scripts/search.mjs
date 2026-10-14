@@ -6,7 +6,8 @@
 //   node scripts/search.mjs --harvest   # 候補集めだけ試す（AIは呼ばない）
 //
 // 使うのは無料のものだけ。
-//   集める = 鍵の要らない公開の口（HN / Reddit / HF / GitHub / arXiv / RSS）
+//   集める = 鍵の要らない公開の口（memory/feeds.json。HN / Reddit / HF / GitHub / arXiv /
+//            各社の公式 / Zenn・Qiita / メディア / YouTube / note / X の RSS）
 //   選ぶ   = 無料枠のLLM（GitHub Models など。src/llm.mjs 参照）
 //
 // 結果は docs/data/topics/YYYY-MM-DD.json に出る。
@@ -17,9 +18,9 @@ import { join, dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { mytDate, planDay } from '../src/build.mjs'
 import { judgeSystem, shortlistTask, decideTask } from '../src/brief.mjs'
-import { harvest, excerpt } from '../src/harvest.mjs'
+import { harvest, excerpt, balance } from '../src/harvest.mjs'
 import { loadPublished, buildIndex, filterCandidates, recentTitles } from '../src/published.mjs'
-import { pickProvider, chat, parseJSON } from '../src/llm.mjs'
+import { pickProvider, pickProviders, chatAny, parseJSON, lastUsed } from '../src/llm.mjs'
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..')
 const OUT = join(ROOT, 'docs', 'data', 'topics')
@@ -119,7 +120,9 @@ if (!kept.length) {
   process.exit(1)
 }
 
-const pool = kept.slice(0, CANDIDATES)
+// 点数順に切ると、点数の無い RSS（公式ブログ・日本語の解説・YouTube）が毎回落ちる。
+// 系統ごとに順番に拾って、網の広さをそのまま AI に見せる
+const pool = balance(kept, CANDIDATES)
 
 if (harvestOnly) {
   console.log(`\n上位20件:`)
@@ -130,15 +133,15 @@ if (harvestOnly) {
 
 /* ---------- 選ぶ ---------- */
 
-const provider = pickProvider()
-console.log(`選ぶ相手: ${provider.label} / ${provider.model}`)
+const providers = pickProviders()
+console.log(`選ぶ相手: ${providers.map((p) => `${p.label} / ${p.model}`).join(' → ')}`)
 
 const system = judgeSystem()
 
 // 1段目。見出しだけを見て、軸に合いそうなものを残す
 console.log(`1段目: ${pool.length}件を最大${Math.min(SHORTLIST, pool.length)}件に落とす…`)
 const picked = parseJSON(
-  await chat(provider, { system, user: shortlistTask(date, pool, SHORTLIST), json: true, maxTokens: 4000 })
+  await chatAny(providers, { system, user: shortlistTask(date, pool, SHORTLIST), json: true, maxTokens: 4000 })
 )
 const keep = (picked.keep || [])
   .map((i) => pool[Number(i) - 1])
@@ -161,7 +164,7 @@ console.log(`  → ${withText.filter((c) => c.excerpt).length}/${withText.length
 // 2段目。関門とシグナルで見て、5枠に配る
 console.log('2段目: 関門とシグナルで見て、5枠に配る…')
 const raw = parseJSON(
-  await chat(provider, {
+  await chatAny(providers, {
     system,
     user: decideTask(date, withText, { published, titles: recentTitles(published) }),
     json: true,
@@ -232,8 +235,8 @@ writeFileSync(
     {
       date,
       generatedAt: new Date().toISOString(),
-      provider: provider.name,
-      model: provider.model,
+      provider: lastUsed.name,
+      model: lastUsed.model,
       harvested: harvested.length,
       shortlisted: keep.length,
       slots

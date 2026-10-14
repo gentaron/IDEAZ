@@ -14,8 +14,9 @@
 scripts/sync-published note.com の過去記事の見出しを取ってくる
                        → memory/published.json
   ↓
-src/harvest.mjs        鍵の要らない公開の口から候補を集める
-                       HN / Reddit / Hugging Face / GitHub / arXiv / 各社のRSS
+src/harvest.mjs        鍵の要らない公開の口から候補を集める（一覧は memory/feeds.json）
+                       HN / Reddit / Hugging Face（モデル・Daily Papers・Spaces）/ GitHub / arXiv /
+                       各社の公式 / Zenn・Qiita / メディア / YouTube / note / X（RSS があれば）
   ↓
 src/published.mjs      既出と当たる候補を、AIに見せる前に機械で落とす
   ↓
@@ -36,7 +37,7 @@ scripts/generate.mjs   題材を土台のフォーマットに埋め込んで5�
 
 | 何を | どこで | いくら |
 | --- | --- | --- |
-| 候補を集める | HN / Reddit / Hugging Face / GitHub / arXiv / 各社のRSS | 鍵すら要らない |
+| 候補を集める | `memory/feeds.json` の口（HN / Reddit / HF / GitHub / arXiv / 公式 / Zenn・Qiita / メディア / YouTube / note） | 鍵すら要らない |
 | 本文を読む | ふつうの HTTP GET | 無料 |
 | 題材を選ぶ | **GitHub Models の無料枠** | 無料。`GITHUB_TOKEN` が最初からあるので登録するものも無い |
 | 生成・公開 | GitHub Actions + Netlify | 無料枠 |
@@ -137,7 +138,8 @@ node scripts/sync-published.mjs --full   # 最初から全部取り直す
 
 選ぶ係にわたす指示書も、同じ `memory/` から組み立てている（`src/brief.mjs`）。
 軸も関門もシグナルも、選ぶ側と書く側で同じ正本を見ているので、二重に管理する場所はない。
-候補を集める先（`src/harvest.mjs`）も `memory/sources.md` の網をそのまま機械で回れる形にしたもの。
+候補を集める先は `memory/feeds.json`。`memory/sources.md` の網をそのまま機械で回れる形にしたもの。1行足せば翌朝から回る。
+点数の付かない RSS が点数の高い口に押し流されないように、系統（`group`）ごとに順番に拾って AI に見せる。
 
 記事を1本出したら、`memory/exclusions.md` にその題材の家族を1行足すこと。
 ここが薄いと同じ話を二度書く。プロンプトの末尾で、書いたあとに家族を一行返すよう指示してある。

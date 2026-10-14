@@ -1,0 +1,77 @@
+{
+  "note": "毎朝の候補集め（src/harvest.mjs）が回る口の一覧。memory/sources.md の網を、機械で回せる形にしたもの。鍵の要らない公開の口だけを書く。足すときはここに1行足せば翌朝から回る。group は候補を偏らせないための札で、同じ group は1つの網として数える（点数の高い口だけで候補が埋まらないように、group ごとに順番に拾う）。",
+  "hackerNews": {
+    "comment": "Algolia の検索は OR を解さない（全部の語を含むものしか返さない）ので、語ごとに投げて合わせる",
+    "queries": ["LLM", "AI", "local model", "open weights", "GPU", "agent", "inference"],
+    "minPoints": 30
+  },
+  "reddit": {
+    "comment": "ローカル実行と量子化の現場。JSON が 403 のときは RSS で取り直す",
+    "subs": ["LocalLLaMA", "LocalLLM", "ollama", "MachineLearning", "ClaudeAI", "OpenAI", "singularity"],
+    "minScore": 40
+  },
+  "github": {
+    "comment": "新しいリポジトリ。github.com/trending は機械から取れないので、作成日と星で近似する",
+    "queries": ["topic:llm", "topic:ai-agents", "topic:ai", "topic:local-llm"],
+    "minStars": 60
+  },
+  "huggingFace": {
+    "comment": "モデルのトレンドに加えて、Daily Papers（その日に話題の論文）とトレンドの Spaces（触れるデモ）",
+    "models": true,
+    "dailyPapers": true,
+    "spaces": true
+  },
+  "arxiv": {
+    "comment": "export.arxiv.org の API は Actions から 429 になりやすい。先に rss.arxiv.org を読み、駄目なら API",
+    "categories": ["cs.CL", "cs.LG", "cs.AI"]
+  },
+  "feeds": [
+    { "group": "公式", "name": "OpenAI", "url": "https://openai.com/news/rss.xml" },
+    { "group": "公式", "name": "Google DeepMind", "url": "https://deepmind.google/blog/rss.xml" },
+    { "group": "公式", "name": "Google AI", "url": "https://blog.google/technology/ai/rss/" },
+    { "group": "公式", "name": "Hugging Face Blog", "url": "https://huggingface.co/blog/feed.xml" },
+    { "group": "公式", "name": "Microsoft Research", "url": "https://www.microsoft.com/en-us/research/feed/" },
+    { "group": "公式", "name": "NVIDIA Technical Blog", "url": "https://developer.nvidia.com/blog/feed" },
+    { "group": "公式", "name": "GitHub Blog AI", "url": "https://github.blog/ai-and-ml/feed/" },
+    { "group": "公式", "name": "Cloudflare Blog", "url": "https://blog.cloudflare.com/rss/" },
+    { "group": "リリース", "name": "Ollama", "url": "https://github.com/ollama/ollama/releases.atom" },
+    { "group": "リリース", "name": "llama.cpp", "url": "https://github.com/ggml-org/llama.cpp/releases.atom" },
+    { "group": "リリース", "name": "vLLM", "url": "https://github.com/vllm-project/vllm/releases.atom" },
+    { "group": "リリース", "name": "LM Studio", "url": "https://github.com/lmstudio-ai/lms/releases.atom" },
+    { "group": "個人の目利き", "name": "Simon Willison", "url": "https://simonwillison.net/atom/everything/" },
+    { "group": "日本語の解説", "name": "Zenn: LLM", "url": "https://zenn.dev/topics/llm/feed" },
+    { "group": "日本語の解説", "name": "Zenn: 生成AI", "url": "https://zenn.dev/topics/生成ai/feed" },
+    { "group": "日本語の解説", "name": "Zenn: AIエージェント", "url": "https://zenn.dev/topics/aiエージェント/feed" },
+    { "group": "日本語の解説", "name": "Qiita: LLM", "url": "https://qiita.com/tags/llm/feed" },
+    { "group": "日本語の解説", "name": "Qiita: 生成AI", "url": "https://qiita.com/tags/生成ai/feed" },
+    { "group": "メディア", "name": "TechCrunch AI", "url": "https://techcrunch.com/category/artificial-intelligence/feed/" },
+    { "group": "メディア", "name": "The Verge AI", "url": "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml" },
+    { "group": "メディア", "name": "ITmedia AI+", "url": "https://rss.itmedia.co.jp/rss/2.0/aiplus.xml" },
+    { "group": "メディア", "name": "Publickey", "url": "https://www.publickey1.jp/atom.xml" }
+  ],
+  "pages": {
+    "comment": "RSS を出していない公式。一覧ページを読んで、記事への内部リンクだけ拾う（pattern に合う href）",
+    "list": [
+      { "group": "公式", "name": "Anthropic", "url": "https://www.anthropic.com/news", "pattern": "^/news/[a-z0-9-]+$" },
+      { "group": "公式", "name": "Mistral AI", "url": "https://mistral.ai/news", "pattern": "^/news/[a-z0-9-]+/?$" }
+    ]
+  },
+  "youtube": {
+    "comment": "デモと実機レビュー。チャンネルの RSS（https://www.youtube.com/feeds/videos.xml?channel_id=...）は鍵が要らない。channelId はチャンネルページのソースの \"channelId\" か、@ハンドルのページから取れる",
+    "channels": [
+      { "name": "Two Minute Papers", "channelId": "UCbfYPyITQ-7l4upoX8nvctg" },
+      { "name": "Yannic Kilcher", "channelId": "UCZHmQk67mSJgfCCTn7xBfew" },
+      { "name": "AI Explained", "channelId": "UCNJ1Ymd5yFuUPtn21xtRbbw" },
+      { "name": "Matthew Berman", "channelId": "UCawZsQWqfGSbCI5yjkdVkTA" }
+    ]
+  },
+  "noteCom": {
+    "comment": "他の書き手の note。キーワード検索は非公式の口なので、取れなくても止めない。追いたい書き手がいれば creators に urlname を足す（その人の RSS を読む）",
+    "queries": ["生成AI", "ローカルLLM", "AIエージェント"],
+    "creators": []
+  },
+  "x": {
+    "comment": "X は鍵なしで機械から読める公式の口が無い。自前の RSSHub や RSS 化サービスを持っているときだけ、その RSS の URL をここに足す（空なら何もしない）。速報は HN・Reddit・各社ブログ経由で数時間遅れで拾える",
+    "rss": []
+  }
+}

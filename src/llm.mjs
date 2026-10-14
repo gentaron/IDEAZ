@@ -12,6 +12,8 @@ const PROVIDERS = [
     base: 'https://models.github.ai/inference',
     keyEnv: ['GITHUB_TOKEN', 'GH_TOKEN'],
     model: 'openai/gpt-4o-mini',
+    // 本来の口が JSON 以外（"OK" の2文字だけ等）を返す日があった。そのときは旧来の口で取り直す
+    altBases: [{ base: 'https://models.inference.ai.azure.com', model: 'gpt-4o-mini' }],
     // Actions の中なら GITHUB_TOKEN が最初からある（workflow に models: read が要る）
     note: 'ワークフローに models: read を足すだけで動く。追加の登録は要らない'
   },
@@ -56,6 +58,22 @@ function envKey(names) {
     if (v && v.trim()) return v.trim()
   }
   return null
+}
+
+/** 使える口を全部、上から順に返す。1つが落ちたら次に回すため */
+export function pickProviders() {
+  const wanted = process.env.IDEAZ_LLM_PROVIDER
+  if (wanted) return [pickProvider()]
+  const out = []
+  for (const p of PROVIDERS) {
+    const key = envKey(p.keyEnv)
+    if (!key) continue
+    const model = process.env.IDEAZ_LLM_MODEL && !out.length ? process.env.IDEAZ_LLM_MODEL : p.model
+    if (p.mustBeFree && !model.endsWith(':free') && !process.env.IDEAZ_ALLOW_PAID) continue
+    out.push({ ...p, key, model, base: process.env.IDEAZ_LLM_BASE || p.base })
+  }
+  if (!out.length) pickProvider() // 使える口が無いときの説明はこちらが持っている
+  return out
 }
 
 /** 使える口を1つ決める。IDEAZ_LLM_PROVIDER で名指しもできる */
@@ -146,13 +164,49 @@ export async function chat(provider, { system, user, json = false, maxTokens = 8
         body: JSON.stringify(body),
         signal: AbortSignal.timeout(300000)
       })
-      if (retry.ok) return pickText(await retry.json())
+      if (retry.ok) return pickText(await readJSON(retry, provider))
       throw new Error(`${provider.label} が ${retry.status}: ${detail}`)
     }
     throw new Error(`${provider.label} が ${res.status}: ${detail}`)
   }
 
-  return pickText(await res.json())
+  return pickText(await readJSON(res, provider))
+}
+
+/** 200 でも JSON とは限らない（"OK" だけ返ってきた日がある）。読めなければ中身つきで投げる */
+async function readJSON(res, provider) {
+  const raw = await res.text()
+  try {
+    return JSON.parse(raw)
+  } catch {
+    throw new Error(`${provider.label} の返事が JSON ではなかった（${res.status}）: ${raw.slice(0, 120)}`)
+  }
+}
+
+/**
+ * 使える口を順に試す。同じ口の別の入口（altBases）も試す。
+ * 全部だめなら、最後の失敗の理由をつけて投げる
+ */
+/** 最後に返事をくれた口。記録に残すため */
+export const lastUsed = { name: null, model: null }
+
+export async function chatAny(providers, opts, log = console.log) {
+  let last = null
+  for (const p of providers) {
+    const routes = [{ base: p.base, model: p.model }, ...(process.env.IDEAZ_LLM_BASE ? [] : p.altBases || [])]
+    for (const r of routes) {
+      try {
+        const text = await chat({ ...p, ...r }, opts)
+        lastUsed.name = p.name
+        lastUsed.model = r.model
+        return text
+      } catch (e) {
+        last = e
+        log(`  ${p.label}（${r.base}）が使えなかった: ${e.message.split('\n')[0].slice(0, 160)}`)
+      }
+    }
+  }
+  throw last || new Error('使える口が無い')
 }
 
 function pickText(payload) {
