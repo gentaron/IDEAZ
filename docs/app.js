@@ -71,6 +71,17 @@ async function getJSON(path) {
   return r.json()
 }
 
+/** SW が前回取っておいた分。ネットを待たずに出すためだけに使う */
+async function cachedJSON(path) {
+  if (!('caches' in window)) return null
+  try {
+    const hit = await caches.match(new URL(path, location.href).href, { ignoreSearch: true })
+    return hit ? await hit.json() : null
+  } catch {
+    return null
+  }
+}
+
 /** 次のMYT 5時までの残り時間 */
 function untilNext() {
   const now = Date.now()
@@ -479,15 +490,18 @@ async function backToToday() {
 /* ---------- boot ---------- */
 
 /** current.json を見にいって、日が変わっていれば入れ替える */
-async function refresh({ quiet = true } = {}) {
+async function refresh({ quiet = true, announce = true } = {}) {
   // 古い日を開いているときは、勝手に今日へ戻さない
   if (viewingArchive) return true
   try {
     const day = await getJSON('data/current.json')
-    if (!today || day.date !== today.date) {
-      const changed = Boolean(today)
+    // 起動直後だけは、同じ日でも作り直されていれば差し替える（前回キャッシュの分を出しているので）。
+    // 読んでいる最中は、日が変わったときしか描き直さない
+    const stale = !announce && day.generatedAt !== today?.generatedAt
+    if (!today || day.date !== today.date || stale) {
+      const changed = Boolean(today) && day.date !== today.date
       render(day)
-      if (changed) toast('5個とも入れ替わりました')
+      if (changed && announce) toast('5個とも入れ替わりました')
     }
     return true
   } catch {
@@ -497,11 +511,14 @@ async function refresh({ quiet = true } = {}) {
 }
 
 async function boot() {
-  skeletons()
-  try {
-    render(await getJSON('data/current.json'))
-    viewingArchive = false
-  } catch {
+  // 前回取った分があれば、ネットを待たずにまず出す（起動を骨組みのまま待たせない）
+  const cached = await cachedJSON('data/current.json')
+  if (cached?.slots) render(cached)
+  else skeletons()
+
+  // そのあと新しい分を取りにいく。起動直後の差し替えは「入れ替わりました」と騒がない
+  const ok = await refresh({ announce: false })
+  if (!ok && !today) {
     cards.innerHTML =
       '<p class="error">今日の分をまだ読めていません。オンラインで一度開けば、そのあとはオフラインでも見られます。</p>'
     cards.setAttribute('aria-busy', 'false')
@@ -571,6 +588,13 @@ if ('serviceWorker' in navigator) {
     } catch {
       /* SW が動かない環境でも、中身は普通に読める */
     }
+  })
+
+  // 殻（HTML/CSS/JS）が裏で新しくなったら、押したときに読み直す。
+  // 次に開いたときは何もしなくても新しい組で立ち上がる
+  navigator.serviceWorker.addEventListener('message', (e) => {
+    if (e.data !== 'shell-updated') return
+    showBanner('update', '新しい版があります。', { label: '更新', run: () => location.reload() })
   })
 
   // 「更新」を押したときだけ、入れ替わったところで一度読み直す。
