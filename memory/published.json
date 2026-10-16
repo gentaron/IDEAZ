@@ -4,9 +4,63 @@
     "note.com/humble_bobcat51",
     "note.com/gensnotes"
   ],
-  "syncedAt": "2026-10-15T23:31:08.047Z",
-  "count": 925,
+  "syncedAt": "2026-10-16T23:13:01.868Z",
+  "count": 934,
   "titles": [
+    {
+      "title": "【新時代到来？】「これ、新しいYouTubeじゃない？」——エウレカとミユシャリ、最近のハマりものを交換する",
+      "url": "https://note.com/gensnotes/n/neb997eb018cd",
+      "publishedAt": "2026-10-17T00:46:47+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "道徳の授業で、先生に反論してもいい？——日本の道徳教育をタルムードから考える",
+      "url": "https://note.com/gensnotes/n/n8c3248a4953f",
+      "publishedAt": "2026-10-16T22:34:54+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "次の一秒が、わからない。——AIコンテンツの面白さは、ここにもある気がする",
+      "url": "https://note.com/gensnotes/n/n39a1d90bd258",
+      "publishedAt": "2026-10-16T21:36:17+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "私には、まだ謎がある。——低コストAIの時代に、小さな優越感を持って生きる",
+      "url": "https://note.com/gensnotes/n/nada3fbd3fda3",
+      "publishedAt": "2026-10-16T19:45:07+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "また、ブログ書いてるの？——AURALISの四人に聞かれた日",
+      "url": "https://note.com/gensnotes/n/n116659f648f6",
+      "publishedAt": "2026-10-16T19:33:55+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "GLM 5.3 Flash が OpenCode で無料に。なのでDeepseekV4.1Flashと性能比較して使い分けしたいです。",
+      "url": "https://note.com/humble_bobcat51/n/n57dd38061068",
+      "publishedAt": "2026-10-16T16:24:17+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "ソフトバンクの“本気”が詰まった国産AI「Sarashina（サラシナ）」とは？30兆トークン学習・マルチモーダルまで広がる全貌",
+      "url": "https://note.com/humble_bobcat51/n/n79d6ad26de2f",
+      "publishedAt": "2026-10-16T12:46:18+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【切実】自分のキャラ画像を安定させたい。見る人を惑わさないためにキャラ画像を安定させる方法を調べました。※サムネは途中経過のやつです、可愛い",
+      "url": "https://note.com/humble_bobcat51/n/n9b7d6dda4752",
+      "publishedAt": "2026-10-16T12:20:33+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【Claudemy】もう40時間の動画講座で挫折しない。「自分専用の2分音声レッスン」を自動生成するClaude Codeスキルが面白そう",
+      "url": "https://note.com/humble_bobcat51/n/nf1ef320c6f72",
+      "publishedAt": "2026-10-16T10:15:39+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
     {
       "title": "【GitHub 4.2万☆】最速・最軽量のAIエージェント基盤「OpenHuman」が革新的な理由——$10のVPSで500エージェントが動く仕組み",
       "url": "https://note.com/humble_bobcat51/n/ne07aeefaee66",
