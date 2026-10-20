@@ -4,9 +4,69 @@
     "note.com/humble_bobcat51",
     "note.com/gensnotes"
   ],
-  "syncedAt": "2026-10-20T00:04:19.727Z",
-  "count": 951,
+  "syncedAt": "2026-10-20T23:35:29.497Z",
+  "count": 961,
   "titles": [
+    {
+      "title": "【Ornith-1.5-122B】自分で問題を作り、自分で解いて強くなるモデルが示したLLM自己改善の新境地",
+      "url": "https://note.com/humble_bobcat51/n/n1215f7c9264a",
+      "publishedAt": "2026-10-21T07:31:33+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【BTE】AIが迷わないのは、賢いから？ それとも、お手上げだから？",
+      "url": "https://note.com/gensnotes/n/n9abe96b87847",
+      "publishedAt": "2026-10-20T23:37:21+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【AIの推論コスト】賢さは安くなるのに、最先端へ行くのは高くなる？「知能コストの裁定」を考えた",
+      "url": "https://note.com/gensnotes/n/n69fe87f2d205",
+      "publishedAt": "2026-10-20T22:48:23+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【AIは生命の天井を超えるのか】人間が到達できない「第三の進化」について考えた",
+      "url": "https://note.com/gensnotes/n/n5c22bf5ff113",
+      "publishedAt": "2026-10-20T21:56:48+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【OSS Scanner】Anthropicが仕掛けるAIセキュリティ革命とは？——Claudeがオープンソースの脆弱性を自動発見・パッチ提案する仕組みと実態",
+      "url": "https://note.com/humble_bobcat51/n/n71f766d5f004",
+      "publishedAt": "2026-10-20T21:49:42+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "私のイラストを使ってくれる人がいる。それが、思った以上にうれしかった",
+      "url": "https://note.com/gensnotes/n/n1330b27ecdaa",
+      "publishedAt": "2026-10-20T21:43:33+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "昨日と明日は、隣人なのかもしれない。時間は流れるものではなく、隣り合うものなのか？",
+      "url": "https://note.com/gensnotes/n/n3e233d8fbe16",
+      "publishedAt": "2026-10-20T17:30:14+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【歴史的72時間】DeepSeek新モデル、米政府の電撃排除命令、そしてMiniMax——米中AI「安値と地政学」の最前線で何が起きたのか？…を知りたいっ",
+      "url": "https://note.com/humble_bobcat51/n/nd83ea5557030",
+      "publishedAt": "2026-10-20T15:22:49+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "2026年10月現在のLLM以外のOCR機能を整理したい。（PaddleOCR-VL、GLM-OCR、TeleOCR、dots.mocr、olmOCR）そしてUPDFのOCR機能！",
+      "url": "https://note.com/humble_bobcat51/n/n362d3aa7850a",
+      "publishedAt": "2026-10-20T12:04:46+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【個人開発】動画生成の自動化ツール系記事を有料販売したいなーと思っていたら、Opencodeの無料枠：DeepseekV4.1で作れちまったという話。こんな簡単に作れるなら有料販売は無理かもなぁ。作り方も一応。",
+      "url": "https://note.com/humble_bobcat51/n/nfff329d279ec",
+      "publishedAt": "2026-10-20T11:09:23+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
     {
       "title": "【ARグラスの未来】6DoF、SLAM、スタンドアロン。メガネがコンピューターになる日は近い？",
       "url": "https://note.com/gensnotes/n/n2131d8bf9678",
