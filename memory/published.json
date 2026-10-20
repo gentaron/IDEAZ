@@ -4,9 +4,51 @@
     "note.com/humble_bobcat51",
     "note.com/gensnotes"
   ],
-  "syncedAt": "2026-10-18T22:42:50.458Z",
-  "count": 944,
+  "syncedAt": "2026-10-20T00:04:19.727Z",
+  "count": 951,
   "titles": [
+    {
+      "title": "【ARグラスの未来】6DoF、SLAM、スタンドアロン。メガネがコンピューターになる日は近い？",
+      "url": "https://note.com/gensnotes/n/n2131d8bf9678",
+      "publishedAt": "2026-10-19T20:04:37+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "日本におけるAI面接の現状（2026年時点）とベストプラクティスをちょっと知っておきたいかも。",
+      "url": "https://note.com/humble_bobcat51/n/nf258c81d1c78",
+      "publishedAt": "2026-10-19T17:15:02+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【SillyTavern】キャラAIに前の会話を覚えていてほしい。CharMemoryで「記憶を見て直す」という選択",
+      "url": "https://note.com/gensnotes/n/n02fc421998dc",
+      "publishedAt": "2026-10-19T13:24:59+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【ポテトチップスの食感】噛む音だけで「新鮮さ」は変わる？パリパリを耳で味わう実験",
+      "url": "https://note.com/gensnotes/n/nc27d553ee353",
+      "publishedAt": "2026-10-19T13:15:55+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【テトリス】I字が来ないのは運が悪い？「7バッグ」で変わる次の一手",
+      "url": "https://note.com/gensnotes/n/nbb49a1611a2a",
+      "publishedAt": "2026-10-19T13:14:06+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "機密ログもゼロデイも手元で解析。完全ローカルで動く27BセキュリティAI「OrcaCyber Nano 1.0」とは？",
+      "url": "https://note.com/humble_bobcat51/n/n16558a414c75",
+      "publishedAt": "2026-10-19T12:15:56+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【Ponytail】コードを半分に、堅牢性を2倍にする優秀プラグインがアプデしまくってるのでおすすめ：47%のコード削減を実現する「7段のラダー」思考法と究極のYAGNI開発",
+      "url": "https://note.com/humble_bobcat51/n/n39bed6b69d14",
+      "publishedAt": "2026-10-19T08:01:40+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
     {
       "title": "【現状のハーネス何使ったらいいの？】AIコーディングはモデルからハーネスで選ぶ時代へ—2026年10月現在での主要5大ツール（Claude Code / Pi / OpenCode / Codex / DeepSeek）徹底比較したい。",
       "url": "https://note.com/humble_bobcat51/n/nc5520b11520a",
