@@ -4,9 +4,45 @@
     "note.com/humble_bobcat51",
     "note.com/gensnotes"
   ],
-  "syncedAt": "2026-10-21T23:52:32.996Z",
-  "count": 969,
+  "syncedAt": "2026-10-22T23:49:52.220Z",
+  "count": 975,
   "titles": [
+    {
+      "title": "MacのローカルLLMが別次元の速さに！ Apple Silicon専用エンジン「Kapitsa 0.2.0」の実力：M1からM5まで対応、llama.cppやOllama超えの衝撃",
+      "url": "https://note.com/humble_bobcat51/n/ne1edb5f539e3",
+      "publishedAt": "2026-10-23T08:46:42+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【シェットランドに行きたい】私のシェルティは15、16歳。今ごろ、きっと寝ているんだろうな。",
+      "url": "https://note.com/gensnotes/n/n74aecc7da3e3",
+      "publishedAt": "2026-10-23T00:46:19+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【ルッキズム】私の顔は、もしかしたら誰かを傷つけているのかもしれない。",
+      "url": "https://note.com/gensnotes/n/naa2a0ec152b7",
+      "publishedAt": "2026-10-22T23:07:29+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【アウフヘーベン】「当たり前」と言うのをやめたい。個人の幸福と社会の幸福は、なぜ対立するのか",
+      "url": "https://note.com/gensnotes/n/n8f714af7780a",
+      "publishedAt": "2026-10-22T16:59:55+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "なぜAIにゲームを作らせるのをやめたのか？Matrix-Game 4.0のアーキテクチャ：「低ポリ＋AIレンダラー」がゲーム制作を変える。",
+      "url": "https://note.com/humble_bobcat51/n/nf3c5fa4e4f78",
+      "publishedAt": "2026-10-22T12:04:28+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "iteLLMのv1.107.0で深刻なマルウェア混入事件：被害の全容と現場が今すぐ取るべき緊急対応「Python起動だけで感染」LiteLLMサプライチェーン攻撃の手口と、絶対にやってはいけないNG対処法",
+      "url": "https://note.com/humble_bobcat51/n/n0f9fe3640eec",
+      "publishedAt": "2026-10-22T10:13:14+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
     {
       "title": "【自分のために総括】2026年10月「狂気の72時間」とNode.js緊急リリース―Webの信頼基盤を揺るがした連続インシデントの全貌",
       "url": "https://note.com/humble_bobcat51/n/ndddf54a43430",
@@ -308,7 +344,7 @@
       "account": "note.com/gensnotes"
     },
     {
-      "title": "【最新版】はじめまして、ゆいまると申します：非ITの中小企業でAIを使い倒す2005年生まれの自己紹介。noteにハマっています",
+      "title": "【2026.10月】はじめまして、ゆいまると申します：非ITの中小企業でAIを使い倒す2005年生まれの自己紹介。noteにハマっています",
       "url": "https://note.com/humble_bobcat51/n/n9e4cde83d992",
       "publishedAt": "2026-10-15T22:05:05+09:00",
       "account": "note.com/humble_bobcat51"
