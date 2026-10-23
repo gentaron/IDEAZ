@@ -4,9 +4,69 @@
     "note.com/humble_bobcat51",
     "note.com/gensnotes"
   ],
-  "syncedAt": "2026-10-22T23:49:52.220Z",
-  "count": 975,
+  "syncedAt": "2026-10-23T23:43:45.459Z",
+  "count": 985,
   "titles": [
+    {
+      "title": "【elephant-1 vs mammoth-1】9Bで足りる？27Bを選ぶ前に比べたい「任せられる件数」",
+      "url": "https://note.com/gensnotes/n/n054bd1d91a81",
+      "publishedAt": "2026-10-24T08:36:26+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【Maverick 1.1】ゲームの中で「それを動かして」が通じるAI——個人開発で用意するものは何か",
+      "url": "https://note.com/gensnotes/n/n33e5abeaaf3a",
+      "publishedAt": "2026-10-24T08:32:45+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【bekko-static-embedding-v1】GPUなしの検索に何を任せる？語順を逆にして確かめた境界",
+      "url": "https://note.com/gensnotes/n/n5b1fac004f76",
+      "publishedAt": "2026-10-24T08:13:49+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【Web3再考】AIが脆弱性を見つける時代、分散型インターネットが必要になるのかもしれない",
+      "url": "https://note.com/gensnotes/n/nceb2f9599ae1",
+      "publishedAt": "2026-10-23T22:55:18+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【AIエージェントの成功率】pass@kとpass^kは何が違う？同じ記録が90%にも30%にもなる理由",
+      "url": "https://note.com/gensnotes/n/n4f26592901b5",
+      "publishedAt": "2026-10-23T22:51:09+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "なぜ1Passwordは「最強」と呼ばれるのか？20年目の進化と最新コスパ徹底解剖（2026年版）",
+      "url": "https://note.com/humble_bobcat51/n/n04eabb0bae98",
+      "publishedAt": "2026-10-23T20:44:36+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "Ruby正規表現エンジン「Onigmo」にCVSS 10.0の未認証RCE発覚 — GitLab全バージョンが影響、即時アップデートを：「信頼できない入力を正規表現にするな」から学ぶ教訓と対策",
+      "url": "https://note.com/humble_bobcat51/n/n2edd4eaa4b33",
+      "publishedAt": "2026-10-23T19:47:33+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【Canva Craft】画像生成AIの決定版？「配置を決めて直せる」まさかの自社開発のCanva新機能を早速試してみた",
+      "url": "https://note.com/humble_bobcat51/n/nf7ffda82cf41",
+      "publishedAt": "2026-10-23T17:40:49+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【Sage-A1.5】アクティブ3Bでフロンティア級を超える「仕事の進め方」を学んだAIエージェント？上海AI Labの革新性と実務活用",
+      "url": "https://note.com/humble_bobcat51/n/ncf0b47a020df",
+      "publishedAt": "2026-10-23T15:55:38+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "「7:1」ハイブリッド構造の秘密：Ant Group最新モデル「Ling-3.1-flash-1019」はどこが進化し、なぜコストが跳ね上がったのか？560B・秒間200トークン",
+      "url": "https://note.com/humble_bobcat51/n/n73d699e41e92",
+      "publishedAt": "2026-10-23T11:33:31+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
     {
       "title": "MacのローカルLLMが別次元の速さに！ Apple Silicon専用エンジン「Kapitsa 0.2.0」の実力：M1からM5まで対応、llama.cppやOllama超えの衝撃",
       "url": "https://note.com/humble_bobcat51/n/ne1edb5f539e3",
