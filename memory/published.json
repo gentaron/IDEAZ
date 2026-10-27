@@ -4,9 +4,45 @@
     "note.com/humble_bobcat51",
     "note.com/gensnotes"
   ],
-  "syncedAt": "2026-10-25T22:59:23.134Z",
-  "count": 1002,
+  "syncedAt": "2026-10-27T00:11:45.714Z",
+  "count": 1008,
   "titles": [
+    {
+      "title": "【個人開発日記】Opencodeの無料枠が減ってきた。DeepseekV4.1Flashでオフラインに引き篭もる準備を進める",
+      "url": "https://note.com/humble_bobcat51/n/n4593eb4cab32",
+      "publishedAt": "2026-10-26T20:36:20+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "Macの16GBでも大きなAIモデルを動かす「Slotstream」。ベンチの数字と、まだ分からないことを整理しました",
+      "url": "https://note.com/humble_bobcat51/n/ne4eebce47b0b",
+      "publishedAt": "2026-10-26T19:36:14+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【世界最悪から世界最高への1カ月】27時間の雨が、灰色だった街を別世界に変えてしまった",
+      "url": "https://note.com/gensnotes/n/ncfc013c244f2",
+      "publishedAt": "2026-10-26T18:54:42+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【面白さの心理物理学】人間はなぜ「変化率」に夢中になるのか？｜AI・ゲーム・欲望を数式で考えてみた",
+      "url": "https://note.com/gensnotes/n/n239d91f67c0b",
+      "publishedAt": "2026-10-26T13:25:45+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "GeForce RTX 40 の行列演算を「解放」するLinuxカーネルモジュール gpu-unlock-ada。何をしていて、何が確かめられていないのか",
+      "url": "https://note.com/humble_bobcat51/n/n93ebef4d22cc",
+      "publishedAt": "2026-10-26T12:20:21+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【Kos】会話中にAIの声が変わるのはなぜ？公開コードで見えた、代役の音声と利用上限",
+      "url": "https://note.com/gensnotes/n/n61170a27778d",
+      "publishedAt": "2026-10-26T08:25:27+09:00",
+      "account": "note.com/gensnotes"
+    },
     {
       "title": "TailscaleのSSH機能に11件の問題、研究者が報告書「Tailworm」を公開。何が起きていて、いま何をすべきかをまとめます",
       "url": "https://note.com/humble_bobcat51/n/n3271a3eb4f01",
