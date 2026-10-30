@@ -4,9 +4,63 @@
     "note.com/humble_bobcat51",
     "note.com/gensnotes"
   ],
-  "syncedAt": "2026-10-29T00:33:52.031Z",
-  "count": 1025,
+  "syncedAt": "2026-10-30T00:32:56.352Z",
+  "count": 1034,
   "titles": [
+    {
+      "title": "【未来妄想録 第3回】太陽を地上につくるという、人類の少し無謀な夢。｜エウレカと未来を見る",
+      "url": "https://note.com/gensnotes/n/n8bf6512d51c1",
+      "publishedAt": "2026-10-29T22:37:04+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【個人開発日記】LFM3がすんごい良いなぁ。OmniよりVL2Bの方が動き良いかも？",
+      "url": "https://note.com/humble_bobcat51/n/n8600821eda26",
+      "publishedAt": "2026-10-29T20:33:37+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【未来妄想録 第2回】宇宙は、目に見えるものだけでできていない。｜エウレカと未来を見る",
+      "url": "https://note.com/gensnotes/n/ne666dae69120",
+      "publishedAt": "2026-10-29T19:58:53+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "Rustの再ビルドが「ミリ秒」に。cargoの代わりに打つだけの新ツール「blaze」を徹底調査",
+      "url": "https://note.com/humble_bobcat51/n/n31ab8ac1e2b2",
+      "publishedAt": "2026-10-29T19:09:59+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【未来妄想録 第1回】宇宙へ行くには、まず落ち続けなければならない。｜エウレカと未来を見る",
+      "url": "https://note.com/gensnotes/n/n0600e4befb02",
+      "publishedAt": "2026-10-29T18:38:57+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【お昼休みの妄想です】AI時代の「七つの大罪」—人類はいかにして自らの欲望によって滅びるのか",
+      "url": "https://note.com/humble_bobcat51/n/n1cd4e4478e32",
+      "publishedAt": "2026-10-29T17:09:06+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【Iris-3B】一枚の絵を動く背景にできる？画像生成AIが推定する「奥行き」の使いどころ",
+      "url": "https://note.com/gensnotes/n/n01e9f9a514fd",
+      "publishedAt": "2026-10-29T16:17:23+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【Runway App Studio】制作手順をアプリにする？会話のまま残す？自分の道具を作る分かれ道",
+      "url": "https://note.com/gensnotes/n/n1d3643f77b84",
+      "publishedAt": "2026-10-29T16:17:04+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【Gemini 4 Carbon】Googleの最強モデルは総合1位、サイバー防御特化：でもまだ使えない",
+      "url": "https://note.com/humble_bobcat51/n/ncfa282eecbe5",
+      "publishedAt": "2026-10-29T12:36:39+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
     {
       "title": "Googleの新ワールドモデル「Genie 4」徹底調査：音が鳴り、会話でき、走らせながら作り変えられる世界",
       "url": "https://note.com/humble_bobcat51/n/nb006dc332d5d",
