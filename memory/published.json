@@ -4,9 +4,69 @@
     "note.com/humble_bobcat51",
     "note.com/gensnotes"
   ],
-  "syncedAt": "2026-10-30T00:32:56.352Z",
-  "count": 1034,
+  "syncedAt": "2026-10-31T00:19:18.998Z",
+  "count": 1044,
   "titles": [
+    {
+      "title": "【Canva Brush】AIで直したデザインは、あとから文字だけ編集できる？",
+      "url": "https://note.com/gensnotes/n/n9996420bb1b8",
+      "publishedAt": "2026-10-31T08:26:54+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【Copilot Fusion】モデルを自動で選ぶだけ？下書き・判定・修正まで変わるAI開発",
+      "url": "https://note.com/gensnotes/n/nd1f6c2745885",
+      "publishedAt": "2026-10-31T08:20:49+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【Kanana-2-embedding】検索AIは大きいモデルが有利？保存する情報まで見て選ぶ",
+      "url": "https://note.com/gensnotes/n/nb6a3f408ae68",
+      "publishedAt": "2026-10-31T08:19:33+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "格差社会と数式とマンゴー。世界の「違い」はどこまで測れるんだろう？",
+      "url": "https://note.com/gensnotes/n/na9bcd0766f19",
+      "publishedAt": "2026-10-31T08:17:35+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "量子コンパイラをPythonだけの世界に置きたくない。10万個の無駄を0.1秒で消したQiskit 2.6 C API",
+      "url": "https://note.com/gensnotes/n/n6b28cc19fe43",
+      "publishedAt": "2026-10-31T08:16:48+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【個人開発日記】何度か失敗した後、LFM3を日本語＆特定業務にFTしてみた",
+      "url": "https://note.com/humble_bobcat51/n/nb0ad56e92145",
+      "publishedAt": "2026-10-30T19:41:13+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "Linuxカーネルに危険度9.8の穴。CVE-2026-98432 と、AIが作った「遠隔rootの攻撃コード」",
+      "url": "https://note.com/humble_bobcat51/n/n13007ce88037",
+      "publishedAt": "2026-10-30T18:06:36+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "Claude Code拡張 2.1.313 にSSHバックドア。入れただけで乗っ取られる仕組みと確かめ方",
+      "url": "https://note.com/humble_bobcat51/n/n8c931b4ee757",
+      "publishedAt": "2026-10-30T17:55:30+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "バイナンスから約59億ドル流出。暗号資産の歴史で最大のハッキングを徹底調査",
+      "url": "https://note.com/humble_bobcat51/n/na925bb458379",
+      "publishedAt": "2026-10-30T17:45:07+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【SenseNova-6.8-Code2Video】コード駆動型動画生成モデルという新しいジャンル：HTMLやReactで動画作っていくモデルだぁ",
+      "url": "https://note.com/humble_bobcat51/n/n0d2ab8322709",
+      "publishedAt": "2026-10-30T12:05:02+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
     {
       "title": "【未来妄想録 第3回】太陽を地上につくるという、人類の少し無謀な夢。｜エウレカと未来を見る",
       "url": "https://note.com/gensnotes/n/n8bf6512d51c1",
