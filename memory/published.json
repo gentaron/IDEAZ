@@ -4,9 +4,57 @@
     "note.com/humble_bobcat51",
     "note.com/gensnotes"
   ],
-  "syncedAt": "2026-10-31T00:19:18.998Z",
-  "count": 1044,
+  "syncedAt": "2026-10-31T23:54:55.427Z",
+  "count": 1052,
   "titles": [
+    {
+      "title": "AIのコードを読めない。偽の法則を0.18秒で止めたBend 2",
+      "url": "https://note.com/gensnotes/n/n1d1f04bb391b",
+      "publishedAt": "2026-11-01T08:28:45+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【Idol】一枚の画像から回せる3Dへ。そのままゲームの小物に使える？",
+      "url": "https://note.com/gensnotes/n/n9e929dd02a0a",
+      "publishedAt": "2026-11-01T08:00:02+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【Mage-VL-Cowork】PC操作AIに道具は多いほどいい？4Bモデルの学習比較から考える選び方",
+      "url": "https://note.com/gensnotes/n/n16c92df4b983",
+      "publishedAt": "2026-11-01T07:57:29+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【SenseNova-Loop】同じ層を二度使う新モデル。自作アプリの動作確認まで任せられる？",
+      "url": "https://note.com/gensnotes/n/n9c9afb1a6aa4",
+      "publishedAt": "2026-10-31T18:17:33+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【Kensaku】10万件を1msで！ Rust製ローカル検索ランチャーの使い方と特徴",
+      "url": "https://note.com/humble_bobcat51/n/n84bb6cd58dc1",
+      "publishedAt": "2026-10-31T17:15:10+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【量子中心スーパーコンピューティング】量子の未来を追っていたら、CとRustと富岳にたどり着いた",
+      "url": "https://note.com/gensnotes/n/ne8558914c704",
+      "publishedAt": "2026-10-31T16:34:22+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "「エージェントを走らせたまま、居場所を失わない」コーディングエージェント専用ターミナル『Kero』が凄すぎる",
+      "url": "https://note.com/humble_bobcat51/n/n681d50baecab",
+      "publishedAt": "2026-10-31T12:01:49+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【TokenEconomizer】AIエージェントのトークン代を最大30%削る「Microsoft発ツール」とは？モデルを弄らず外側から賢く節約する技術",
+      "url": "https://note.com/humble_bobcat51/n/n8e30db175984",
+      "publishedAt": "2026-10-31T09:57:33+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
     {
       "title": "【Canva Brush】AIで直したデザインは、あとから文字だけ編集できる？",
       "url": "https://note.com/gensnotes/n/n9996420bb1b8",
