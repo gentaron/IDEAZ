@@ -4,9 +4,57 @@
     "note.com/humble_bobcat51",
     "note.com/gensnotes"
   ],
-  "syncedAt": "2026-10-31T23:54:55.427Z",
-  "count": 1052,
+  "syncedAt": "2026-11-02T00:10:55.330Z",
+  "count": 1060,
   "titles": [
+    {
+      "title": "【Spark-X2.6-1.7B】自作メモ助手は毎回じっくり考えるべき？小型AIの思考設定から役割を決める",
+      "url": "https://note.com/gensnotes/n/n1f54e12d8be8",
+      "publishedAt": "2026-11-02T08:22:32+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【Pomerado】APIのないサイトを自作AIの道具に。毎回の画面操作をコードへ残す",
+      "url": "https://note.com/gensnotes/n/na27f33e7053f",
+      "publishedAt": "2026-11-02T08:17:33+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "エンバペの中国トラブルとサンシーロ解体？日本代表以外も落ち着かないサッカー界のお話",
+      "url": "https://note.com/humble_bobcat51/n/n3bfb2d3593ba",
+      "publishedAt": "2026-11-01T23:19:40+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【進化生物学】性染色体は寿命の設計図なのか。100万年、守られた生き物を想像してみた",
+      "url": "https://note.com/gensnotes/n/na33d29dbaac9",
+      "publishedAt": "2026-11-01T19:19:41+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【Local Code】CSVを図入り資料へ。MacのローカルAIで残したい「計算の跡」",
+      "url": "https://note.com/gensnotes/n/n4b543ad86f76",
+      "publishedAt": "2026-11-01T19:08:54+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【Nemotron 3.5 Embed】図のあるPDFを言葉で探すには？原本へ戻れる資料棚の作り方",
+      "url": "https://note.com/gensnotes/n/na693a5e05a43",
+      "publishedAt": "2026-11-01T19:07:01+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "文章から3Dシーンを一発生成。4Bの小型モデル「Qwen3.5-4B-3D-Coder」を徹底調査",
+      "url": "https://note.com/humble_bobcat51/n/n456433ee9dbb",
+      "publishedAt": "2026-11-01T18:53:27+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【10月のnote状況】自分のデータをみて、何かしら改善してみよう",
+      "url": "https://note.com/humble_bobcat51/n/n7693b73f8d65",
+      "publishedAt": "2026-11-01T11:18:09+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
     {
       "title": "AIのコードを読めない。偽の法則を0.18秒で止めたBend 2",
       "url": "https://note.com/gensnotes/n/n1d1f04bb391b",
