@@ -4,9 +4,63 @@
     "note.com/humble_bobcat51",
     "note.com/gensnotes"
   ],
-  "syncedAt": "2026-11-08T00:08:49.496Z",
-  "count": 1112,
+  "syncedAt": "2026-11-09T00:26:20.736Z",
+  "count": 1121,
   "titles": [
+    {
+      "title": "【自己分析】2,791本の記事を書いた私は、いったい誰だったのか。ブログの転換点にBIG5で自分を分析してみた",
+      "url": "https://note.com/gensnotes/n/n9e9f16f70edf",
+      "publishedAt": "2026-11-09T08:48:03+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【WASM】AIエージェントが同じ仕事を毎回考え直す。反復を286KBの検証済み実行物へ変えたAuto",
+      "url": "https://note.com/gensnotes/n/n45668c048d74",
+      "publishedAt": "2026-11-09T08:42:53+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "3Dを作っても画面の中だけ。AIのコードをスマホへ持ち出せる立体素材に変えたThree-Live",
+      "url": "https://note.com/gensnotes/n/nb6ac809339a2",
+      "publishedAt": "2026-11-09T08:40:40+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【Fibo 2】フリマの商品写真、AIで背景だけ変えられる？ マグカップの影で考えた",
+      "url": "https://note.com/gensnotes/n/n853521b42a4a",
+      "publishedAt": "2026-11-08T22:13:43+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【個人開発日記】Qwen4の27BとFlashNEXTがすごい性能らしいので入れれる環境を用意しておこう",
+      "url": "https://note.com/humble_bobcat51/n/nd2d9b0e688c0",
+      "publishedAt": "2026-11-08T21:41:03+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "8GBのMacで26Bモデルを動かす：TurboFieldfareが変えるローカルLLMの常識とwiftとMetalで書かれた裏の仕組み",
+      "url": "https://note.com/humble_bobcat51/n/nfb10247c38f5",
+      "publishedAt": "2026-11-08T16:49:40+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "チップがまだなくても、37KBの量子耐性ブートをCPUで0.006秒検証できたOpen Chiplet Atlas",
+      "url": "https://note.com/gensnotes/n/n8dcc842f816f",
+      "publishedAt": "2026-11-08T16:46:17+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【Figma完全再現】美しすぎる人事労務・カレンダーUIのフロントエンド実装プロトタイプを触ってみた",
+      "url": "https://note.com/humble_bobcat51/n/n13363880eb4c",
+      "publishedAt": "2026-11-08T12:31:53+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "動画生成AIを仕様書にする時代へ：AIで作った10秒の動画が本物の3Dゲームになる衝撃―オープンソース「video-to-game」が描き替える開発の未来",
+      "url": "https://note.com/humble_bobcat51/n/n9bfb8aea33f4",
+      "publishedAt": "2026-11-08T09:51:46+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
     {
       "title": "【もう一つのウォール街】国家資本を動かす天才集団GIC。シンガポールが2026年、アクティブ運用へ踏み込んだ本当の理由",
       "url": "https://note.com/gensnotes/n/n1ebbcd0684c2",
