@@ -4,9 +4,57 @@
     "note.com/humble_bobcat51",
     "note.com/gensnotes"
   ],
-  "syncedAt": "2026-11-10T03:06:54.008Z",
-  "count": 1131,
+  "syncedAt": "2026-11-11T00:58:27.086Z",
+  "count": 1139,
   "titles": [
+    {
+      "title": "SQL Server に「9.8」の遠隔コード実行の穴。11月の更新は37件（CVE-2026-116945）",
+      "url": "https://note.com/humble_bobcat51/n/nef115310a397",
+      "publishedAt": "2026-11-11T08:54:56+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【40.5MBの衝撃】GPUもPyTorchも不要！NumPyだけで動く超軽量・日本語音声合成「Underdog Woof Japanese」を徹底解剖する",
+      "url": "https://note.com/humble_bobcat51/n/nf87b1cbb2e47",
+      "publishedAt": "2026-11-11T08:16:22+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【スマホ依存症】スクリーンタイムを劇的に減らしたい。でも、趣味まで削るの？",
+      "url": "https://note.com/gensnotes/n/n64cbb70f0e27",
+      "publishedAt": "2026-11-11T07:54:52+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【徹底解剖】Gemini 4 Carbonの実力とは？「サイバー防御特化×1M思考」が生み出すフロンティアモデルの現在地",
+      "url": "https://note.com/humble_bobcat51/n/ncabbc63b6dba",
+      "publishedAt": "2026-11-11T07:47:51+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【個人開発日記】Fable5.2でRAGと動画ツール＆スライドツールを焼き直し…なんだけど思い通りにいかない。正直、Fable5.2を活かしきれてない",
+      "url": "https://note.com/humble_bobcat51/n/na3dfbbb9b8af",
+      "publishedAt": "2026-11-10T20:06:05+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【リアル】未来は無料にならない。AIと量子の夢を現実に引き戻す「物理量」の話",
+      "url": "https://note.com/gensnotes/n/n3f1553e27772",
+      "publishedAt": "2026-11-10T13:46:33+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "投資、意外と上手いと思っていた。でも、たぶん私はそんなに上手くない。",
+      "url": "https://note.com/gensnotes/n/n6ee0f980067f",
+      "publishedAt": "2026-11-10T13:02:25+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "Xで話題になってる「CVSS 10.0・積極的に悪用中」の WordPress 警告を調べたら、WordPress 本体ではなくプラグインの話だった（CVE-2026-123751）",
+      "url": "https://note.com/humble_bobcat51/n/n7488a082302e",
+      "publishedAt": "2026-11-10T12:20:57+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
     {
       "title": "【Claude Code / Cursor】AIエージェントに3.6万点の無料3D素材を与える「sozai-search-mcp」が便利そう",
       "url": "https://note.com/humble_bobcat51/n/ncb190a2cbd3c",
