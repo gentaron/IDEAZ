@@ -243,3 +243,17 @@ npx serve docs                        # ローカルで開く（何でもいい�
 探索が落ちた日は警告が出るが、公開は続く。その日は角度だけの5枠になる。
 
 GitHub の cron は混み具合で数十分ずれることがある。5時ちょうどに出ていなくても壊れてはいない。
+
+<!-- ecosystem:begin (自動生成: gentaron/infocollect の ecosystem/registry.json から。手で直さない) -->
+
+## つながり
+
+gentaron のリポジトリ群のうち **発信パイプライン** の一つ。1日5枠のブログ・フォーマットと題材。コピーして AI に渡せば記事が立ち上がる。
+
+- **受け取る**: [infocollect](https://github.com/gentaron/infocollect)（ナレッジベース）
+- **渡す**: [genesisvault](https://github.com/gentaron/genesisvault)（書き方の型）、[Gentarog](https://github.com/gentaron/Gentarog)（書き方の型）
+- **同じ島**: [VAIZ](https://github.com/gentaron/VAIZ)、[SAIZ](https://github.com/gentaron/SAIZ)、[genimage](https://github.com/gentaron/genimage)、[seo](https://github.com/gentaron/seo)
+
+全体の地図 → [ecosystem](https://github.com/gentaron/infocollect/blob/HEAD/ecosystem/README.md)
+
+<!-- ecosystem:end -->

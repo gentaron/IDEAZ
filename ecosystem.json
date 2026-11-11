@@ -1,0 +1,59 @@
+{
+  "$schema": "https://raw.githubusercontent.com/gentaron/infocollect/HEAD/ecosystem/schema.json",
+  "schema": 1,
+  "name": "IDEAZ",
+  "group": "pipeline",
+  "groupLabel": "発信パイプライン",
+  "status": "active",
+  "role": "1日5枠のブログ・フォーマットと題材。コピーして AI に渡せば記事が立ち上がる",
+  "stack": "Node · Netlify · PWA",
+  "produces": [
+    "formats",
+    "topics"
+  ],
+  "consumes": [
+    "kb"
+  ],
+  "upstream": [
+    {
+      "repo": "infocollect",
+      "flows": [
+        "kb"
+      ],
+      "url": "https://github.com/gentaron/infocollect"
+    }
+  ],
+  "downstream": [
+    {
+      "repo": "genesisvault",
+      "flows": [
+        "formats"
+      ],
+      "url": "https://github.com/gentaron/genesisvault"
+    },
+    {
+      "repo": "Gentarog",
+      "flows": [
+        "formats"
+      ],
+      "url": "https://github.com/gentaron/Gentarog"
+    }
+  ],
+  "siblings": [
+    "genesisvault",
+    "Gentarog",
+    "VAIZ",
+    "SAIZ",
+    "genimage",
+    "seo"
+  ],
+  "hub": {
+    "repo": "https://github.com/gentaron/infocollect",
+    "map": "https://github.com/gentaron/infocollect/blob/HEAD/ecosystem/README.md",
+    "kb": "https://raw.githubusercontent.com/gentaron/infocollect/HEAD/docs/kb",
+    "mcp": [
+      "infocollect-kb",
+      "forge"
+    ]
+  }
+}
