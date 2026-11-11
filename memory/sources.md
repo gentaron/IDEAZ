@@ -16,3 +16,8 @@ startupcorners の devtools-digest／zeli.app の日次／RSSHub と FreshRSS
 - WebFetchが弾かれたら先に検索して、結果に出たURLを踏むと通ることが多い。
 - arxiv.org/html/{id}v1 が本文の数値を拾いやすい。science.org は403、phys.org は429になりやすい。
 - ひとつのソースだけで書かない。最低3つ突き合わせて、話題が本物か・どこが誇張されているかを見極める。
+
+ハブのナレッジベース（gentaron/infocollect）
+- src/harvest.mjs の「InfoCollect KB」が、ハブが毎朝集めている広い網を読む（arXiv・HF の論文と急上昇モデル・Reddit・HN・Zenn/Qiita・セキュリティ系・各社のリリース）。鍵は要らない。場所は https://raw.githubusercontent.com/gentaron/infocollect/HEAD/docs/kb（IDEAZ_KB_URL で差し替え可）
+- 何日も続けて観測された題材ほど点が上がる。一発の話題より、続いている話題を拾いやすい
+- 手元で調べるときは MCP の infocollect-kb（kb_search / kb_context）が同じ中身を引ける

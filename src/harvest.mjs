@@ -135,6 +135,43 @@ async function feed(name, url) {
   })
 }
 
+/**
+ * InfoCollect のナレッジベース（gentaron/infocollect）。
+ * ハブが毎朝集めている広い網（arXiv・HF の論文と急上昇モデル・Reddit・HN・Zenn/Qiita・
+ * セキュリティ系・各社のリリース）を、月ごとの JSONL のまま読む。鍵は要らない。
+ * 何度も観測されたもの（seen）ほど点を上げる。自分たちの記事（own）は題材にしない。
+ */
+export const KB_URL = process.env.IDEAZ_KB_URL || 'https://raw.githubusercontent.com/gentaron/infocollect/HEAD/docs/kb'
+
+export function kbCandidates(docs, sinceISO) {
+  const since = sinceISO.slice(0, 10)
+  return docs
+    .filter((d) => d && d.url && d.title && d.sourceType !== 'own' && String(d.date || '') >= since)
+    .map((d) => ({
+      source: `InfoCollect/${d.source}`,
+      title: clean(d.titleJa || d.title),
+      url: d.url,
+      summary: clean([d.summary, d.body].filter(Boolean).join(' ')).slice(0, 400),
+      // 元の点は口ごとに桁が違う（スター/日は数千になる）ので、HN の点数と同じくらいの幅に縮める
+      score: Math.min(150, Math.round(25 * Math.log10(1 + (d.score || 0)) + 15 * Math.max(0, (d.seen || 1) - 1))),
+      ...(d.discussion ? { discussion: d.discussion } : {})
+    }))
+}
+
+async function infocollect(sinceISO) {
+  const manifest = await get(`${KB_URL}/manifest.json`)
+  const keys = (manifest.shards || []).map((s) => s.key).filter((k) => k >= sinceISO.slice(0, 7)).sort().slice(-2)
+  const docs = []
+  for (const key of keys) {
+    const text = await get(`${KB_URL}/shards/${key}.jsonl`, { as: 'text' })
+    for (const line of text.split('\n')) {
+      if (!line.trim()) continue
+      try { docs.push(JSON.parse(line)) } catch { /* 壊れた行は飛ばす */ }
+    }
+  }
+  return kbCandidates(docs, sinceISO)
+}
+
 /* ---------- まとめて回す ---------- */
 
 const FEEDS = [
@@ -161,6 +198,7 @@ export async function harvest({ hours = 72, log = console.log } = {}) {
     soft('Hugging Face', () => huggingFace(), log),
     soft('GitHub', () => github(sinceISO), log),
     soft('arXiv', () => arxiv(['cs.CL', 'cs.LG', 'cs.AI']), log),
+    soft('InfoCollect KB', () => infocollect(sinceISO), log),
     ...FEEDS.map(([name, url]) => soft(name, () => feed(name, url), log))
   ])
 
