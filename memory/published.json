@@ -4,9 +4,57 @@
     "note.com/humble_bobcat51",
     "note.com/gensnotes"
   ],
-  "syncedAt": "2026-11-11T00:58:27.086Z",
-  "count": 1139,
+  "syncedAt": "2026-11-12T02:05:46.556Z",
+  "count": 1147,
   "titles": [
+    {
+      "title": "【脱スマホ日誌 Day 1】インターネットを見るのをやめた。代わりにAIと数学と開発に全力を注ぐ",
+      "url": "https://note.com/gensnotes/n/nc423edb428d0",
+      "publishedAt": "2026-11-12T08:41:29+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【完全ローカル】ElevenLabs・Sunoを自分のPCで動かす！AI音声ワークステーション「Soundbox」が凄すぎる",
+      "url": "https://note.com/humble_bobcat51/n/n85178abe80b8",
+      "publishedAt": "2026-11-12T08:24:10+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【AI開発日誌】87の開発資産をつなぐ仕組みを作った。でも、まだ使い方がわからない",
+      "url": "https://note.com/gensnotes/n/n279afad13414",
+      "publishedAt": "2026-11-12T07:54:59+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【AI開発】88個目のリポジトリを作る前に考えたい。最高性能と最低コストを両立するネットワークは作れるのか",
+      "url": "https://note.com/gensnotes/n/n2020dff36772",
+      "publishedAt": "2026-11-12T07:47:05+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【AIフロンティア】87の開発資産を超えて、世界最高峰の自律研究・進化型コンピューティングに挑みたい",
+      "url": "https://note.com/gensnotes/n/n7c7a64856ed8",
+      "publishedAt": "2026-11-12T00:51:21+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【IQテスト】IQってなんやねん。知能指数を調べたら、そもそも「知性とは何か」がわからなくなった",
+      "url": "https://note.com/gensnotes/n/na98b59da7e86",
+      "publishedAt": "2026-11-11T22:59:10+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【神アプリ降臨】AndroidとPCが完全にひとつになるオープンソース「NectarLink」が凄すぎる！Phone Link・KDE Connect・LocalSendの全部入り",
+      "url": "https://note.com/humble_bobcat51/n/n76ec11374830",
+      "publishedAt": "2026-11-11T21:16:59+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "「AIにいきなりコードを書かせるな」Google発の設計手法『Elephant-Goldfish Model』が革新的すぎる",
+      "url": "https://note.com/humble_bobcat51/n/nff7f033884ea",
+      "publishedAt": "2026-11-11T12:16:56+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
     {
       "title": "SQL Server に「9.8」の遠隔コード実行の穴。11月の更新は37件（CVE-2026-116945）",
       "url": "https://note.com/humble_bobcat51/n/nef115310a397",
