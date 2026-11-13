@@ -4,9 +4,69 @@
     "note.com/humble_bobcat51",
     "note.com/gensnotes"
   ],
-  "syncedAt": "2026-11-12T02:05:46.556Z",
-  "count": 1147,
+  "syncedAt": "2026-11-13T01:37:59.185Z",
+  "count": 1157,
   "titles": [
+    {
+      "title": "30BのMoEをスマホサイズに焼き詰める：スマホやMacBookで20万字の長文をサクサク処理！オンデバイス特化型LLM「Raon-1 nano」の実力",
+      "url": "https://note.com/humble_bobcat51/n/nb7eaf599135d",
+      "publishedAt": "2026-11-13T10:30:12+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "Gemini 4 Hydrogen 徹底解剖：「全員にもっと効く」日次実行モデルの実像と、公式主張のウラ側",
+      "url": "https://note.com/humble_bobcat51/n/nd6d5ac8fb54b",
+      "publishedAt": "2026-11-13T10:01:10+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【NVIDIA後継者問題】ジェンスン・フアン突然退場。M7と比較して見えた「創業者なき巨大企業」の本当のリスク",
+      "url": "https://note.com/gensnotes/n/nbc40d47007e0",
+      "publishedAt": "2026-11-13T08:23:41+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "AI計算はデータ運びで電気を食う。非力なPCで試せた「アドレスなしCPU」MADAR",
+      "url": "https://note.com/gensnotes/n/n7b15a254d0c3",
+      "publishedAt": "2026-11-13T08:20:16+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【ジェンスン・フアン辞任】不倫の一件は、もはや一件ではない。東アジアが「世界の火薬庫」になる日",
+      "url": "https://note.com/gensnotes/n/nae3da32a383f",
+      "publishedAt": "2026-11-13T07:33:10+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【個人開発日記】Fable5.2で日用ツールは全て改良済み。一旦、環境構成を作り直そう",
+      "url": "https://note.com/humble_bobcat51/n/nb9d0f1d0e8ac",
+      "publishedAt": "2026-11-12T22:06:12+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【3100記事突破記念】5年間、書いて、迷って、また書いた。Genesis Vaultという終わらない思考の記録",
+      "url": "https://note.com/gensnotes/n/n4103d2d43a93",
+      "publishedAt": "2026-11-12T22:03:58+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "コンピューターの熱が減らない。計算を逆向きにも走らせるCPUモデルを普通のPCで試したtheseus",
+      "url": "https://note.com/gensnotes/n/n39c70110cf9b",
+      "publishedAt": "2026-11-12T21:25:10+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "この10日間のセキュリティ情報と最近のWindows脆弱性まとめを整理しないと、頭がおかしくなりそうです（2026年11月2日〜12日）",
+      "url": "https://note.com/humble_bobcat51/n/n93c740a7dd20",
+      "publishedAt": "2026-11-12T20:41:28+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "「未完成」を公言する百度の怪異作――『ERNIE 5.5 Flash Preview』の正体と、見るべき現実",
+      "url": "https://note.com/humble_bobcat51/n/n3297b9163b58",
+      "publishedAt": "2026-11-12T19:04:20+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
     {
       "title": "【脱スマホ日誌 Day 1】インターネットを見るのをやめた。代わりにAIと数学と開発に全力を注ぐ",
       "url": "https://note.com/gensnotes/n/nc423edb428d0",
