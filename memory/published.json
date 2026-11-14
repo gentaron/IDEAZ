@@ -4,9 +4,51 @@
     "note.com/humble_bobcat51",
     "note.com/gensnotes"
   ],
-  "syncedAt": "2026-11-13T01:37:59.185Z",
-  "count": 1157,
+  "syncedAt": "2026-11-14T01:12:29.689Z",
+  "count": 1164,
   "titles": [
+    {
+      "title": "【水平遺伝子伝達】藻の染色体は、なぜ哺乳類の細胞から捨てられなかったのか",
+      "url": "https://note.com/gensnotes/n/n7a3916bf5293",
+      "publishedAt": "2026-11-14T10:11:39+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【QAIZ市場分析｜2026年11月14日】上昇基調なのに米国株230銘柄が下落？エウレカ団が世界市場と自作クオンツAIを徹底点検",
+      "url": "https://note.com/gensnotes/n/n43dc9e52b48c",
+      "publishedAt": "2026-11-14T08:47:40+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【note.comトレンド調査】何が読まれているのか調べたら、ブログの価値がわからなくなった",
+      "url": "https://note.com/gensnotes/n/n4e0876e108b6",
+      "publishedAt": "2026-11-14T08:40:46+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【スパイキングNN】AIの応答を速めたい。でも全時間ステップを待たなくていい。非力なPCで確かめたELSA",
+      "url": "https://note.com/gensnotes/n/ne70fd6594d07",
+      "publishedAt": "2026-11-14T08:20:58+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【NVIDIAブラックホール】成功しすぎた企業は、なぜGPUを自由に売れなくなるのか",
+      "url": "https://note.com/gensnotes/n/nf909c44188e8",
+      "publishedAt": "2026-11-14T07:46:16+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "URLを1本渡すだけで競合の「マーケティング機械」を証拠付きで逆解析するOSS『REM』の設計思想が凄すぎた",
+      "url": "https://note.com/humble_bobcat51/n/naa276858275e",
+      "publishedAt": "2026-11-13T12:33:36+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "ヘルスチェックがサーバーを殺した——Microsoft 365 世界規模接続障害（EX1550543）の技術的解剖",
+      "url": "https://note.com/humble_bobcat51/n/n4e037d53f098",
+      "publishedAt": "2026-11-13T10:48:44+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
     {
       "title": "30BのMoEをスマホサイズに焼き詰める：スマホやMacBookで20万字の長文をサクサク処理！オンデバイス特化型LLM「Raon-1 nano」の実力",
       "url": "https://note.com/humble_bobcat51/n/nb7eaf599135d",
