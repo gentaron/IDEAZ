@@ -19,6 +19,7 @@ import { mytDate, planDay } from '../src/build.mjs'
 import { judgeSystem, shortlistTask, decideTask } from '../src/brief.mjs'
 import { harvest, excerpt } from '../src/harvest.mjs'
 import { loadPublished, buildIndex, filterCandidates, recentTitles } from '../src/published.mjs'
+import { checkSelection } from '../src/selection-gate.mjs'
 import { pickProvider, chat, parseJSON } from '../src/llm.mjs'
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..')
@@ -177,11 +178,17 @@ function normalise(raw) {
   const out = {}
   const dropped = []
   const urls = new Map(withText.map((c) => [c.url, c]))
+  const usedTitles = new Set()
+  const usedUrls = new Set()
 
   for (const entry of raw.slots || []) {
     const id = String(entry.slotId || '').padStart(2, '0')
     if (!known.has(id)) {
       dropped.push(`知らない枠id: ${entry.slotId}`)
+      continue
+    }
+    if (out[id]) {
+      dropped.push(`${id} が複数回返されたため、後の候補を却下`)
       continue
     }
     if (!entry.found) {
@@ -202,6 +209,18 @@ function normalise(raw) {
       continue
     }
 
+    const checked = checkSelection({
+      title: entry.title,
+      sources,
+      publishedIndex: index,
+      usedTitles,
+      usedUrls
+    })
+    if (!checked.ok) {
+      dropped.push(`${id} は根拠・独立性ゲートで却下: ${checked.reason}`)
+      continue
+    }
+
     out[id] = {
       title: entry.title,
       whatChanged: entry.whatChanged,
@@ -212,6 +231,8 @@ function normalise(raw) {
       sources,
       backups: (entry.backups || []).filter((b) => b?.title)
     }
+    usedTitles.add(checked.signature)
+    checked.urls.forEach((url) => usedUrls.add(url))
   }
 
   return { slots: out, dropped }
