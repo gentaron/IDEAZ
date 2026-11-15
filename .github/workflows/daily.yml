@@ -24,9 +24,9 @@ jobs:
     env:
       NETLIFY_BUILD_HOOK: ${{ secrets.NETLIFY_BUILD_HOOK }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
         with:
           node-version: '22'
 
@@ -42,6 +42,7 @@ jobs:
         id: search
         continue-on-error: true
         env:
+          SECURITY_INPUT_1: ${{ github.event.inputs.date }}
           # 候補集めは鍵不要。選ぶところは GitHub Models の無料枠を使う。
           # GITHUB_TOKEN はワークフローが最初から持っているので、登録するものは無い。
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -51,10 +52,12 @@ jobs:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           IDEAZ_LLM_PROVIDER: ${{ vars.IDEAZ_LLM_PROVIDER }}
           IDEAZ_LLM_MODEL: ${{ vars.IDEAZ_LLM_MODEL }}
-        run: node scripts/search.mjs ${{ github.event.inputs.date }}
+        run: node scripts/search.mjs "${SECURITY_INPUT_1}"
 
       - name: 5枠を生成する
-        run: node scripts/generate.mjs ${{ github.event.inputs.date }}
+        env:
+          SECURITY_INPUT_1: ${{ github.event.inputs.date }}
+        run: node scripts/generate.mjs "${SECURITY_INPUT_1}"
 
       - name: 変わっていればコミットする
         run: |
