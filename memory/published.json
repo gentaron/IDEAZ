@@ -4,9 +4,45 @@
     "note.com/humble_bobcat51",
     "note.com/gensnotes"
   ],
-  "syncedAt": "2026-11-15T00:39:43.413Z",
-  "count": 1172,
+  "syncedAt": "2026-11-16T00:39:38.832Z",
+  "count": 1178,
   "titles": [
+    {
+      "title": "AIエージェントにPythonを渡すのが怖い。外部操作を言語の意味で管理するQuasar",
+      "url": "https://note.com/gensnotes/n/nb6a366a45589",
+      "publishedAt": "2026-11-16T08:28:32+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【進化生物学】人間は声を出す霊長類にすぎないのか？ 観察する私も「ただの動物」だった",
+      "url": "https://note.com/gensnotes/n/nb0c38ec4a1fd",
+      "publishedAt": "2026-11-16T08:26:14+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【クオンツ開発日誌】予測検証は「証拠なし」だった。NVIDIA決算を前に、私は株価よりも「市場の期待」を疑い始めた",
+      "url": "https://note.com/gensnotes/n/ndf96ef339e7f",
+      "publishedAt": "2026-11-15T21:25:10+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【Euclidの重力レンズ】曲がった光は、なぜ別の銀河だと分かる？ 1万5000件の「候補」の読み方",
+      "url": "https://note.com/gensnotes/n/nd3707b06db26",
+      "publishedAt": "2026-11-15T20:33:42+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "次世代メモリを試したい。でもHBM4は買えない。非力なPCで規格そのものを動かしたRamulator 2.1",
+      "url": "https://note.com/gensnotes/n/n98c30f321b57",
+      "publishedAt": "2026-11-15T19:23:05+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "16MP（4096×4096）を6ステップで直接生成！オープンウェイト画像生成・編集モデル「MiniMax-H3-Image」",
+      "url": "https://note.com/humble_bobcat51/n/ne8c7b11b24f1",
+      "publishedAt": "2026-11-15T11:12:29+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
     {
       "title": "3年半のローリングリリース時代に終止符。「llama.cpp v1.0.0」初安定版の全貌と破壊的変更・移行ポイント",
       "url": "https://note.com/humble_bobcat51/n/n81104f59cf2c",
