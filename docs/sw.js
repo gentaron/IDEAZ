@@ -9,7 +9,7 @@
 // （スマホのホーム画面から開いた最初の1回だけ崩れる、の正体）。
 // 版を揃えるのはキャッシュの名前ではなく、取り方の側で担保する。
 
-const SHELL_CACHE = 'ideaz-shell-v3'
+const SHELL_CACHE = 'ideaz-shell-v4'
 const DATA_CACHE = 'ideaz-data-v1'
 const KEEP = [SHELL_CACHE, DATA_CACHE]
 
@@ -19,9 +19,11 @@ const SHELL = [
   'styles.css',
   'app.js',
   'manifest.webmanifest',
-  'icons/icon.svg',
-  'icons/icon-192.png',
-  'icons/icon-512.png',
+  'icons/eureka/favicon.ico',
+  'icons/eureka/apple-touch-icon.png',
+  'icons/eureka/icon-maskable-512.png',
+  'icons/eureka/icon-192.png',
+  'icons/eureka/icon-512.png',
 ]
 
 self.addEventListener('install', (e) => {
