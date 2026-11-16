@@ -51,7 +51,6 @@ jobs:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           IDEAZ_LLM_PROVIDER: ${{ vars.IDEAZ_LLM_PROVIDER }}
           IDEAZ_LLM_MODEL: ${{ vars.IDEAZ_LLM_MODEL }}
-        env:
           IDEAZ_DATE: ${{ inputs.date }}
         run: node scripts/search.mjs "$IDEAZ_DATE"
 
