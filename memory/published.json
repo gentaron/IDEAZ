@@ -4,9 +4,63 @@
     "note.com/humble_bobcat51",
     "note.com/gensnotes"
   ],
-  "syncedAt": "2026-11-16T00:39:38.832Z",
-  "count": 1178,
+  "syncedAt": "2026-11-17T03:21:15.043Z",
+  "count": 1187,
   "titles": [
+    {
+      "title": "AIが書く「動くけど古いWebコード」を根絶する——Chrome・Edge・Firefox・MDN連合の『Modern Web Guidance』が凄まじい",
+      "url": "https://note.com/humble_bobcat51/n/n4aa4a91a7d40",
+      "publishedAt": "2026-11-17T12:08:43+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【リベラル】人間をラベルで見ない。国籍、批判、復讐について考えたら、最後は「許す」という話になった",
+      "url": "https://note.com/gensnotes/n/n82fc7171c8dc",
+      "publishedAt": "2026-11-17T11:05:03+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【SOV-Transcribe-1】AI文字起こしに人名リストを渡すと、聞き間違いは減る？",
+      "url": "https://note.com/gensnotes/n/n6d10274f63d7",
+      "publishedAt": "2026-11-17T11:01:32+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "単価は旗艦の1/12以下、実タスクコスト1/20。Tencent『Hy4 flash』は本当にコスパ最強モデルなのか？",
+      "url": "https://note.com/humble_bobcat51/n/n9021dbc38eb5",
+      "publishedAt": "2026-11-17T10:15:12+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【恋愛格差】モンクモードは恋愛市場からの「静かな撤退」なのか？ スマホを置き、自分の人生に戻る男たち",
+      "url": "https://note.com/gensnotes/n/n5210ee807296",
+      "publishedAt": "2026-11-17T08:41:22+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【変革】量子回路がメモリに載らない。77億ゲートを表に変えたPandora",
+      "url": "https://note.com/gensnotes/n/n23e39f1e1e8d",
+      "publishedAt": "2026-11-17T08:24:41+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "three.jsのコードがそのまま60fpsのパストレーシングに？ MeshyAIの研究プロジェクト『ThreeRT』徹底解説",
+      "url": "https://note.com/humble_bobcat51/n/n6751884a83a1",
+      "publishedAt": "2026-11-17T08:17:10+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【コンゴ民主共和国】隣人のインキーから旧ザイールを調べたら、世界有数の資源大国の未来が気になった",
+      "url": "https://note.com/gensnotes/n/n5f30306cf40c",
+      "publishedAt": "2026-11-17T08:13:29+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【個人開発日記】風邪ひきました。が、決定モデルにセキュリティとPonytailを覚え込ませました。",
+      "url": "https://note.com/humble_bobcat51/n/nf21cd889e406",
+      "publishedAt": "2026-11-16T20:14:24+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
     {
       "title": "AIエージェントにPythonを渡すのが怖い。外部操作を言語の意味で管理するQuasar",
       "url": "https://note.com/gensnotes/n/nb6a366a45589",
