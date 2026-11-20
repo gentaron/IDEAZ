@@ -4,9 +4,69 @@
     "note.com/humble_bobcat51",
     "note.com/gensnotes"
   ],
-  "syncedAt": "2026-11-19T02:12:10.419Z",
-  "count": 1207,
+  "syncedAt": "2026-11-20T01:59:05.355Z",
+  "count": 1217,
   "titles": [
+    {
+      "title": "『agentes.chat』徹底解剖 — AIエージェントが「チームの一員」として働くOSSワークスペースOSの設計思想",
+      "url": "https://note.com/humble_bobcat51/n/nac69957582c8",
+      "publishedAt": "2026-11-20T09:47:56+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "strataでパーソナルAgent動かすの？ 「Claude級」を謳うローカルAIエージェント『Linger』を徹底解剖",
+      "url": "https://note.com/humble_bobcat51/n/n52879f76810e",
+      "publishedAt": "2026-11-20T08:23:03+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【さらに外縁へ】素粒子の外側に、まだ世界があるらしい。アクシオン、ダークフォトン、プレオン……お前たちは一体何者なんだ？",
+      "url": "https://note.com/gensnotes/n/nb61a815c31af",
+      "publishedAt": "2026-11-19T23:12:03+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "若年性がんの増加を追って気づいた、「健康的な生活」は本当に健康なのか？",
+      "url": "https://note.com/gensnotes/n/n8282dff82263",
+      "publishedAt": "2026-11-19T22:46:30+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【個人開発日記】一日strataに丸投げした業務形成ツールはどうなったかな？",
+      "url": "https://note.com/humble_bobcat51/n/n305d9246d669",
+      "publishedAt": "2026-11-19T21:25:49+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【HyperFrames Studio】 HTMLで動画を組む「エージェントのための動画エディタ」が変える映像制作",
+      "url": "https://note.com/humble_bobcat51/n/n5e1623b445f4",
+      "publishedAt": "2026-11-19T20:41:55+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "「一番賢いAI」を選ぶと損をする―27モデルの性能と価格を比べてたどり着いた、2026年11月版AIモデル選定のベストプラクティス",
+      "url": "https://note.com/humble_bobcat51/n/n22b887cecf3c",
+      "publishedAt": "2026-11-19T19:37:54+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【理想より値段】量子コンピューターはAIより賢いの？ 量子優位性と古典計算、巨大な開発競争の裏側をさらに深掘りしてみた",
+      "url": "https://note.com/gensnotes/n/n5ab8f08a959f",
+      "publishedAt": "2026-11-19T18:59:40+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【地道】量子コンピューターは本当に近づいたのか？ 735件の研究を追って見えた「次の時代」の正体",
+      "url": "https://note.com/gensnotes/n/n92809133e78e",
+      "publishedAt": "2026-11-19T16:40:54+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "世界情勢大図鑑｜UNDERCURRENT × QAIZで市場からミームまで覗いたら、世界の見え方が変わった",
+      "url": "https://note.com/gensnotes/n/nb05672135ada",
+      "publishedAt": "2026-11-19T14:21:23+09:00",
+      "account": "note.com/gensnotes"
+    },
     {
       "title": "GTA VI、やっぱり正義だった。AI全盛の2026年、それでも人類はゲームに熱狂する",
       "url": "https://note.com/gensnotes/n/n459e58b70792",
