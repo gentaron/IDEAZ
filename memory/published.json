@@ -4,9 +4,69 @@
     "note.com/humble_bobcat51",
     "note.com/gensnotes"
   ],
-  "syncedAt": "2026-11-20T01:59:05.355Z",
-  "count": 1217,
+  "syncedAt": "2026-11-21T01:56:17.721Z",
+  "count": 1227,
   "titles": [
+    {
+      "title": "AIエージェントに生FFmpegを書かせてはいけない理由 — 8,800スター超えのローカル動画編集エンジン「ffmpeg-skill」のアップデート徹底整理！",
+      "url": "https://note.com/humble_bobcat51/n/nee06b5252fc4",
+      "publishedAt": "2026-11-21T09:43:08+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "量子誤り訂正の性能が推定で止まる、量子機なしで厳密な距離へ変えたQEDist",
+      "url": "https://note.com/gensnotes/n/n4286183aac05",
+      "publishedAt": "2026-11-21T08:45:59+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【急変】AI関連株急落と世界経済｜売られているのはAIの未来か、それとも未来に付けた値段か",
+      "url": "https://note.com/gensnotes/n/ne2ada3897adb",
+      "publishedAt": "2026-11-21T07:39:04+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【2026年最新比較】T3 Code vs Orca — AIコーディングエージェントを束ねる「二大制御層」を徹底解剖",
+      "url": "https://note.com/humble_bobcat51/n/nd0e3d89c9dfe",
+      "publishedAt": "2026-11-20T23:18:41+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【Newtake】AI動画を、生成して終わりにしない次世代AI映像制作プラットフォームが日本向けプレローンチ！特徴・機能・料金・規約を総まとめ【PR】",
+      "url": "https://note.com/humble_bobcat51/n/n0a3e373acf72",
+      "publishedAt": "2026-11-20T19:07:18+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【エウレカ、イメチェンしました！】半現実の私と、AIと、変わり続ける世界。これからのGenesis Vaultについて",
+      "url": "https://note.com/gensnotes/n/nc659c22d5e2c",
+      "publishedAt": "2026-11-20T17:49:52+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【アンソロピック上場】QAIZ統合観測｜リスクオフの裏側で、数字は未来を語るのか？",
+      "url": "https://note.com/gensnotes/n/ndf670f2b8c6e",
+      "publishedAt": "2026-11-20T15:26:06+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【Opencode】無料枠に謎のステルスモデルが来たぞーっ！note攻略ツールでも作らせてみよう【tidepool alpha】",
+      "url": "https://note.com/humble_bobcat51/n/n41619f2a2fd7",
+      "publishedAt": "2026-11-20T13:36:57+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【実測・人工データ検証】埋め込みの1bit量子化｜32倍軽くしたら検索が遅くなった！？ SIMD実装で逆転した意外な理由",
+      "url": "https://note.com/gensnotes/n/na0ff0139048f",
+      "publishedAt": "2026-11-20T12:21:24+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "「Rustのコンパイル待ち3分を11秒に」—rustcもLLVMも使わずRustをJIT実行する『makepad/relax』の野心と現実",
+      "url": "https://note.com/humble_bobcat51/n/na92a6b05d084",
+      "publishedAt": "2026-11-20T12:11:45+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
     {
       "title": "『agentes.chat』徹底解剖 — AIエージェントが「チームの一員」として働くOSSワークスペースOSの設計思想",
       "url": "https://note.com/humble_bobcat51/n/nac69957582c8",
