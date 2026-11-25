@@ -4,9 +4,45 @@
     "note.com/humble_bobcat51",
     "note.com/gensnotes"
   ],
-  "syncedAt": "2026-11-24T05:06:41.953Z",
-  "count": 1253,
+  "syncedAt": "2026-11-25T03:55:23.990Z",
+  "count": 1259,
   "titles": [
+    {
+      "title": "【Ternary Bonsai 2.5 27B】27Bモデルがわずか5.93GBになって性能上がっとる。エージェント特化の三元LLMらしい",
+      "url": "https://note.com/humble_bobcat51/n/n58d2196a4ec3",
+      "publishedAt": "2026-11-25T12:33:45+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【QAIZ市場分析】上がるディフェンシブ、下がる半導体。典型的なセクターローテーション来たー！ 世界市場の主役が交代する？",
+      "url": "https://note.com/gensnotes/n/na73a2359fc28",
+      "publishedAt": "2026-11-25T11:24:45+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "Apache 2.0で予定より2日早く無告知公開！「ERNIE 5.5 Flash Preview」徹底リサーチレポート",
+      "url": "https://note.com/humble_bobcat51/n/n1648cd2b8681",
+      "publishedAt": "2026-11-25T08:06:50+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【レッドピル】テクノロジーは平和をもたらさない。戦争のない未来という幻想を、そろそろ捨てた方がいい【忘れてはいけない】",
+      "url": "https://note.com/gensnotes/n/nd253c7df4fa6",
+      "publishedAt": "2026-11-24T21:12:01+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【情報金融】QAIZからQAIZ World Fieldへ｜世界の変化を記録する、小さなクオンツ研究の始まり",
+      "url": "https://note.com/gensnotes/n/n983e40022b40",
+      "publishedAt": "2026-11-24T19:37:10+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "発表なしで降りた124Bモデル「Ling-3.2-air」徹底解剖 — 5.5B活性MoEの実力と落とし穴",
+      "url": "https://note.com/humble_bobcat51/n/nd69c4a14171c",
+      "publishedAt": "2026-11-24T14:13:32+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
     {
       "title": "【最先端AI伴走物理学】正の天球幾何（Positive Celestial Geometry）｜宇宙の散乱振幅が天球上の幾何学になる！ 15の研究をつないで見る",
       "url": "https://note.com/gensnotes/n/na4d0c39141f2",
