@@ -4,9 +4,21 @@
     "note.com/humble_bobcat51",
     "note.com/gensnotes"
   ],
-  "syncedAt": "2026-11-25T03:55:23.990Z",
-  "count": 1259,
+  "syncedAt": "2026-11-26T03:20:46.107Z",
+  "count": 1261,
   "titles": [
+    {
+      "title": "【個人開発日記】開発を必ず成功する方法は未だにわからないけど、逆はなんとなく分かる",
+      "url": "https://note.com/humble_bobcat51/n/n3eaacd8877ac",
+      "publishedAt": "2026-11-25T20:54:46+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "問いを学ぶ｜答えが42だったとして、あなたは何を問うのか？",
+      "url": "https://note.com/gensnotes/n/n33d1dc65f19a",
+      "publishedAt": "2026-11-25T20:50:17+09:00",
+      "account": "note.com/gensnotes"
+    },
     {
       "title": "【Ternary Bonsai 2.5 27B】27Bモデルがわずか5.93GBになって性能上がっとる。エージェント特化の三元LLMらしい",
       "url": "https://note.com/humble_bobcat51/n/n58d2196a4ec3",
