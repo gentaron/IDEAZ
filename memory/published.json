@@ -4,9 +4,57 @@
     "note.com/humble_bobcat51",
     "note.com/gensnotes"
   ],
-  "syncedAt": "2026-11-26T03:20:46.107Z",
-  "count": 1261,
+  "syncedAt": "2026-11-27T03:26:49.725Z",
+  "count": 1269,
   "titles": [
+    {
+      "title": "【パワー】大いなる力には大いなる責任が伴う｜ツバメとゴキブリから考える、作為と不作為の倫理",
+      "url": "https://note.com/gensnotes/n/n552470dcdd3a",
+      "publishedAt": "2026-11-27T11:11:20+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "AIに関数を何度も呼ばせるのが怖い、失敗まで累積枠へ残すScarp alpha.19",
+      "url": "https://note.com/gensnotes/n/nb22deb1687a0",
+      "publishedAt": "2026-11-27T10:08:39+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "GPUなしではLLMは重い。それでも推論の本体は14.7KBにできた llm.asm",
+      "url": "https://note.com/gensnotes/n/n8f5cea79a234",
+      "publishedAt": "2026-11-27T10:06:21+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【深夜の寝言】自然に生きて、人を愛して、面白い問いを追いかける。それだけでいいのかな。",
+      "url": "https://note.com/gensnotes/n/n9e6423da2e70",
+      "publishedAt": "2026-11-27T02:16:38+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【保存版】イーロン・マスク名言集150選｜第一原理思考、人生、挑戦、そして人類の未来",
+      "url": "https://note.com/gensnotes/n/n24b3cd55759e",
+      "publishedAt": "2026-11-27T01:11:17+09:00",
+      "account": "note.com/gensnotes"
+    },
+    {
+      "title": "【個人開発日記】kintone風ツールを一回、仮定として仕事やってる風にLLMで動かしてみようと思ったけど上手くいかん",
+      "url": "https://note.com/humble_bobcat51/n/n781163d154b5",
+      "publishedAt": "2026-11-26T20:06:17+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "【Keshin2D】絵1枚からブラウザで動く2Dアバターを作るツールとは？ 34時間・30コミットで組み上げられた全貌を解剖",
+      "url": "https://note.com/humble_bobcat51/n/n87497ece9bd9",
+      "publishedAt": "2026-11-26T19:08:23+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
+    {
+      "title": "Claude Opus 5.6とかのリーク情報が気になりましたんで、集めましたー",
+      "url": "https://note.com/humble_bobcat51/n/nc8e4df8e1e72",
+      "publishedAt": "2026-11-26T17:03:54+09:00",
+      "account": "note.com/humble_bobcat51"
+    },
     {
       "title": "【個人開発日記】開発を必ず成功する方法は未だにわからないけど、逆はなんとなく分かる",
       "url": "https://note.com/humble_bobcat51/n/n3eaacd8877ac",
